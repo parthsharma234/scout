@@ -1,0 +1,6 @@
+id,status,items_ingested,last_scraped_offset_sec,error_message
+hackernews,live,2847,12,
+reddit,live,1923,18,
+techcrunch,live,642,45,
+twitter,cached,1204,300,Rate limit reached — using cached data
+producthunt,live,384,30,

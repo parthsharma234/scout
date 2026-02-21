@@ -1,0 +1,9 @@
+id,entity,message,velocity_multiplier,sources,timestamp_offset_min
+alert-1,OpenAI,GPT-5 announcement driving massive discussion across HN and Reddit — reasoning benchmarks leaked,4.8,"hackernews,reddit,twitter",2
+alert-2,Cursor,Series B at $2.5B valuation — developer community buzzing on HN,3.6,"hackernews,reddit",8
+alert-3,Anthropic,Claude new model launch — safety benchmarks outperforming GPT-4 across multiple evals,3.4,"hackernews,reddit,techcrunch",15
+alert-4,Databricks,Acquisition of MosaicML driving renewed interest — $1.3B deal confirmed,3.1,"hackernews,reddit",22
+alert-5,Groq,LPU inference demo showing 10x speed over GPU clusters — viral on Twitter,2.8,"hackernews,twitter",35
+alert-6,Perplexity,Enterprise tier launch trending on Product Hunt — revenue doubling monthly,2.4,"producthunt,hackernews",48
+alert-7,OpenAI,Second wave — Sam Altman AMA on Reddit driving renewed engagement,2.2,"reddit,twitter",55
+alert-8,Cursor,TechCrunch interview with founders — daily active users surpassing 500K,2.0,"techcrunch,reddit",68
