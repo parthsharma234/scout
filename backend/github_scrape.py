@@ -3,7 +3,8 @@
 GitHub repo scraper for startup-signal discovery.
 
 Usage:
-  python github_scrape.py --limit-per-query 200 --out data/github_repos.jsonl
+  python github_scrape.py --limit-per-query 50 --out data/github_repos.jsonl
+  python github_scrape.py --incremental
   python github_scrape.py --skip-release-lookup
 
 Environment variables required:
@@ -28,11 +29,37 @@ SEARCH_REPOS_PATH = "/search/repositories"
 RELEASE_LATEST_PATH = "/repos/{owner}/{repo}/releases/latest"
 
 DEFAULT_QUERIES = [
-    "topic:startup",  # repositories tagged with startup
-    "topic:saas",     # SaaS projects
+    "topic:startup",
+    "topic:saas",
     "topic:indie-hacker",
     "topic:side-project",
     "topic:productivity",
+    "topic:ai",
+    "topic:llm",
+    "topic:agent",
+    "topic:devtools",
+    "topic:fintech",
+    "topic:healthtech",
+    "topic:edtech",
+    "topic:climate-tech",
+    "topic:infra",
+    "topic:observability",
+    "topic:security",
+    "topic:automation",
+    "topic:opensource",
+    "topic:sdk",
+    "topic:api",
+    "topic:cli",
+    "topic:no-code",
+    "topic:low-code",
+    "topic:marketplace",
+    "topic:payments",
+    "in:name,description \"launch\"",
+    "in:name,description \"beta\"",
+    "in:name,description \"waitlist\"",
+    "in:name,description \"early access\"",
+    "in:name,description \"mvp\"",
+    "in:name,description \"v1\"",
 ]
 
 
@@ -43,11 +70,28 @@ def get_env(name: str, required: bool = True) -> str:
     return value
 
 
-def read_json_response(req: urllib.request.Request, timeout_seconds: int) -> tuple[int, dict[str, Any], dict[str, str]]:
-    with urllib.request.urlopen(req, timeout=timeout_seconds) as response:
-        body = response.read().decode("utf-8")
-        headers = {k.lower(): v for k, v in response.headers.items()}
-        return response.status, json.loads(body), headers
+def read_json_response(
+    req: urllib.request.Request,
+    timeout_seconds: int,
+    retries: int = 3,
+    backoff_seconds: float = 1.0,
+) -> tuple[int, dict[str, Any], dict[str, str]]:
+    for attempt in range(retries + 1):
+        try:
+            with urllib.request.urlopen(req, timeout=timeout_seconds) as response:
+                body = response.read().decode("utf-8")
+                headers = {k.lower(): v for k, v in response.headers.items()}
+                return response.status, json.loads(body), headers
+        except urllib.error.URLError as e:
+            # Let HTTP errors bubble up so callers can handle 404/422, etc.
+            if isinstance(e, urllib.error.HTTPError):
+                raise
+            if attempt >= retries:
+                raise RuntimeError(
+                    "Network/DNS error while calling GitHub. "
+                    "Check internet connection, VPN/proxy, and DNS settings."
+                ) from e
+            time.sleep(backoff_seconds * (2 ** attempt))
 
 
 def parse_iso8601(value: str | None) -> datetime | None:
@@ -134,6 +178,24 @@ def extract_repo(repo: dict[str, Any], query: str, release_info: dict[str, Any] 
 def iso_date_days_ago(days: int) -> str:
     dt = datetime.now(timezone.utc) - timedelta(days=days)
     return dt.strftime("%Y-%m-%d")
+
+
+def load_incremental_state(path: Path) -> str | None:
+    if not path.exists():
+        return None
+    try:
+        with path.open("r", encoding="utf-8") as f:
+            payload = json.load(f)
+        return payload.get("last_run_date")
+    except (OSError, json.JSONDecodeError, AttributeError):
+        return None
+
+
+def save_incremental_state(path: Path) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    payload = {"last_run_date": datetime.now(timezone.utc).strftime("%Y-%m-%d")}
+    with path.open("w", encoding="utf-8") as f:
+        json.dump(payload, f, ensure_ascii=False, indent=2)
 
 
 def fetch_query_repos(
@@ -252,7 +314,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--limit-per-query",
         type=int,
-        default=200,
+        default=50,
         help="Maximum repos to collect per query.",
     )
     parser.add_argument(
@@ -293,8 +355,19 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--created-within-days",
         type=int,
-        default=30,
+        default=14,
         help="Add created:>YYYY-MM-DD filter based on days back.",
+    )
+    parser.add_argument(
+        "--incremental",
+        action="store_true",
+        help="Only query repos created after the last run date.",
+    )
+    parser.add_argument(
+        "--incremental-state",
+        type=Path,
+        default=Path("data/github_incremental.json"),
+        help="Path to store last run date for incremental mode.",
     )
     parser.add_argument(
         "--release-within-days",
@@ -315,7 +388,13 @@ def main() -> None:
     token = get_env("GITHUB_TOKEN", required=True)
 
     created_filter = ""
-    if args.created_within_days and args.created_within_days > 0:
+    if args.incremental:
+        last_run = load_incremental_state(args.incremental_state)
+        if last_run:
+            created_filter = f" created:>{last_run}"
+        elif args.created_within_days and args.created_within_days > 0:
+            created_filter = f" created:>{iso_date_days_ago(args.created_within_days)}"
+    elif args.created_within_days and args.created_within_days > 0:
         created_filter = f" created:>{iso_date_days_ago(args.created_within_days)}"
 
     all_records: list[dict[str, Any]] = []
@@ -353,6 +432,8 @@ def main() -> None:
 
     save_output(all_records, args.out, as_jsonl=not args.json_array)
     print(f"Saved {len(all_records)} repos to {args.out}")
+    if args.incremental:
+        save_incremental_state(args.incremental_state)
 
 
 if __name__ == "__main__":
