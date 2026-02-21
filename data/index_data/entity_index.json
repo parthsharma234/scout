@@ -1,0 +1,3692 @@
+{
+  "_meta": {
+    "description": "Unified cross-source entity index for niche search. Aggregates Hacker News, GitHub, and Product Hunt entities and nodes.",
+    "schema_version": "1.0",
+    "generated_at": "2026-02-21T16:46:42.583117+00:00",
+    "sources_expected": [
+      "github",
+      "hackernews",
+      "producthunt"
+    ]
+  },
+  "entity_count": 81,
+  "stats": {
+    "sources_seen": 2,
+    "entity_rows_seen": 81,
+    "node_rows_seen": 83
+  },
+  "entities": [
+    {
+      "entity_key": "rtkai",
+      "entity": "Rtk Ai",
+      "confidence": 0.9,
+      "trend_score": 98.8,
+      "impressions": 13625,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "rust",
+        "cli",
+        "llm",
+        "agentic-coding",
+        "ai-coding",
+        "anthropic"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "owner_org"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "github-1139971460-rtk-ai",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "rtk-ai/rtk",
+          "url": "https://github.com/rtk-ai/rtk",
+          "summary": "CLI proxy that reduces LLM token consumption by 60-90% on common dev commands. Single Rust binary, zero dependencies",
+          "interactions": 2117,
+          "views": 13625,
+          "impressions": 13625,
+          "published_at": "2026-02-20T17:26:38Z",
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "entity_key": "micasa",
+      "entity": "Micasa",
+      "confidence": 1.0,
+      "trend_score": 65.55,
+      "impressions": 5802,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "micasa",
+        "but",
+        "track",
+        "need",
+        "some",
+        "demo"
+      ],
+      "quality_signals": [
+        "builder_signal",
+        "domain_entity",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "hn-47075124-micasa",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Micasa – track your house from the terminal",
+          "url": "https://micasa.dev",
+          "summary": "micasa is a terminal UI that helps you track home stuff, in a single SQLite file. No cloud, no account, no subscription. Backup with cp. I built it because I was tired of losing track of everything in notes apps, and \"I'll remember that\"s. When do I need to clean the dishwasher f",
+          "interactions": 1025,
+          "views": 6270,
+          "impressions": 5802,
+          "published_at": "2026-02-19T15:54:14+00:00",
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "entity_key": "daymonio",
+      "entity": "Daymonio",
+      "confidence": 0.9,
+      "trend_score": 32.52,
+      "impressions": 3363,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "ai",
+        "ai-agents",
+        "ai-assistant",
+        "automation",
+        "claude-code",
+        "claude-desktop"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "owner_org"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "github-1157946652-daymonio",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "daymonio/daymon",
+          "url": "https://github.com/daymonio/daymon",
+          "summary": "Daymon puts your favorite AI to work 24/7. It schedules, remembers, and orchestrates your own virtual team. Free.",
+          "interactions": 404,
+          "views": 3363,
+          "impressions": 3363,
+          "published_at": "2026-02-19T18:03:18Z",
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "entity_key": "makie",
+      "entity": "Makie",
+      "confidence": 0.87,
+      "trend_score": 29.39,
+      "impressions": 2053,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "julia",
+        "physically-based",
+        "gpu",
+        "ray",
+        "tracer",
+        "makie"
+      ],
+      "quality_signals": [
+        "builder_signal",
+        "domain_entity",
+        "showcase_story",
+        "text_presence"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "hn-47072444-makie",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: A physically-based GPU ray tracer written in Julia",
+          "url": "https://makie.org/website/blogposts/raytracing/",
+          "summary": "We ported pbrt-v4 to Julia and built it into a Makie backend. Any Makie plot can now be rendered with physically-based path tracing. Julia compiles user-defined physics directly into GPU kernels, so anyone can extend the ray tracer with new materials and media - a black hole with",
+          "interactions": 364,
+          "views": 2053,
+          "impressions": 2053,
+          "published_at": "2026-02-19T10:55:13+00:00",
+          "confidence": 0.87
+        }
+      ]
+    },
+    {
+      "entity_key": "myinvestpilot",
+      "entity": "Myinvestpilot",
+      "confidence": 0.8,
+      "trend_score": 27.27,
+      "impressions": 2736,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "ai-native",
+        "dsl",
+        "investment",
+        "and",
+        "agent-driven-development",
+        "agentic-ai"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "owner_org"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "github-1157909530-myinvestpilot",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "myinvestpilot/ai-architecture",
+          "url": "https://github.com/myinvestpilot/ai-architecture",
+          "summary": "Design notes, architecture, and trade-offs for MyInvestPilot — an AI-native investment OS built with agent-driven development, DSL engine, and solo company tech stack.",
+          "interactions": 399,
+          "views": 2736,
+          "impressions": 2736,
+          "published_at": "2026-02-16T17:38:28Z",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "entity_key": "openbootdotdev",
+      "entity": "Openbootdotdev",
+      "confidence": 0.9,
+      "trend_score": 26.6,
+      "impressions": 2447,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "cli",
+        "go",
+        "dev-environment",
+        "developer-tools",
+        "devops",
+        "dotfiles"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "owner_org"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "github-1147139359-openbootdotdev",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "openbootdotdev/openboot",
+          "url": "https://github.com/openbootdotdev/openboot",
+          "summary": "Set up your Mac dev environment in one command — CLI + Web Dashboard + Team sharing",
+          "interactions": 277,
+          "views": 2447,
+          "impressions": 2447,
+          "published_at": "2026-02-20T12:15:26Z",
+          "confidence": 0.9
+        }
+      ]
+    },
+    {
+      "entity_key": "minidiarium",
+      "entity": "Mini-Diarium",
+      "confidence": 0.47,
+      "trend_score": 19.02,
+      "impressions": 1450,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "mini-diarium",
+        "encrypted",
+        "local",
+        "cross-platform",
+        "journaling",
+        "app"
+      ],
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "hn-47072863-mini-diarium",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Mini-Diarium - An encrypted, local, cross-platform journaling app",
+          "url": "https://github.com/fjrevoredo/mini-diarium",
+          "summary": "This is Nice. However, how do one access their diary, when you stopped maintaining it? Is this targeted more at the technically inclined, high-profile people who need to keep secrets? Personally, I believe that for something like a diary/journal, it should be in a format easily r",
+          "interactions": 255,
+          "views": 1450,
+          "impressions": 1450,
+          "published_at": "2026-02-19T11:54:21+00:00",
+          "confidence": 0.47
+        }
+      ]
+    },
+    {
+      "entity_key": "mines",
+      "entity": "Mines",
+      "confidence": 0.87,
+      "trend_score": 18.72,
+      "impressions": 897,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "mines",
+        "all",
+        "visualization",
+        "fyi",
+        "leaflet",
+        "downloaded"
+      ],
+      "quality_signals": [
+        "builder_signal",
+        "domain_entity",
+        "showcase_story",
+        "text_presence"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "hn-47094149-mines",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Mines.fyi – all the mines in the US in a leaflet visualization",
+          "url": "https://mines.fyi/",
+          "summary": "I downloaded the MSHA's (Mine Safety and Health Administration) public datasets and create a visualization of all the mines in the US complete with the operators and details on each site.",
+          "interactions": 147,
+          "views": 897,
+          "impressions": 897,
+          "published_at": "2026-02-20T21:22:27+00:00",
+          "confidence": 0.87
+        }
+      ]
+    },
+    {
+      "entity_key": "rebrain",
+      "entity": "Rebrain",
+      "confidence": 0.47,
+      "trend_score": 16.62,
+      "impressions": 1189,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "rebrain",
+        "llm",
+        "conversation",
+        "doom",
+        "learn",
+        "https"
+      ],
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "hn-47060220-rebrain",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Rebrain.gg – Doom learn, don't doom scroll",
+          "url": "https://news.ycombinator.com/item?id=47060220",
+          "summary": "Hi HN, I built https://rebrain.gg . It's a website which is intended to help you learn new things. I built it for two reasons: 1. To play around with different ways of interacting with a LLM. Instead of a standard chat conversation, the LLM returns question forms the user can dir",
+          "interactions": 214,
+          "views": 1189,
+          "impressions": 1189,
+          "published_at": "2026-02-18T12:18:26+00:00",
+          "confidence": 0.47
+        }
+      ]
+    },
+    {
+      "entity_key": "beyteflow",
+      "entity": "BeyteFlow",
+      "confidence": 0.85,
+      "trend_score": 14.69,
+      "impressions": 695,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "readme",
+        "ai",
+        "automation",
+        "developer-tool",
+        "github-api",
+        "markdown"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "owner_org"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "github-1152942711-beyteflow",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "BeyteFlow/ReadmeGenAI",
+          "url": "https://github.com/BeyteFlow/ReadmeGenAI",
+          "summary": "AI-powered README generator for GitHub. Paste a repo URL and instantly create a professional, well-structured README.md file.",
+          "interactions": 64,
+          "views": 695,
+          "impressions": 695,
+          "published_at": "2026-02-19T14:40:36Z",
+          "confidence": 0.85
+        }
+      ]
+    },
+    {
+      "entity_key": "claudia",
+      "entity": "Claudia",
+      "confidence": 0.6,
+      "trend_score": 13.28,
+      "impressions": 941,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "ai-assistant",
+        "claude-code",
+        "productivity",
+        "relationship-management",
+        "terminal",
+        "python"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "github-1140897918-claudia",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "kbanc85/claudia",
+          "url": "https://github.com/kbanc85/claudia",
+          "summary": "Terminal-based AI chief of staff. Remembers relationships, tracks commitments, helps you think strategically. Runs on Claude Code.",
+          "interactions": 107,
+          "views": 941,
+          "impressions": 941,
+          "published_at": "2026-02-19T21:39:55Z",
+          "confidence": 0.6
+        }
+      ]
+    },
+    {
+      "entity_key": "scriptsnap",
+      "entity": "Script Snap",
+      "confidence": 1.0,
+      "trend_score": 13.25,
+      "impressions": 136,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "out",
+        "script",
+        "snap",
+        "code",
+        "extraction",
+        "extract"
+      ],
+      "quality_signals": [
+        "builder_signal",
+        "domain_entity",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "hn-47097554-script-snap",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Script Snap – Extract code from videos",
+          "url": "https://script-snap.com/",
+          "summary": "Hi HN, I'm lmw-lab, the builder behind Script Snap. The Backstory: I built this out of pure frustration. A while ago, I was trying to figure out a specific configuration for a project, and the only good resource I could find was a 25-minute YouTube video. I had to scrub through e",
+          "interactions": 5,
+          "views": 136,
+          "impressions": 136,
+          "published_at": "2026-02-21T04:39:20+00:00",
+          "confidence": 1.0
+        }
+      ]
+    },
+    {
+      "entity_key": "appvox",
+      "entity": "App Vox",
+      "confidence": 0.8,
+      "trend_score": 12.8,
+      "impressions": 495,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "llm",
+        "typescript",
+        "voice-to-text",
+        "whisper",
+        "dictation",
+        "electron"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "owner_org"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "github-1152960251-app-vox",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "app-vox/vox",
+          "url": "https://github.com/app-vox/vox",
+          "summary": "Your privacy-first voice-to-text tool. Local Whisper transcription with optional LLM enhancement so your audio never leaves your computer.",
+          "interactions": 91,
+          "views": 495,
+          "impressions": 495,
+          "published_at": "2026-02-20T21:00:32Z",
+          "confidence": 0.8
+        }
+      ]
+    },
+    {
+      "entity_key": "emailmarketingskill",
+      "entity": "Emailmarketingskill",
+      "confidence": 0.87,
+      "trend_score": 12.05,
+      "impressions": 174,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "email",
+        "skill",
+        "data",
+        "can",
+        "claude",
+        "bible"
+      ],
+      "quality_signals": [
+        "builder_signal",
+        "domain_entity",
+        "showcase_story",
+        "text_presence"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "hn-47096335-emailmarketingskill",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: I built a 55K-word email marketing knowledge base and Claude Code skill",
+          "url": "https://www.emailmarketingskill.com/",
+          "summary": "I co-founded SmartrMail (email marketing SaaS, 12K ecommerce customers, acquired 2022). When I left, I no longer had access to the sending data I'd spent years learning from, billions of sent emails, deliverability patterns, things that actually move email engagement Cos' I don't",
+          "interactions": 13,
+          "views": 174,
+          "impressions": 174,
+          "published_at": "2026-02-21T01:08:21+00:00",
+          "confidence": 0.87
+        }
+      ]
+    },
+    {
+      "entity_key": "novadev",
+      "entity": "Novadev",
+      "confidence": 0.82,
+      "trend_score": 12.03,
+      "impressions": 237,
+      "mention_count_1h": 0,
+      "mention_count_24h": 2,
+      "spike_detected": false,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 2
+      },
+      "top_keywords": [
+        "check",
+        "ios",
+        "cert",
+        "status",
+        "via",
+        "our"
+      ],
+      "quality_signals": [
+        "builder_signal",
+        "domain_entity",
+        "showcase_story"
+      ],
+      "node_count": 2,
+      "top_nodes": [
+        {
+          "id": "hn-47096720-novadev",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Check iOS Cert Status via our easy to use API",
+          "url": "https://novadev.vip/api/",
+          "summary": "It is an extremely bad idea to send your encrypted signing certificates and password thereof to a third party like this. This service is most likely malicious and should be shut down.",
+          "interactions": 4,
+          "views": 124,
+          "impressions": 124,
+          "published_at": "2026-02-21T02:03:40+00:00",
+          "confidence": 0.77
+        },
+        {
+          "id": "hn-47096442-novadev",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Share Your Ideas with the Community",
+          "url": "https://novadev.vip/share/",
+          "summary": "No summary text available.",
+          "interactions": 2,
+          "views": 113,
+          "impressions": 113,
+          "published_at": "2026-02-21T01:24:17+00:00",
+          "confidence": 0.77
+        }
+      ]
+    },
+    {
+      "entity_key": "netlify",
+      "entity": "Netlify",
+      "confidence": 0.87,
+      "trend_score": 11.57,
+      "impressions": 123,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "rule",
+        "playground",
+        "engine",
+        "action",
+        "event",
+        "pipeline"
+      ],
+      "quality_signals": [
+        "builder_signal",
+        "domain_entity",
+        "showcase_story",
+        "text_presence"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "hn-47095929-netlify",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Are – Rule engine for JavaScript, C#, and Dart with playground",
+          "url": "https://are-playground.netlify.app/",
+          "summary": "I built a rule engine called ARE (Action Rule Event) that follows a simple pipeline: Event → Middleware → Condition Evaluation → Rule Matching → Action Execution. It's available on npm, NuGet, and pub.dev with the same API design across all three. I also built a playground where ",
+          "interactions": 4,
+          "views": 123,
+          "impressions": 123,
+          "published_at": "2026-02-21T00:14:31+00:00",
+          "confidence": 0.87
+        }
+      ]
+    },
+    {
+      "entity_key": "webhookstream",
+      "entity": "Webhookstream",
+      "confidence": 0.87,
+      "trend_score": 11.57,
+      "impressions": 122,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "webhookstream",
+        "receive",
+        "relay",
+        "send",
+        "debug",
+        "webhooks"
+      ],
+      "quality_signals": [
+        "builder_signal",
+        "domain_entity",
+        "showcase_story",
+        "text_presence"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "hn-47097627-webhookstream",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: WebhookStream – Receive, relay, send and debug webhooks from 1 platform",
+          "url": "https://webhookstream.com",
+          "summary": "I built this because every company I've worked at ends up rebuilding the same webhook infrastructure from scratch. Retry logic, signature verification, delivery logs, failure alerts — it's always the same code, and it's never prioritized until something breaks in production. Webh",
+          "interactions": 3,
+          "views": 122,
+          "impressions": 122,
+          "published_at": "2026-02-21T04:53:38+00:00",
+          "confidence": 0.87
+        }
+      ]
+    },
+    {
+      "entity_key": "awingender",
+      "entity": "Awingender",
+      "confidence": 0.87,
+      "trend_score": 11.53,
+      "impressions": 118,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "native",
+        "react",
+        "web",
+        "animation",
+        "beautiful",
+        "number"
+      ],
+      "quality_signals": [
+        "builder_signal",
+        "domain_entity",
+        "showcase_story",
+        "text_presence"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "hn-47096379-awingender",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: I created a beautiful number animation library for React Native",
+          "url": "https://number-flow-react-native.awingender.com/",
+          "summary": "Hi! I've been frustrated with the fact that the beautiful NumberFlow library for web (link) is not available on React Native - a platform that I think is much more animation native than the web is. And there are no alternatives of the same quality available. So I reimplemented it",
+          "interactions": 3,
+          "views": 118,
+          "impressions": 118,
+          "published_at": "2026-02-21T01:16:24+00:00",
+          "confidence": 0.87
+        }
+      ]
+    },
+    {
+      "entity_key": "8gent",
+      "entity": "8Gent",
+      "confidence": 0.87,
+      "trend_score": 11.5,
+      "impressions": 115,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "mobile",
+        "workflow",
+        "automation",
+        "gent",
+        "around",
+        "native"
+      ],
+      "quality_signals": [
+        "builder_signal",
+        "domain_entity",
+        "showcase_story",
+        "text_presence"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "hn-47095446-8gent",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: 8gent – Mobile first workflow automation for iOS",
+          "url": "https://www.8gent.tech/en",
+          "summary": "8gent is an experiment in building a workflow automation tool designed around the smartphone instead of the browser. The idea is to combine a visual workflow builder with mobile native triggers such as location events, push notifications and audio input. The execution logic runs ",
+          "interactions": 3,
+          "views": 115,
+          "impressions": 115,
+          "published_at": "2026-02-20T23:20:52+00:00",
+          "confidence": 0.87
+        }
+      ]
+    },
+    {
+      "entity_key": "mukoko",
+      "entity": "Mukoko",
+      "confidence": 0.87,
+      "trend_score": 11.47,
+      "impressions": 112,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "weather",
+        "zimbabwe",
+        "data",
+        "mukoko",
+        "global",
+        "approach"
+      ],
+      "quality_signals": [
+        "builder_signal",
+        "domain_entity",
+        "showcase_story",
+        "text_presence"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "hn-47097611-mukoko",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Mukoko weather – AI-powered weather intelligence built for Zimbabwe",
+          "url": "https://weather.mukoko.com/harare",
+          "summary": "Zimbabwe has 90+ towns and cities, a population of 15+ million, significant agricultural and mining sectors — and almost no weather infrastructure built specifically for it. Global apps cover Harare and Bulawayo at best, and the AI summaries they generate read like they were writ",
+          "interactions": 1,
+          "views": 112,
+          "impressions": 112,
+          "published_at": "2026-02-21T04:51:00+00:00",
+          "confidence": 0.87
+        }
+      ]
+    },
+    {
+      "entity_key": "pmclaudeskills",
+      "entity": "Pm Claude Skills",
+      "confidence": 0.6,
+      "trend_score": 11.47,
+      "impressions": 661,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "claude",
+        "skills",
+        "ai",
+        "claude-ai",
+        "product-management",
+        "productivity"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "github-1144946140-pm-claude-skills",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "mohitagw15856/pm-claude-skills",
+          "url": "https://github.com/mohitagw15856/pm-claude-skills",
+          "summary": "Product Management Skills for Claude AI - Save 8-9 hours per week",
+          "interactions": 73,
+          "views": 661,
+          "impressions": 661,
+          "published_at": "2026-02-20T12:15:55Z",
+          "confidence": 0.6
+        }
+      ]
+    },
+    {
+      "entity_key": "unidocverse",
+      "entity": "Unidocverse",
+      "confidence": 0.87,
+      "trend_score": 11.46,
+      "impressions": 110,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "document",
+        "local",
+        "cloud",
+        "runs",
+        "machine",
+        "documents"
+      ],
+      "quality_signals": [
+        "builder_signal",
+        "domain_entity",
+        "showcase_story",
+        "text_presence"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "hn-47095658-unidocverse",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Local AI document intelligence – no cloud, runs on your machine",
+          "url": "https://unidocverse.com",
+          "summary": "I got tired of uploading sensitive documents to cloud AI services, so I built UniDocVerse — a fully local AI document analysis platform. Everything runs on your machine: - Local LLM via Ollama (Mistral 7B) - PostgreSQL + pgvector for semantic search - Tesseract OCR for scanned do",
+          "interactions": 2,
+          "views": 110,
+          "impressions": 110,
+          "published_at": "2026-02-20T23:41:55+00:00",
+          "confidence": 0.87
+        }
+      ]
+    },
+    {
+      "entity_key": "streakout",
+      "entity": "Streakout",
+      "confidence": 0.87,
+      "trend_score": 11.45,
+      "impressions": 109,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "workout",
+        "tracker",
+        "stats",
+        "health",
+        "data",
+        "most"
+      ],
+      "quality_signals": [
+        "builder_signal",
+        "domain_entity",
+        "showcase_story",
+        "text_presence"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "hn-47088909-streakout",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Minimalistic workout tracker for iPhone – Stats, Trends, Streaks",
+          "url": "https://streakout.app/",
+          "summary": "Streakout is a minimal iOS workout tracker designed to extend Apple Health & Fitness. It reads your existing workout data and turns it into beautiful tiles, charts, and timelines – helping you answer one of the most important questions for your health: “How often did I move this ",
+          "interactions": 4,
+          "views": 109,
+          "impressions": 109,
+          "published_at": "2026-02-20T15:06:51+00:00",
+          "confidence": 0.87
+        }
+      ]
+    },
+    {
+      "entity_key": "jvbar",
+      "entity": "Jvbar",
+      "confidence": 0.87,
+      "trend_score": 11.45,
+      "impressions": 109,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "remediation",
+        "server",
+        "script",
+        "windows",
+        "jvbar",
+        "cis"
+      ],
+      "quality_signals": [
+        "builder_signal",
+        "domain_entity",
+        "showcase_story",
+        "text_presence"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "hn-47097110-jvbar",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: JVBar CIS Benchmark scanner and remediation script generator",
+          "url": "https://www.jvbar.com",
+          "summary": "I spent 25 years as an enterprise IT admin and cybersecurity engineer. In that time I've manually worked through CIS Benchmark compliance on Windows Server more times than I want to count — open the PDF, check each control in gpedit/secedit/registry, write remediation scripts by ",
+          "interactions": 1,
+          "views": 109,
+          "impressions": 109,
+          "published_at": "2026-02-21T03:11:02+00:00",
+          "confidence": 0.87
+        }
+      ]
+    },
+    {
+      "entity_key": "backlinkpilot",
+      "entity": "Backlink Pilot",
+      "confidence": 0.5,
+      "trend_score": 11.13,
+      "impressions": 794,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "awesome-lists",
+        "automation",
+        "backlinks",
+        "directory-submission",
+        "indie-hacker",
+        "link-building"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "github-1158894944-backlink-pilot",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "s87343472/backlink-pilot",
+          "url": "https://github.com/s87343472/backlink-pilot",
+          "summary": "Automated backlink submission toolkit for indie hackers — submit your product to directory sites, awesome-lists, and search engines with one command",
+          "interactions": 96,
+          "views": 794,
+          "impressions": 794,
+          "published_at": "2026-02-17T05:13:52Z",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "entity_key": "twig",
+      "entity": "Twig",
+      "confidence": 0.6,
+      "trend_score": 11.07,
+      "impressions": 599,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "rust",
+        "tmux",
+        "cli",
+        "developer-tools",
+        "git-worktree",
+        "productivity"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "github-1141147716-twig",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "andersonkrs/twig",
+          "url": "https://github.com/andersonkrs/twig",
+          "summary": "A glamorous tmux session manager with git worktree support.",
+          "interactions": 53,
+          "views": 599,
+          "impressions": 599,
+          "published_at": "2026-02-20T12:50:03Z",
+          "confidence": 0.6
+        }
+      ]
+    },
+    {
+      "entity_key": "mephistomail",
+      "entity": "MephistoMail",
+      "confidence": 0.72,
+      "trend_score": 10.76,
+      "impressions": 230,
+      "mention_count_1h": 0,
+      "mention_count_24h": 2,
+      "spike_detected": false,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 2
+      },
+      "top_keywords": [
+        "mephistomail",
+        "mail",
+        "ram-only",
+        "client",
+        "https",
+        "tracker-free"
+      ],
+      "quality_signals": [
+        "builder_signal",
+        "domain_entity",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "node_count": 2,
+      "top_nodes": [
+        {
+          "id": "hn-47096177-mephistomail",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: MephistoMail – A RAM-only, tracker-free disposable email client",
+          "url": "https://news.ycombinator.com/item?id=47096177",
+          "summary": "Hi HN, I got frustrated with the current landscape of 10-minute mail services. They are often full of ads, Google Analytics trackers, and clunky interfaces—completely defeating the purpose of a \"privacy\" tool. I built MephistoMail as a clean, RAM-only frontend alternative. It use",
+          "interactions": 3,
+          "views": 118,
+          "impressions": 118,
+          "published_at": "2026-02-21T00:46:00+00:00",
+          "confidence": 0.47
+        },
+        {
+          "id": "hn-47096170-mephistomail",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: MephistoMail – A RAM-only, tracker-free disposable email client",
+          "url": "https://mephistomail.site?1",
+          "summary": "Hi HN, I got frustrated with the current landscape of 10-minute mail services. They are often full of ads, Google Analytics trackers, and clunky interfaces--completely defeating the purpose of a \"privacy\" tool. I built MephistoMail as a clean, RAM-only frontend alternative. It us",
+          "interactions": 2,
+          "views": 112,
+          "impressions": 112,
+          "published_at": "2026-02-21T00:44:55+00:00",
+          "confidence": 0.87
+        }
+      ]
+    },
+    {
+      "entity_key": "usevaultlink",
+      "entity": "Usevaultlink",
+      "confidence": 0.77,
+      "trend_score": 10.33,
+      "impressions": 118,
+      "mention_count_1h": 1,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "key",
+        "password",
+        "vaultlink",
+        "api",
+        "don",
+        "use"
+      ],
+      "quality_signals": [
+        "builder_signal",
+        "domain_entity",
+        "showcase_story"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "hn-47097666-usevaultlink",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Stop Pasting Credentials in Slack",
+          "url": "https://www.usevaultlink.com/",
+          "summary": "I built VaultLink to solve a recurring problem: how do you securely share an API key or password with someone when you don’t use the same password manager (or don’t use one at all)? VaultLink encrypts secrets client-side using the Web Crypto API (AES-256-GCM). The encryption key ",
+          "interactions": 2,
+          "views": 118,
+          "impressions": 118,
+          "published_at": "2026-02-21T05:02:27+00:00",
+          "confidence": 0.77
+        }
+      ]
+    },
+    {
+      "entity_key": "crates",
+      "entity": "Crates",
+      "confidence": 0.77,
+      "trend_score": 10.32,
+      "impressions": 117,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "hn-stories",
+        "rust",
+        "cli",
+        "browse",
+        "open",
+        "stories"
+      ],
+      "quality_signals": [
+        "builder_signal",
+        "domain_entity",
+        "showcase_story"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "hn-47096129-crates",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: HN-Stories – Rust CLI to browse and open HN stories from the terminal",
+          "url": "https://crates.io/crates/hn-stories",
+          "summary": "No summary text available.",
+          "interactions": 3,
+          "views": 117,
+          "impressions": 117,
+          "published_at": "2026-02-21T00:39:23+00:00",
+          "confidence": 0.77
+        }
+      ]
+    },
+    {
+      "entity_key": "migratetoresponses",
+      "entity": "Migratetoresponses",
+      "confidence": 0.77,
+      "trend_score": 10.27,
+      "impressions": 112,
+      "mention_count_1h": 1,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "free",
+        "tool",
+        "migrate",
+        "openai",
+        "assistants"
+      ],
+      "quality_signals": [
+        "builder_signal",
+        "domain_entity",
+        "showcase_story"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "hn-47097845-migratetoresponses",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Free tool to migrate OpenAI Assistants",
+          "url": "https://migratetoresponses.com",
+          "summary": "No summary text available.",
+          "interactions": 1,
+          "views": 112,
+          "impressions": 112,
+          "published_at": "2026-02-21T05:46:24+00:00",
+          "confidence": 0.77
+        }
+      ]
+    },
+    {
+      "entity_key": "polyasurn",
+      "entity": "Polyasurn",
+      "confidence": 0.77,
+      "trend_score": 10.25,
+      "impressions": 109,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "polya",
+        "urn",
+        "essays",
+        "complexity",
+        "emergence"
+      ],
+      "quality_signals": [
+        "builder_signal",
+        "domain_entity",
+        "showcase_story"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "hn-47097082-polyasurn",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Polya's urn – essays on complexity and emergence",
+          "url": "https://www.polyasurn.com/",
+          "summary": "No summary text available.",
+          "interactions": 1,
+          "views": 109,
+          "impressions": 109,
+          "published_at": "2026-02-21T03:07:23+00:00",
+          "confidence": 0.77
+        }
+      ]
+    },
+    {
+      "entity_key": "humaboam",
+      "entity": "Humaboam",
+      "confidence": 0.77,
+      "trend_score": 10.2,
+      "impressions": 104,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "jobs",
+        "last",
+        "job",
+        "access",
+        "posted",
+        "feed"
+      ],
+      "quality_signals": [
+        "builder_signal",
+        "domain_entity",
+        "showcase_story"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "hn-47095491-humaboam",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: How to make your ClawBot access to all jobs posted in last 24 hrs",
+          "url": "https://www.humaboam.fyi/",
+          "summary": "I run JobHuntr. We’ve been aggregating jobs from our community for a while, and I decided to expose the feed publicly. It’s a 24-hour rolling job board. You can generate an API token and read every job posted in the last 24 hours. Access is free if your agent posts 5 valid jobs f",
+          "interactions": 1,
+          "views": 104,
+          "impressions": 104,
+          "published_at": "2026-02-20T23:25:06+00:00",
+          "confidence": 0.77
+        }
+      ]
+    },
+    {
+      "entity_key": "remembermd",
+      "entity": "Remember Md",
+      "confidence": 0.7,
+      "trend_score": 10.15,
+      "impressions": 271,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "markdown",
+        "ai-brain",
+        "claude-code",
+        "knowledge-management",
+        "note-taking",
+        "obsidian"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "owner_org"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "github-1149698194-remember-md",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "remember-md/remember",
+          "url": "https://github.com/remember-md/remember",
+          "summary": "AI-powered second brain for Claude Code that builds itself.  Extract knowledge from every session—past and present—into  auto-organized Markdown. Local-first, queryable, learns your patterns.",
+          "interactions": 4,
+          "views": 271,
+          "impressions": 271,
+          "published_at": "2026-02-20T22:33:27Z",
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
+      "entity_key": "superlocalmemoryv2",
+      "entity": "SuperLocalMemoryV2",
+      "confidence": 0.55,
+      "trend_score": 9.42,
+      "impressions": 436,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "memory",
+        "python",
+        "ai",
+        "ai-memory",
+        "ai-tools",
+        "claude"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "github-1150546081-superlocalmemoryv2",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "varun369/SuperLocalMemoryV2",
+          "url": "https://github.com/varun369/SuperLocalMemoryV2",
+          "summary": "Standalone intelligent memory system with knowledge graphs, pattern learning, and 7-layer architecture. 100% local, zero external APIs.",
+          "interactions": 31,
+          "views": 436,
+          "impressions": 436,
+          "published_at": "2026-02-20T10:18:31Z",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "entity_key": "airsend",
+      "entity": "AirSend",
+      "confidence": 0.55,
+      "trend_score": 8.85,
+      "impressions": 348,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "localsend",
+        "macos",
+        "native",
+        "swift",
+        "file-transfer",
+        "productivity"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "github-1161865259-airsend",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "Avi7ii/AirSend",
+          "url": "https://github.com/Avi7ii/AirSend",
+          "summary": "A native, headless LocalSend client for macOS. Lightweight, fast, and elegant.",
+          "interactions": 5,
+          "views": 348,
+          "impressions": 348,
+          "published_at": "2026-02-20T12:52:58Z",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "entity_key": "macronyx",
+      "entity": "Macronyx",
+      "confidence": 0.55,
+      "trend_score": 8.81,
+      "impressions": 342,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "automation",
+        "cross-platform",
+        "macro",
+        "typescript",
+        "desktop-app",
+        "electron"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "github-1162154523-macronyx",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "DefinitelyN0tMe/Macronyx",
+          "url": "https://github.com/DefinitelyN0tMe/Macronyx",
+          "summary": "Cross-platform macro recorder with timeline editor, input automation, and visual mouse tracking.",
+          "interactions": 3,
+          "views": 342,
+          "impressions": 342,
+          "published_at": "2026-02-20T21:45:45Z",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "entity_key": "batzhiroquicktools",
+      "entity": "Bat Zhiro Quicktools",
+      "confidence": 0.55,
+      "trend_score": 8.6,
+      "impressions": 309,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "automation",
+        "batch-script",
+        "context-menu",
+        "ffmpeg",
+        "imagemagick",
+        "media-conversion"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "github-1161132760-bat-zhiro-quicktools",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "Zhiro90/bat-zhiro-quicktools",
+          "url": "https://github.com/Zhiro90/bat-zhiro-quicktools",
+          "summary": "A bunch of tiny one click `.bat` scripts to handle mundane, repetitive media tasks (conversions, trimming, captioning, etc.).",
+          "interactions": 10,
+          "views": 309,
+          "impressions": 309,
+          "published_at": "2026-02-19T19:46:07Z",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "entity_key": "devtoolsui",
+      "entity": "DevTools UI",
+      "confidence": 0.55,
+      "trend_score": 8.59,
+      "impressions": 308,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "groovy",
+        "javafx",
+        "and",
+        "developer-tools",
+        "devtools",
+        "productivity"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "github-1161012141-devtools-ui",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "Electricane/DevTools-UI",
+          "url": "https://github.com/Electricane/DevTools-UI",
+          "summary": "A multi-tool developer utility built with JavaFX and Groovy, designed for quick data manipulation, encoding, and visualization.",
+          "interactions": 4,
+          "views": 308,
+          "impressions": 308,
+          "published_at": "2026-02-20T15:41:59Z",
+          "confidence": 0.55
+        }
+      ]
+    },
+    {
+      "entity_key": "piraterf",
+      "entity": "PIrateRF",
+      "confidence": 0.47,
+      "trend_score": 8.17,
+      "impressions": 274,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "transmission",
+        "without",
+        "piraterf",
+        "raspberry",
+        "zero",
+        "mode"
+      ],
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "hn-47047559-piraterf",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: PIrateRF – Turn a $20 Raspberry Pi Zero into a 12-mode RF transmitter",
+          "url": "https://github.com/psyb0t/piraterf",
+          "summary": "I built a software-defined radio transmission platform that runs on a Raspberry Pi Zero W. It spawns its own WiFi hotspot and serves a web UI — connect from any device and you have a portable RF signal generator with 12 transmission modes: FM broadcasting with RDS, FT8, RTTY, FSK",
+          "interactions": 49,
+          "views": 290,
+          "impressions": 274,
+          "published_at": "2026-02-17T14:00:56+00:00",
+          "confidence": 0.47
+        }
+      ]
+    },
+    {
+      "entity_key": "desktidysticky",
+      "entity": "Desk Tidy Sticky",
+      "confidence": 0.45,
+      "trend_score": 8.08,
+      "impressions": 414,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "windows",
+        "desktop",
+        "hotkey",
+        "notes",
+        "sticky",
+        "dart"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "github-1142491633-desk-tidy-sticky",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "sqmw/desk_tidy_sticky",
+          "url": "https://github.com/sqmw/desk_tidy_sticky",
+          "summary": "Desk Tidy Sticky：Windows 极简便笺/待办，热键秒记·托盘常驻·钉在桌面 | Minimal sticky notes for Windows (hotkey, tray, pin to desktop)",
+          "interactions": 25,
+          "views": 414,
+          "impressions": 414,
+          "published_at": "2026-02-20T12:20:04Z",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "entity_key": "gitv",
+      "entity": "Gitv",
+      "confidence": 0.45,
+      "trend_score": 7.82,
+      "impressions": 375,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "github",
+        "issues",
+        "cli",
+        "productivity",
+        "tui",
+        "rust"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "github-1153530889-gitv",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "JayanAXHF/gitv",
+          "url": "https://github.com/JayanAXHF/gitv",
+          "summary": "gitv is a terminal-based viewer for GitHub issues. It allows you to view and manage your GitHub issues directly from the terminal.",
+          "interactions": 19,
+          "views": 375,
+          "impressions": 375,
+          "published_at": "2026-02-20T18:28:59Z",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "entity_key": "aisdkecosystem",
+      "entity": "AI SDK ECOSYSTEM",
+      "confidence": 0.45,
+      "trend_score": 7.75,
+      "impressions": 364,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "anthropic",
+        "autogen",
+        "crewai",
+        "haystack",
+        "langchain",
+        "langgraph"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "github-1160631174-ai-sdk-ecosystem",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "mk-knight23/AI-SDK-ECOSYSTEM",
+          "url": "https://github.com/mk-knight23/AI-SDK-ECOSYSTEM",
+          "summary": "Complete AI SDK ecosystem showcasing 10 production-ready SaaS products across LangChain, CrewAI, LangGraph, AutoGen, OpenAI, Vercel AI, Anthropic, Haystack, Semantic Kernel, and LlamaIndex frameworks",
+          "interactions": 19,
+          "views": 364,
+          "impressions": 364,
+          "published_at": "2026-02-20T07:17:46Z",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "entity_key": "missioncontrol",
+      "entity": "Mission Control",
+      "confidence": 0.45,
+      "trend_score": 7.75,
+      "impressions": 364,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "dashboard",
+        "kanban",
+        "moltbot",
+        "for",
+        "ai-assistant",
+        "clawdbot"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "github-1144455877-mission-control",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "rdsthomas/mission-control",
+          "url": "https://github.com/rdsthomas/mission-control",
+          "summary": "🎛️ Kanban dashboard for AI assistants. Chat-to-task. Visual project management for MoltBot.",
+          "interactions": 27,
+          "views": 364,
+          "impressions": 364,
+          "published_at": "2026-02-20T16:03:43Z",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "entity_key": "prbro",
+      "entity": "Pr Bro",
+      "confidence": 0.45,
+      "trend_score": 7.67,
+      "impressions": 352,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "tui",
+        "code-review",
+        "productivity",
+        "rust",
+        "app",
+        "prioritizes"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "github-1148125267-pr-bro",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "toniperic/pr-bro",
+          "url": "https://github.com/toniperic/pr-bro",
+          "summary": "🖥️ TUI app that prioritizes pull request reviews using weighted scoring — so you always know which PR to review next.",
+          "interactions": 21,
+          "views": 352,
+          "impressions": 352,
+          "published_at": "2026-02-20T16:59:02Z",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "entity_key": "ghosttype",
+      "entity": "GhostType",
+      "confidence": 0.45,
+      "trend_score": 7.32,
+      "impressions": 297,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "dictation",
+        "macos",
+        "productivity",
+        "swift",
+        "whisper",
+        "apple-silicon"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "github-1156765101-ghosttype",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "never13254/GhostType",
+          "url": "https://github.com/never13254/GhostType",
+          "summary": "macOS voice productivity app — built-in dictation, AI rewrite, and translation. Powered by local Whisper + LLM.",
+          "interactions": 13,
+          "views": 297,
+          "impressions": 297,
+          "published_at": "2026-02-20T03:05:58Z",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "entity_key": "wispah",
+      "entity": "Wispah",
+      "confidence": 0.45,
+      "trend_score": 7.25,
+      "impressions": 286,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "macos",
+        "swift",
+        "voice-to-text",
+        "open",
+        "source",
+        "acessibility"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "github-1161086935-wispah",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "idanyekutiel/wispah",
+          "url": "https://github.com/idanyekutiel/wispah",
+          "summary": "Free, open source voice-to-text for macOS. Press a hotkey, speak, and your words appear at the cursor — adapted to what's on screen.   Open source Wispr Flow alternative.",
+          "interactions": 3,
+          "views": 286,
+          "impressions": 286,
+          "published_at": "2026-02-20T19:46:32Z",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "entity_key": "ohmyclaude",
+      "entity": "Oh My Claude",
+      "confidence": 0.45,
+      "trend_score": 7.24,
+      "impressions": 285,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "claude",
+        "oh-my-zsh",
+        "plugins",
+        "statusline",
+        "themes",
+        "ai-coding"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "github-1160692151-oh-my-claude",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "npow/oh-my-claude",
+          "url": "https://github.com/npow/oh-my-claude",
+          "summary": "Like oh-my-zsh, but for Claude Code. An extensible statusline framework with themes and plugins.",
+          "interactions": 3,
+          "views": 285,
+          "impressions": 285,
+          "published_at": "2026-02-20T22:07:49Z",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "entity_key": "vanta",
+      "entity": "Vanta",
+      "confidence": 0.45,
+      "trend_score": 7.16,
+      "impressions": 273,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "rust",
+        "scriptable",
+        "svelte",
+        "wayland",
+        "command-palette",
+        "customizable"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "github-1160396778-vanta",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "Misiix9/Vanta",
+          "url": "https://github.com/Misiix9/Vanta",
+          "summary": "A hyper-fast, scriptable command palette for Wayland (Rust + Svelte).",
+          "interactions": 3,
+          "views": 273,
+          "impressions": 273,
+          "published_at": "2026-02-20T18:45:26Z",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "entity_key": "agentpassport",
+      "entity": "Agent Passport",
+      "confidence": 0.47,
+      "trend_score": 7.1,
+      "impressions": 158,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "agent",
+        "agents",
+        "identity",
+        "passport",
+        "github",
+        "verification"
+      ],
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "hn-47096131-agent-passport",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Agent Passport – OAuth-like identity verification for AI agents",
+          "url": "https://news.ycombinator.com/item?id=47096131",
+          "summary": "Hi HN, I built Agent Passport, an open-source identity verification layer for AI agents. Think \"Sign in with Google, but for Agents.\" The problem: AI agents are everywhere now (OpenClaw has 180K+ GitHub stars, Moltbook had 2.3M agent accounts), but there's no standard way for age",
+          "interactions": 10,
+          "views": 158,
+          "impressions": 158,
+          "published_at": "2026-02-21T00:39:37+00:00",
+          "confidence": 0.47
+        }
+      ]
+    },
+    {
+      "entity_key": "privateworkcontributionsmirror",
+      "entity": "Private Work Contributions Mirror",
+      "confidence": 0.45,
+      "trend_score": 7.1,
+      "impressions": 263,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "github",
+        "cli",
+        "contribution-graph",
+        "developer-tools",
+        "git",
+        "hacktoberfest"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "github-1146277146-private-work-contributions-mirror",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "yuvrajangadsingh/private-work-contributions-mirror",
+          "url": "https://github.com/yuvrajangadsingh/private-work-contributions-mirror",
+          "summary": "Mirror commit timestamps from private work repos to your GitHub contribution graph—without exposing any code",
+          "interactions": 4,
+          "views": 263,
+          "impressions": 263,
+          "published_at": "2026-02-20T19:31:49Z",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "entity_key": "dailycli",
+      "entity": "Daily Cli",
+      "confidence": 0.45,
+      "trend_score": 7.1,
+      "impressions": 263,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "cli",
+        "minimalist",
+        "python",
+        "scrum",
+        "for",
+        "agile"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "github-1142542332-daily-cli",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "creusvictor/daily-cli",
+          "url": "https://github.com/creusvictor/daily-cli",
+          "summary": "Minimalist CLI for engineers to log daily work. Fast capture, Markdown-based, and smart weekend logic for perfect Scrum standups.",
+          "interactions": 11,
+          "views": 263,
+          "impressions": 263,
+          "published_at": "2026-02-20T10:26:55Z",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "entity_key": "bond",
+      "entity": "BOND",
+      "confidence": 0.45,
+      "trend_score": 7.09,
+      "impressions": 262,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "ai-assistant",
+        "ai-tools",
+        "anthropic",
+        "claude",
+        "context-management",
+        "memory"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "github-1142809500-bond",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "moneyjarrod/BOND",
+          "url": "https://github.com/moneyjarrod/BOND",
+          "summary": "A governed runtime for persistent human-AI collaboration",
+          "interactions": 6,
+          "views": 262,
+          "impressions": 262,
+          "published_at": "2026-02-20T13:13:56Z",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "entity_key": "pinnotes",
+      "entity": "Pin Notes",
+      "confidence": 0.45,
+      "trend_score": 7.07,
+      "impressions": 258,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "typescript",
+        "windows",
+        "notes",
+        "always",
+        "always-on-top",
+        "desktop-app"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "github-1158806816-pin-notes",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "AleenaTahir1/Pin-Notes",
+          "url": "https://github.com/AleenaTahir1/Pin-Notes",
+          "summary": "Floating sticky notes for Windows — pin notes to your desktop, always on top, always within reach. Fast, local, no  account needed.",
+          "interactions": 3,
+          "views": 258,
+          "impressions": 258,
+          "published_at": "2026-02-20T16:41:25Z",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "entity_key": "groaskrelease",
+      "entity": "Groask Release",
+      "confidence": 0.45,
+      "trend_score": 7.06,
+      "impressions": 256,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "claude",
+        "launcher",
+        "macos",
+        "ai",
+        "chatgpt",
+        "deepseek"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "github-1151169566-groask-release",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "ThinkerJack/groask-release",
+          "url": "https://github.com/ThinkerJack/groask-release",
+          "summary": "GroAsk — Your Claude Code Control Center. Agent Dashboard + AI Launcher for macOS. Monitor every session, launch 10 AIs with ⌥Space.",
+          "interactions": 4,
+          "views": 256,
+          "impressions": 256,
+          "published_at": "2026-02-20T14:37:22Z",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "entity_key": "ccgate",
+      "entity": "Ccgate",
+      "confidence": 0.45,
+      "trend_score": 7.05,
+      "impressions": 255,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "claude",
+        "macos",
+        "ai",
+        "ai-tools",
+        "anthropic",
+        "claude-code"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "github-1152281676-ccgate",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "ai-fresh/ccgate",
+          "url": "https://github.com/ai-fresh/ccgate",
+          "summary": "macOS menu bar app for managing Claude Code sessions, permissions, and auto-accept hooks",
+          "interactions": 3,
+          "views": 255,
+          "impressions": 255,
+          "published_at": "2026-02-20T21:26:21Z",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "entity_key": "olcli",
+      "entity": "Olcli",
+      "confidence": 0.45,
+      "trend_score": 7.02,
+      "impressions": 251,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "cli",
+        "command-line",
+        "latex",
+        "overleaf",
+        "academic-writing",
+        "automation"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "github-1147798916-olcli",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "aloth/olcli",
+          "url": "https://github.com/aloth/olcli",
+          "summary": "Overleaf CLI — Command-line interface to sync, manage, and compile LaTeX projects from your terminal.",
+          "interactions": 11,
+          "views": 251,
+          "impressions": 251,
+          "published_at": "2026-02-19T20:58:06Z",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "entity_key": "gituncommit",
+      "entity": "Git uncommit",
+      "confidence": 0.47,
+      "trend_score": 6.98,
+      "impressions": 145,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "git",
+        "reset",
+        "uncommit",
+        "unpushed",
+        "committed",
+        "changes"
+      ],
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "hn-47097125-git-uncommit",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Git uncommit – reset unpushed, committed changes",
+          "url": "https://github.com/below43/git-uncommit",
+          "summary": "Equivalent of \"git reset --soft HEAD~1\". Got sick of googling it every time with my goldfish memory. Just a brew package at this point, but feel free to suggest alternatives.",
+          "interactions": 8,
+          "views": 145,
+          "impressions": 145,
+          "published_at": "2026-02-21T03:14:03+00:00",
+          "confidence": 0.47
+        }
+      ]
+    },
+    {
+      "entity_key": "aicouncil",
+      "entity": "AI Council",
+      "confidence": 0.47,
+      "trend_score": 6.92,
+      "impressions": 139,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "council",
+        "model",
+        "deliberation",
+        "different",
+        "models",
+        "zero"
+      ],
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "hn-47095909-ai-council",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: AI Council – multi-model deliberation that runs in the browser",
+          "url": "https://github.com/prijak/Ai-council",
+          "summary": "There's LLM Council and similar tools, but they use predefined model lineups. This one is different in a few ways that mattered to me: *Bring your own models.* Mix Ollama (local), OpenAI, Anthropic, Groq, Google — or any OpenAI-compatible endpoint — in whatever combination you wa",
+          "interactions": 7,
+          "views": 139,
+          "impressions": 139,
+          "published_at": "2026-02-21T00:11:34+00:00",
+          "confidence": 0.47
+        }
+      ]
+    },
+    {
+      "entity_key": "rolloutio",
+      "entity": "Rollout io",
+      "confidence": 0.45,
+      "trend_score": 6.9,
+      "impressions": 232,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "and",
+        "centralized",
+        "feature",
+        "configuration",
+        "management",
+        "configuration-management"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "github-1153816981-rollout-io",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "TechParaglide/Rollout.io",
+          "url": "https://github.com/TechParaglide/Rollout.io",
+          "summary": "Rollout.io – Remote Config is a centralized feature flag and configuration management system that allows applications to change behavior dynamically at runtime without redeployment. It supports controlled feature rollouts, instant rollback, and centralized configuration management, improving reliability and operational",
+          "interactions": 8,
+          "views": 232,
+          "impressions": 232,
+          "published_at": "2026-02-20T17:40:43Z",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "entity_key": "producthuntskills",
+      "entity": "Producthunt Skills",
+      "confidence": 0.45,
+      "trend_score": 6.82,
+      "impressions": 220,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "codex",
+        "cursor",
+        "marketing",
+        "skills",
+        "for",
+        "ai"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "github-1141314793-producthunt-skills",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "yoanbernabeu/producthunt-skills",
+          "url": "https://github.com/yoanbernabeu/producthunt-skills",
+          "summary": "🚀 31 AI Agent Skills for Product Hunt launches. Expert guidance for strategy, content, marketing, compliance & more. Works with Claude Code, Cursor, Codex, and 20+ AI agents.",
+          "interactions": 18,
+          "views": 220,
+          "impressions": 220,
+          "published_at": "2026-01-30T09:09:10Z",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "entity_key": "assay",
+      "entity": "Assay",
+      "confidence": 0.47,
+      "trend_score": 6.79,
+      "impressions": 125,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "assay",
+        "found",
+        "bugs",
+        "litellm",
+        "lobechat",
+        "via"
+      ],
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "hn-47097012-assay",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Assay – Found 250 bugs in LiteLLM, LobeChat via AI code verification",
+          "url": "https://github.com/gtsbahamas/hallucination-reversing-system",
+          "summary": "Hi HN, I'm Ty. I built Assay because I kept shipping bugs that my AI coding assistant hallucinated into existence. Three independent papers have proven that LLM hallucination is mathematically inevitable (Xu et al. 2024, Banerjee et al. 2024, Karpowicz 2025). You can't train it a",
+          "interactions": 4,
+          "views": 125,
+          "impressions": 125,
+          "published_at": "2026-02-21T02:52:43+00:00",
+          "confidence": 0.47
+        }
+      ]
+    },
+    {
+      "entity_key": "yamlschemarouter",
+      "entity": "YAML-schema-router",
+      "confidence": 0.47,
+      "trend_score": 6.77,
+      "impressions": 123,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "yaml-schema-router",
+        "content-based",
+        "schema",
+        "routing",
+        "yaml"
+      ],
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "hn-47096642-yaml-schema-router",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: YAML-schema-router – content-based schema routing for yaml ls",
+          "url": "https://github.com/traiproject/yaml-schema-router",
+          "summary": "yaml-language-server is great, but outside VS Code schema association is mostly glob-based, which quickly becomes ambiguous (multiple schemas match) or pushes you into modelines. yaml-schema-router is a lightweight stdio proxy that sits between any LSP client and yaml-language-se",
+          "interactions": 4,
+          "views": 123,
+          "impressions": 123,
+          "published_at": "2026-02-21T01:50:46+00:00",
+          "confidence": 0.47
+        }
+      ]
+    },
+    {
+      "entity_key": "typstme",
+      "entity": "TypstMe",
+      "confidence": 0.47,
+      "trend_score": 6.77,
+      "impressions": 123,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "typstme",
+        "typst",
+        "wasm",
+        "monthly",
+        "subscriptions",
+        "ats"
+      ],
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "hn-47096632-typstme",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: TypstMe – Build ATS-proof resumes using Typst and WASM",
+          "url": "https://news.ycombinator.com/item?id=47096632",
+          "summary": "Hi HN, I built TypstMe because I was frustrated with the current state of resume builders. Most of them are either overpriced monthly subscriptions or tools like Canva that produce absolute-positioned PDFs which ATS (Applicant Tracking Systems) often fail to parse correctly. The ",
+          "interactions": 4,
+          "views": 123,
+          "impressions": 123,
+          "published_at": "2026-02-21T01:49:16+00:00",
+          "confidence": 0.47
+        }
+      ]
+    },
+    {
+      "entity_key": "murl",
+      "entity": "Murl",
+      "confidence": 0.47,
+      "trend_score": 6.77,
+      "impressions": 123,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "mcp",
+        "murl",
+        "tools",
+        "https",
+        "com",
+        "servers"
+      ],
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "hn-47095935-murl",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Murl – Curl for MCP Servers",
+          "url": "https://github.com/turlockmike/murl",
+          "summary": "I built murl because interacting with MCP (Model Context Protocol) servers from the command line was way more painful than it needed to be. MCP uses JSON-RPC 2.0 over HTTP, so every request means hand-crafting payloads with method names, params objects, and id fields. I wanted so",
+          "interactions": 4,
+          "views": 123,
+          "impressions": 123,
+          "published_at": "2026-02-21T00:15:24+00:00",
+          "confidence": 0.47
+        }
+      ]
+    },
+    {
+      "entity_key": "velo",
+      "entity": "Velo",
+      "confidence": 0.47,
+      "trend_score": 6.74,
+      "impressions": 119,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "velo",
+        "tauri",
+        "search",
+        "inbox",
+        "email",
+        "client"
+      ],
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "hn-47096524-velo",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Velo – Open-source, keyboard-first email client in Tauri and Rust",
+          "url": "https://news.ycombinator.com/item?id=47096524",
+          "summary": "I built Velo because I wanted Superhuman's speed and keyboard workflow without the $30/month price tag or sending all my data through someone else's servers. Velo is a local-first desktop email client. Your emails live in a local SQLite database - no middleman servers, no cloud s",
+          "interactions": 3,
+          "views": 119,
+          "impressions": 119,
+          "published_at": "2026-02-21T01:34:10+00:00",
+          "confidence": 0.47
+        }
+      ]
+    },
+    {
+      "entity_key": "fixmymic",
+      "entity": "Fix-my-mic",
+      "confidence": 0.47,
+      "trend_score": 6.73,
+      "impressions": 118,
+      "mention_count_1h": 1,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "airpods",
+        "mic",
+        "mac",
+        "fix-my-mic",
+        "keeps",
+        "stop"
+      ],
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "hn-47097799-fix-my-mic",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Fix-my-mic – stop macOS from switching to AirPods mic every connection",
+          "url": "https://github.com/yigitkonur/cli-disablemic",
+          "summary": "airpods connect to mac → mic hijacked automatically → you sound like a tin can. mac has a 3-mic built-in array made for calls. airpods doesn't come close. this runs in the background, keeps airpods as output, keeps mac as input. native swift. ~10mb ram. zero cpu. ``` npx fix-my-m",
+          "interactions": 2,
+          "views": 118,
+          "impressions": 118,
+          "published_at": "2026-02-21T05:34:53+00:00",
+          "confidence": 0.47
+        }
+      ]
+    },
+    {
+      "entity_key": "crtx",
+      "entity": "CRTX",
+      "confidence": 0.47,
+      "trend_score": 6.73,
+      "impressions": 118,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "dev",
+        "time",
+        "crtx",
+        "code",
+        "different",
+        "tests"
+      ],
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "hn-47096764-crtx",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: CRTX – AI code gen that tests and fixes its own output (OSS)",
+          "url": "https://github.com/CRTXAI/CRTX",
+          "summary": "We built an open-source CLI that generates code, runs tests, fixes failures, and gets an independent AI review — all before you see the output. We started with a multi-model pipeline where different AI models handled different stages (architect, implement, refactor, verify). We a",
+          "interactions": 3,
+          "views": 118,
+          "impressions": 118,
+          "published_at": "2026-02-21T02:10:03+00:00",
+          "confidence": 0.47
+        }
+      ]
+    },
+    {
+      "entity_key": "hnstories",
+      "entity": "HN-Stories",
+      "confidence": 0.47,
+      "trend_score": 6.72,
+      "impressions": 117,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "hn-stories",
+        "rust",
+        "cli",
+        "browse",
+        "open",
+        "stories"
+      ],
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "hn-47096129-hn-stories",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: HN-Stories – Rust CLI to browse and open HN stories from the terminal",
+          "url": "https://crates.io/crates/hn-stories",
+          "summary": "No summary text available.",
+          "interactions": 3,
+          "views": 117,
+          "impressions": 117,
+          "published_at": "2026-02-21T00:39:23+00:00",
+          "confidence": 0.47
+        }
+      ]
+    },
+    {
+      "entity_key": "resilientopenclawbrowserrelay",
+      "entity": "Resilient OpenClaw Browser Relay",
+      "confidence": 0.47,
+      "trend_score": 6.67,
+      "impressions": 112,
+      "mention_count_1h": 1,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "resilient",
+        "openclaw",
+        "browser",
+        "relay",
+        "survives",
+        "drops"
+      ],
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "hn-47097692-resilient-openclaw-browser-relay",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Resilient OpenClaw Browser Relay – Survives WS Drops and MV3 Restarts",
+          "url": "https://github.com/Unayung/openclaw-browser-relay",
+          "summary": "No summary text available.",
+          "interactions": 1,
+          "views": 112,
+          "impressions": 112,
+          "published_at": "2026-02-21T05:07:16+00:00",
+          "confidence": 0.47
+        }
+      ]
+    },
+    {
+      "entity_key": "mukokoweather",
+      "entity": "Mukoko weather",
+      "confidence": 0.47,
+      "trend_score": 6.67,
+      "impressions": 112,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "weather",
+        "zimbabwe",
+        "data",
+        "mukoko",
+        "global",
+        "approach"
+      ],
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "hn-47097611-mukoko-weather",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Mukoko weather – AI-powered weather intelligence built for Zimbabwe",
+          "url": "https://weather.mukoko.com/harare",
+          "summary": "Zimbabwe has 90+ towns and cities, a population of 15+ million, significant agricultural and mining sectors — and almost no weather infrastructure built specifically for it. Global apps cover Harare and Bulawayo at best, and the AI summaries they generate read like they were writ",
+          "interactions": 1,
+          "views": 112,
+          "impressions": 112,
+          "published_at": "2026-02-21T04:51:00+00:00",
+          "confidence": 0.47
+        }
+      ]
+    },
+    {
+      "entity_key": "wp2txt",
+      "entity": "WP2TXT",
+      "confidence": 0.47,
+      "trend_score": 6.67,
+      "impressions": 112,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "wikipedia",
+        "dump",
+        "text",
+        "category",
+        "extract",
+        "wp2txt"
+      ],
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "hn-47097593-wp2txt",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: WP2TXT – Wikipedia dump text extractor with category/section filtering",
+          "url": "https://github.com/yohasebe/wp2txt",
+          "summary": "WP2TXT is a command-line tool that extracts plain text from Wikipedia dump files. I originally built it in 2006 for corpus linguistics research and have maintained it since. The latest version (2.1) was largely rewritten with features for selective extraction: - Auto-download dum",
+          "interactions": 1,
+          "views": 112,
+          "impressions": 112,
+          "published_at": "2026-02-21T04:46:34+00:00",
+          "confidence": 0.47
+        }
+      ]
+    },
+    {
+      "entity_key": "aicodereviewagent",
+      "entity": "AI Code Review Agent",
+      "confidence": 0.47,
+      "trend_score": 6.67,
+      "impressions": 112,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "code",
+        "agent",
+        "reviews",
+        "google",
+        "adk",
+        "gemini"
+      ],
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "hn-47097588-ai-code-review-agent",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: AI Code Review Agent – Automated PR Reviews with Google ADK and Gemini",
+          "url": "https://github.com/mkantwala/AI-Code-Review-Agent",
+          "summary": "Production-ready AI agent that reviews GitHub pull requests using Google's ADK and Gemini 2.5 Flash. Analyzes code for security, performance, and correctness issues. Deploys to Cloud Run, posts structured feedback as PR comments.",
+          "interactions": 1,
+          "views": 112,
+          "impressions": 112,
+          "published_at": "2026-02-21T04:46:23+00:00",
+          "confidence": 0.47
+        }
+      ]
+    },
+    {
+      "entity_key": "nf1",
+      "entity": "NF-1",
+      "confidence": 0.47,
+      "trend_score": 6.67,
+      "impressions": 112,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "nf-1",
+        "resource-zero",
+        "programming",
+        "language",
+        "low-end",
+        "hardware"
+      ],
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "hn-47097570-nf-1",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: NF-1 – A resource-zero programming language for low-end hardware",
+          "url": "https://github.com/sonamsingh25437-ship-it/NF-1-PROGRAMMING-LANGUAGE",
+          "summary": "No summary text available.",
+          "interactions": 1,
+          "views": 112,
+          "impressions": 112,
+          "published_at": "2026-02-21T04:42:27+00:00",
+          "confidence": 0.47
+        }
+      ]
+    },
+    {
+      "entity_key": "watchturm",
+      "entity": "WatchTurm",
+      "confidence": 0.47,
+      "trend_score": 6.67,
+      "impressions": 112,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "watchturm",
+        "visibility",
+        "open-source",
+        "release",
+        "layer",
+        "work"
+      ],
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "hn-47096201-watchturm",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: WatchTurm – an open-source release visibility layer I use in my work",
+          "url": "https://news.ycombinator.com/item?id=47096201",
+          "summary": "I built this to solve a recurring problem in multi-repo, multi-environment setups: it’s surprisingly hard to answer “what is actually running where?” without checking several systems. WatchTurm is an open-source release visibility layer. It aggregates metadata from sources like G",
+          "interactions": 2,
+          "views": 112,
+          "impressions": 112,
+          "published_at": "2026-02-21T00:49:09+00:00",
+          "confidence": 0.47
+        }
+      ]
+    },
+    {
+      "entity_key": "claudechromeparallel",
+      "entity": "Claude Chrome Parallel",
+      "confidence": 0.47,
+      "trend_score": 6.66,
+      "impressions": 111,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "chrome",
+        "parallel",
+        "claude",
+        "ultrafast",
+        "browser",
+        "mcp"
+      ],
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "hn-47097478-claude-chrome-parallel",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Claude Chrome Parallel – Ultrafast Parallel Browser MCP for Chrome",
+          "url": "https://github.com/shaun0927/claude-chrome-parallel",
+          "summary": "No summary text available.",
+          "interactions": 1,
+          "views": 111,
+          "impressions": 111,
+          "published_at": "2026-02-21T04:24:02+00:00",
+          "confidence": 0.47
+        }
+      ]
+    },
+    {
+      "entity_key": "openalinuxcontainer",
+      "entity": "Open a Linux Container",
+      "confidence": 0.47,
+      "trend_score": 6.66,
+      "impressions": 111,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "open",
+        "container",
+        "ttyd",
+        "linux",
+        "mac",
+        "http"
+      ],
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "hn-47095810-open-a-linux-container",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Open a Linux Container (for Mac)",
+          "url": "https://news.ycombinator.com/item?id=47095810",
+          "summary": "open http://localhost:7681 && container run -it -p 7681:7681 --entrypoint /usr/bin/ttyd tsl0922/ttyd -W bash Been playing around with Apple containers. Fast! (I like to keep all my work in browser tabs)",
+          "interactions": 2,
+          "views": 111,
+          "impressions": 111,
+          "published_at": "2026-02-21T00:02:14+00:00",
+          "confidence": 0.47
+        }
+      ]
+    },
+    {
+      "entity_key": "localaidocumentintelligence",
+      "entity": "Local AI document intelligence",
+      "confidence": 0.47,
+      "trend_score": 6.66,
+      "impressions": 110,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "document",
+        "local",
+        "cloud",
+        "runs",
+        "machine",
+        "documents"
+      ],
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "hn-47095658-local-ai-document-intelligence",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Local AI document intelligence – no cloud, runs on your machine",
+          "url": "https://unidocverse.com",
+          "summary": "I got tired of uploading sensitive documents to cloud AI services, so I built UniDocVerse — a fully local AI document analysis platform. Everything runs on your machine: - Local LLM via Ollama (Mistral 7B) - PostgreSQL + pgvector for semantic search - Tesseract OCR for scanned do",
+          "interactions": 2,
+          "views": 110,
+          "impressions": 110,
+          "published_at": "2026-02-20T23:41:55+00:00",
+          "confidence": 0.47
+        }
+      ]
+    },
+    {
+      "entity_key": "routype",
+      "entity": "Routype",
+      "confidence": 0.47,
+      "trend_score": 6.61,
+      "impressions": 105,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "typed",
+        "user",
+        "rest",
+        "client",
+        "existing",
+        "routes"
+      ],
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "hn-47096063-routype",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Routype – typed REST client in ~200 lines, no codegen",
+          "url": "https://github.com/jbingen/routype",
+          "summary": "I wanted a typed client for existing REST endpoints without adopting tRPC's architecture or maintaining OpenAPI schemas. Most solutions either replace your routing layer or add a build step. This just wires TypeScript types to your existing routes. You describe your routes once w",
+          "interactions": 1,
+          "views": 105,
+          "impressions": 105,
+          "published_at": "2026-02-21T00:29:41+00:00",
+          "confidence": 0.47
+        }
+      ]
+    },
+    {
+      "entity_key": "flaskit",
+      "entity": "Flaskit",
+      "confidence": 0.45,
+      "trend_score": 6.53,
+      "impressions": 175,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "flask",
+        "cli",
+        "cross-platform",
+        "mvp",
+        "python",
+        "saas"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "github-1159648358-flaskit",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "MaswiliK/flaskit",
+          "url": "https://github.com/MaswiliK/flaskit",
+          "summary": "🚀 FlaskIt — Premium Flask Project Generator CLI with MVP & SAAS templates, Rich progress bars, and cross-platform support. Just flask it",
+          "interactions": 13,
+          "views": 175,
+          "impressions": 175,
+          "published_at": "2026-02-19T08:37:15Z",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "entity_key": "myuserjourney",
+      "entity": "Myuserjourney",
+      "confidence": 0.45,
+      "trend_score": 6.42,
+      "impressions": 157,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "analytics",
+        "gdpr",
+        "privacy-first",
+        "self-hosted",
+        "typescript",
+        "ai"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "github-1157248839-myuserjourney",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "RakshakIT/myuserjourney",
+          "url": "https://github.com/RakshakIT/myuserjourney",
+          "summary": "AI-powered privacy-first digital analytics platform with predictive insights, cookieless tracking, and full GDPR/PECR compliance. Self-hosted alternative to Google Analytics.",
+          "interactions": 6,
+          "views": 157,
+          "impressions": 157,
+          "published_at": "2026-02-18T11:00:27Z",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "entity_key": "claudesaasevalskills",
+      "entity": "Claude Saas Eval Skills",
+      "confidence": 0.45,
+      "trend_score": 6.38,
+      "impressions": 152,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "saas",
+        "claude-code",
+        "claude-skills",
+        "indie-hacker",
+        "lifestyle-business",
+        "niche-research"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "github-1141398507-claude-saas-eval-skills",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "kirillpolevoy/claude-saas-eval-skills",
+          "url": "https://github.com/kirillpolevoy/claude-saas-eval-skills",
+          "summary": "Claude Code skills for evaluating niche SaaS opportunities through a lifestyle business lens",
+          "interactions": 8,
+          "views": 152,
+          "impressions": 152,
+          "published_at": "2026-01-26T20:53:49Z",
+          "confidence": 0.45
+        }
+      ]
+    }
+  ]
+}

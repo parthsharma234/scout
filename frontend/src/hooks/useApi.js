@@ -1,18 +1,44 @@
 import { useState, useEffect, useCallback } from 'react'
 
-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+const rawApiBase = String(import.meta.env.VITE_API_URL || '').trim()
+const API_BASE = rawApiBase ? rawApiBase.replace(/\/+$/, '') : ''
+
+function buildApiUrl(path) {
+  if (!path) return API_BASE || '/'
+  if (/^https?:\/\//i.test(path)) return path
+  const normalizedPath = path.startsWith('/') ? path : `/${path}`
+  return `${API_BASE}${normalizedPath}`
+}
 
 /**
  * Generic fetch wrapper with loading / error state.
  */
 async function apiFetch(path, options = {}) {
-  const res = await fetch(`${API_BASE}${path}`, {
-    headers: { 'Content-Type': 'application/json', ...options.headers },
-    ...options,
-  })
+  let res
+  try {
+    res = await fetch(buildApiUrl(path), {
+      headers: { 'Content-Type': 'application/json', ...options.headers },
+      ...options,
+    })
+  } catch {
+    throw new Error('API unreachable. Start backend/search_api.py on port 8000.')
+  }
+
   if (!res.ok) {
     const text = await res.text()
-    throw new Error(`${res.status} ${res.statusText}: ${text}`)
+    const lower = String(text || '').toLowerCase()
+    const isProxyConnectionError =
+      res.status >= 500 &&
+      (lower.includes('error occurred while trying to proxy') ||
+        lower.includes('econnrefused') ||
+        lower.includes('socket hang up') ||
+        lower.includes('proxy error'))
+
+    if (isProxyConnectionError) {
+      throw new Error('API unreachable. Start backend/search_api.py on port 8000.')
+    }
+
+    throw new Error(`${res.status} ${res.statusText}${text ? `: ${text}` : ''}`)
   }
   return res.json()
 }
@@ -44,7 +70,6 @@ export function useTrends({ enabled = true, pollInterval = 10000 } = {}) {
       setTrends(Array.isArray(data) ? data : (data.entities ?? []))
     } catch (err) {
       setError(err)
-      console.error('[Scout API] /api/trends/ failed:', err)
     } finally {
       setLoading(false)
     }
@@ -122,4 +147,35 @@ export function useVelocityHistory(window = '1h') {
   useEffect(() => { fetch() }, [fetch])
 
   return { data, entities, loading, error }
+}
+
+/**
+ * searchNiche
+ *
+ * Calls the niche prompt endpoint:
+ * POST /api/niche-search
+ */
+export async function searchNiche({
+  query,
+  limit = 12,
+  minScore = 10,
+  refresh = '',
+  rebuildIndex = false,
+  useNemotron = true,
+} = {}) {
+  if (!query || !String(query).trim()) {
+    throw new Error('query is required')
+  }
+
+  return apiFetch('/api/niche-search', {
+    method: 'POST',
+    body: JSON.stringify({
+      query: String(query).trim(),
+      limit,
+      min_score: minScore,
+      refresh,
+      rebuild_index: rebuildIndex,
+      use_nemotron: useNemotron,
+    }),
+  })
 }

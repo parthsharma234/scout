@@ -1,6 +1,18 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 
-const WS_URL = import.meta.env.VITE_WS_URL || 'ws://localhost:8000/ws/trends/'
+function resolveWsUrl() {
+  const explicit = String(import.meta.env.VITE_WS_URL || '').trim()
+  if (explicit) return explicit
+
+  const wsEnabled = String(import.meta.env.VITE_ENABLE_WS || '').trim().toLowerCase()
+  const shouldEnable = wsEnabled === '1' || wsEnabled === 'true'
+  if (!shouldEnable || typeof window === 'undefined') return ''
+
+  const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:'
+  return `${protocol}//${window.location.host}/ws/trends/`
+}
+
+const WS_URL = resolveWsUrl()
 const RECONNECT_DELAY_MS = 3000
 const MAX_RECONNECT_ATTEMPTS = 10
 
@@ -36,6 +48,7 @@ export function useWebSocket() {
   const alertIdCounter     = useRef(0)
 
   const connect = useCallback(() => {
+    if (!WS_URL) return
     if (wsRef.current?.readyState === WebSocket.OPEN) return
 
     const ws = new WebSocket(WS_URL)
@@ -98,8 +111,10 @@ export function useWebSocket() {
       }
     }
 
-    ws.onerror = (err) => {
-      console.error('[Scout WS] Error:', err)
+    ws.onerror = () => {
+      // Server may not expose a WS endpoint in REST-only mode.
+      // Keep this low-noise to avoid spamming developer console.
+      console.debug('[Scout WS] Socket error, falling back to REST polling.')
     }
 
     ws.onclose = () => {

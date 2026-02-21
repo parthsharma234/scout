@@ -1,0 +1,85 @@
+{
+  "_meta": {
+    "description": "Latest niche query results from Scout tool pipeline",
+    "query": "weather"
+  },
+  "result_count": 2,
+  "results": [
+    {
+      "entity_key": "mukokoweather",
+      "entity": "Mukoko weather",
+      "final_score": 69.867,
+      "lexical_score": 49.734,
+      "relevance_score": 90.0,
+      "entity_type": "startup_company",
+      "include": true,
+      "reason": "Direct mention of 'weather' in entity name, headline describes AI-powered weather intelligence product, and URL indicates a company/product venture.",
+      "sources": [
+        "hackernews"
+      ],
+      "top_keywords": [
+        "weather",
+        "zimbabwe",
+        "data",
+        "mukoko",
+        "global",
+        "approach"
+      ],
+      "trend_score": 6.67,
+      "confidence": 0.47,
+      "top_nodes": [
+        {
+          "id": "hn-47097611-mukoko-weather",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Mukoko weather – AI-powered weather intelligence built for Zimbabwe",
+          "url": "https://weather.mukoko.com/harare",
+          "summary": "Zimbabwe has 90+ towns and cities, a population of 15+ million, significant agricultural and mining sectors — and almost no weather infrastructure built specifically for it. Global apps cover Harare and Bulawayo at best, and the AI summaries they generate read like they were writ",
+          "interactions": 1,
+          "views": 112,
+          "impressions": 112,
+          "published_at": "2026-02-21T04:51:00+00:00",
+          "confidence": 0.47
+        }
+      ]
+    },
+    {
+      "entity_key": "mukoko",
+      "entity": "Mukoko",
+      "final_score": 55.209,
+      "lexical_score": 25.418,
+      "relevance_score": 85.0,
+      "entity_type": "startup_company",
+      "include": true,
+      "reason": "Entity is the parent company of the weather product (Mukoko weather), with shared headlines and URLs signaling a clear company venture in the weather niche.",
+      "sources": [
+        "hackernews"
+      ],
+      "top_keywords": [
+        "weather",
+        "zimbabwe",
+        "data",
+        "mukoko",
+        "global",
+        "approach"
+      ],
+      "trend_score": 11.47,
+      "confidence": 0.87,
+      "top_nodes": [
+        {
+          "id": "hn-47097611-mukoko",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Mukoko weather – AI-powered weather intelligence built for Zimbabwe",
+          "url": "https://weather.mukoko.com/harare",
+          "summary": "Zimbabwe has 90+ towns and cities, a population of 15+ million, significant agricultural and mining sectors — and almost no weather infrastructure built specifically for it. Global apps cover Harare and Bulawayo at best, and the AI summaries they generate read like they were writ",
+          "interactions": 1,
+          "views": 112,
+          "impressions": 112,
+          "published_at": "2026-02-21T04:51:00+00:00",
+          "confidence": 0.87
+        }
+      ]
+    }
+  ]
+}

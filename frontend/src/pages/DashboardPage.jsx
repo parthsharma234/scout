@@ -5,7 +5,7 @@ import ClusterMap from '../components/ClusterMap'
 import FundingTimeline from '../components/FundingTimeline'
 import TrendLeaderboard from '../components/TrendLeaderboard'
 import { useWebSocket } from '../hooks/useWebSocket'
-import { useTrends } from '../hooks/useApi'
+import { searchNiche, useTrends } from '../hooks/useApi'
 import { useMockData } from '../hooks/useMockData'
 import './DashboardPage.css'
 
@@ -22,6 +22,11 @@ function normalizeEntityKey(value = '') {
 export default function DashboardPage() {
   const [drilledEntity, setDrilledEntity] = useState(null)
   const [secondaryTab, setSecondaryTab] = useState(null)
+  const [nicheQuery, setNicheQuery] = useState('')
+  const [nicheLoading, setNicheLoading] = useState(false)
+  const [nicheError, setNicheError] = useState('')
+  const [nicheResults, setNicheResults] = useState([])
+  const [nicheUsedNemotron, setNicheUsedNemotron] = useState(false)
 
   const {
     connected: wsConnected,
@@ -51,13 +56,29 @@ export default function DashboardPage() {
     if (!drilledEntity) return []
     const drilledKey = normalizeEntityKey(drilledEntity)
     const fromData = mock.sourceNodes.filter((node) => normalizeEntityKey(node.entity) === drilledKey)
+    const fromNiche = nicheResults
+      .find((row) => normalizeEntityKey(row.entity) === drilledKey)
+      ?.top_nodes ?? []
 
-    const deduped = Array.from(new Map(fromData.map((node) => [node.id, node])).values())
+    const normalizedNicheNodes = fromNiche.map((node, idx) => ({
+      id: node.id || `niche-${drilledKey}-${idx}`,
+      entity: drilledEntity,
+      source_id: node.source_id || 'unknown',
+      source_name: node.source_name || node.source_id || 'Source',
+      headline: node.headline || 'Untitled source',
+      url: node.url || '',
+      summary: node.summary || 'No summary available.',
+      interactions: Number(node.interactions || 0),
+      views: Number(node.views || 0),
+    }))
+
+    const combined = [...fromData, ...normalizedNicheNodes]
+    const deduped = Array.from(new Map(combined.map((node) => [node.id, node])).values())
 
     return deduped
       .sort((a, b) => scoreNode(b) - scoreNode(a))
       .slice(0, 20)
-  }, [mock.sourceNodes, drilledEntity])
+  }, [mock.sourceNodes, nicheResults, drilledEntity])
 
   const selectedTrend = trends.find((item) => normalizeEntityKey(item.entity) === normalizeEntityKey(drilledEntity))
   const isLoading = trendsLoading && !connected && mock.loading
@@ -70,6 +91,32 @@ export default function DashboardPage() {
   function handleBack() {
     setDrilledEntity(null)
     setSecondaryTab(null)
+  }
+
+  async function handleRunNicheSearch() {
+    if (!nicheQuery.trim() || nicheLoading) return
+    setNicheLoading(true)
+    setNicheError('')
+    try {
+      const payload = await searchNiche({
+        query: nicheQuery.trim(),
+        limit: 10,
+        useNemotron: true,
+      })
+      setNicheResults(payload.results ?? [])
+      setNicheUsedNemotron(Boolean(payload.used_nemotron))
+    } catch (error) {
+      const rawMessage = String(error?.message || '').toLowerCase()
+      if (rawMessage.includes('failed to fetch')) {
+        setNicheError('API offline. Start backend/search_api.py on port 8000.')
+      } else {
+        setNicheError(error?.message || 'Search failed.')
+      }
+      setNicheResults([])
+      setNicheUsedNemotron(false)
+    } finally {
+      setNicheLoading(false)
+    }
   }
 
   const showCluster = !drilledEntity && !secondaryTab
@@ -131,44 +178,99 @@ export default function DashboardPage() {
       </nav>
 
       <main className="db-main">
-        {showCluster && (
-          <div className="db-view">
-            <ClusterMap
-              trends={trends}
-              loading={isLoading}
-              selectedEntity={drilledEntity}
-              onSelectEntity={handleSelectEntity}
-            />
-          </div>
-        )}
+        <div className="db-canvas">
+          {showCluster && (
+            <div className="db-view">
+              <ClusterMap
+                trends={trends}
+                loading={isLoading}
+                selectedEntity={drilledEntity}
+                onSelectEntity={handleSelectEntity}
+              />
+            </div>
+          )}
 
-        {showSourceWeb && (
-          <div className="db-view">
-            <NodeGraph
-              company={drilledEntity}
-              nodes={sourceNodesForEntity}
-              loading={isLoading}
-            />
-          </div>
-        )}
+          {showSourceWeb && (
+            <div className="db-view">
+              <NodeGraph
+                company={drilledEntity}
+                nodes={sourceNodesForEntity}
+                loading={isLoading}
+              />
+            </div>
+          )}
 
-        {showLeaderboard && (
-          <div className="db-view">
-            <TrendLeaderboard
-              entities={trends}
-              loading={isLoading}
-              selectedEntity={drilledEntity}
-              onSelectEntity={handleSelectEntity}
-              mode="table"
-            />
-          </div>
-        )}
+          {showLeaderboard && (
+            <div className="db-view">
+              <TrendLeaderboard
+                entities={trends}
+                loading={isLoading}
+                selectedEntity={drilledEntity}
+                onSelectEntity={handleSelectEntity}
+                mode="table"
+              />
+            </div>
+          )}
 
-        {showTimeline && (
-          <div className="db-view">
-            <FundingTimeline data={mock.fundingData} loading={isLoading} />
-          </div>
-        )}
+          {showTimeline && (
+            <div className="db-view">
+              <FundingTimeline data={mock.fundingData} loading={isLoading} />
+            </div>
+          )}
+        </div>
+
+        <aside className="db-sidepanel">
+          <section className="db-search-panel">
+            <header className="db-search-head">
+              <span className="section-label">Niche Query</span>
+              {nicheUsedNemotron && <span className="db-search-chip mono">Nemotron</span>}
+            </header>
+
+            <div className="db-search-form">
+              <input
+                className="db-search-input"
+                type="text"
+                placeholder='Try: "weather intelligence startup"'
+                value={nicheQuery}
+                onChange={(event) => setNicheQuery(event.target.value)}
+                onKeyDown={(event) => {
+                  if (event.key === 'Enter') handleRunNicheSearch()
+                }}
+              />
+              <button
+                type="button"
+                className="db-search-btn"
+                onClick={handleRunNicheSearch}
+                disabled={nicheLoading || !nicheQuery.trim()}
+              >
+                {nicheLoading ? 'Searching...' : 'Search'}
+              </button>
+            </div>
+
+            {nicheError && <p className="db-search-error">{nicheError}</p>}
+
+            {!nicheError && nicheResults.length === 0 && (
+              <p className="db-search-empty">Run a query to rank startups by niche.</p>
+            )}
+
+            {nicheResults.length > 0 && (
+              <div className="db-search-results">
+                {nicheResults.map((result, index) => (
+                  <button
+                    key={result.entity_key || `${result.entity}-${index}`}
+                    type="button"
+                    className="db-search-row"
+                    onClick={() => handleSelectEntity(result.entity)}
+                  >
+                    <span className="db-search-rank mono">{String(index + 1).padStart(2, '0')}</span>
+                    <span className="db-search-name">{result.entity}</span>
+                    <span className="db-search-score mono">{Number(result.final_score || 0).toFixed(1)}</span>
+                  </button>
+                ))}
+              </div>
+            )}
+          </section>
+        </aside>
       </main>
 
       <footer className="db-statusbar">
