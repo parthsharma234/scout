@@ -1,0 +1,9 @@
+{
+  "_meta": {
+    "description": "Source node records for Product Hunt. Each node represents one product post mapped to an entity.",
+    "source": "producthunt",
+    "schema_version": "1.0"
+  },
+  "generated_at": "",
+  "source_nodes": []
+}

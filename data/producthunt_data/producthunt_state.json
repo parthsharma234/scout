@@ -1,0 +1,13 @@
+{
+  "_meta": {
+    "description": "Pipeline run metadata for Product Hunt transform job.",
+    "source": "producthunt",
+    "schema_version": "1.0"
+  },
+  "last_run_started_at": "",
+  "last_run_finished_at": "",
+  "input_post_count": 0,
+  "posts_written": 0,
+  "entities_written": 0,
+  "nodes_written": 0
+}

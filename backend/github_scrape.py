@@ -8,7 +8,7 @@ Usage:
   python github_scrape.py --skip-release-lookup
 
 Environment variables required:
-- GITHUB_TOKEN (fine-grained or classic PAT with public repo read)
+- GHUB (preferred) or GITHUB_TOKEN (fine-grained or classic PAT with public repo read)
 """
 
 from __future__ import annotations
@@ -385,7 +385,7 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> None:
     args = parse_args()
-    token = get_env("GITHUB_TOKEN", required=True)
+    token = get_env("GHUB", required=False) or get_env("GITHUB_TOKEN", required=True)
 
     created_filter = ""
     if args.incremental:

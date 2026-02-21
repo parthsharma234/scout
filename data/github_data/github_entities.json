@@ -4,7 +4,7 @@
     "source": "github",
     "schema_version": "1.0"
   },
-  "generated_at": "2026-02-21T06:27:19.200872+00:00",
+  "generated_at": "2026-02-21T15:28:23.753029+00:00",
   "input_repo_count": 485,
   "repo_count": 37,
   "entity_count": 37,
@@ -12,7 +12,7 @@
     {
       "entity": "Rtk Ai",
       "confidence": 0.9,
-      "impressions": 13643,
+      "impressions": 13625,
       "repos": 1,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -44,7 +44,7 @@
     {
       "entity": "Daymonio",
       "confidence": 0.9,
-      "impressions": 3381,
+      "impressions": 3363,
       "repos": 1,
       "mention_count_1h": 0,
       "mention_count_24h": 0,
@@ -69,17 +69,17 @@
       ],
       "first_seen_at": "2026-02-20T22:28:16Z",
       "last_seen_at": "2026-02-20T22:28:16Z",
-      "trend_score": 44.35,
+      "trend_score": 44.28,
       "velocity_delta_pct": 0.0,
       "spike_detected": false
     },
     {
       "entity": "Openbootdotdev",
       "confidence": 0.9,
-      "impressions": 2465,
+      "impressions": 2447,
       "repos": 1,
       "mention_count_1h": 0,
-      "mention_count_24h": 1,
+      "mention_count_24h": 0,
       "sources": [
         "github"
       ],
@@ -101,7 +101,7 @@
       ],
       "first_seen_at": "2026-02-20T14:52:18Z",
       "last_seen_at": "2026-02-20T14:52:18Z",
-      "trend_score": 39.65,
+      "trend_score": 39.57,
       "velocity_delta_pct": 0.0,
       "spike_detected": false
     },
@@ -133,14 +133,14 @@
       ],
       "first_seen_at": "2026-02-20T15:27:07Z",
       "last_seen_at": "2026-02-20T15:27:07Z",
-      "trend_score": 38.04,
+      "trend_score": 38.06,
       "velocity_delta_pct": 0.0,
       "spike_detected": false
     },
     {
       "entity": "BeyteFlow",
       "confidence": 0.85,
-      "impressions": 713,
+      "impressions": 695,
       "repos": 1,
       "mention_count_1h": 0,
       "mention_count_24h": 0,
@@ -165,14 +165,14 @@
       ],
       "first_seen_at": "2026-02-20T16:15:53Z",
       "last_seen_at": "2026-02-20T16:15:53Z",
-      "trend_score": 29.16,
+      "trend_score": 29.07,
       "velocity_delta_pct": 0.0,
       "spike_detected": false
     },
     {
       "entity": "App Vox",
       "confidence": 0.8,
-      "impressions": 513,
+      "impressions": 495,
       "repos": 1,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -197,14 +197,14 @@
       ],
       "first_seen_at": "2026-02-20T21:39:19Z",
       "last_seen_at": "2026-02-20T21:39:19Z",
-      "trend_score": 26.63,
+      "trend_score": 26.54,
       "velocity_delta_pct": 0.0,
       "spike_detected": false
     },
     {
       "entity": "Claudia",
       "confidence": 0.6,
-      "impressions": 959,
+      "impressions": 941,
       "repos": 1,
       "mention_count_1h": 0,
       "mention_count_24h": 0,
@@ -229,14 +229,14 @@
       ],
       "first_seen_at": "2026-02-19T21:39:36Z",
       "last_seen_at": "2026-02-19T21:39:36Z",
-      "trend_score": 22.92,
+      "trend_score": 22.83,
       "velocity_delta_pct": 0.0,
       "spike_detected": false
     },
     {
       "entity": "Remember Md",
       "confidence": 0.7,
-      "impressions": 289,
+      "impressions": 271,
       "repos": 1,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -261,17 +261,17 @@
       ],
       "first_seen_at": "2026-02-20T22:32:15Z",
       "last_seen_at": "2026-02-20T22:32:15Z",
-      "trend_score": 22.48,
+      "trend_score": 22.39,
       "velocity_delta_pct": 0.0,
       "spike_detected": false
     },
     {
       "entity": "Pm Claude Skills",
       "confidence": 0.6,
-      "impressions": 679,
+      "impressions": 661,
       "repos": 1,
       "mention_count_1h": 0,
-      "mention_count_24h": 1,
+      "mention_count_24h": 0,
       "sources": [
         "github"
       ],
@@ -293,17 +293,17 @@
       ],
       "first_seen_at": "2026-02-20T12:15:59Z",
       "last_seen_at": "2026-02-20T12:15:59Z",
-      "trend_score": 21.48,
+      "trend_score": 21.4,
       "velocity_delta_pct": 0.0,
       "spike_detected": false
     },
     {
       "entity": "Twig",
       "confidence": 0.6,
-      "impressions": 617,
+      "impressions": 599,
       "repos": 1,
       "mention_count_1h": 0,
-      "mention_count_24h": 1,
+      "mention_count_24h": 0,
       "sources": [
         "github"
       ],
@@ -325,7 +325,7 @@
       ],
       "first_seen_at": "2026-02-20T12:49:39Z",
       "last_seen_at": "2026-02-20T12:49:39Z",
-      "trend_score": 21.17,
+      "trend_score": 21.08,
       "velocity_delta_pct": 0.0,
       "spike_detected": false
     },
@@ -357,17 +357,17 @@
       ],
       "first_seen_at": "2026-02-20T17:28:40Z",
       "last_seen_at": "2026-02-20T17:28:40Z",
-      "trend_score": 19.07,
+      "trend_score": 19.08,
       "velocity_delta_pct": 0.0,
       "spike_detected": false
     },
     {
       "entity": "SuperLocalMemoryV2",
       "confidence": 0.55,
-      "impressions": 454,
+      "impressions": 436,
       "repos": 1,
       "mention_count_1h": 0,
-      "mention_count_24h": 1,
+      "mention_count_24h": 0,
       "sources": [
         "github"
       ],
@@ -389,17 +389,17 @@
       ],
       "first_seen_at": "2026-02-20T10:18:35Z",
       "last_seen_at": "2026-02-20T10:18:35Z",
-      "trend_score": 18.83,
+      "trend_score": 18.74,
       "velocity_delta_pct": 0.0,
       "spike_detected": false
     },
     {
       "entity": "AirSend",
       "confidence": 0.55,
-      "impressions": 366,
+      "impressions": 348,
       "repos": 1,
       "mention_count_1h": 0,
-      "mention_count_24h": 1,
+      "mention_count_24h": 0,
       "sources": [
         "github"
       ],
@@ -421,14 +421,14 @@
       ],
       "first_seen_at": "2026-02-20T15:23:35Z",
       "last_seen_at": "2026-02-20T15:23:35Z",
-      "trend_score": 18.38,
+      "trend_score": 18.29,
       "velocity_delta_pct": 0.0,
       "spike_detected": false
     },
     {
       "entity": "Macronyx",
       "confidence": 0.55,
-      "impressions": 360,
+      "impressions": 342,
       "repos": 1,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -453,14 +453,14 @@
       ],
       "first_seen_at": "2026-02-20T21:45:44Z",
       "last_seen_at": "2026-02-20T21:45:44Z",
-      "trend_score": 18.35,
+      "trend_score": 18.26,
       "velocity_delta_pct": 0.0,
       "spike_detected": false
     },
     {
       "entity": "Bat Zhiro Quicktools",
       "confidence": 0.55,
-      "impressions": 327,
+      "impressions": 309,
       "repos": 1,
       "mention_count_1h": 0,
       "mention_count_24h": 0,
@@ -485,14 +485,14 @@
       ],
       "first_seen_at": "2026-02-20T19:31:22Z",
       "last_seen_at": "2026-02-20T19:31:22Z",
-      "trend_score": 18.18,
+      "trend_score": 18.09,
       "velocity_delta_pct": 0.0,
       "spike_detected": false
     },
     {
       "entity": "DevTools UI",
       "confidence": 0.55,
-      "impressions": 326,
+      "impressions": 308,
       "repos": 1,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -517,17 +517,17 @@
       ],
       "first_seen_at": "2026-02-20T18:16:51Z",
       "last_seen_at": "2026-02-20T18:16:51Z",
-      "trend_score": 18.17,
+      "trend_score": 18.08,
       "velocity_delta_pct": 0.0,
       "spike_detected": false
     },
     {
       "entity": "Desk Tidy Sticky",
       "confidence": 0.45,
-      "impressions": 432,
+      "impressions": 414,
       "repos": 1,
       "mention_count_1h": 0,
-      "mention_count_24h": 1,
+      "mention_count_24h": 0,
       "sources": [
         "github"
       ],
@@ -549,14 +549,14 @@
       ],
       "first_seen_at": "2026-02-20T12:20:09Z",
       "last_seen_at": "2026-02-20T12:20:09Z",
-      "trend_score": 15.72,
+      "trend_score": 15.63,
       "velocity_delta_pct": 0.0,
       "spike_detected": false
     },
     {
       "entity": "Gitv",
       "confidence": 0.45,
-      "impressions": 393,
+      "impressions": 375,
       "repos": 1,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -581,17 +581,17 @@
       ],
       "first_seen_at": "2026-02-20T13:23:56Z",
       "last_seen_at": "2026-02-20T13:23:56Z",
-      "trend_score": 15.52,
+      "trend_score": 15.43,
       "velocity_delta_pct": 0.0,
       "spike_detected": false
     },
     {
       "entity": "AI SDK ECOSYSTEM",
       "confidence": 0.45,
-      "impressions": 382,
+      "impressions": 364,
       "repos": 1,
       "mention_count_1h": 0,
-      "mention_count_24h": 1,
+      "mention_count_24h": 0,
       "sources": [
         "github"
       ],
@@ -613,14 +613,14 @@
       ],
       "first_seen_at": "2026-02-20T08:24:44Z",
       "last_seen_at": "2026-02-20T08:24:44Z",
-      "trend_score": 15.46,
+      "trend_score": 15.37,
       "velocity_delta_pct": 0.0,
       "spike_detected": false
     },
     {
       "entity": "Mission Control",
       "confidence": 0.45,
-      "impressions": 382,
+      "impressions": 364,
       "repos": 1,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -645,14 +645,14 @@
       ],
       "first_seen_at": "2026-02-20T16:03:47Z",
       "last_seen_at": "2026-02-20T16:03:47Z",
-      "trend_score": 15.46,
+      "trend_score": 15.37,
       "velocity_delta_pct": 0.0,
       "spike_detected": false
     },
     {
       "entity": "Pr Bro",
       "confidence": 0.45,
-      "impressions": 370,
+      "impressions": 352,
       "repos": 1,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -677,14 +677,14 @@
       ],
       "first_seen_at": "2026-02-20T16:56:03Z",
       "last_seen_at": "2026-02-20T16:56:03Z",
-      "trend_score": 15.4,
+      "trend_score": 15.31,
       "velocity_delta_pct": 0.0,
       "spike_detected": false
     },
     {
       "entity": "GhostType",
       "confidence": 0.45,
-      "impressions": 315,
+      "impressions": 297,
       "repos": 1,
       "mention_count_1h": 0,
       "mention_count_24h": 0,
@@ -709,14 +709,14 @@
       ],
       "first_seen_at": "2026-02-20T03:06:01Z",
       "last_seen_at": "2026-02-20T03:06:01Z",
-      "trend_score": 15.12,
+      "trend_score": 15.03,
       "velocity_delta_pct": 0.0,
       "spike_detected": false
     },
     {
       "entity": "Wispah",
       "confidence": 0.45,
-      "impressions": 304,
+      "impressions": 286,
       "repos": 1,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -741,14 +741,14 @@
       ],
       "first_seen_at": "2026-02-20T19:46:34Z",
       "last_seen_at": "2026-02-20T19:46:34Z",
-      "trend_score": 15.06,
+      "trend_score": 14.97,
       "velocity_delta_pct": 0.0,
       "spike_detected": false
     },
     {
       "entity": "Oh My Claude",
       "confidence": 0.45,
-      "impressions": 303,
+      "impressions": 285,
       "repos": 1,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -773,14 +773,14 @@
       ],
       "first_seen_at": "2026-02-20T22:07:52Z",
       "last_seen_at": "2026-02-20T22:07:52Z",
-      "trend_score": 15.05,
+      "trend_score": 14.96,
       "velocity_delta_pct": 0.0,
       "spike_detected": false
     },
     {
       "entity": "Vanta",
       "confidence": 0.45,
-      "impressions": 291,
+      "impressions": 273,
       "repos": 1,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -805,14 +805,14 @@
       ],
       "first_seen_at": "2026-02-20T18:45:30Z",
       "last_seen_at": "2026-02-20T18:45:30Z",
-      "trend_score": 14.99,
+      "trend_score": 14.9,
       "velocity_delta_pct": 0.0,
       "spike_detected": false
     },
     {
       "entity": "Private Work Contributions Mirror",
       "confidence": 0.45,
-      "impressions": 281,
+      "impressions": 263,
       "repos": 1,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -837,17 +837,17 @@
       ],
       "first_seen_at": "2026-02-20T19:31:53Z",
       "last_seen_at": "2026-02-20T19:31:53Z",
-      "trend_score": 14.94,
+      "trend_score": 14.85,
       "velocity_delta_pct": 0.0,
       "spike_detected": false
     },
     {
       "entity": "BOND",
       "confidence": 0.45,
-      "impressions": 280,
+      "impressions": 262,
       "repos": 1,
       "mention_count_1h": 0,
-      "mention_count_24h": 1,
+      "mention_count_24h": 0,
       "sources": [
         "github"
       ],
@@ -869,17 +869,17 @@
       ],
       "first_seen_at": "2026-02-20T13:14:02Z",
       "last_seen_at": "2026-02-20T13:14:02Z",
-      "trend_score": 14.94,
+      "trend_score": 14.85,
       "velocity_delta_pct": 0.0,
       "spike_detected": false
     },
     {
       "entity": "Daily Cli",
       "confidence": 0.45,
-      "impressions": 281,
+      "impressions": 263,
       "repos": 1,
       "mention_count_1h": 0,
-      "mention_count_24h": 1,
+      "mention_count_24h": 0,
       "sources": [
         "github"
       ],
@@ -901,14 +901,14 @@
       ],
       "first_seen_at": "2026-02-20T21:08:10Z",
       "last_seen_at": "2026-02-20T21:08:10Z",
-      "trend_score": 14.94,
+      "trend_score": 14.85,
       "velocity_delta_pct": 0.0,
       "spike_detected": false
     },
     {
       "entity": "Pin Notes",
       "confidence": 0.45,
-      "impressions": 276,
+      "impressions": 258,
       "repos": 1,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -933,17 +933,17 @@
       ],
       "first_seen_at": "2026-02-20T16:33:37Z",
       "last_seen_at": "2026-02-20T16:33:37Z",
-      "trend_score": 14.92,
+      "trend_score": 14.83,
       "velocity_delta_pct": 0.0,
       "spike_detected": false
     },
     {
       "entity": "Groask Release",
       "confidence": 0.45,
-      "impressions": 274,
+      "impressions": 256,
       "repos": 1,
       "mention_count_1h": 0,
-      "mention_count_24h": 1,
+      "mention_count_24h": 0,
       "sources": [
         "github"
       ],
@@ -965,14 +965,14 @@
       ],
       "first_seen_at": "2026-02-20T14:37:23Z",
       "last_seen_at": "2026-02-20T14:37:23Z",
-      "trend_score": 14.91,
+      "trend_score": 14.82,
       "velocity_delta_pct": 0.0,
       "spike_detected": false
     },
     {
       "entity": "Ccgate",
       "confidence": 0.45,
-      "impressions": 273,
+      "impressions": 255,
       "repos": 1,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -997,14 +997,14 @@
       ],
       "first_seen_at": "2026-02-20T10:44:54Z",
       "last_seen_at": "2026-02-20T10:44:54Z",
-      "trend_score": 14.9,
+      "trend_score": 14.81,
       "velocity_delta_pct": 0.0,
       "spike_detected": false
     },
     {
       "entity": "Olcli",
       "confidence": 0.45,
-      "impressions": 270,
+      "impressions": 251,
       "repos": 1,
       "mention_count_1h": 0,
       "mention_count_24h": 0,
@@ -1029,14 +1029,14 @@
       ],
       "first_seen_at": "2026-02-19T20:58:08Z",
       "last_seen_at": "2026-02-19T20:58:08Z",
-      "trend_score": 14.89,
+      "trend_score": 14.79,
       "velocity_delta_pct": 0.0,
       "spike_detected": false
     },
     {
       "entity": "Rollout io",
       "confidence": 0.45,
-      "impressions": 250,
+      "impressions": 232,
       "repos": 1,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -1061,7 +1061,7 @@
       ],
       "first_seen_at": "2026-02-20T17:40:43Z",
       "last_seen_at": "2026-02-20T17:40:43Z",
-      "trend_score": 14.78,
+      "trend_score": 14.69,
       "velocity_delta_pct": 0.0,
       "spike_detected": false
     },
@@ -1100,7 +1100,7 @@
     {
       "entity": "Flaskit",
       "confidence": 0.45,
-      "impressions": 193,
+      "impressions": 175,
       "repos": 1,
       "mention_count_1h": 0,
       "mention_count_24h": 0,
@@ -1125,14 +1125,14 @@
       ],
       "first_seen_at": "2026-02-20T04:09:11Z",
       "last_seen_at": "2026-02-20T04:09:11Z",
-      "trend_score": 14.49,
+      "trend_score": 14.4,
       "velocity_delta_pct": 0.0,
       "spike_detected": false
     },
     {
       "entity": "Myuserjourney",
       "confidence": 0.45,
-      "impressions": 166,
+      "impressions": 157,
       "repos": 1,
       "mention_count_1h": 0,
       "mention_count_24h": 0,
@@ -1157,7 +1157,7 @@
       ],
       "first_seen_at": "2026-02-18T11:00:38Z",
       "last_seen_at": "2026-02-18T11:00:38Z",
-      "trend_score": 14.35,
+      "trend_score": 14.31,
       "velocity_delta_pct": 0.0,
       "spike_detected": false
     },

@@ -2,6 +2,7 @@ import './SourceMonitor.css'
 
 const SOURCE_META = {
   hackernews: { label: 'Hacker News', short: 'HN', color: '#ff8b3d' },
+  github: { label: 'GitHub', short: 'GH', color: '#8b5cf6' },
   reddit: { label: 'Reddit', short: 'RD', color: '#ff7340' },
   techcrunch: { label: 'Tech RSS', short: 'TC', color: '#37d67a' },
   twitter: { label: 'Twitter/X', short: 'TW', color: '#5bc7ff' },

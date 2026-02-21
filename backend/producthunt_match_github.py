@@ -9,7 +9,7 @@ Usage:
   python producthunt_match_github.py --in data/github_repos.jsonl --out data/github_ph_matches.jsonl
 
 Environment variables required:
-- PRODUCTHUNT_DEVELOPER_TOKEN
+- PHUNT (preferred) or PRODUCTHUNT_DEVELOPER_TOKEN
 """
 
 from __future__ import annotations
@@ -226,7 +226,7 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> None:
     args = parse_args()
-    token = get_env("PRODUCTHUNT_DEVELOPER_TOKEN", required=True)
+    token = get_env("PHUNT", required=False) or get_env("PRODUCTHUNT_DEVELOPER_TOKEN", required=True)
 
     repos = load_jsonl(args.input_path)
     posts = fetch_posts(

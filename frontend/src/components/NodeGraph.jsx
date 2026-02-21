@@ -3,6 +3,7 @@ import './NodeGraph.css'
 
 const SOURCE_COLORS = {
   hackernews: { fill: '#ff8b3d', bg: 'rgba(255,139,61,0.15)' },
+  github: { fill: '#8b5cf6', bg: 'rgba(139,92,246,0.16)' },
   reddit: { fill: '#ff7340', bg: 'rgba(255,115,64,0.15)' },
   twitter: { fill: '#5bc7ff', bg: 'rgba(91,199,255,0.15)' },
   techcrunch: { fill: '#37d67a', bg: 'rgba(55,214,122,0.15)' },
@@ -27,7 +28,7 @@ function clamp(v, min, max) {
 }
 
 function shortSource(sourceId) {
-  const map = { hackernews: 'HN', reddit: 'RD', twitter: 'X', techcrunch: 'TC', producthunt: 'PH' }
+  const map = { hackernews: 'HN', github: 'GH', reddit: 'RD', twitter: 'X', techcrunch: 'TC', producthunt: 'PH' }
   return map[sourceId] ?? 'SRC'
 }
 

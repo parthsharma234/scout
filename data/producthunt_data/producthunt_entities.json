@@ -1,0 +1,11 @@
+{
+  "_meta": {
+    "description": "Entity-level aggregation from Product Hunt posts. Use for source-specific rankings and cross-source merge.",
+    "source": "producthunt",
+    "schema_version": "1.0"
+  },
+  "generated_at": "",
+  "post_count": 0,
+  "entity_count": 0,
+  "entities": []
+}

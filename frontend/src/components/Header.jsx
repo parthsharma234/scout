@@ -4,6 +4,7 @@ import './Header.css'
 
 const DEFAULT_SOURCES = [
   { id: 'hackernews', label: 'HN', status: 'live' },
+  { id: 'github', label: 'GitHub', status: 'live' },
   { id: 'reddit', label: 'Reddit', status: 'live' },
   { id: 'techcrunch', label: 'RSS', status: 'live' },
   { id: 'twitter', label: 'Twitter', status: 'cached' },
