@@ -87,6 +87,7 @@ export default function TrendLeaderboard({
                 key={entity.entity}
                 className={`lb-table-row ${isActive ? 'lb-table-row--active' : ''}`}
                 onClick={() => onSelectEntity?.(entity.entity)}
+                title={entity.score_explanation || ''}
               >
                 <span className="lb-td lb-td--rank mono">{String(index + 1).padStart(2, '0')}</span>
                 <span className="lb-td lb-td--name">
@@ -113,6 +114,7 @@ export default function TrendLeaderboard({
               key={entity.entity}
               className={`lb-row ${isActive ? 'lb-row--active' : ''}`}
               onClick={() => onSelectEntity?.(entity.entity)}
+              title={entity.score_explanation || ''}
             >
               <span className="lb-rank mono">{String(index + 1).padStart(2, '0')}</span>
               <span className="lb-dot" style={{ background: color }} />
@@ -126,4 +128,3 @@ export default function TrendLeaderboard({
     </section>
   )
 }
-

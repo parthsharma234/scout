@@ -103,6 +103,15 @@
   text-align: center;
 }
 
+.cm-tip-explain {
+  margin-top: 8px;
+  padding-top: 6px;
+  border-top: 1px solid var(--border-faint);
+  font-size: 10px;
+  line-height: 1.35;
+  color: var(--text-secondary);
+}
+
 /* Legend */
 .cm-legend {
   position: absolute;

@@ -51,7 +51,7 @@ export default function DashboardPage() {
 
   const connected = wsConnected || apiTrends.length > 0
   const hasLiveData = connected
-  const trendsRaw = wsConnected ? wsTrends : apiTrends
+  const trendsRaw = apiTrends.length > 0 ? apiTrends : (wsConnected ? wsTrends : apiTrends)
   const trendsTopPool = useMemo(
     () => trendsRaw.filter((row) => !Boolean(row?.is_known_incumbent)),
     [trendsRaw],

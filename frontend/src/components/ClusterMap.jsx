@@ -606,6 +606,9 @@ export default function ClusterMap({
                   <span>Sources</span>
                   <span>{trend.sources?.length ?? 0}</span>
                 </div>
+                {trend.score_explanation && (
+                  <div className="cm-tip-explain">{trend.score_explanation}</div>
+                )}
               </>
             )}
             <div className="cm-tip-hint">Click a bubble to open source web</div>

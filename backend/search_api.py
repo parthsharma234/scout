@@ -18,8 +18,13 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
+import re
 import threading
+import time
 import traceback
+import urllib.error
+import urllib.request
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
@@ -74,6 +79,15 @@ SCHEDULER = PipelineScheduler()
 PIPELINE_THREAD: threading.Thread | None = None
 PIPELINE_LAST_RUN: dict | None = None
 PIPELINE_LAST_RUN_LOCK = threading.Lock()
+SCORE_EXPL_CACHE = {"signature": "", "expires_at": 0.0, "map": {}}
+DEFAULT_NEMOTRON_MODEL = "nvidia/llama-3.1-nemotron-ultra-253b-v1"
+
+
+def _env_truthy(name: str, default: bool = False) -> bool:
+    raw = os.getenv(name, "").strip().lower()
+    if not raw:
+        return default
+    return raw in {"1", "true", "yes", "on"}
 
 TOP_MAP_EXCLUDED_KEYS = {
     "vercel",
@@ -124,6 +138,119 @@ def _percentile(values: list[float], q: float) -> float:
     hi = min(len(ordered) - 1, lo + 1)
     frac = idx - lo
     return float(ordered[lo]) * (1.0 - frac) + float(ordered[hi]) * frac
+
+
+def _fallback_score_explanation(row: dict) -> str:
+    breakdown = row.get("score_breakdown") if isinstance(row.get("score_breakdown"), dict) else {}
+    momentum = float(breakdown.get("momentum_score") or row.get("momentum_score") or 0.0)
+    interaction = float(breakdown.get("interaction_score") or row.get("interaction_score") or 0.0)
+    recency = float(breakdown.get("recency_score") or 0.0)
+    m1h = int(breakdown.get("mention_count_1h") or row.get("mention_count_1h") or 0)
+    m24h = int(breakdown.get("mention_count_24h") or row.get("mention_count_24h") or 0)
+    a30 = int(breakdown.get("activity_last_30d") or row.get("activity_last_30d") or 0)
+    return (
+        f"Score={float(row.get('trend_score') or 0.0):.2f} from momentum {momentum:.1f}, "
+        f"cross-source interaction {interaction:.1f}, recency {recency:.1f}; "
+        f"mentions: 1h={m1h}, 24h={m24h}, 30d={a30}."
+    )
+
+
+def _nemotron_score_explanations(rows: list[dict]) -> dict[str, str]:
+    api_key = os.getenv("OPENROUTER_API_KEY", "").strip()
+    if not api_key or not rows:
+        return {}
+
+    condensed = []
+    for row in rows:
+        key = str(row.get("entity_key") or "")
+        if not key:
+            continue
+        breakdown = row.get("score_breakdown") if isinstance(row.get("score_breakdown"), dict) else {}
+        condensed.append(
+            {
+                "entity_key": key,
+                "entity": row.get("entity"),
+                "trend_score": row.get("trend_score"),
+                "momentum_score": breakdown.get("momentum_score", row.get("momentum_score")),
+                "interaction_score": breakdown.get("interaction_score", row.get("interaction_score")),
+                "recency_score": breakdown.get("recency_score", row.get("recency_score")),
+                "mention_count_1h": breakdown.get("mention_count_1h", row.get("mention_count_1h")),
+                "mention_count_24h": breakdown.get("mention_count_24h", row.get("mention_count_24h")),
+                "activity_last_30d": breakdown.get("activity_last_30d", row.get("activity_last_30d")),
+                "source_interactions": breakdown.get("source_interactions", row.get("source_interactions") or {}),
+                "sources": row.get("sources") or [],
+            }
+        )
+
+    if not condensed:
+        return {}
+
+    payload = {
+        "model": os.getenv("OPENROUTER_MODEL", "").strip() or os.getenv("NEMOTRON_MODEL", "").strip() or DEFAULT_NEMOTRON_MODEL,
+        "temperature": 0,
+        "max_tokens": 2800,
+        "messages": [
+            {
+                "role": "system",
+                "content": (
+                    "You explain ranking scores for startup entities. "
+                    "Return strict JSON only. Each explanation must reference concrete numeric values from input."
+                ),
+            },
+            {
+                "role": "user",
+                "content": json.dumps(
+                    {
+                        "instruction": "For each entity, write 1 concise explanation sentence with specific numbers.",
+                        "entities": condensed,
+                        "schema": {
+                            "results": [
+                                {"entity_key": "string", "score_explanation": "string"}
+                            ]
+                        },
+                    },
+                    ensure_ascii=False,
+                ),
+            },
+        ],
+    }
+    req = urllib.request.Request(
+        f"{(os.getenv('OPENROUTER_BASE_URL', '').strip() or 'https://openrouter.ai/api/v1').rstrip('/')}/chat/completions",
+        data=json.dumps(payload).encode("utf-8"),
+        method="POST",
+        headers={
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+            "HTTP-Referer": "https://scout.local",
+            "X-Title": "Scout Score Explanations",
+            "User-Agent": "scout-search-api/0.1",
+        },
+    )
+
+    try:
+        with urllib.request.urlopen(req, timeout=45) as response:
+            raw = json.loads(response.read().decode("utf-8"))
+        content = (((raw.get("choices") or [{}])[0].get("message") or {}).get("content") or "").strip()
+        try:
+            parsed = json.loads(content)
+        except json.JSONDecodeError:
+            match = re.search(r"(\{.*\})", content, flags=re.DOTALL)
+            parsed = json.loads(match.group(1)) if match else {}
+    except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, json.JSONDecodeError):
+        return {}
+
+    out: dict[str, str] = {}
+    results = parsed.get("results") if isinstance(parsed, dict) else []
+    if isinstance(results, list):
+        for item in results:
+            if not isinstance(item, dict):
+                continue
+            key = str(item.get("entity_key") or "").strip()
+            explanation = str(item.get("score_explanation") or "").strip()
+            if key and explanation:
+                out[key] = explanation
+    return out
 
 
 def _ensure_index_exists() -> dict:
@@ -187,6 +314,9 @@ def build_trends_payload(index_payload: dict) -> dict:
                 "trend_score": raw_score,
                 "raw_trend_score": raw_score,
                 "momentum_score": float(row.get("momentum_score") or 0.0),
+                "interaction_score": float(row.get("interaction_score") or 0.0),
+                "recency_score": float(row.get("recency_score") or 0.0),
+                "score_breakdown": row.get("score_breakdown") if isinstance(row.get("score_breakdown"), dict) else {},
                 "is_known_incumbent": bool(row.get("is_known_incumbent")),
                 "velocity_delta_pct": 0.0,
                 "sentiment": {"positive": 0.55, "neutral": 0.3, "negative": 0.15},
@@ -215,6 +345,26 @@ def build_trends_payload(index_payload: dict) -> dict:
             row["trend_score"] = round(display_score, 2)
 
     trends.sort(key=lambda row: row["trend_score"], reverse=True)
+
+    # Nemotron/OpenRouter explanation pass with short in-memory cache.
+    signature = "|".join(
+        f"{row.get('entity_key')}:{float(row.get('trend_score') or 0.0):.2f}:{float((row.get('score_breakdown') or {}).get('interaction_score') or row.get('interaction_score') or 0.0):.2f}"
+        for row in trends[:80]
+    )
+    explanation_map: dict[str, str] = {}
+    now_ts = time.time()
+    if SCORE_EXPL_CACHE.get("signature") == signature and float(SCORE_EXPL_CACHE.get("expires_at") or 0.0) > now_ts:
+        explanation_map = SCORE_EXPL_CACHE.get("map") if isinstance(SCORE_EXPL_CACHE.get("map"), dict) else {}
+    else:
+        explanation_map = _nemotron_score_explanations(trends[:80])
+        SCORE_EXPL_CACHE["signature"] = signature
+        SCORE_EXPL_CACHE["expires_at"] = now_ts + 600.0
+        SCORE_EXPL_CACHE["map"] = explanation_map
+
+    for row in trends:
+        key = str(row.get("entity_key") or "")
+        row["score_explanation"] = explanation_map.get(key) or _fallback_score_explanation(row)
+
     return {"entities": trends, "count": len(trends), "source_totals": source_totals}
 
 
@@ -512,10 +662,15 @@ def main() -> None:
     args = parse_args()
     load_env_file()
     migrate()
-    try:
-        export_index_json(DEFAULT_INDEX)
-    except Exception:
-        pass
+    auto_rebuild = _env_truthy("SCOUT_AUTO_REBUILD_INDEX", default=False)
+    if auto_rebuild:
+        try:
+            export_index_json(DEFAULT_INDEX)
+            print("index rebuild on startup: enabled")
+        except Exception as exc:  # noqa: BLE001
+            print(f"index rebuild on startup failed: {exc}")
+    else:
+        print("index rebuild on startup: disabled (set SCOUT_AUTO_REBUILD_INDEX=1 to enable)")
     SCHEDULER.start()
     server = ThreadingHTTPServer((args.host, args.port), SearchHandler)
     print(f"Scout search API listening on http://{args.host}:{args.port}")

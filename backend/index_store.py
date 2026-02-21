@@ -34,6 +34,12 @@ INDEX_EXCLUDED_KEYS = {
     "npmjs",
     "github",
     "gitlab",
+    "openai",
+    "chatgpt",
+    "claude",
+    "gemini",
+    "copilot",
+    "llama",
 }
 INDEX_BLOCKED_DOMAINS = {
     "vercel.app",
@@ -42,8 +48,20 @@ INDEX_BLOCKED_DOMAINS = {
     "netlify.com",
     "visualstudio.com",
     "visualstudio.microsoft.com",
+    "openai.com",
+    "anthropic.com",
+    "gemini.google.com",
 }
 DEFAULT_NEMOTRON_MODEL = "nvidia/llama-3.1-nemotron-ultra-253b-v1"
+MODEL_LIKE_PATTERNS = [
+    re.compile(r"\bgpt(?:[\-\s]?\d+(?:\.\d+)?)?\b", re.IGNORECASE),
+    re.compile(r"\bcodex\b", re.IGNORECASE),
+    re.compile(r"\bchatgpt\b", re.IGNORECASE),
+    re.compile(r"\bclaude\b", re.IGNORECASE),
+    re.compile(r"\bgemini\b", re.IGNORECASE),
+    re.compile(r"\bllama\b", re.IGNORECASE),
+    re.compile(r"\bcopilot\b", re.IGNORECASE),
+]
 
 
 def _normalize_key(value: str) -> str:
@@ -64,11 +82,15 @@ def _domain_root(url: str) -> str:
 
 
 def _is_filtered_entity(entity_name: str, entity_key: str, nodes: list[dict[str, Any]] | None = None) -> bool:
+    name = str(entity_name or "").strip()
     key = _normalize_key(entity_key or entity_name)
     if not key:
         return True
     if key in INDEX_EXCLUDED_KEYS:
         return True
+    for pattern in MODEL_LIKE_PATTERNS:
+        if pattern.search(name):
+            return True
     if nodes:
         url_hits = 0
         blocked_hits = 0
@@ -158,7 +180,19 @@ def _normalize_scores(rows: list[dict[str, Any]]) -> None:
         row["raw_trend_score"] = base_raw
         row["interaction_score"] = round(interaction, 2)
         row["momentum_score"] = round(base, 2)
+        row["recency_score"] = round(recency, 2)
         row["trend_score"] = round(min(98.0, max(0.1, final_score)), 2)
+        row["score_breakdown"] = {
+            "weights": {"momentum": 0.45, "interaction": 0.35, "recency": 0.20},
+            "momentum_score": row["momentum_score"],
+            "interaction_score": row["interaction_score"],
+            "recency_score": row["recency_score"],
+            "mention_count_1h": _safe_int(row.get("mention_count_1h"), 0),
+            "mention_count_24h": _safe_int(row.get("mention_count_24h"), 0),
+            "activity_last_30d": _safe_int(row.get("activity_last_30d"), 0),
+            "source_interactions": row.get("source_interactions") or {},
+            "raw_trend_score": row["raw_trend_score"],
+        }
 
 
 def _load_external_github_rows(path: Path = EXTERNAL_GITHUB_INDEX) -> list[dict[str, Any]]:
@@ -455,6 +489,8 @@ def build_index_payload(limit_nodes: int = 30) -> dict[str, Any]:
                     "first_seen_at": profile["first_seen_at"],
                     "last_seen_at": profile["last_seen_at"],
                     "activity_last_30d": int(profile["activity_last_30d"] or 0),
+                    "recency_score": 0.0,
+                    "score_breakdown": {},
                 }
             )
 
