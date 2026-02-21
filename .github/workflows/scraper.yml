@@ -1,0 +1,26 @@
+name: HN Scraper
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch: # lets you trigger it manually from the GitHub UI
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    env:
+      DB_URL: ${{ secrets.DB_URL }}
+      SECRET_KEY: ${{ secrets.SECRET_KEY }}
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run scraper
+        run: python3 hacker_news_scraper.py updates
