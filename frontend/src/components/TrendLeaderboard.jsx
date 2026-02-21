@@ -21,6 +21,10 @@ function formatDate(value) {
   return date.toLocaleDateString(undefined, { month: 'short', day: 'numeric' })
 }
 
+function scoreOf(entity) {
+  return Number(entity?.raw_trend_score ?? entity?.trend_score ?? 0)
+}
+
 export default function TrendLeaderboard({
   entities = [],
   loading = false,
@@ -30,7 +34,7 @@ export default function TrendLeaderboard({
 }) {
   const isTable = mode === 'table'
   const maxScore = useMemo(
-    () => Math.max(...entities.map((e) => Number(e.trend_score ?? 0)), 1),
+    () => Math.max(...entities.map((e) => scoreOf(e)), 1),
     [entities],
   )
 
@@ -76,7 +80,7 @@ export default function TrendLeaderboard({
 
         {!loading && entities.map((entity, index) => {
           const isActive = selectedEntity === entity.entity
-          const score = Number(entity.trend_score ?? 0)
+          const score = scoreOf(entity)
           const color = CAT_COLORS[entity.entity] || '#60a5fa'
           const spike = entity.spike_detected
           const barWidth = (score / maxScore) * 100

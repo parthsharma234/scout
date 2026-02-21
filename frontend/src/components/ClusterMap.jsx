@@ -26,6 +26,10 @@ function clamp(value, min, max) {
   return Math.max(min, Math.min(max, value))
 }
 
+function scoreOf(item) {
+  return Number(item?.raw_trend_score ?? item?.trend_score ?? 0)
+}
+
 function getWorldBounds(circles) {
   if (!circles.length) {
     return { minX: 0, maxX: 0, minY: 0, maxY: 0 }
@@ -84,14 +88,14 @@ function packCircles(items, width, height) {
   const cy = height / 2
   const maxDim = Math.min(width, height)
 
-  const sorted = [...items].sort((a, b) => b.trend_score - a.trend_score)
-  const minScore = sorted[sorted.length - 1].trend_score
+  const sorted = [...items].sort((a, b) => scoreOf(b) - scoreOf(a))
+  const minScore = scoreOf(sorted[sorted.length - 1])
   const p95Index = Math.max(0, Math.floor((sorted.length - 1) * 0.05))
-  const p95Score = sorted[p95Index]?.trend_score ?? sorted[0].trend_score
+  const p95Score = scoreOf(sorted[p95Index] ?? sorted[0])
   const scaleMax = Math.max(minScore + 0.0001, p95Score)
 
   const circles = sorted.map((item) => {
-    const clampedScore = Math.min(item.trend_score, scaleMax)
+    const clampedScore = Math.min(scoreOf(item), scaleMax)
     const tRaw = scaleMax === minScore ? 0.5 : (clampedScore - minScore) / (scaleMax - minScore)
     const t = Math.sqrt(Math.max(0, tRaw))
     const r = maxDim * (0.04 + t * 0.07)
@@ -555,7 +559,7 @@ export default function ClusterMap({
                         letterSpacing="0.04em"
                         style={{ pointerEvents: 'none' }}
                       >
-                        {circle.trend_score.toFixed(1)}
+                        {scoreOf(circle).toFixed(1)}
                       </text>
                     )}
                   </>
@@ -594,7 +598,7 @@ export default function ClusterMap({
             </div>
             <div className="cm-tip-row">
               <span>Score</span>
-              <span>{circle.trend_score.toFixed(1)}</span>
+              <span>{scoreOf(circle).toFixed(1)}</span>
             </div>
             {trend && (
               <>

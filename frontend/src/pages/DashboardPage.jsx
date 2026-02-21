@@ -18,6 +18,10 @@ function normalizeEntityKey(value = '') {
     .replace(/[^a-z0-9]+/g, '')
 }
 
+function trendScore(row) {
+  return Number(row?.raw_trend_score ?? row?.trend_score ?? row?.momentum_score ?? 0)
+}
+
 function formatDate(value) {
   if (!value) return 'N/A'
   const date = new Date(value)
@@ -59,7 +63,11 @@ export default function DashboardPage() {
   const trendsTop = useMemo(() => {
     const base = trendsTopPool.length > 0 ? trendsTopPool : trendsRaw
     return [...base]
-      .sort((a, b) => Number(b?.momentum_score ?? b?.trend_score ?? 0) - Number(a?.momentum_score ?? a?.trend_score ?? 0))
+      .sort((a, b) => {
+        const trendDelta = trendScore(b) - trendScore(a)
+        if (Math.abs(trendDelta) > 1e-6) return trendDelta
+        return Number(b?.momentum_score ?? 0) - Number(a?.momentum_score ?? 0)
+      })
       .slice(0, 50)
   }, [trendsTopPool, trendsRaw])
 
@@ -241,7 +249,7 @@ export default function DashboardPage() {
                 <>
                   <span className="db-drilled-stat">
                     <span className="db-stat-label">Score</span>
-                    <span className="db-stat-value">{selectedTrend.trend_score.toFixed(1)}</span>
+                    <span className="db-stat-value">{trendScore(selectedTrend).toFixed(1)}</span>
                   </span>
                   <span className="db-drilled-stat">
                     <span className="db-stat-label">Mentions/h</span>

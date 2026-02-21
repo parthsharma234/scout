@@ -165,8 +165,15 @@ def _fallback_score_explanation(row: dict) -> str:
     m1h = int(breakdown.get("mention_count_1h") or row.get("mention_count_1h") or 0)
     m24h = int(breakdown.get("mention_count_24h") or row.get("mention_count_24h") or 0)
     a30 = int(breakdown.get("activity_last_30d") or row.get("activity_last_30d") or 0)
+    display_score = float(row.get("trend_score") or 0.0)
+    raw_score = float(row.get("raw_trend_score") or display_score)
+    score_prefix = (
+        f"Score={raw_score:.2f}"
+        if abs(display_score - raw_score) < 1e-6
+        else f"Score={display_score:.2f} (raw={raw_score:.2f})"
+    )
     return (
-        f"Score={float(row.get('trend_score') or 0.0):.2f} from momentum {momentum:.1f}, "
+        f"{score_prefix} from momentum {momentum:.1f}, "
         f"cross-source interaction {interaction:.1f}, recency {recency:.1f}; "
         f"mentions: 1h={m1h}, 24h={m24h}, 30d={a30}."
     )
@@ -187,7 +194,8 @@ def _nemotron_score_explanations(rows: list[dict]) -> dict[str, str]:
             {
                 "entity_key": key,
                 "entity": row.get("entity"),
-                "trend_score": row.get("trend_score"),
+                "trend_score": row.get("raw_trend_score", row.get("trend_score")),
+                "trend_score_display": row.get("trend_score"),
                 "momentum_score": breakdown.get("momentum_score", row.get("momentum_score")),
                 "interaction_score": breakdown.get("interaction_score", row.get("interaction_score")),
                 "recency_score": breakdown.get("recency_score", row.get("recency_score")),
@@ -351,21 +359,22 @@ def build_trends_payload(index_payload: dict) -> dict:
         )
 
     if trends:
-        lo = _percentile(raw_scores, 0.1)
-        hi = _percentile(raw_scores, 0.95)
-        span = max(1e-6, hi - lo)
+        # Keep trend_score on the canonical raw scale to avoid top-tail display collapse.
         for row in trends:
-            raw_score = float(row.get("raw_trend_score") or 0.0)
-            unit = max(0.0, min(1.0, (raw_score - lo) / span))
-            # 0.5-10 display scale for dashboard readability.
-            display_score = 0.5 + (unit**0.65) * 9.5
-            row["trend_score"] = round(display_score, 2)
+            row["trend_score"] = round(float(row.get("raw_trend_score") or 0.0), 2)
 
-    trends.sort(key=lambda row: row["trend_score"], reverse=True)
+    trends.sort(
+        key=lambda row: (
+            float(row.get("raw_trend_score") or 0.0),
+            float((row.get("score_breakdown") or {}).get("interaction_score") or row.get("interaction_score") or 0.0),
+            int(row.get("activity_last_30d") or 0),
+        ),
+        reverse=True,
+    )
 
     # Nemotron/OpenRouter explanation pass with short in-memory cache.
     signature = "|".join(
-        f"{row.get('entity_key')}:{float(row.get('trend_score') or 0.0):.2f}:{float((row.get('score_breakdown') or {}).get('interaction_score') or row.get('interaction_score') or 0.0):.2f}"
+        f"{row.get('entity_key')}:{float(row.get('raw_trend_score') or row.get('trend_score') or 0.0):.2f}:{float((row.get('score_breakdown') or {}).get('interaction_score') or row.get('interaction_score') or 0.0):.2f}"
         for row in trends[:80]
     )
     explanation_map: dict[str, str] = {}
