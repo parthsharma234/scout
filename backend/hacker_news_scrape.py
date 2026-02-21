@@ -80,8 +80,8 @@ KEYWORD_TAXONOMY: dict[str, list[str]] = {
 
 def get_supabase() -> Client:
     return create_client(
-        os.environ["SUPABASE_URL"],
-        os.environ["SUPABASE_SERVICE_KEY"],
+        os.environ["DB_URL"],
+        os.environ["SECRET_KEY"],
     )
 
 
