@@ -1,0 +1,1215 @@
+{
+  "_meta": {
+    "description": "Alias table linking product names, company names, repos, and domains.",
+    "source": "scout_final_entity",
+    "schema_version": "1.0"
+  },
+  "generated_at": "2026-02-21T17:59:47.475805+00:00",
+  "alias_count": 72,
+  "aliases": [
+    {
+      "canonical_entity": "8Gent",
+      "canonical_entity_key": "8gent.tech",
+      "root_domain": "8gent.tech",
+      "category": "general",
+      "company_names": [
+        "8Gent"
+      ],
+      "product_names": [],
+      "repo_names": [],
+      "domains": [
+        "8gent.tech"
+      ],
+      "sources": [
+        "hackernews"
+      ]
+    },
+    {
+      "canonical_entity": "AI Code Review Agent",
+      "canonical_entity_key": "aicodereviewagent|ai",
+      "root_domain": "",
+      "category": "ai",
+      "company_names": [
+        "AI Code Review Agent"
+      ],
+      "product_names": [],
+      "repo_names": [],
+      "domains": [],
+      "sources": [
+        "hackernews"
+      ]
+    },
+    {
+      "canonical_entity": "AI Council",
+      "canonical_entity_key": "aicouncil|general",
+      "root_domain": "",
+      "category": "general",
+      "company_names": [
+        "AI Council"
+      ],
+      "product_names": [],
+      "repo_names": [],
+      "domains": [],
+      "sources": [
+        "hackernews"
+      ]
+    },
+    {
+      "canonical_entity": "AI SDK ECOSYSTEM",
+      "canonical_entity_key": "aisdkecosystem|devtools",
+      "root_domain": "",
+      "category": "devtools",
+      "company_names": [
+        "AI SDK ECOSYSTEM"
+      ],
+      "product_names": [],
+      "repo_names": [
+        "mk-knight23/AI-SDK-ECOSYSTEM"
+      ],
+      "domains": [],
+      "sources": [
+        "github"
+      ]
+    },
+    {
+      "canonical_entity": "AirSend",
+      "canonical_entity_key": "airsend|devtools",
+      "root_domain": "",
+      "category": "devtools",
+      "company_names": [
+        "AirSend"
+      ],
+      "product_names": [],
+      "repo_names": [
+        "Avi7ii/AirSend"
+      ],
+      "domains": [],
+      "sources": [
+        "github"
+      ]
+    },
+    {
+      "canonical_entity": "App Vox",
+      "canonical_entity_key": "appvox|ai",
+      "root_domain": "",
+      "category": "ai",
+      "company_names": [
+        "App Vox"
+      ],
+      "product_names": [],
+      "repo_names": [
+        "app-vox/vox"
+      ],
+      "domains": [],
+      "sources": [
+        "github"
+      ]
+    },
+    {
+      "canonical_entity": "Assay",
+      "canonical_entity_key": "assay|general",
+      "root_domain": "",
+      "category": "general",
+      "company_names": [
+        "Assay"
+      ],
+      "product_names": [],
+      "repo_names": [],
+      "domains": [],
+      "sources": [
+        "hackernews"
+      ]
+    },
+    {
+      "canonical_entity": "Awingender",
+      "canonical_entity_key": "awingender.com",
+      "root_domain": "awingender.com",
+      "category": "general",
+      "company_names": [
+        "Awingender"
+      ],
+      "product_names": [],
+      "repo_names": [],
+      "domains": [
+        "awingender.com"
+      ],
+      "sources": [
+        "hackernews"
+      ]
+    },
+    {
+      "canonical_entity": "Backlink Pilot",
+      "canonical_entity_key": "backlinkpilot|devtools",
+      "root_domain": "",
+      "category": "devtools",
+      "company_names": [
+        "Backlink Pilot"
+      ],
+      "product_names": [],
+      "repo_names": [
+        "s87343472/backlink-pilot"
+      ],
+      "domains": [],
+      "sources": [
+        "github"
+      ]
+    },
+    {
+      "canonical_entity": "Bat Zhiro Quicktools",
+      "canonical_entity_key": "batzhiroquicktools|devtools",
+      "root_domain": "",
+      "category": "devtools",
+      "company_names": [
+        "Bat Zhiro Quicktools"
+      ],
+      "product_names": [],
+      "repo_names": [
+        "Zhiro90/bat-zhiro-quicktools"
+      ],
+      "domains": [],
+      "sources": [
+        "github"
+      ]
+    },
+    {
+      "canonical_entity": "BeyteFlow",
+      "canonical_entity_key": "beyteflow|ai",
+      "root_domain": "",
+      "category": "ai",
+      "company_names": [
+        "BeyteFlow"
+      ],
+      "product_names": [],
+      "repo_names": [
+        "BeyteFlow/ReadmeGenAI"
+      ],
+      "domains": [],
+      "sources": [
+        "github"
+      ]
+    },
+    {
+      "canonical_entity": "BOND",
+      "canonical_entity_key": "bond|devtools",
+      "root_domain": "",
+      "category": "devtools",
+      "company_names": [
+        "BOND"
+      ],
+      "product_names": [],
+      "repo_names": [
+        "moneyjarrod/BOND"
+      ],
+      "domains": [],
+      "sources": [
+        "github"
+      ]
+    },
+    {
+      "canonical_entity": "Ccgate",
+      "canonical_entity_key": "ccgate|ai",
+      "root_domain": "",
+      "category": "ai",
+      "company_names": [
+        "Ccgate"
+      ],
+      "product_names": [],
+      "repo_names": [
+        "ai-fresh/ccgate"
+      ],
+      "domains": [],
+      "sources": [
+        "github"
+      ]
+    },
+    {
+      "canonical_entity": "Claude Chrome Parallel",
+      "canonical_entity_key": "claudechromeparallel|general",
+      "root_domain": "",
+      "category": "general",
+      "company_names": [
+        "Claude Chrome Parallel"
+      ],
+      "product_names": [],
+      "repo_names": [],
+      "domains": [],
+      "sources": [
+        "hackernews"
+      ]
+    },
+    {
+      "canonical_entity": "Claude Saas Eval Skills",
+      "canonical_entity_key": "claudesaasevalskills|devtools",
+      "root_domain": "",
+      "category": "devtools",
+      "company_names": [
+        "Claude Saas Eval Skills"
+      ],
+      "product_names": [],
+      "repo_names": [
+        "kirillpolevoy/claude-saas-eval-skills"
+      ],
+      "domains": [],
+      "sources": [
+        "github"
+      ]
+    },
+    {
+      "canonical_entity": "Claudia",
+      "canonical_entity_key": "claudia|devtools",
+      "root_domain": "",
+      "category": "devtools",
+      "company_names": [
+        "Claudia"
+      ],
+      "product_names": [],
+      "repo_names": [
+        "kbanc85/claudia"
+      ],
+      "domains": [],
+      "sources": [
+        "github"
+      ]
+    },
+    {
+      "canonical_entity": "Crates",
+      "canonical_entity_key": "crates.io",
+      "root_domain": "crates.io",
+      "category": "devtools",
+      "company_names": [
+        "Crates",
+        "HN-Stories"
+      ],
+      "product_names": [],
+      "repo_names": [],
+      "domains": [
+        "crates.io"
+      ],
+      "sources": [
+        "hackernews"
+      ]
+    },
+    {
+      "canonical_entity": "CRTX",
+      "canonical_entity_key": "crtx|general",
+      "root_domain": "",
+      "category": "general",
+      "company_names": [
+        "CRTX"
+      ],
+      "product_names": [],
+      "repo_names": [],
+      "domains": [],
+      "sources": [
+        "hackernews"
+      ]
+    },
+    {
+      "canonical_entity": "Daily Cli",
+      "canonical_entity_key": "dailycli|devtools",
+      "root_domain": "",
+      "category": "devtools",
+      "company_names": [
+        "Daily Cli"
+      ],
+      "product_names": [],
+      "repo_names": [
+        "creusvictor/daily-cli"
+      ],
+      "domains": [],
+      "sources": [
+        "github"
+      ]
+    },
+    {
+      "canonical_entity": "Daymonio",
+      "canonical_entity_key": "daymonio|ai",
+      "root_domain": "",
+      "category": "ai",
+      "company_names": [
+        "Daymonio"
+      ],
+      "product_names": [],
+      "repo_names": [
+        "daymonio/daymon"
+      ],
+      "domains": [],
+      "sources": [
+        "github"
+      ]
+    },
+    {
+      "canonical_entity": "Desk Tidy Sticky",
+      "canonical_entity_key": "desktidysticky|devtools",
+      "root_domain": "",
+      "category": "devtools",
+      "company_names": [
+        "Desk Tidy Sticky"
+      ],
+      "product_names": [],
+      "repo_names": [
+        "sqmw/desk_tidy_sticky"
+      ],
+      "domains": [],
+      "sources": [
+        "github"
+      ]
+    },
+    {
+      "canonical_entity": "DevTools UI",
+      "canonical_entity_key": "devtoolsui|devtools",
+      "root_domain": "",
+      "category": "devtools",
+      "company_names": [
+        "DevTools UI"
+      ],
+      "product_names": [],
+      "repo_names": [
+        "Electricane/DevTools-UI"
+      ],
+      "domains": [],
+      "sources": [
+        "github"
+      ]
+    },
+    {
+      "canonical_entity": "Emailmarketingskill",
+      "canonical_entity_key": "emailmarketingskill.com",
+      "root_domain": "emailmarketingskill.com",
+      "category": "general",
+      "company_names": [
+        "Emailmarketingskill"
+      ],
+      "product_names": [],
+      "repo_names": [],
+      "domains": [
+        "emailmarketingskill.com"
+      ],
+      "sources": [
+        "hackernews"
+      ]
+    },
+    {
+      "canonical_entity": "Fix-my-mic",
+      "canonical_entity_key": "fixmymic|general",
+      "root_domain": "",
+      "category": "general",
+      "company_names": [
+        "Fix-my-mic"
+      ],
+      "product_names": [],
+      "repo_names": [],
+      "domains": [],
+      "sources": [
+        "hackernews"
+      ]
+    },
+    {
+      "canonical_entity": "Flaskit",
+      "canonical_entity_key": "flaskit|devtools",
+      "root_domain": "",
+      "category": "devtools",
+      "company_names": [
+        "Flaskit"
+      ],
+      "product_names": [],
+      "repo_names": [
+        "MaswiliK/flaskit"
+      ],
+      "domains": [],
+      "sources": [
+        "github"
+      ]
+    },
+    {
+      "canonical_entity": "GhostType",
+      "canonical_entity_key": "ghosttype|devtools",
+      "root_domain": "",
+      "category": "devtools",
+      "company_names": [
+        "GhostType"
+      ],
+      "product_names": [],
+      "repo_names": [
+        "never13254/GhostType"
+      ],
+      "domains": [],
+      "sources": [
+        "github"
+      ]
+    },
+    {
+      "canonical_entity": "Git uncommit",
+      "canonical_entity_key": "gituncommit|general",
+      "root_domain": "",
+      "category": "general",
+      "company_names": [
+        "Git uncommit"
+      ],
+      "product_names": [],
+      "repo_names": [],
+      "domains": [],
+      "sources": [
+        "hackernews"
+      ]
+    },
+    {
+      "canonical_entity": "Gitv",
+      "canonical_entity_key": "gitv|devtools",
+      "root_domain": "",
+      "category": "devtools",
+      "company_names": [
+        "Gitv"
+      ],
+      "product_names": [],
+      "repo_names": [
+        "JayanAXHF/gitv"
+      ],
+      "domains": [],
+      "sources": [
+        "github"
+      ]
+    },
+    {
+      "canonical_entity": "Groask Release",
+      "canonical_entity_key": "groaskrelease|ai",
+      "root_domain": "",
+      "category": "ai",
+      "company_names": [
+        "Groask Release"
+      ],
+      "product_names": [],
+      "repo_names": [
+        "ThinkerJack/groask-release"
+      ],
+      "domains": [],
+      "sources": [
+        "github"
+      ]
+    },
+    {
+      "canonical_entity": "Humaboam",
+      "canonical_entity_key": "humaboam.fyi",
+      "root_domain": "humaboam.fyi",
+      "category": "general",
+      "company_names": [
+        "Humaboam"
+      ],
+      "product_names": [],
+      "repo_names": [],
+      "domains": [
+        "humaboam.fyi"
+      ],
+      "sources": [
+        "hackernews"
+      ]
+    },
+    {
+      "canonical_entity": "Jvbar",
+      "canonical_entity_key": "jvbar.com",
+      "root_domain": "jvbar.com",
+      "category": "general",
+      "company_names": [
+        "Jvbar"
+      ],
+      "product_names": [],
+      "repo_names": [],
+      "domains": [
+        "jvbar.com"
+      ],
+      "sources": [
+        "hackernews"
+      ]
+    },
+    {
+      "canonical_entity": "Macronyx",
+      "canonical_entity_key": "macronyx|devtools",
+      "root_domain": "",
+      "category": "devtools",
+      "company_names": [
+        "Macronyx"
+      ],
+      "product_names": [],
+      "repo_names": [
+        "DefinitelyN0tMe/Macronyx"
+      ],
+      "domains": [],
+      "sources": [
+        "github"
+      ]
+    },
+    {
+      "canonical_entity": "Makie",
+      "canonical_entity_key": "makie.org",
+      "root_domain": "makie.org",
+      "category": "general",
+      "company_names": [
+        "Makie"
+      ],
+      "product_names": [],
+      "repo_names": [],
+      "domains": [
+        "makie.org"
+      ],
+      "sources": [
+        "hackernews"
+      ]
+    },
+    {
+      "canonical_entity": "MephistoMail",
+      "canonical_entity_key": "ycombinator.com",
+      "root_domain": "ycombinator.com",
+      "category": "general",
+      "company_names": [
+        "Agent Passport",
+        "MephistoMail",
+        "Open a Linux Container",
+        "Rebrain",
+        "TypstMe",
+        "Velo",
+        "WatchTurm"
+      ],
+      "product_names": [],
+      "repo_names": [],
+      "domains": [
+        "mephistomail.site",
+        "ycombinator.com"
+      ],
+      "sources": [
+        "hackernews"
+      ]
+    },
+    {
+      "canonical_entity": "Micasa",
+      "canonical_entity_key": "micasa.dev",
+      "root_domain": "micasa.dev",
+      "category": "general",
+      "company_names": [
+        "Micasa"
+      ],
+      "product_names": [],
+      "repo_names": [],
+      "domains": [
+        "micasa.dev"
+      ],
+      "sources": [
+        "hackernews"
+      ]
+    },
+    {
+      "canonical_entity": "Migratetoresponses",
+      "canonical_entity_key": "migratetoresponses.com",
+      "root_domain": "migratetoresponses.com",
+      "category": "general",
+      "company_names": [
+        "Migratetoresponses"
+      ],
+      "product_names": [],
+      "repo_names": [],
+      "domains": [
+        "migratetoresponses.com"
+      ],
+      "sources": [
+        "hackernews"
+      ]
+    },
+    {
+      "canonical_entity": "Mines",
+      "canonical_entity_key": "mines.fyi",
+      "root_domain": "mines.fyi",
+      "category": "general",
+      "company_names": [
+        "Mines"
+      ],
+      "product_names": [],
+      "repo_names": [],
+      "domains": [
+        "mines.fyi"
+      ],
+      "sources": [
+        "hackernews"
+      ]
+    },
+    {
+      "canonical_entity": "Mini-Diarium",
+      "canonical_entity_key": "minidiarium|general",
+      "root_domain": "",
+      "category": "general",
+      "company_names": [
+        "Mini-Diarium"
+      ],
+      "product_names": [],
+      "repo_names": [],
+      "domains": [],
+      "sources": [
+        "hackernews"
+      ]
+    },
+    {
+      "canonical_entity": "Mission Control",
+      "canonical_entity_key": "missioncontrol|devtools",
+      "root_domain": "",
+      "category": "devtools",
+      "company_names": [
+        "Mission Control"
+      ],
+      "product_names": [],
+      "repo_names": [
+        "rdsthomas/mission-control"
+      ],
+      "domains": [],
+      "sources": [
+        "github"
+      ]
+    },
+    {
+      "canonical_entity": "Mukoko",
+      "canonical_entity_key": "mukoko.com",
+      "root_domain": "mukoko.com",
+      "category": "general",
+      "company_names": [
+        "Mukoko",
+        "Mukoko weather"
+      ],
+      "product_names": [],
+      "repo_names": [],
+      "domains": [
+        "mukoko.com"
+      ],
+      "sources": [
+        "hackernews"
+      ]
+    },
+    {
+      "canonical_entity": "Murl",
+      "canonical_entity_key": "murl|general",
+      "root_domain": "",
+      "category": "general",
+      "company_names": [
+        "Murl"
+      ],
+      "product_names": [],
+      "repo_names": [],
+      "domains": [],
+      "sources": [
+        "hackernews"
+      ]
+    },
+    {
+      "canonical_entity": "Myinvestpilot",
+      "canonical_entity_key": "myinvestpilot|devtools",
+      "root_domain": "",
+      "category": "devtools",
+      "company_names": [
+        "Myinvestpilot"
+      ],
+      "product_names": [],
+      "repo_names": [
+        "myinvestpilot/ai-architecture"
+      ],
+      "domains": [],
+      "sources": [
+        "github"
+      ]
+    },
+    {
+      "canonical_entity": "Myuserjourney",
+      "canonical_entity_key": "myuserjourney|ai",
+      "root_domain": "",
+      "category": "ai",
+      "company_names": [
+        "Myuserjourney"
+      ],
+      "product_names": [],
+      "repo_names": [
+        "RakshakIT/myuserjourney"
+      ],
+      "domains": [],
+      "sources": [
+        "github"
+      ]
+    },
+    {
+      "canonical_entity": "Netlify",
+      "canonical_entity_key": "netlify.app",
+      "root_domain": "netlify.app",
+      "category": "general",
+      "company_names": [
+        "Netlify"
+      ],
+      "product_names": [],
+      "repo_names": [],
+      "domains": [
+        "netlify.app"
+      ],
+      "sources": [
+        "hackernews"
+      ]
+    },
+    {
+      "canonical_entity": "NF-1",
+      "canonical_entity_key": "nf1|general",
+      "root_domain": "",
+      "category": "general",
+      "company_names": [
+        "NF-1"
+      ],
+      "product_names": [],
+      "repo_names": [],
+      "domains": [],
+      "sources": [
+        "hackernews"
+      ]
+    },
+    {
+      "canonical_entity": "Novadev",
+      "canonical_entity_key": "novadev.vip",
+      "root_domain": "novadev.vip",
+      "category": "general",
+      "company_names": [
+        "Novadev"
+      ],
+      "product_names": [],
+      "repo_names": [],
+      "domains": [
+        "novadev.vip"
+      ],
+      "sources": [
+        "hackernews"
+      ]
+    },
+    {
+      "canonical_entity": "Oh My Claude",
+      "canonical_entity_key": "ohmyclaude|devtools",
+      "root_domain": "",
+      "category": "devtools",
+      "company_names": [
+        "Oh My Claude"
+      ],
+      "product_names": [],
+      "repo_names": [
+        "npow/oh-my-claude"
+      ],
+      "domains": [],
+      "sources": [
+        "github"
+      ]
+    },
+    {
+      "canonical_entity": "Olcli",
+      "canonical_entity_key": "olcli|devtools",
+      "root_domain": "",
+      "category": "devtools",
+      "company_names": [
+        "Olcli"
+      ],
+      "product_names": [],
+      "repo_names": [
+        "aloth/olcli"
+      ],
+      "domains": [],
+      "sources": [
+        "github"
+      ]
+    },
+    {
+      "canonical_entity": "Openbootdotdev",
+      "canonical_entity_key": "openbootdotdev|devtools",
+      "root_domain": "",
+      "category": "devtools",
+      "company_names": [
+        "Openbootdotdev"
+      ],
+      "product_names": [],
+      "repo_names": [
+        "openbootdotdev/openboot"
+      ],
+      "domains": [],
+      "sources": [
+        "github"
+      ]
+    },
+    {
+      "canonical_entity": "Pin Notes",
+      "canonical_entity_key": "pinnotes|devtools",
+      "root_domain": "",
+      "category": "devtools",
+      "company_names": [
+        "Pin Notes"
+      ],
+      "product_names": [],
+      "repo_names": [
+        "AleenaTahir1/Pin-Notes"
+      ],
+      "domains": [],
+      "sources": [
+        "github"
+      ]
+    },
+    {
+      "canonical_entity": "PIrateRF",
+      "canonical_entity_key": "piraterf|general",
+      "root_domain": "",
+      "category": "general",
+      "company_names": [
+        "PIrateRF"
+      ],
+      "product_names": [],
+      "repo_names": [],
+      "domains": [],
+      "sources": [
+        "hackernews"
+      ]
+    },
+    {
+      "canonical_entity": "Pm Claude Skills",
+      "canonical_entity_key": "pmclaudeskills|ai",
+      "root_domain": "",
+      "category": "ai",
+      "company_names": [
+        "Pm Claude Skills"
+      ],
+      "product_names": [],
+      "repo_names": [
+        "mohitagw15856/pm-claude-skills"
+      ],
+      "domains": [],
+      "sources": [
+        "github"
+      ]
+    },
+    {
+      "canonical_entity": "Polyasurn",
+      "canonical_entity_key": "polyasurn.com",
+      "root_domain": "polyasurn.com",
+      "category": "general",
+      "company_names": [
+        "Polyasurn"
+      ],
+      "product_names": [],
+      "repo_names": [],
+      "domains": [
+        "polyasurn.com"
+      ],
+      "sources": [
+        "hackernews"
+      ]
+    },
+    {
+      "canonical_entity": "Pr Bro",
+      "canonical_entity_key": "prbro|devtools",
+      "root_domain": "",
+      "category": "devtools",
+      "company_names": [
+        "Pr Bro"
+      ],
+      "product_names": [],
+      "repo_names": [
+        "toniperic/pr-bro"
+      ],
+      "domains": [],
+      "sources": [
+        "github"
+      ]
+    },
+    {
+      "canonical_entity": "Private Work Contributions Mirror",
+      "canonical_entity_key": "privateworkcontributionsmirror|devtools",
+      "root_domain": "",
+      "category": "devtools",
+      "company_names": [
+        "Private Work Contributions Mirror"
+      ],
+      "product_names": [],
+      "repo_names": [
+        "yuvrajangadsingh/private-work-contributions-mirror"
+      ],
+      "domains": [],
+      "sources": [
+        "github"
+      ]
+    },
+    {
+      "canonical_entity": "Producthunt Skills",
+      "canonical_entity_key": "producthuntskills|ai",
+      "root_domain": "",
+      "category": "ai",
+      "company_names": [
+        "Producthunt Skills"
+      ],
+      "product_names": [],
+      "repo_names": [
+        "yoanbernabeu/producthunt-skills"
+      ],
+      "domains": [],
+      "sources": [
+        "github"
+      ]
+    },
+    {
+      "canonical_entity": "Remember Md",
+      "canonical_entity_key": "remembermd|devtools",
+      "root_domain": "",
+      "category": "devtools",
+      "company_names": [
+        "Remember Md"
+      ],
+      "product_names": [],
+      "repo_names": [
+        "remember-md/remember"
+      ],
+      "domains": [],
+      "sources": [
+        "github"
+      ]
+    },
+    {
+      "canonical_entity": "Resilient OpenClaw Browser Relay",
+      "canonical_entity_key": "resilientopenclawbrowserrelay|general",
+      "root_domain": "",
+      "category": "general",
+      "company_names": [
+        "Resilient OpenClaw Browser Relay"
+      ],
+      "product_names": [],
+      "repo_names": [],
+      "domains": [],
+      "sources": [
+        "hackernews"
+      ]
+    },
+    {
+      "canonical_entity": "Rollout io",
+      "canonical_entity_key": "rolloutio|devtools",
+      "root_domain": "",
+      "category": "devtools",
+      "company_names": [
+        "Rollout io"
+      ],
+      "product_names": [],
+      "repo_names": [
+        "TechParaglide/Rollout.io"
+      ],
+      "domains": [],
+      "sources": [
+        "github"
+      ]
+    },
+    {
+      "canonical_entity": "Routype",
+      "canonical_entity_key": "routype|general",
+      "root_domain": "",
+      "category": "general",
+      "company_names": [
+        "Routype"
+      ],
+      "product_names": [],
+      "repo_names": [],
+      "domains": [],
+      "sources": [
+        "hackernews"
+      ]
+    },
+    {
+      "canonical_entity": "Rtk Ai",
+      "canonical_entity_key": "rtkai|ai",
+      "root_domain": "",
+      "category": "ai",
+      "company_names": [
+        "Rtk Ai"
+      ],
+      "product_names": [],
+      "repo_names": [
+        "rtk-ai/rtk"
+      ],
+      "domains": [],
+      "sources": [
+        "github"
+      ]
+    },
+    {
+      "canonical_entity": "Script Snap",
+      "canonical_entity_key": "script-snap.com",
+      "root_domain": "script-snap.com",
+      "category": "general",
+      "company_names": [
+        "Script Snap"
+      ],
+      "product_names": [],
+      "repo_names": [],
+      "domains": [
+        "script-snap.com"
+      ],
+      "sources": [
+        "hackernews"
+      ]
+    },
+    {
+      "canonical_entity": "Streakout",
+      "canonical_entity_key": "streakout.app",
+      "root_domain": "streakout.app",
+      "category": "general",
+      "company_names": [
+        "Streakout"
+      ],
+      "product_names": [],
+      "repo_names": [],
+      "domains": [
+        "streakout.app"
+      ],
+      "sources": [
+        "hackernews"
+      ]
+    },
+    {
+      "canonical_entity": "SuperLocalMemoryV2",
+      "canonical_entity_key": "superlocalmemoryv2|ai",
+      "root_domain": "",
+      "category": "ai",
+      "company_names": [
+        "SuperLocalMemoryV2"
+      ],
+      "product_names": [],
+      "repo_names": [
+        "varun369/SuperLocalMemoryV2"
+      ],
+      "domains": [],
+      "sources": [
+        "github"
+      ]
+    },
+    {
+      "canonical_entity": "Twig",
+      "canonical_entity_key": "twig|devtools",
+      "root_domain": "",
+      "category": "devtools",
+      "company_names": [
+        "Twig"
+      ],
+      "product_names": [],
+      "repo_names": [
+        "andersonkrs/twig"
+      ],
+      "domains": [],
+      "sources": [
+        "github"
+      ]
+    },
+    {
+      "canonical_entity": "Unidocverse",
+      "canonical_entity_key": "unidocverse.com",
+      "root_domain": "unidocverse.com",
+      "category": "general",
+      "company_names": [
+        "Local AI document intelligence",
+        "Unidocverse"
+      ],
+      "product_names": [],
+      "repo_names": [],
+      "domains": [
+        "unidocverse.com"
+      ],
+      "sources": [
+        "hackernews"
+      ]
+    },
+    {
+      "canonical_entity": "Usevaultlink",
+      "canonical_entity_key": "usevaultlink.com",
+      "root_domain": "usevaultlink.com",
+      "category": "devtools",
+      "company_names": [
+        "Usevaultlink"
+      ],
+      "product_names": [],
+      "repo_names": [],
+      "domains": [
+        "usevaultlink.com"
+      ],
+      "sources": [
+        "hackernews"
+      ]
+    },
+    {
+      "canonical_entity": "Vanta",
+      "canonical_entity_key": "vanta|devtools",
+      "root_domain": "",
+      "category": "devtools",
+      "company_names": [
+        "Vanta"
+      ],
+      "product_names": [],
+      "repo_names": [
+        "Misiix9/Vanta"
+      ],
+      "domains": [],
+      "sources": [
+        "github"
+      ]
+    },
+    {
+      "canonical_entity": "Webhookstream",
+      "canonical_entity_key": "webhookstream.com",
+      "root_domain": "webhookstream.com",
+      "category": "general",
+      "company_names": [
+        "Webhookstream"
+      ],
+      "product_names": [],
+      "repo_names": [],
+      "domains": [
+        "webhookstream.com"
+      ],
+      "sources": [
+        "hackernews"
+      ]
+    },
+    {
+      "canonical_entity": "Wispah",
+      "canonical_entity_key": "wispah|devtools",
+      "root_domain": "",
+      "category": "devtools",
+      "company_names": [
+        "Wispah"
+      ],
+      "product_names": [],
+      "repo_names": [
+        "idanyekutiel/wispah"
+      ],
+      "domains": [],
+      "sources": [
+        "github"
+      ]
+    },
+    {
+      "canonical_entity": "WP2TXT",
+      "canonical_entity_key": "wp2txt|general",
+      "root_domain": "",
+      "category": "general",
+      "company_names": [
+        "WP2TXT"
+      ],
+      "product_names": [],
+      "repo_names": [],
+      "domains": [],
+      "sources": [
+        "hackernews"
+      ]
+    },
+    {
+      "canonical_entity": "YAML-schema-router",
+      "canonical_entity_key": "yamlschemarouter|general",
+      "root_domain": "",
+      "category": "general",
+      "company_names": [
+        "YAML-schema-router"
+      ],
+      "product_names": [],
+      "repo_names": [],
+      "domains": [],
+      "sources": [
+        "hackernews"
+      ]
+    }
+  ]
+}

@@ -1,14 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
 
-import hnEntitiesRaw from '@data/hn_data/hn_entities.json'
-import hnNodesRaw from '@data/hn_data/hn_source_nodes.json'
 import hnStateRaw from '@data/hn_data/hn_state.json'
-import githubEntitiesRaw from '@data/github_data/github_entities.json'
-import githubNodesRaw from '@data/github_data/github_source_nodes.json'
 import githubStateRaw from '@data/github_data/github_state.json'
-import productHuntEntitiesRaw from '@data/producthunt_data/producthunt_entities.json'
-import productHuntNodesRaw from '@data/producthunt_data/producthunt_source_nodes.json'
 import productHuntStateRaw from '@data/producthunt_data/producthunt_state.json'
+import finalEntitiesTopRaw from '@data/final_entity/final_entities_top50.json'
+import finalNodesRaw from '@data/final_entity/final_source_nodes.json'
 
 const EMPTY_SENTIMENT = { positive: 0.6, neutral: 0.3, negative: 0.1 }
 
@@ -23,11 +19,27 @@ function normalizeEntityKey(value = '') {
     .replace(/[^a-z0-9]+/g, '')
 }
 
-function buildTrends(payload) {
+function normalizeScoreRows(rows) {
+  if (!Array.isArray(rows) || rows.length === 0) return []
+  const values = rows.map((row) => toNumber(row._rawScore, 0))
+  const low = Math.min(...values, 0)
+  const high = Math.max(...values, 1)
+  return rows.map((row) => {
+    const normalized = high <= low ? 100 : ((row._rawScore - low) / (high - low)) * 100
+    return { ...row, _normalizedScore: normalized }
+  })
+}
+
+function buildTrends(payload, leaderboardMode = 'global_prominence') {
   const entities = Array.isArray(payload?.entities) ? payload.entities : []
-  return entities.map((item) => ({
+  const mode = leaderboardMode === 'niche_opportunity' ? 'niche_opportunity' : 'global_prominence'
+  const scored = normalizeScoreRows(entities.map((item) => ({
     entity: item.entity,
-    trend_score: toNumber(item.trend_score, 0),
+    _rawScore: toNumber(item.global_prominence_score, toNumber(item.relevance_score, toNumber(item.trend_score, 0))),
+    _rawNiche: toNumber(
+      item.niche_opportunity_score,
+      toNumber(item.velocity_delta_pct, 0) * 0.8 + toNumber(item.mention_count_1h, 0) * 2.5 + toNumber(item.confidence, 0) * 20,
+    ),
     velocity_delta_pct: toNumber(item.velocity_delta_pct, 0),
     sentiment: item.sentiment ?? EMPTY_SENTIMENT,
     mention_count_1h: toNumber(item.mention_count_1h, 0),
@@ -36,51 +48,26 @@ function buildTrends(payload) {
     sources: Array.isArray(item.sources) ? item.sources : ['hackernews'],
     top_keywords: Array.isArray(item.top_keywords) ? item.top_keywords : [],
     source_counts: item.source_counts ?? { hackernews: toNumber(item.stories, 1) },
-  }))
-}
-
-function mergeTrends(...collections) {
-  const map = new Map()
-
-  collections.flat().forEach((trend) => {
-    const key = normalizeEntityKey(trend.entity)
-    if (!key) return
-
-    const existing = map.get(key)
-    if (!existing) {
-      map.set(key, {
-        ...trend,
-        sources: [...new Set(trend.sources ?? [])],
-        source_counts: { ...(trend.source_counts ?? {}) },
-        top_keywords: [...new Set(trend.top_keywords ?? [])].slice(0, 8),
-      })
-      return
+  })))
+  const nicheNorm = normalizeScoreRows(scored.map((row) => ({ ...row, _rawScore: row._rawNiche })))
+  const withScores = scored.map((row, idx) => {
+    const globalScore = toNumber(row._normalizedScore, 0)
+    const nicheScore = toNumber(nicheNorm[idx]?._normalizedScore, 0)
+    const trendScore = mode === 'niche_opportunity' ? nicheScore : globalScore
+    return {
+      ...row,
+      trend_score: trendScore,
+      global_prominence_score: globalScore,
+      niche_opportunity_score: nicheScore,
+      leaderboard_mode: mode,
     }
-
-    existing.trend_score += toNumber(trend.trend_score)
-    existing.mention_count_1h += toNumber(trend.mention_count_1h)
-    existing.mention_count_24h += toNumber(trend.mention_count_24h)
-    existing.spike_detected = existing.spike_detected || Boolean(trend.spike_detected)
-    existing.velocity_delta_pct = Number(((existing.velocity_delta_pct + toNumber(trend.velocity_delta_pct)) / 2).toFixed(2))
-    existing.sources = [...new Set([...(existing.sources ?? []), ...(trend.sources ?? [])])]
-    existing.top_keywords = [...new Set([...(existing.top_keywords ?? []), ...(trend.top_keywords ?? [])])].slice(0, 8)
-
-    const mergedSourceCounts = { ...(existing.source_counts ?? {}) }
-    Object.entries(trend.source_counts ?? {}).forEach(([sourceId, count]) => {
-      mergedSourceCounts[sourceId] = toNumber(mergedSourceCounts[sourceId]) + toNumber(count)
-    })
-    existing.source_counts = mergedSourceCounts
   })
-
-  const merged = Array.from(map.values())
-  const maxScore = Math.max(...merged.map((trend) => toNumber(trend.trend_score, 0)), 1)
-
-  return merged
-    .map((trend) => ({
-      ...trend,
-      trend_score: Number(((toNumber(trend.trend_score, 0) / maxScore) * 100).toFixed(2)),
-    }))
-    .sort((a, b) => b.trend_score - a.trend_score)
+  return withScores
+    .sort((a, b) => toNumber(b.trend_score, 0) - toNumber(a.trend_score, 0))
+    .map((row) => {
+      const { _rawScore, _rawNiche, _normalizedScore, ...clean } = row
+      return clean
+    })
 }
 
 function buildSourceNodes(payload) {
@@ -98,8 +85,7 @@ function buildSourceNodes(payload) {
   }))
 }
 
-function mergeSourceNodes(...collections) {
-  const rows = collections.flat()
+function dedupeSourceNodes(rows) {
   const seen = new Set()
   return rows.filter((row) => {
     const key = row.id || `${row.source_id}-${normalizeEntityKey(row.entity)}-${row.url}`
@@ -125,14 +111,6 @@ function buildSources({ hnState, githubState, productHuntState }, nowIso) {
       status: 'live',
       items_ingested: toNumber(githubState?.repos_written, 0),
       last_scraped: githubState?.last_run_finished_at ?? nowIso,
-      error_message: undefined,
-    },
-    {
-      id: 'reddit',
-      label: 'Reddit',
-      status: 'cached',
-      items_ingested: 0,
-      last_scraped: nowIso,
       error_message: undefined,
     },
     {
@@ -162,7 +140,7 @@ function buildSources({ hnState, githubState, productHuntState }, nowIso) {
   ]
 }
 
-export function useMockData({ paused = false } = {}) {
+export function useMockData({ paused = false, leaderboardMode = 'global_prominence' } = {}) {
   const [trends, setTrends] = useState([])
   const [sources, setSources] = useState([])
   const [sourceNodes, setSourceNodes] = useState([])
@@ -174,15 +152,11 @@ export function useMockData({ paused = false } = {}) {
   }, [paused])
 
   useEffect(() => {
-    const parsedHnTrends = buildTrends(hnEntitiesRaw)
-    const parsedGithubTrends = buildTrends(githubEntitiesRaw)
-    const parsedProductHuntTrends = buildTrends(productHuntEntitiesRaw)
-    const parsedTrends = mergeTrends(parsedHnTrends, parsedGithubTrends, parsedProductHuntTrends)
-
-    const parsedHnNodes = buildSourceNodes(hnNodesRaw)
-    const parsedGithubNodes = buildSourceNodes(githubNodesRaw)
-    const parsedProductHuntNodes = buildSourceNodes(productHuntNodesRaw)
-    const parsedNodes = mergeSourceNodes(parsedHnNodes, parsedGithubNodes, parsedProductHuntNodes)
+    const parsedTrends = buildTrends(finalEntitiesTopRaw, leaderboardMode).slice(0, 50)
+    const topEntityKeys = new Set(parsedTrends.map((trend) => normalizeEntityKey(trend.entity)))
+    const parsedNodes = dedupeSourceNodes(
+      buildSourceNodes(finalNodesRaw).filter((node) => topEntityKeys.has(normalizeEntityKey(node.entity))),
+    )
 
     const nowIso = new Date().toISOString()
 
@@ -205,7 +179,7 @@ export function useMockData({ paused = false } = {}) {
     }, 15000)
 
     return () => clearInterval(interval)
-  }, [])
+  }, [leaderboardMode])
 
   return {
     trends,

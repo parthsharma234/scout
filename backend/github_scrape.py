@@ -54,12 +54,62 @@ DEFAULT_QUERIES = [
     "topic:low-code",
     "topic:marketplace",
     "topic:payments",
+    "topic:biotech",
+    "topic:healthcare",
+    "topic:digital-health",
+    "topic:medtech",
+    "topic:robotics",
+    "topic:defense-tech",
+    "topic:logistics",
+    "topic:supply-chain",
+    "topic:manufacturing",
+    "topic:construction-tech",
+    "topic:proptech",
+    "topic:legaltech",
+    "topic:govtech",
+    "topic:insurtech",
+    "topic:agtech",
+    "topic:foodtech",
+    "topic:creator-economy",
+    "topic:ecommerce",
+    "topic:marketing-tech",
+    "topic:data-platform",
+    "topic:analytics",
+    "topic:computer-vision",
+    "topic:voice-ai",
+    "topic:cybersecurity",
+    "topic:identity",
+    "topic:privacy",
+    "topic:observability",
+    "topic:developer-experience",
+    "topic:enterprise-software",
+    "topic:b2b",
+    "topic:deeptech",
+    "topic:quantum",
+    "topic:semiconductor",
+    "topic:spacetech",
+    "topic:energy",
+    "topic:battery",
+    "topic:mobility",
+    "topic:autonomous-vehicles",
+    "topic:ar",
+    "topic:vr",
+    "topic:education",
+    "topic:hrtech",
+    "topic:real-estate",
+    "topic:compliance",
+    "topic:risk",
     "in:name,description \"launch\"",
     "in:name,description \"beta\"",
     "in:name,description \"waitlist\"",
     "in:name,description \"early access\"",
     "in:name,description \"mvp\"",
     "in:name,description \"v1\"",
+    "in:name,description \"pilot\"",
+    "in:name,description \"pre-seed\"",
+    "in:name,description \"seed round\"",
+    "in:name,description \"now open\"",
+    "in:name,description \"public beta\"",
 ]
 
 
@@ -144,6 +194,26 @@ def extract_repo(repo: dict[str, Any], query: str, release_info: dict[str, Any] 
         if published_days is not None and published_days <= release_within_days:
             has_recent_release = True
 
+    pushed_days = days_since(repo.get("pushed_at"))
+    updated_days = days_since(repo.get("updated_at"))
+    recency_boost = 0.0
+    if pushed_days is not None:
+        recency_boost += max(0.0, 45.0 - pushed_days) * 1.1
+    if updated_days is not None:
+        recency_boost += max(0.0, 30.0 - updated_days) * 0.6
+    growth_signal_score = round(
+        min(
+            100.0,
+            float(stargazers) * 0.45
+            + float(repo.get("forks_count") or 0) * 0.9
+            + float(repo.get("watchers_count") or 0) * 0.3
+            + float(star_velocity or 0.0) * 22.0
+            + (18.0 if has_recent_release else 0.0)
+            + recency_boost,
+        ),
+        2,
+    )
+
     return {
         "id": repo.get("id"),
         "name": repo.get("name"),
@@ -170,6 +240,7 @@ def extract_repo(repo: dict[str, Any], query: str, release_info: dict[str, Any] 
         "latest_release_tag": latest_release_tag,
         "latest_release_published_at": latest_release_published_at,
         "has_recent_release": has_recent_release,
+        "growth_signal_score": growth_signal_score,
         "query": query,
         "scraped_at_utc": int(time.time()),
     }
@@ -355,7 +426,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--created-within-days",
         type=int,
-        default=14,
+        default=45,
         help="Add created:>YYYY-MM-DD filter based on days back.",
     )
     parser.add_argument(
@@ -398,6 +469,7 @@ def main() -> None:
         created_filter = f" created:>{iso_date_days_ago(args.created_within_days)}"
 
     all_records: list[dict[str, Any]] = []
+    by_repo_id: dict[int, dict[str, Any]] = {}
 
     for query in args.queries:
         full_query = f"{query}{created_filter}"
@@ -426,12 +498,43 @@ def main() -> None:
                 if args.sleep_seconds > 0:
                     time.sleep(args.sleep_seconds)
 
-            all_records.append(
-                extract_repo(repo, full_query, release_info, args.release_within_days)
+            extracted = extract_repo(repo, full_query, release_info, args.release_within_days)
+            repo_id = int(extracted.get("id") or 0)
+            if not repo_id:
+                continue
+            current = by_repo_id.get(repo_id)
+            if not current:
+                extracted["query_hits"] = 1
+                extracted["matched_queries"] = [full_query]
+                by_repo_id[repo_id] = extracted
+                continue
+            current["query_hits"] = int(current.get("query_hits") or 1) + 1
+            matched = set(current.get("matched_queries") or [])
+            matched.add(full_query)
+            current["matched_queries"] = sorted(matched)
+            current["growth_signal_score"] = max(
+                float(current.get("growth_signal_score") or 0.0),
+                float(extracted.get("growth_signal_score") or 0.0),
             )
+            if float(extracted.get("star_velocity_per_day") or 0.0) > float(current.get("star_velocity_per_day") or 0.0):
+                current["star_velocity_per_day"] = extracted.get("star_velocity_per_day")
+            if bool(extracted.get("has_recent_release")):
+                current["has_recent_release"] = True
+                current["latest_release_tag"] = extracted.get("latest_release_tag") or current.get("latest_release_tag")
+                current["latest_release_published_at"] = extracted.get("latest_release_published_at") or current.get("latest_release_published_at")
+
+    all_records = sorted(
+        by_repo_id.values(),
+        key=lambda row: (
+            float(row.get("growth_signal_score") or 0.0),
+            float(row.get("star_velocity_per_day") or 0.0),
+            int(row.get("stargazers_count") or 0),
+        ),
+        reverse=True,
+    )
 
     save_output(all_records, args.out, as_jsonl=not args.json_array)
-    print(f"Saved {len(all_records)} repos to {args.out}")
+    print(f"Saved {len(all_records)} unique repos to {args.out}")
     if args.incremental:
         save_incremental_state(args.incremental_state)
 

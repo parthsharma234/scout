@@ -50,16 +50,61 @@ except ModuleNotFoundError:
 
 DEFAULT_INDEX = Path("data/index_data/entity_index.json")
 DEFAULT_SAVE = Path("data/index_data/latest_query_results.json")
+VALID_LEADERBOARDS = {"global_prominence", "niche_opportunity"}
 
 
-def build_trends_payload(index_payload: dict) -> dict:
+def _safe_float(value: object, fallback: float = 0.0) -> float:
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return fallback
+
+
+def _normalize_scores(values: list[float]) -> list[float]:
+    if not values:
+        return []
+    low = min(values)
+    high = max(values)
+    if high <= low:
+        return [100.0 for _ in values]
+    return [((v - low) / (high - low)) * 100.0 for v in values]
+
+
+def build_trends_payload(index_payload: dict, leaderboard_mode: str = "global_prominence") -> dict:
+    mode = leaderboard_mode if leaderboard_mode in VALID_LEADERBOARDS else "global_prominence"
     entities = index_payload.get("entities") or []
     if not isinstance(entities, list):
         entities = []
 
+    global_raw: list[float] = []
+    niche_raw: list[float] = []
+    for row in entities:
+        mention_1h = int(row.get("mention_count_1h") or 0)
+        mention_24h = int(row.get("mention_count_24h") or 0)
+        sources = row.get("sources") or []
+        source_count = len(sources) if isinstance(sources, list) else 0
+        trend_score = _safe_float(row.get("global_prominence_score"), _safe_float(row.get("trend_score")))
+        confidence = _safe_float(row.get("confidence"))
+        velocity = _safe_float(row.get("velocity_delta_pct"))
+        spike_bonus = 14.0 if bool(row.get("spike_detected")) else 0.0
+        single_source_bonus = 20.0 if source_count <= 1 else (8.0 if source_count == 2 else 0.0)
+
+        global_raw.append(trend_score)
+        niche_raw.append(
+            (trend_score * 0.32)
+            + (min(mention_1h, 20) * 2.4)
+            + (min(mention_24h, 30) * 1.2)
+            + (min(max(velocity, 0.0), 200.0) * 0.12)
+            + (min(confidence, 1.0) * 25.0)
+            + single_source_bonus
+            + spike_bonus
+        )
+
+    normalized_global = _normalize_scores(global_raw)
+    normalized_niche = _normalize_scores(niche_raw)
     trends = []
     aggregate_sources: Counter[str] = Counter()
-    for row in entities:
+    for idx, row in enumerate(entities):
         source_counts = row.get("source_counts") or {}
         if isinstance(source_counts, dict):
             for src, count in source_counts.items():
@@ -68,11 +113,17 @@ def build_trends_payload(index_payload: dict) -> dict:
                 except (TypeError, ValueError):
                     continue
 
+        global_score = round(normalized_global[idx], 2) if idx < len(normalized_global) else 0.0
+        niche_score = round(normalized_niche[idx], 2) if idx < len(normalized_niche) else 0.0
+        selected_score = global_score if mode == "global_prominence" else niche_score
         trends.append(
             {
                 "entity": row.get("entity"),
-                "trend_score": float(row.get("trend_score") or 0.0),
-                "velocity_delta_pct": 0.0,
+                "trend_score": selected_score,
+                "global_prominence_score": global_score,
+                "niche_opportunity_score": niche_score,
+                "leaderboard_mode": mode,
+                "velocity_delta_pct": _safe_float(row.get("velocity_delta_pct"), 0.0),
                 "sentiment": {"positive": 0.55, "neutral": 0.3, "negative": 0.15},
                 "mention_count_1h": int(row.get("mention_count_1h") or 0),
                 "mention_count_24h": int(row.get("mention_count_24h") or 0),
@@ -83,9 +134,18 @@ def build_trends_payload(index_payload: dict) -> dict:
             }
         )
 
-    trends.sort(key=lambda t: t["trend_score"], reverse=True)
+    trends.sort(
+        key=lambda t: (
+            t["trend_score"],
+            t["global_prominence_score"],
+            t.get("mention_count_24h") or 0,
+        ),
+        reverse=True,
+    )
 
     return {
+        "leaderboard_mode": mode,
+        "available_leaderboards": sorted(VALID_LEADERBOARDS),
         "entities": trends,
         "count": len(trends),
         "source_totals": dict(aggregate_sources),
@@ -113,7 +173,6 @@ def build_sources_payload(index_payload: dict) -> dict:
         ("hackernews", "HN"),
         ("github", "GitHub"),
         ("producthunt", "PH"),
-        ("reddit", "Reddit"),
         ("techcrunch", "RSS"),
         ("twitter", "Twitter"),
     ]
@@ -228,7 +287,9 @@ class SearchHandler(BaseHTTPRequestHandler):
                 load_env_file()
                 if not DEFAULT_INDEX.exists():
                     tool_build_index(DEFAULT_INDEX)
-                payload = build_trends_payload(load_index(DEFAULT_INDEX))
+                params = parse_qs(parsed.query)
+                leaderboard_mode = str((params.get("leaderboard") or params.get("mode") or ["global_prominence"])[0])
+                payload = build_trends_payload(load_index(DEFAULT_INDEX), leaderboard_mode=leaderboard_mode)
                 self._set_json(200)
                 self.wfile.write(json.dumps(payload, ensure_ascii=False).encode("utf-8"))
             except Exception as exc:  # noqa: BLE001

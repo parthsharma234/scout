@@ -1,0 +1,110 @@
+{
+  "_meta": {
+    "description": "Ground-truth labels for lead-time backtesting. Each entity has one or more external validation events with concrete dates.",
+    "created_at": "2026-02-21T00:00:00Z",
+    "schema_version": "1.0",
+    "label_definition": "positive if Scout surfaced the entity before external validation date",
+    "default_target_lead_time_days": 14
+  },
+  "entities": [
+    {
+      "canonical_entity": "OpenClaw",
+      "aliases": ["MoltBot", "Clawbot"],
+      "domains": ["openclaw.com"],
+      "outcome_label": 1,
+      "confidence": "high",
+      "target_lead_time_days": 7,
+      "validation_events": [
+        {
+          "event_id": "openclaw_tamarak_join_openai_2026_02_15",
+          "event_date": "2026-02-15",
+          "event_type": "mainstream_recognition",
+          "event_title": "OpenClaw founder joined OpenAI after broad user uptake and visibility",
+          "source": "The Verge",
+          "source_url": "https://www.theverge.com/news/619385/openai-hires-ai-agent-startup-openclaw-founder-tamara-khachaturian"
+        }
+      ]
+    },
+    {
+      "canonical_entity": "Cursor",
+      "aliases": ["Anysphere", "Cursor IDE"],
+      "domains": ["cursor.com", "anysphere.inc"],
+      "outcome_label": 1,
+      "confidence": "high",
+      "target_lead_time_days": 14,
+      "validation_events": [
+        {
+          "event_id": "cursor_series_b_2025_01_16",
+          "event_date": "2025-01-16",
+          "event_type": "funding",
+          "event_title": "Cursor announced $105M Series B",
+          "source": "Cursor Blog",
+          "source_url": "https://cursor.com/blog/series-b"
+        },
+        {
+          "event_id": "cursor_round_900m_2025_06_05",
+          "event_date": "2025-06-05",
+          "event_type": "funding",
+          "event_title": "Anysphere reportedly raised at ~$9.9B valuation",
+          "source": "TechCrunch",
+          "source_url": "https://techcrunch.com/2025/06/05/cursor-creator-anysphere-raises-900m-at-9-9b-valuation/",
+          "event_confidence": "medium"
+        }
+      ]
+    },
+    {
+      "canonical_entity": "ElevenLabs",
+      "aliases": ["11Labs"],
+      "domains": ["elevenlabs.io"],
+      "outcome_label": 1,
+      "confidence": "high",
+      "target_lead_time_days": 14,
+      "validation_events": [
+        {
+          "event_id": "elevenlabs_series_c_2025_01_30",
+          "event_date": "2025-01-30",
+          "event_type": "funding",
+          "event_title": "ElevenLabs announced $180M Series C at $3.3B valuation",
+          "source": "ElevenLabs Blog",
+          "source_url": "https://elevenlabs.io/blog/series-c-funding"
+        }
+      ]
+    },
+    {
+      "canonical_entity": "Lovable",
+      "aliases": ["Lovable.dev"],
+      "domains": ["lovable.dev"],
+      "outcome_label": 1,
+      "confidence": "high",
+      "target_lead_time_days": 14,
+      "validation_events": [
+        {
+          "event_id": "lovable_series_a_2025_07_17",
+          "event_date": "2025-07-17",
+          "event_type": "funding",
+          "event_title": "Lovable raised $200M Series A at ~$1.8B valuation",
+          "source": "TechCrunch",
+          "source_url": "https://techcrunch.com/2025/07/17/lovable-raises-200m-series-a-at-nearly-2b-valuation/"
+        }
+      ]
+    },
+    {
+      "canonical_entity": "Replit",
+      "aliases": ["Replit Agent"],
+      "domains": ["replit.com"],
+      "outcome_label": 1,
+      "confidence": "medium",
+      "target_lead_time_days": 14,
+      "validation_events": [
+        {
+          "event_id": "replit_round_300m_2025_09_10",
+          "event_date": "2025-09-10",
+          "event_type": "funding",
+          "event_title": "Replit reportedly raised $300M at $3B valuation",
+          "source": "TechCrunch",
+          "source_url": "https://techcrunch.com/2025/09/10/replit-reportedly-raises-300m-at-3b-valuation/"
+        }
+      ]
+    }
+  ]
+}

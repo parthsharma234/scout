@@ -27,6 +27,36 @@ API_ENDPOINT = "https://api.producthunt.com/v2/api/graphql"
 SOURCE_ID = "producthunt"
 SOURCE_NAME = "Product Hunt"
 
+HIGH_GROWTH_VERTICAL_KEYWORDS = {
+    "ai",
+    "agent",
+    "llm",
+    "fintech",
+    "payments",
+    "healthtech",
+    "biotech",
+    "medtech",
+    "robotics",
+    "security",
+    "cybersecurity",
+    "compliance",
+    "devtools",
+    "infrastructure",
+    "observability",
+    "logistics",
+    "supply",
+    "enterprise",
+    "analytics",
+    "marketplace",
+    "insurtech",
+    "proptech",
+    "legaltech",
+    "agtech",
+    "climate",
+    "energy",
+    "battery",
+}
+
 QUERY_POSTS = """
 query Posts($first: Int!, $after: String, $order: PostsOrder) {
   posts(first: $first, after: $after, order: $order) {
@@ -106,6 +136,10 @@ def extract_keywords(name: str, tagline: str, description: str, top_n: int = 8) 
     return [token for token, _ in counts.most_common(top_n)]
 
 
+def has_growth_vertical(keywords: list[str]) -> bool:
+    return bool({k.lower() for k in keywords} & HIGH_GROWTH_VERTICAL_KEYWORDS)
+
+
 def score_impressions(votes: int, comments: int, rating: float, created_at: str | None) -> int:
     age_hours = get_age_hours(created_at)
     base = votes * 11 + comments * 9 + int(rating * 28)
@@ -113,6 +147,15 @@ def score_impressions(votes: int, comments: int, rating: float, created_at: str 
     if age_hours is not None:
         recency = int(max(0.0, 120.0 - age_hours) * 2.2)
     return max(0, base + recency)
+
+
+def growth_signal_score(votes: int, comments: int, rating: float, created_at: str | None, keywords: list[str]) -> float:
+    age_hours = get_age_hours(created_at) or 120.0
+    engagement_rate = (votes + comments * 1.6) / max(1.0, age_hours / 6.0)
+    momentum = min(100.0, engagement_rate * 14.0)
+    quality = min(20.0, max(0.0, rating) * 4.0)
+    vertical_bonus = 10.0 if has_growth_vertical(keywords) else 0.0
+    return round(min(130.0, momentum + quality + vertical_bonus), 2)
 
 
 def graphql_request(token: str, query: str, variables: dict[str, Any], timeout_seconds: int) -> dict[str, Any]:
@@ -187,10 +230,10 @@ def write_json(path: Path, payload: dict[str, Any]) -> None:
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Product Hunt to JSON pipeline for Scout")
     parser.add_argument("--limit-posts", type=int, default=240)
-    parser.add_argument("--order", choices=["RANKING", "VOTES", "NEWEST"], default="VOTES")
+    parser.add_argument("--order", choices=["RANKING", "VOTES", "NEWEST"], default="NEWEST")
     parser.add_argument("--sleep-seconds", type=float, default=0.15)
     parser.add_argument("--timeout-seconds", type=int, default=20)
-    parser.add_argument("--min-votes", type=int, default=2)
+    parser.add_argument("--min-votes", type=int, default=1)
     parser.add_argument("--raw-out", type=Path, default=Path("data/producthunt_data/producthunt_raw.jsonl"))
     parser.add_argument("--entities-out", type=Path, default=Path("data/producthunt_data/producthunt_entities.json"))
     parser.add_argument("--nodes-out", type=Path, default=Path("data/producthunt_data/producthunt_source_nodes.json"))
@@ -233,6 +276,7 @@ def main() -> None:
         created_at = post.get("createdAt")
         impressions = score_impressions(votes, comments, rating, created_at)
         keywords = extract_keywords(name, tagline, description)
+        growth_signal = growth_signal_score(votes, comments, rating, created_at, keywords)
         summary = (description or tagline or "No summary available.")[:320]
 
         raw_rows.append(
@@ -252,8 +296,8 @@ def main() -> None:
                 "entity_candidates": [
                     {
                         "entity": name,
-                        "confidence": 0.8 if votes >= 25 else 0.7,
-                        "reasons": ["post_name", "votes_threshold"],
+                        "confidence": 0.82 if growth_signal >= 55 else (0.78 if votes >= 25 else 0.68),
+                        "reasons": ["post_name", "votes_threshold", "growth_signal"],
                     }
                 ],
                 "fetched_at": now_iso(),
@@ -263,8 +307,8 @@ def main() -> None:
         mentions.append(
             {
                 "entity": name,
-                "confidence": 0.8 if votes >= 25 else 0.7,
-                "reasons": ["post_name", "votes_threshold"],
+                "confidence": 0.82 if growth_signal >= 55 else (0.78 if votes >= 25 else 0.68),
+                "reasons": ["post_name", "votes_threshold", "growth_signal"],
                 "ph_id": post.get("id"),
                 "headline": name,
                 "tagline": tagline,
@@ -275,6 +319,7 @@ def main() -> None:
                 "comments": comments,
                 "rating": rating,
                 "impressions": impressions,
+                "growth_signal_score": growth_signal,
                 "created_at": created_at,
             }
         )
@@ -295,6 +340,7 @@ def main() -> None:
         count = len(entity_mentions)
         impressions_total = sum(m["impressions"] for m in entity_mentions)
         confidence = round(sum(m["confidence"] for m in entity_mentions) / count, 3)
+        avg_growth_signal = sum(float(m.get("growth_signal_score") or 0.0) for m in entity_mentions) / max(1, count)
 
         mention_1h = 0
         mention_24h = 0
@@ -327,6 +373,7 @@ def main() -> None:
                 "quality_signals": sorted({reason for m in entity_mentions for reason in m["reasons"]}),
                 "first_seen_at": min((m["created_at"] or now_iso()) for m in entity_mentions),
                 "last_seen_at": max((m["created_at"] or now_iso()) for m in entity_mentions),
+                "growth_signal_score": round(avg_growth_signal, 2),
             }
         )
 
@@ -343,6 +390,7 @@ def main() -> None:
                     "interactions": int(mention["votes"] + mention["comments"] * 2 + mention["rating"] * 5),
                     "views": int(max(mention["impressions"], mention["votes"] * 14)),
                     "impressions": mention["impressions"],
+                    "growth_signal_score": mention.get("growth_signal_score"),
                     "ph_id": mention["ph_id"],
                     "published_at": mention["created_at"],
                     "confidence": mention["confidence"],
@@ -354,8 +402,9 @@ def main() -> None:
         impression_component = (row["impressions"] / max_impressions) * 70.0
         confidence_component = row["confidence"] * 30.0
         row["trend_score"] = round(impression_component + confidence_component, 2)
-        row["velocity_delta_pct"] = 0.0
-        row["spike_detected"] = row["mention_count_24h"] >= 2
+        growth_component = float(row.get("growth_signal_score") or 0.0)
+        row["velocity_delta_pct"] = round(min(250.0, growth_component * 1.7 + row["mention_count_1h"] * 24.0), 2)
+        row["spike_detected"] = row["mention_count_24h"] >= 2 or row["velocity_delta_pct"] >= 50.0
 
     entity_rows.sort(key=lambda r: r["trend_score"], reverse=True)
     node_rows.sort(key=lambda r: (r["interactions"] + r["views"] * 0.18), reverse=True)

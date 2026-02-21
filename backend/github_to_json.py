@@ -36,6 +36,31 @@ ENTITY_STOP = {
     "Template",
     "Starter",
     "Example",
+    "Inc",
+    "Llc",
+    "Corp",
+    "Ltd",
+}
+
+HIGH_GROWTH_TOPICS = {
+    "ai",
+    "llm",
+    "agent",
+    "fintech",
+    "payments",
+    "healthtech",
+    "biotech",
+    "robotics",
+    "security",
+    "cybersecurity",
+    "developer-experience",
+    "devtools",
+    "observability",
+    "enterprise-software",
+    "climate-tech",
+    "energy",
+    "compliance",
+    "supply-chain",
 }
 
 
@@ -122,15 +147,17 @@ def score_impressions(repo: dict[str, Any]) -> int:
     issues = int(repo.get("open_issues_count") or 0)
     velocity = float(repo.get("star_velocity_per_day") or 0.0)
     recent_release = bool(repo.get("has_recent_release"))
+    growth_signal_score = float(repo.get("growth_signal_score") or 0.0)
     pushed_age = age_hours(repo.get("pushed_at"))
 
     base = stars * 8 + forks * 6 + watchers * 3 + issues * 1
     velocity_boost = int(min(300, velocity * 45))
     release_boost = 120 if recent_release else 0
+    growth_boost = int(min(220, growth_signal_score * 1.6))
     recency_boost = 0
     if pushed_age is not None:
         recency_boost = int(max(0.0, 72.0 - pushed_age) * 2.0)
-    return max(0, base + velocity_boost + release_boost + recency_boost)
+    return max(0, base + velocity_boost + release_boost + growth_boost + recency_boost)
 
 
 def build_keywords(repo: dict[str, Any]) -> list[str]:
@@ -170,6 +197,16 @@ def confidence_for_repo(repo: dict[str, Any], reasons: list[str]) -> float:
     velocity = float(repo.get("star_velocity_per_day") or 0.0)
     if velocity >= 1.0:
         confidence += 0.1
+    growth_signal = float(repo.get("growth_signal_score") or 0.0)
+    if growth_signal >= 55:
+        confidence += 0.08
+    elif growth_signal >= 35:
+        confidence += 0.05
+    topics = {str(t).strip().lower() for t in (repo.get("topics") or []) if isinstance(t, str)}
+    if topics & HIGH_GROWTH_TOPICS:
+        confidence += 0.06
+    if int(repo.get("query_hits") or 1) >= 3:
+        confidence += 0.06
     return round(min(1.0, confidence), 3)
 
 
@@ -218,8 +255,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--entities-out", type=Path, default=Path("data/github_data/github_entities.json"))
     parser.add_argument("--nodes-out", type=Path, default=Path("data/github_data/github_source_nodes.json"))
     parser.add_argument("--state-out", type=Path, default=Path("data/github_data/github_state.json"))
-    parser.add_argument("--min-stars", type=int, default=5)
-    parser.add_argument("--min-confidence", type=float, default=0.45)
+    parser.add_argument("--min-stars", type=int, default=2)
+    parser.add_argument("--min-confidence", type=float, default=0.4)
     return parser.parse_args()
 
 
@@ -241,15 +278,19 @@ def main() -> None:
         recent_release = bool(repo.get("has_recent_release"))
         description = str(repo.get("description") or "").strip()
 
+        growth_signal = float(repo.get("growth_signal_score") or 0.0)
+        query_hits = int(repo.get("query_hits") or 1)
         quality_gate = (
             stars >= args.min_stars
             or forks >= 2
             or watchers >= 10
             or (recent_release and stars >= 2)
+            or growth_signal >= 32.0
+            or query_hits >= 3
         )
         if not quality_gate:
             continue
-        if len(description) < 16:
+        if len(description) < 12 and growth_signal < 45.0:
             continue
 
         entity, reasons = pick_entity(repo)
@@ -291,6 +332,8 @@ def main() -> None:
                 "summary": summary[:320],
                 "entity_confidence": confidence,
                 "entity_reasons": reasons,
+                "growth_signal_score": growth_signal,
+                "query_hits": query_hits,
                 "fetched_at": now_iso(),
             }
         )
@@ -311,6 +354,7 @@ def main() -> None:
                 "watchers": watchers,
                 "open_issues": int(repo.get("open_issues_count") or 0),
                 "impressions": impressions,
+                "growth_signal_score": growth_signal,
                 "updated_at": repo.get("updated_at"),
                 "pushed_at": repo.get("pushed_at"),
             }
@@ -389,6 +433,7 @@ def main() -> None:
                     "interactions": interactions,
                     "views": int(max(mention["impressions"], mention["stars"] * 10)),
                     "impressions": mention["impressions"],
+                    "growth_signal_score": mention.get("growth_signal_score"),
                     "repo_id": mention["repo_id"],
                     "published_at": mention.get("pushed_at") or mention.get("updated_at"),
                     "confidence": mention["confidence"],
@@ -400,8 +445,11 @@ def main() -> None:
         impression_component = (row["impressions"] / max_impressions) * 70.0
         confidence_component = row["confidence"] * 30.0
         row["trend_score"] = round(impression_component + confidence_component, 2)
-        row["velocity_delta_pct"] = 0.0
-        row["spike_detected"] = row["mention_count_24h"] >= 2
+        row["velocity_delta_pct"] = round(
+            min(250.0, (row["mention_count_1h"] * 38.0) + (row["mention_count_24h"] * 4.0)),
+            2,
+        )
+        row["spike_detected"] = row["mention_count_24h"] >= 2 or row["velocity_delta_pct"] >= 55.0
 
     entity_rows.sort(key=lambda r: r["trend_score"], reverse=True)
     node_rows.sort(key=lambda r: (r["interactions"] + r["views"] * 0.18), reverse=True)

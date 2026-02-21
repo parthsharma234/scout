@@ -19,9 +19,67 @@ function normalizeEntityKey(value = '') {
     .replace(/[^a-z0-9]+/g, '')
 }
 
+function normalizeScores(values = []) {
+  if (!Array.isArray(values) || values.length === 0) return []
+  const low = Math.min(...values)
+  const high = Math.max(...values)
+  if (high <= low) return values.map(() => 100)
+  return values.map((value) => ((value - low) / (high - low)) * 100)
+}
+
+function applyLeaderboardMode(inputRows = [], leaderboardMode = 'global_prominence') {
+  const mode = leaderboardMode === 'niche_opportunity' ? 'niche_opportunity' : 'global_prominence'
+  const rows = (Array.isArray(inputRows) ? inputRows : []).map((row) => {
+    const mention1h = Number(row.mention_count_1h || 0)
+    const mention24h = Number(row.mention_count_24h || 0)
+    const confidence = Number(row.confidence || 0)
+    const velocity = Number(row.velocity_delta_pct || 0)
+    const sourceCount = Array.isArray(row.sources) ? row.sources.length : 0
+    const singleSourceBonus = sourceCount <= 1 ? 20 : sourceCount === 2 ? 8 : 0
+    return {
+      ...row,
+      _globalRaw: Number(
+        row.global_prominence_score ?? row.relevance_score ?? row.trend_score ?? 0,
+      ),
+      _nicheRaw: Number(
+        row.niche_opportunity_score
+          ?? (Number(row.trend_score || 0) * 0.32
+            + Math.min(mention1h, 20) * 2.4
+            + Math.min(mention24h, 30) * 1.2
+            + Math.min(Math.max(velocity, 0), 200) * 0.12
+            + Math.min(confidence, 1) * 25
+            + singleSourceBonus
+            + (row.spike_detected ? 14 : 0)),
+      ),
+    }
+  })
+  const globalNorm = normalizeScores(rows.map((row) => row._globalRaw))
+  const nicheNorm = normalizeScores(rows.map((row) => row._nicheRaw))
+
+  const enriched = rows.map((row, idx) => {
+    const globalScore = Number((globalNorm[idx] ?? 0).toFixed(2))
+    const nicheScore = Number((nicheNorm[idx] ?? 0).toFixed(2))
+    return {
+      ...row,
+      global_prominence_score: globalScore,
+      niche_opportunity_score: nicheScore,
+      trend_score: mode === 'niche_opportunity' ? nicheScore : globalScore,
+      leaderboard_mode: mode,
+    }
+  })
+
+  return enriched
+    .sort((a, b) => Number(b.trend_score || 0) - Number(a.trend_score || 0))
+    .map((row) => {
+      const { _globalRaw, _nicheRaw, ...clean } = row
+      return clean
+    })
+}
+
 export default function DashboardPage() {
   const [drilledEntity, setDrilledEntity] = useState(null)
   const [secondaryTab, setSecondaryTab] = useState(null)
+  const [leaderboardMode, setLeaderboardMode] = useState('global_prominence')
   const [nicheQuery, setNicheQuery] = useState('')
   const [nicheLoading, setNicheLoading] = useState(false)
   const [nicheError, setNicheError] = useState('')
@@ -37,18 +95,23 @@ export default function DashboardPage() {
   const { trends: apiTrends, loading: trendsLoading } = useTrends({
     enabled: !wsConnected,
     pollInterval: 10000,
+    leaderboardMode,
   })
 
-  const mock = useMockData()
+  const mock = useMockData({ leaderboardMode })
 
   const hasLiveData = wsConnected || apiTrends.length > 0
   const connected = wsConnected || mock.connected
 
-  const trends = wsConnected
+  const baseTrends = wsConnected
     ? wsTrends
     : apiTrends.length > 0
       ? apiTrends
       : mock.trends
+  const trends = useMemo(
+    () => applyLeaderboardMode(baseTrends, leaderboardMode),
+    [baseTrends, leaderboardMode],
+  )
 
   const sources = wsSources.length > 0 ? wsSources : mock.sources
 
@@ -208,6 +271,8 @@ export default function DashboardPage() {
                 selectedEntity={drilledEntity}
                 onSelectEntity={handleSelectEntity}
                 mode="table"
+                leaderboardMode={leaderboardMode}
+                onLeaderboardModeChange={setLeaderboardMode}
               />
             </div>
           )}

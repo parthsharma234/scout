@@ -2,26 +2,26 @@
   "_meta": {
     "description": "Unified cross-source entity index for niche search. Aggregates Hacker News, GitHub, and Product Hunt entities and nodes.",
     "schema_version": "1.0",
-    "generated_at": "2026-02-21T16:46:42.583117+00:00",
+    "generated_at": "2026-02-21T19:09:27.097048+00:00",
     "sources_expected": [
       "github",
       "hackernews",
       "producthunt"
     ]
   },
-  "entity_count": 81,
+  "entity_count": 68,
   "stats": {
     "sources_seen": 2,
-    "entity_rows_seen": 81,
-    "node_rows_seen": 83
+    "entity_rows_seen": 68,
+    "node_rows_seen": 72
   },
   "entities": [
     {
-      "entity_key": "rtkai",
-      "entity": "Rtk Ai",
-      "confidence": 0.9,
-      "trend_score": 98.8,
-      "impressions": 13625,
+      "entity_key": "weathr",
+      "entity": "Weathr",
+      "confidence": 0.65,
+      "trend_score": 95.8,
+      "impressions": 23022,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
       "spike_detected": false,
@@ -32,31 +32,31 @@
         "github": 1
       },
       "top_keywords": [
-        "rust",
+        "terminal",
+        "weather",
         "cli",
-        "llm",
-        "agentic-coding",
-        "ai-coding",
-        "anthropic"
+        "rust-lang",
+        "tui",
+        "rust"
       ],
       "quality_signals": [
         "full_name_present",
-        "owner_org"
+        "repo_name"
       ],
       "node_count": 1,
       "top_nodes": [
         {
-          "id": "github-1139971460-rtk-ai",
+          "id": "github-1152969678-weathr",
           "source_id": "github",
           "source_name": "GitHub",
-          "headline": "rtk-ai/rtk",
-          "url": "https://github.com/rtk-ai/rtk",
-          "summary": "CLI proxy that reduces LLM token consumption by 60-90% on common dev commands. Single Rust binary, zero dependencies",
-          "interactions": 2117,
-          "views": 13625,
-          "impressions": 13625,
-          "published_at": "2026-02-20T17:26:38Z",
-          "confidence": 0.9
+          "headline": "Veirt/weathr",
+          "url": "https://github.com/Veirt/weathr",
+          "summary": "a terminal weather app with ascii animation",
+          "interactions": 3297,
+          "views": 23022,
+          "impressions": 23022,
+          "published_at": "2026-02-21T15:26:26Z",
+          "confidence": 0.65
         }
       ]
     },
@@ -64,7 +64,7 @@
       "entity_key": "micasa",
       "entity": "Micasa",
       "confidence": 1.0,
-      "trend_score": 65.55,
+      "trend_score": 55.12,
       "impressions": 5802,
       "mention_count_1h": 0,
       "mention_count_24h": 0,
@@ -108,54 +108,10 @@
       ]
     },
     {
-      "entity_key": "daymonio",
-      "entity": "Daymonio",
-      "confidence": 0.9,
-      "trend_score": 32.52,
-      "impressions": 3363,
-      "mention_count_1h": 0,
-      "mention_count_24h": 0,
-      "spike_detected": false,
-      "sources": [
-        "github"
-      ],
-      "source_counts": {
-        "github": 1
-      },
-      "top_keywords": [
-        "ai",
-        "ai-agents",
-        "ai-assistant",
-        "automation",
-        "claude-code",
-        "claude-desktop"
-      ],
-      "quality_signals": [
-        "full_name_present",
-        "owner_org"
-      ],
-      "node_count": 1,
-      "top_nodes": [
-        {
-          "id": "github-1157946652-daymonio",
-          "source_id": "github",
-          "source_name": "GitHub",
-          "headline": "daymonio/daymon",
-          "url": "https://github.com/daymonio/daymon",
-          "summary": "Daymon puts your favorite AI to work 24/7. It schedules, remembers, and orchestrates your own virtual team. Free.",
-          "interactions": 404,
-          "views": 3363,
-          "impressions": 3363,
-          "published_at": "2026-02-19T18:03:18Z",
-          "confidence": 0.9
-        }
-      ]
-    },
-    {
       "entity_key": "makie",
       "entity": "Makie",
       "confidence": 0.87,
-      "trend_score": 29.39,
+      "trend_score": 25.7,
       "impressions": 2053,
       "mention_count_1h": 0,
       "mention_count_24h": 0,
@@ -198,11 +154,55 @@
       ]
     },
     {
+      "entity_key": "rezi",
+      "entity": "Rezi",
+      "confidence": 0.71,
+      "trend_score": 25.4,
+      "impressions": 4416,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "typescript",
+        "tui",
+        "bun",
+        "c",
+        "cli",
+        "console-application"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "github-1154535341-rezi",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "RtlZeroMemory/Rezi",
+          "url": "https://github.com/RtlZeroMemory/Rezi",
+          "summary": "Rezi — TypeScript TUI, Near-Native Performance. Powered by deterministic C engine.",
+          "interactions": 549,
+          "views": 4416,
+          "impressions": 4416,
+          "published_at": "2026-02-21T15:25:47Z",
+          "confidence": 0.71
+        }
+      ]
+    },
+    {
       "entity_key": "myinvestpilot",
       "entity": "Myinvestpilot",
-      "confidence": 0.8,
-      "trend_score": 27.27,
-      "impressions": 2736,
+      "confidence": 0.86,
+      "trend_score": 20.88,
+      "impressions": 2764,
       "mention_count_1h": 0,
       "mention_count_24h": 0,
       "spike_detected": false,
@@ -233,101 +233,11 @@
           "headline": "myinvestpilot/ai-architecture",
           "url": "https://github.com/myinvestpilot/ai-architecture",
           "summary": "Design notes, architecture, and trade-offs for MyInvestPilot — an AI-native investment OS built with agent-driven development, DSL engine, and solo company tech stack.",
-          "interactions": 399,
-          "views": 2736,
-          "impressions": 2736,
+          "interactions": 406,
+          "views": 2764,
+          "impressions": 2764,
           "published_at": "2026-02-16T17:38:28Z",
-          "confidence": 0.8
-        }
-      ]
-    },
-    {
-      "entity_key": "openbootdotdev",
-      "entity": "Openbootdotdev",
-      "confidence": 0.9,
-      "trend_score": 26.6,
-      "impressions": 2447,
-      "mention_count_1h": 0,
-      "mention_count_24h": 0,
-      "spike_detected": false,
-      "sources": [
-        "github"
-      ],
-      "source_counts": {
-        "github": 1
-      },
-      "top_keywords": [
-        "cli",
-        "go",
-        "dev-environment",
-        "developer-tools",
-        "devops",
-        "dotfiles"
-      ],
-      "quality_signals": [
-        "full_name_present",
-        "owner_org"
-      ],
-      "node_count": 1,
-      "top_nodes": [
-        {
-          "id": "github-1147139359-openbootdotdev",
-          "source_id": "github",
-          "source_name": "GitHub",
-          "headline": "openbootdotdev/openboot",
-          "url": "https://github.com/openbootdotdev/openboot",
-          "summary": "Set up your Mac dev environment in one command — CLI + Web Dashboard + Team sharing",
-          "interactions": 277,
-          "views": 2447,
-          "impressions": 2447,
-          "published_at": "2026-02-20T12:15:26Z",
-          "confidence": 0.9
-        }
-      ]
-    },
-    {
-      "entity_key": "minidiarium",
-      "entity": "Mini-Diarium",
-      "confidence": 0.47,
-      "trend_score": 19.02,
-      "impressions": 1450,
-      "mention_count_1h": 0,
-      "mention_count_24h": 0,
-      "spike_detected": false,
-      "sources": [
-        "hackernews"
-      ],
-      "source_counts": {
-        "hackernews": 1
-      },
-      "top_keywords": [
-        "mini-diarium",
-        "encrypted",
-        "local",
-        "cross-platform",
-        "journaling",
-        "app"
-      ],
-      "quality_signals": [
-        "builder_signal",
-        "showcase_story",
-        "text_presence",
-        "title_pattern"
-      ],
-      "node_count": 1,
-      "top_nodes": [
-        {
-          "id": "hn-47072863-mini-diarium",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "Show HN: Mini-Diarium - An encrypted, local, cross-platform journaling app",
-          "url": "https://github.com/fjrevoredo/mini-diarium",
-          "summary": "This is Nice. However, how do one access their diary, when you stopped maintaining it? Is this targeted more at the technically inclined, high-profile people who need to keep secrets? Personally, I believe that for something like a diary/journal, it should be in a format easily r",
-          "interactions": 255,
-          "views": 1450,
-          "impressions": 1450,
-          "published_at": "2026-02-19T11:54:21+00:00",
-          "confidence": 0.47
+          "confidence": 0.86
         }
       ]
     },
@@ -335,7 +245,7 @@
       "entity_key": "mines",
       "entity": "Mines",
       "confidence": 0.87,
-      "trend_score": 18.72,
+      "trend_score": 17.11,
       "impressions": 897,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -378,10 +288,56 @@
       ]
     },
     {
+      "entity_key": "minidiarium",
+      "entity": "Mini-Diarium",
+      "confidence": 0.47,
+      "trend_score": 16.41,
+      "impressions": 1450,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "mini-diarium",
+        "encrypted",
+        "local",
+        "cross-platform",
+        "journaling",
+        "app"
+      ],
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "hn-47072863-mini-diarium",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Mini-Diarium - An encrypted, local, cross-platform journaling app",
+          "url": "https://github.com/fjrevoredo/mini-diarium",
+          "summary": "This is Nice. However, how do one access their diary, when you stopped maintaining it? Is this targeted more at the technically inclined, high-profile people who need to keep secrets? Personally, I believe that for something like a diary/journal, it should be in a format easily r",
+          "interactions": 255,
+          "views": 1450,
+          "impressions": 1450,
+          "published_at": "2026-02-19T11:54:21+00:00",
+          "confidence": 0.47
+        }
+      ]
+    },
+    {
       "entity_key": "rebrain",
       "entity": "Rebrain",
       "confidence": 0.47,
-      "trend_score": 16.62,
+      "trend_score": 14.48,
       "impressions": 1189,
       "mention_count_1h": 0,
       "mention_count_24h": 0,
@@ -424,98 +380,10 @@
       ]
     },
     {
-      "entity_key": "beyteflow",
-      "entity": "BeyteFlow",
-      "confidence": 0.85,
-      "trend_score": 14.69,
-      "impressions": 695,
-      "mention_count_1h": 0,
-      "mention_count_24h": 0,
-      "spike_detected": false,
-      "sources": [
-        "github"
-      ],
-      "source_counts": {
-        "github": 1
-      },
-      "top_keywords": [
-        "readme",
-        "ai",
-        "automation",
-        "developer-tool",
-        "github-api",
-        "markdown"
-      ],
-      "quality_signals": [
-        "full_name_present",
-        "owner_org"
-      ],
-      "node_count": 1,
-      "top_nodes": [
-        {
-          "id": "github-1152942711-beyteflow",
-          "source_id": "github",
-          "source_name": "GitHub",
-          "headline": "BeyteFlow/ReadmeGenAI",
-          "url": "https://github.com/BeyteFlow/ReadmeGenAI",
-          "summary": "AI-powered README generator for GitHub. Paste a repo URL and instantly create a professional, well-structured README.md file.",
-          "interactions": 64,
-          "views": 695,
-          "impressions": 695,
-          "published_at": "2026-02-19T14:40:36Z",
-          "confidence": 0.85
-        }
-      ]
-    },
-    {
-      "entity_key": "claudia",
-      "entity": "Claudia",
-      "confidence": 0.6,
-      "trend_score": 13.28,
-      "impressions": 941,
-      "mention_count_1h": 0,
-      "mention_count_24h": 0,
-      "spike_detected": false,
-      "sources": [
-        "github"
-      ],
-      "source_counts": {
-        "github": 1
-      },
-      "top_keywords": [
-        "ai-assistant",
-        "claude-code",
-        "productivity",
-        "relationship-management",
-        "terminal",
-        "python"
-      ],
-      "quality_signals": [
-        "full_name_present",
-        "repo_name"
-      ],
-      "node_count": 1,
-      "top_nodes": [
-        {
-          "id": "github-1140897918-claudia",
-          "source_id": "github",
-          "source_name": "GitHub",
-          "headline": "kbanc85/claudia",
-          "url": "https://github.com/kbanc85/claudia",
-          "summary": "Terminal-based AI chief of staff. Remembers relationships, tracks commitments, helps you think strategically. Runs on Claude Code.",
-          "interactions": 107,
-          "views": 941,
-          "impressions": 941,
-          "published_at": "2026-02-19T21:39:55Z",
-          "confidence": 0.6
-        }
-      ]
-    },
-    {
       "entity_key": "scriptsnap",
       "entity": "Script Snap",
       "confidence": 1.0,
-      "trend_score": 13.25,
+      "trend_score": 13.01,
       "impressions": 136,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -559,11 +427,68 @@
       ]
     },
     {
-      "entity_key": "appvox",
-      "entity": "App Vox",
+      "entity_key": "xorbitsai",
+      "entity": "Xorbitsai",
       "confidence": 0.8,
-      "trend_score": 12.8,
-      "impressions": 495,
+      "trend_score": 12.16,
+      "impressions": 670,
+      "mention_count_1h": 0,
+      "mention_count_24h": 2,
+      "spike_detected": true,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 2
+      },
+      "top_keywords": [
+        "orchestration",
+        "agent",
+        "agentic-ai",
+        "claude",
+        "gemini",
+        "llm"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "owner_org"
+      ],
+      "node_count": 2,
+      "top_nodes": [
+        {
+          "id": "github-1158548143-xorbitsai",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "xorbitsai/xagent",
+          "url": "https://github.com/xorbitsai/xagent",
+          "summary": "AI agents for everyone. Production-ready platform with dynamic planning and autonomous tool orchestration.",
+          "interactions": 10,
+          "views": 335,
+          "impressions": 335,
+          "published_at": "2026-02-21T15:16:07Z",
+          "confidence": 0.76
+        },
+        {
+          "id": "github-1158548143-xorbitsai",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "xorbitsai/xagent",
+          "url": "https://github.com/xorbitsai/xagent",
+          "summary": "AI agents for everyone. Production-ready platform with dynamic planning and autonomous tool orchestration.",
+          "interactions": 10,
+          "views": 335,
+          "impressions": 335,
+          "published_at": "2026-02-21T15:16:07Z",
+          "confidence": 0.76
+        }
+      ]
+    },
+    {
+      "entity_key": "opencrustorg",
+      "entity": "Opencrust Org",
+      "confidence": 0.86,
+      "trend_score": 12.02,
+      "impressions": 444,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
       "spike_detected": false,
@@ -574,12 +499,12 @@
         "github": 1
       },
       "top_keywords": [
-        "llm",
-        "typescript",
-        "voice-to-text",
-        "whisper",
-        "dictation",
-        "electron"
+        "rust",
+        "ai",
+        "ai-assistant",
+        "chatbot",
+        "discord-bot",
+        "llm"
       ],
       "quality_signals": [
         "full_name_present",
@@ -588,17 +513,17 @@
       "node_count": 1,
       "top_nodes": [
         {
-          "id": "github-1152960251-app-vox",
+          "id": "github-1158960069-opencrust-org",
           "source_id": "github",
           "source_name": "GitHub",
-          "headline": "app-vox/vox",
-          "url": "https://github.com/app-vox/vox",
-          "summary": "Your privacy-first voice-to-text tool. Local Whisper transcription with optional LLM enhancement so your audio never leaves your computer.",
-          "interactions": 91,
-          "views": 495,
-          "impressions": 495,
-          "published_at": "2026-02-20T21:00:32Z",
-          "confidence": 0.8
+          "headline": "opencrust-org/opencrust",
+          "url": "https://github.com/opencrust-org/opencrust",
+          "summary": "Personal AI assistant platform, rewritten in Rust from OpenClaw",
+          "interactions": 73,
+          "views": 444,
+          "impressions": 444,
+          "published_at": "2026-02-21T15:25:13Z",
+          "confidence": 0.86
         }
       ]
     },
@@ -606,7 +531,7 @@
       "entity_key": "emailmarketingskill",
       "entity": "Emailmarketingskill",
       "confidence": 0.87,
-      "trend_score": 12.05,
+      "trend_score": 11.73,
       "impressions": 174,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -652,7 +577,7 @@
       "entity_key": "novadev",
       "entity": "Novadev",
       "confidence": 0.82,
-      "trend_score": 12.03,
+      "trend_score": 11.6,
       "impressions": 237,
       "mention_count_1h": 0,
       "mention_count_24h": 2,
@@ -710,7 +635,7 @@
       "entity_key": "netlify",
       "entity": "Netlify",
       "confidence": 0.87,
-      "trend_score": 11.57,
+      "trend_score": 11.35,
       "impressions": 123,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -756,7 +681,7 @@
       "entity_key": "webhookstream",
       "entity": "Webhookstream",
       "confidence": 0.87,
-      "trend_score": 11.57,
+      "trend_score": 11.35,
       "impressions": 122,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -802,7 +727,7 @@
       "entity_key": "awingender",
       "entity": "Awingender",
       "confidence": 0.87,
-      "trend_score": 11.53,
+      "trend_score": 11.32,
       "impressions": 118,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -848,7 +773,7 @@
       "entity_key": "8gent",
       "entity": "8Gent",
       "confidence": 0.87,
-      "trend_score": 11.5,
+      "trend_score": 11.3,
       "impressions": 115,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -891,10 +816,54 @@
       ]
     },
     {
+      "entity_key": "modeltc",
+      "entity": "ModelTC",
+      "confidence": 0.75,
+      "trend_score": 11.29,
+      "impressions": 598,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "dpo",
+        "grpo",
+        "imagegeneration",
+        "infra",
+        "reinforcement-learning",
+        "rl"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "owner_org"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "github-1154876909-modeltc",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "ModelTC/GenRL",
+          "url": "https://github.com/ModelTC/GenRL",
+          "summary": "Reinforcement Learning Framework for Visual Generation",
+          "interactions": 62,
+          "views": 598,
+          "impressions": 598,
+          "published_at": "2026-02-13T07:38:38Z",
+          "confidence": 0.75
+        }
+      ]
+    },
+    {
       "entity_key": "mukoko",
       "entity": "Mukoko",
       "confidence": 0.87,
-      "trend_score": 11.47,
+      "trend_score": 11.27,
       "impressions": 112,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -937,54 +906,10 @@
       ]
     },
     {
-      "entity_key": "pmclaudeskills",
-      "entity": "Pm Claude Skills",
-      "confidence": 0.6,
-      "trend_score": 11.47,
-      "impressions": 661,
-      "mention_count_1h": 0,
-      "mention_count_24h": 0,
-      "spike_detected": false,
-      "sources": [
-        "github"
-      ],
-      "source_counts": {
-        "github": 1
-      },
-      "top_keywords": [
-        "claude",
-        "skills",
-        "ai",
-        "claude-ai",
-        "product-management",
-        "productivity"
-      ],
-      "quality_signals": [
-        "full_name_present",
-        "repo_name"
-      ],
-      "node_count": 1,
-      "top_nodes": [
-        {
-          "id": "github-1144946140-pm-claude-skills",
-          "source_id": "github",
-          "source_name": "GitHub",
-          "headline": "mohitagw15856/pm-claude-skills",
-          "url": "https://github.com/mohitagw15856/pm-claude-skills",
-          "summary": "Product Management Skills for Claude AI - Save 8-9 hours per week",
-          "interactions": 73,
-          "views": 661,
-          "impressions": 661,
-          "published_at": "2026-02-20T12:15:55Z",
-          "confidence": 0.6
-        }
-      ]
-    },
-    {
       "entity_key": "unidocverse",
       "entity": "Unidocverse",
       "confidence": 0.87,
-      "trend_score": 11.46,
+      "trend_score": 11.26,
       "impressions": 110,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -1030,7 +955,7 @@
       "entity_key": "streakout",
       "entity": "Streakout",
       "confidence": 0.87,
-      "trend_score": 11.45,
+      "trend_score": 11.25,
       "impressions": 109,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -1076,7 +1001,7 @@
       "entity_key": "jvbar",
       "entity": "Jvbar",
       "confidence": 0.87,
-      "trend_score": 11.45,
+      "trend_score": 11.25,
       "impressions": 109,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -1119,98 +1044,10 @@
       ]
     },
     {
-      "entity_key": "backlinkpilot",
-      "entity": "Backlink Pilot",
-      "confidence": 0.5,
-      "trend_score": 11.13,
-      "impressions": 794,
-      "mention_count_1h": 0,
-      "mention_count_24h": 0,
-      "spike_detected": false,
-      "sources": [
-        "github"
-      ],
-      "source_counts": {
-        "github": 1
-      },
-      "top_keywords": [
-        "awesome-lists",
-        "automation",
-        "backlinks",
-        "directory-submission",
-        "indie-hacker",
-        "link-building"
-      ],
-      "quality_signals": [
-        "full_name_present",
-        "repo_name"
-      ],
-      "node_count": 1,
-      "top_nodes": [
-        {
-          "id": "github-1158894944-backlink-pilot",
-          "source_id": "github",
-          "source_name": "GitHub",
-          "headline": "s87343472/backlink-pilot",
-          "url": "https://github.com/s87343472/backlink-pilot",
-          "summary": "Automated backlink submission toolkit for indie hackers — submit your product to directory sites, awesome-lists, and search engines with one command",
-          "interactions": 96,
-          "views": 794,
-          "impressions": 794,
-          "published_at": "2026-02-17T05:13:52Z",
-          "confidence": 0.5
-        }
-      ]
-    },
-    {
-      "entity_key": "twig",
-      "entity": "Twig",
-      "confidence": 0.6,
-      "trend_score": 11.07,
-      "impressions": 599,
-      "mention_count_1h": 0,
-      "mention_count_24h": 0,
-      "spike_detected": false,
-      "sources": [
-        "github"
-      ],
-      "source_counts": {
-        "github": 1
-      },
-      "top_keywords": [
-        "rust",
-        "tmux",
-        "cli",
-        "developer-tools",
-        "git-worktree",
-        "productivity"
-      ],
-      "quality_signals": [
-        "full_name_present",
-        "repo_name"
-      ],
-      "node_count": 1,
-      "top_nodes": [
-        {
-          "id": "github-1141147716-twig",
-          "source_id": "github",
-          "source_name": "GitHub",
-          "headline": "andersonkrs/twig",
-          "url": "https://github.com/andersonkrs/twig",
-          "summary": "A glamorous tmux session manager with git worktree support.",
-          "interactions": 53,
-          "views": 599,
-          "impressions": 599,
-          "published_at": "2026-02-20T12:50:03Z",
-          "confidence": 0.6
-        }
-      ]
-    },
-    {
       "entity_key": "mephistomail",
       "entity": "MephistoMail",
       "confidence": 0.72,
-      "trend_score": 10.76,
+      "trend_score": 10.35,
       "impressions": 230,
       "mention_count_1h": 0,
       "mention_count_24h": 2,
@@ -1267,10 +1104,54 @@
       ]
     },
     {
+      "entity_key": "niaexperience",
+      "entity": "NiaExperience",
+      "confidence": 0.7,
+      "trend_score": 10.23,
+      "impressions": 479,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "intelligent",
+        "typescript",
+        "self-evolving",
+        "companion",
+        "memory",
+        "systems"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "owner_org"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "github-1160852606-niaexperience",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "NiaExperience/PearlOS",
+          "url": "https://github.com/NiaExperience/PearlOS",
+          "summary": "Self-evolving Intelligent OS companion with memory systems, voice integration, and distributed architecture. Multi-platform support with OpenClaw intelligent agent orchestration. Early access for developers..",
+          "interactions": 26,
+          "views": 479,
+          "impressions": 479,
+          "published_at": "2026-02-20T16:54:57Z",
+          "confidence": 0.7
+        }
+      ]
+    },
+    {
       "entity_key": "usevaultlink",
       "entity": "Usevaultlink",
       "confidence": 0.77,
-      "trend_score": 10.33,
+      "trend_score": 10.12,
       "impressions": 118,
       "mention_count_1h": 1,
       "mention_count_24h": 1,
@@ -1315,7 +1196,7 @@
       "entity_key": "crates",
       "entity": "Crates",
       "confidence": 0.77,
-      "trend_score": 10.32,
+      "trend_score": 10.11,
       "impressions": 117,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -1360,7 +1241,7 @@
       "entity_key": "migratetoresponses",
       "entity": "Migratetoresponses",
       "confidence": 0.77,
-      "trend_score": 10.27,
+      "trend_score": 10.07,
       "impressions": 112,
       "mention_count_1h": 1,
       "mention_count_24h": 1,
@@ -1404,7 +1285,7 @@
       "entity_key": "polyasurn",
       "entity": "Polyasurn",
       "confidence": 0.77,
-      "trend_score": 10.25,
+      "trend_score": 10.05,
       "impressions": 109,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -1448,7 +1329,7 @@
       "entity_key": "humaboam",
       "entity": "Humaboam",
       "confidence": 0.77,
-      "trend_score": 10.2,
+      "trend_score": 10.01,
       "impressions": 104,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -1490,11 +1371,11 @@
       ]
     },
     {
-      "entity_key": "remembermd",
-      "entity": "Remember Md",
-      "confidence": 0.7,
-      "trend_score": 10.15,
-      "impressions": 271,
+      "entity_key": "vividmoney",
+      "entity": "Vivid Money",
+      "confidence": 0.76,
+      "trend_score": 9.93,
+      "impressions": 212,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
       "spike_detected": false,
@@ -1505,12 +1386,12 @@
         "github": 1
       },
       "top_keywords": [
-        "markdown",
-        "ai-brain",
-        "claude-code",
-        "knowledge-management",
-        "note-taking",
-        "obsidian"
+        "mcp",
+        "vivid",
+        "ai",
+        "banking",
+        "chatgpt",
+        "claude"
       ],
       "quality_signals": [
         "full_name_present",
@@ -1519,26 +1400,70 @@
       "node_count": 1,
       "top_nodes": [
         {
-          "id": "github-1149698194-remember-md",
+          "id": "github-1160975709-vivid-money",
           "source_id": "github",
           "source_name": "GitHub",
-          "headline": "remember-md/remember",
-          "url": "https://github.com/remember-md/remember",
-          "summary": "AI-powered second brain for Claude Code that builds itself.  Extract knowledge from every session—past and present—into  auto-organized Markdown. Local-first, queryable, learns your patterns.",
+          "headline": "vivid-money/vivid-mcp",
+          "url": "https://github.com/vivid-money/vivid-mcp",
+          "summary": "Open a Vivid Business account from your AI chat via MCP",
           "interactions": 4,
-          "views": 271,
-          "impressions": 271,
-          "published_at": "2026-02-20T22:33:27Z",
+          "views": 212,
+          "impressions": 212,
+          "published_at": "2026-02-21T14:13:36Z",
+          "confidence": 0.76
+        }
+      ]
+    },
+    {
+      "entity_key": "minbzk",
+      "entity": "MinBZK",
+      "confidence": 0.7,
+      "trend_score": 9.67,
+      "impressions": 332,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "overheid",
+        "claude-code-marketplace",
+        "claude-code-plugin",
+        "interoperabiliteit",
+        "marketplace",
+        "minbzk"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "owner_org"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "github-1159520928-minbzk",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "MinBZK/overheid-claude-plugins",
+          "url": "https://github.com/MinBZK/overheid-claude-plugins",
+          "summary": "Centrale catalogus van Claude Code plugins voor de Nederlandse overheid",
+          "interactions": 15,
+          "views": 332,
+          "impressions": 332,
+          "published_at": "2026-02-21T11:27:39Z",
           "confidence": 0.7
         }
       ]
     },
     {
-      "entity_key": "superlocalmemoryv2",
-      "entity": "SuperLocalMemoryV2",
-      "confidence": 0.55,
-      "trend_score": 9.42,
-      "impressions": 436,
+      "entity_key": "opencrew",
+      "entity": "Opencrew",
+      "confidence": 0.61,
+      "trend_score": 9.27,
+      "impressions": 509,
       "mention_count_1h": 0,
       "mention_count_24h": 0,
       "spike_detected": false,
@@ -1549,84 +1474,172 @@
         "github": 1
       },
       "top_keywords": [
+        "openclaw",
+        "multi-agent",
+        "slack",
+        "a2a-protocol",
+        "agent-deployment",
+        "agent-orchestration"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "github-1152536742-opencrew",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "AlexAnys/opencrew",
+          "url": "https://github.com/AlexAnys/opencrew",
+          "summary": "Openclaw多智能体协同系统 | Multi-Agent OS for Decision Makers — 基于 OpenClaw (Clawbot) + Slack，让 AI 团队各司其职、自主稳定迭代。",
+          "interactions": 41,
+          "views": 509,
+          "impressions": 509,
+          "published_at": "2026-02-20T09:00:43Z",
+          "confidence": 0.61
+        }
+      ]
+    },
+    {
+      "entity_key": "initrunner",
+      "entity": "Initrunner",
+      "confidence": 0.61,
+      "trend_score": 9.12,
+      "impressions": 470,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "cli",
+        "python",
+        "yaml",
+        "agent-framework",
+        "ai-agents",
+        "ai-automation"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "github-1154022019-initrunner",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "vladkesler/initrunner",
+          "url": "https://github.com/vladkesler/initrunner",
+          "summary": "Define AI agent roles in YAML and run them anywhere: CLI, API server, or autonomous daemon",
+          "interactions": 29,
+          "views": 470,
+          "impressions": 470,
+          "published_at": "2026-02-21T12:33:22Z",
+          "confidence": 0.61
+        }
+      ]
+    },
+    {
+      "entity_key": "backlinkpilot",
+      "entity": "Backlink Pilot",
+      "confidence": 0.5,
+      "trend_score": 9.08,
+      "impressions": 805,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "awesome-lists",
+        "automation",
+        "backlinks",
+        "directory-submission",
+        "indie-hacker",
+        "link-building"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "github-1158894944-backlink-pilot",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "s87343472/backlink-pilot",
+          "url": "https://github.com/s87343472/backlink-pilot",
+          "summary": "Automated backlink submission toolkit for indie hackers — submit your product to directory sites, awesome-lists, and search engines with one command",
+          "interactions": 97,
+          "views": 805,
+          "impressions": 805,
+          "published_at": "2026-02-17T05:13:52Z",
+          "confidence": 0.5
+        }
+      ]
+    },
+    {
+      "entity_key": "agentralabs",
+      "entity": "Agentralabs",
+      "confidence": 0.66,
+      "trend_score": 8.69,
+      "impressions": 201,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "rust",
+        "mcp",
         "memory",
         "python",
-        "ai",
-        "ai-memory",
-        "ai-tools",
-        "claude"
+        "agent-memory",
+        "agentic"
       ],
       "quality_signals": [
         "full_name_present",
-        "repo_name"
+        "owner_org"
       ],
       "node_count": 1,
       "top_nodes": [
         {
-          "id": "github-1150546081-superlocalmemoryv2",
+          "id": "github-1161257906-agentralabs",
           "source_id": "github",
           "source_name": "GitHub",
-          "headline": "varun369/SuperLocalMemoryV2",
-          "url": "https://github.com/varun369/SuperLocalMemoryV2",
-          "summary": "Standalone intelligent memory system with knowledge graphs, pattern learning, and 7-layer architecture. 100% local, zero external APIs.",
-          "interactions": 31,
-          "views": 436,
-          "impressions": 436,
-          "published_at": "2026-02-20T10:18:31Z",
-          "confidence": 0.55
+          "headline": "agentralabs/agentic-memory",
+          "url": "https://github.com/agentralabs/agentic-memory",
+          "summary": "Persistent cognitive graph memory for AI agents — facts, decisions, reasoning chains, corrections. 16 query types, sub-millisecond. Rust core + Python SDK + MCP server.",
+          "interactions": 13,
+          "views": 201,
+          "impressions": 201,
+          "published_at": "2026-02-21T15:26:53Z",
+          "confidence": 0.66
         }
       ]
     },
     {
-      "entity_key": "airsend",
-      "entity": "AirSend",
-      "confidence": 0.55,
-      "trend_score": 8.85,
-      "impressions": 348,
-      "mention_count_1h": 0,
-      "mention_count_24h": 0,
-      "spike_detected": false,
-      "sources": [
-        "github"
-      ],
-      "source_counts": {
-        "github": 1
-      },
-      "top_keywords": [
-        "localsend",
-        "macos",
-        "native",
-        "swift",
-        "file-transfer",
-        "productivity"
-      ],
-      "quality_signals": [
-        "full_name_present",
-        "repo_name"
-      ],
-      "node_count": 1,
-      "top_nodes": [
-        {
-          "id": "github-1161865259-airsend",
-          "source_id": "github",
-          "source_name": "GitHub",
-          "headline": "Avi7ii/AirSend",
-          "url": "https://github.com/Avi7ii/AirSend",
-          "summary": "A native, headless LocalSend client for macOS. Lightweight, fast, and elegant.",
-          "interactions": 5,
-          "views": 348,
-          "impressions": 348,
-          "published_at": "2026-02-20T12:52:58Z",
-          "confidence": 0.55
-        }
-      ]
-    },
-    {
-      "entity_key": "macronyx",
-      "entity": "Macronyx",
-      "confidence": 0.55,
-      "trend_score": 8.81,
-      "impressions": 342,
+      "entity_key": "openclawopsdeckcore",
+      "entity": "Openclaw Opsdeck Core",
+      "confidence": 0.51,
+      "trend_score": 8.27,
+      "impressions": 564,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
       "spike_detected": false,
@@ -1637,12 +1650,12 @@
         "github": 1
       },
       "top_keywords": [
-        "automation",
-        "cross-platform",
-        "macro",
-        "typescript",
-        "desktop-app",
-        "electron"
+        "dashboard",
+        "openclaw",
+        "agent",
+        "fastify",
+        "local-first",
+        "react"
       ],
       "quality_signals": [
         "full_name_present",
@@ -1651,70 +1664,26 @@
       "node_count": 1,
       "top_nodes": [
         {
-          "id": "github-1162154523-macronyx",
+          "id": "github-1163061770-openclaw-opsdeck-core",
           "source_id": "github",
           "source_name": "GitHub",
-          "headline": "DefinitelyN0tMe/Macronyx",
-          "url": "https://github.com/DefinitelyN0tMe/Macronyx",
-          "summary": "Cross-platform macro recorder with timeline editor, input automation, and visual mouse tracking.",
-          "interactions": 3,
-          "views": 342,
-          "impressions": 342,
-          "published_at": "2026-02-20T21:45:45Z",
-          "confidence": 0.55
+          "headline": "ewimsatt/openclaw-opsdeck-core",
+          "url": "https://github.com/ewimsatt/openclaw-opsdeck-core",
+          "summary": "Mission Control dashboard for OpenClaw: round table, local chat, and cron controls.",
+          "interactions": 27,
+          "views": 564,
+          "impressions": 564,
+          "published_at": "2026-02-21T15:22:54Z",
+          "confidence": 0.51
         }
       ]
     },
     {
-      "entity_key": "batzhiroquicktools",
-      "entity": "Bat Zhiro Quicktools",
+      "entity_key": "lalibelacli",
+      "entity": "Lalibela Cli",
       "confidence": 0.55,
-      "trend_score": 8.6,
-      "impressions": 309,
-      "mention_count_1h": 0,
-      "mention_count_24h": 0,
-      "spike_detected": false,
-      "sources": [
-        "github"
-      ],
-      "source_counts": {
-        "github": 1
-      },
-      "top_keywords": [
-        "automation",
-        "batch-script",
-        "context-menu",
-        "ffmpeg",
-        "imagemagick",
-        "media-conversion"
-      ],
-      "quality_signals": [
-        "full_name_present",
-        "repo_name"
-      ],
-      "node_count": 1,
-      "top_nodes": [
-        {
-          "id": "github-1161132760-bat-zhiro-quicktools",
-          "source_id": "github",
-          "source_name": "GitHub",
-          "headline": "Zhiro90/bat-zhiro-quicktools",
-          "url": "https://github.com/Zhiro90/bat-zhiro-quicktools",
-          "summary": "A bunch of tiny one click `.bat` scripts to handle mundane, repetitive media tasks (conversions, trimming, captioning, etc.).",
-          "interactions": 10,
-          "views": 309,
-          "impressions": 309,
-          "published_at": "2026-02-19T19:46:07Z",
-          "confidence": 0.55
-        }
-      ]
-    },
-    {
-      "entity_key": "devtoolsui",
-      "entity": "DevTools UI",
-      "confidence": 0.55,
-      "trend_score": 8.59,
-      "impressions": 308,
+      "trend_score": 7.86,
+      "impressions": 330,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
       "spike_detected": false,
@@ -1725,12 +1694,12 @@
         "github": 1
       },
       "top_keywords": [
-        "groovy",
-        "javafx",
-        "and",
-        "developer-tools",
-        "devtools",
-        "productivity"
+        "backend",
+        "cli",
+        "go",
+        "api",
+        "golang",
+        "golang-application"
       ],
       "quality_signals": [
         "full_name_present",
@@ -1739,16 +1708,16 @@
       "node_count": 1,
       "top_nodes": [
         {
-          "id": "github-1161012141-devtools-ui",
+          "id": "github-1161976004-lalibela-cli",
           "source_id": "github",
           "source_name": "GitHub",
-          "headline": "Electricane/DevTools-UI",
-          "url": "https://github.com/Electricane/DevTools-UI",
-          "summary": "A multi-tool developer utility built with JavaFX and Groovy, designed for quick data manipulation, encoding, and visualization.",
-          "interactions": 4,
-          "views": 308,
-          "impressions": 308,
-          "published_at": "2026-02-20T15:41:59Z",
+          "headline": "naodEthiop/lalibela-cli",
+          "url": "https://github.com/naodEthiop/lalibela-cli",
+          "summary": "🚀 Lalibela CLI is a powerful Go-based project generator that scaffolds production-ready backend applications using Gin, Echo, Fiber, or net/http — complete with Docker, JWT, database setup, and clean architecture.",
+          "interactions": 7,
+          "views": 330,
+          "impressions": 330,
+          "published_at": "2026-02-21T14:45:11Z",
           "confidence": 0.55
         }
       ]
@@ -1757,7 +1726,7 @@
       "entity_key": "piraterf",
       "entity": "PIrateRF",
       "confidence": 0.47,
-      "trend_score": 8.17,
+      "trend_score": 7.68,
       "impressions": 274,
       "mention_count_1h": 0,
       "mention_count_24h": 0,
@@ -1800,55 +1769,11 @@
       ]
     },
     {
-      "entity_key": "desktidysticky",
-      "entity": "Desk Tidy Sticky",
+      "entity_key": "torzondarknetlink",
+      "entity": "Torzon Darknet Link",
       "confidence": 0.45,
-      "trend_score": 8.08,
-      "impressions": 414,
-      "mention_count_1h": 0,
-      "mention_count_24h": 0,
-      "spike_detected": false,
-      "sources": [
-        "github"
-      ],
-      "source_counts": {
-        "github": 1
-      },
-      "top_keywords": [
-        "windows",
-        "desktop",
-        "hotkey",
-        "notes",
-        "sticky",
-        "dart"
-      ],
-      "quality_signals": [
-        "full_name_present",
-        "repo_name"
-      ],
-      "node_count": 1,
-      "top_nodes": [
-        {
-          "id": "github-1142491633-desk-tidy-sticky",
-          "source_id": "github",
-          "source_name": "GitHub",
-          "headline": "sqmw/desk_tidy_sticky",
-          "url": "https://github.com/sqmw/desk_tidy_sticky",
-          "summary": "Desk Tidy Sticky：Windows 极简便笺/待办，热键秒记·托盘常驻·钉在桌面 | Minimal sticky notes for Windows (hotkey, tray, pin to desktop)",
-          "interactions": 25,
-          "views": 414,
-          "impressions": 414,
-          "published_at": "2026-02-20T12:20:04Z",
-          "confidence": 0.45
-        }
-      ]
-    },
-    {
-      "entity_key": "gitv",
-      "entity": "Gitv",
-      "confidence": 0.45,
-      "trend_score": 7.82,
-      "impressions": 375,
+      "trend_score": 7.43,
+      "impressions": 531,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
       "spike_detected": false,
@@ -1859,12 +1784,12 @@
         "github": 1
       },
       "top_keywords": [
-        "github",
-        "issues",
-        "cli",
-        "productivity",
-        "tui",
-        "rust"
+        "free-for-dev",
+        "no-code",
+        "torzon-darknet-link",
+        "torzon",
+        "darknet",
+        "link"
       ],
       "quality_signals": [
         "full_name_present",
@@ -1873,202 +1798,26 @@
       "node_count": 1,
       "top_nodes": [
         {
-          "id": "github-1153530889-gitv",
+          "id": "github-1163159991-torzon-darknet-link",
           "source_id": "github",
           "source_name": "GitHub",
-          "headline": "JayanAXHF/gitv",
-          "url": "https://github.com/JayanAXHF/gitv",
-          "summary": "gitv is a terminal-based viewer for GitHub issues. It allows you to view and manage your GitHub issues directly from the terminal.",
-          "interactions": 19,
-          "views": 375,
-          "impressions": 375,
-          "published_at": "2026-02-20T18:28:59Z",
-          "confidence": 0.45
-        }
-      ]
-    },
-    {
-      "entity_key": "aisdkecosystem",
-      "entity": "AI SDK ECOSYSTEM",
-      "confidence": 0.45,
-      "trend_score": 7.75,
-      "impressions": 364,
-      "mention_count_1h": 0,
-      "mention_count_24h": 0,
-      "spike_detected": false,
-      "sources": [
-        "github"
-      ],
-      "source_counts": {
-        "github": 1
-      },
-      "top_keywords": [
-        "anthropic",
-        "autogen",
-        "crewai",
-        "haystack",
-        "langchain",
-        "langgraph"
-      ],
-      "quality_signals": [
-        "full_name_present",
-        "repo_name"
-      ],
-      "node_count": 1,
-      "top_nodes": [
-        {
-          "id": "github-1160631174-ai-sdk-ecosystem",
-          "source_id": "github",
-          "source_name": "GitHub",
-          "headline": "mk-knight23/AI-SDK-ECOSYSTEM",
-          "url": "https://github.com/mk-knight23/AI-SDK-ECOSYSTEM",
-          "summary": "Complete AI SDK ecosystem showcasing 10 production-ready SaaS products across LangChain, CrewAI, LangGraph, AutoGen, OpenAI, Vercel AI, Anthropic, Haystack, Semantic Kernel, and LlamaIndex frameworks",
-          "interactions": 19,
-          "views": 364,
-          "impressions": 364,
-          "published_at": "2026-02-20T07:17:46Z",
-          "confidence": 0.45
-        }
-      ]
-    },
-    {
-      "entity_key": "missioncontrol",
-      "entity": "Mission Control",
-      "confidence": 0.45,
-      "trend_score": 7.75,
-      "impressions": 364,
-      "mention_count_1h": 0,
-      "mention_count_24h": 1,
-      "spike_detected": false,
-      "sources": [
-        "github"
-      ],
-      "source_counts": {
-        "github": 1
-      },
-      "top_keywords": [
-        "dashboard",
-        "kanban",
-        "moltbot",
-        "for",
-        "ai-assistant",
-        "clawdbot"
-      ],
-      "quality_signals": [
-        "full_name_present",
-        "repo_name"
-      ],
-      "node_count": 1,
-      "top_nodes": [
-        {
-          "id": "github-1144455877-mission-control",
-          "source_id": "github",
-          "source_name": "GitHub",
-          "headline": "rdsthomas/mission-control",
-          "url": "https://github.com/rdsthomas/mission-control",
-          "summary": "🎛️ Kanban dashboard for AI assistants. Chat-to-task. Visual project management for MoltBot.",
-          "interactions": 27,
-          "views": 364,
-          "impressions": 364,
-          "published_at": "2026-02-20T16:03:43Z",
-          "confidence": 0.45
-        }
-      ]
-    },
-    {
-      "entity_key": "prbro",
-      "entity": "Pr Bro",
-      "confidence": 0.45,
-      "trend_score": 7.67,
-      "impressions": 352,
-      "mention_count_1h": 0,
-      "mention_count_24h": 1,
-      "spike_detected": false,
-      "sources": [
-        "github"
-      ],
-      "source_counts": {
-        "github": 1
-      },
-      "top_keywords": [
-        "tui",
-        "code-review",
-        "productivity",
-        "rust",
-        "app",
-        "prioritizes"
-      ],
-      "quality_signals": [
-        "full_name_present",
-        "repo_name"
-      ],
-      "node_count": 1,
-      "top_nodes": [
-        {
-          "id": "github-1148125267-pr-bro",
-          "source_id": "github",
-          "source_name": "GitHub",
-          "headline": "toniperic/pr-bro",
-          "url": "https://github.com/toniperic/pr-bro",
-          "summary": "🖥️ TUI app that prioritizes pull request reviews using weighted scoring — so you always know which PR to review next.",
+          "headline": "took-sHlAt/torzon-darknet-link",
+          "url": "https://github.com/took-sHlAt/torzon-darknet-link",
+          "summary": "TorZon Darknet Link",
           "interactions": 21,
-          "views": 352,
-          "impressions": 352,
-          "published_at": "2026-02-20T16:59:02Z",
+          "views": 531,
+          "impressions": 531,
+          "published_at": "2026-02-21T07:22:00Z",
           "confidence": 0.45
         }
       ]
     },
     {
-      "entity_key": "ghosttype",
-      "entity": "GhostType",
-      "confidence": 0.45,
-      "trend_score": 7.32,
-      "impressions": 297,
-      "mention_count_1h": 0,
-      "mention_count_24h": 0,
-      "spike_detected": false,
-      "sources": [
-        "github"
-      ],
-      "source_counts": {
-        "github": 1
-      },
-      "top_keywords": [
-        "dictation",
-        "macos",
-        "productivity",
-        "swift",
-        "whisper",
-        "apple-silicon"
-      ],
-      "quality_signals": [
-        "full_name_present",
-        "repo_name"
-      ],
-      "node_count": 1,
-      "top_nodes": [
-        {
-          "id": "github-1156765101-ghosttype",
-          "source_id": "github",
-          "source_name": "GitHub",
-          "headline": "never13254/GhostType",
-          "url": "https://github.com/never13254/GhostType",
-          "summary": "macOS voice productivity app — built-in dictation, AI rewrite, and translation. Powered by local Whisper + LLM.",
-          "interactions": 13,
-          "views": 297,
-          "impressions": 297,
-          "published_at": "2026-02-20T03:05:58Z",
-          "confidence": 0.45
-        }
-      ]
-    },
-    {
-      "entity_key": "wispah",
-      "entity": "Wispah",
-      "confidence": 0.45,
-      "trend_score": 7.25,
-      "impressions": 286,
+      "entity_key": "manbot",
+      "entity": "Manbot",
+      "confidence": 0.51,
+      "trend_score": 7.42,
+      "impressions": 341,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
       "spike_detected": false,
@@ -2079,12 +1828,12 @@
         "github": 1
       },
       "top_keywords": [
-        "macos",
-        "swift",
-        "voice-to-text",
-        "open",
-        "source",
-        "acessibility"
+        "agent",
+        "agentic-ai",
+        "agents",
+        "ai",
+        "assistant",
+        "bot"
       ],
       "quality_signals": [
         "full_name_present",
@@ -2093,26 +1842,26 @@
       "node_count": 1,
       "top_nodes": [
         {
-          "id": "github-1161086935-wispah",
+          "id": "github-1159573919-manbot",
           "source_id": "github",
           "source_name": "GitHub",
-          "headline": "idanyekutiel/wispah",
-          "url": "https://github.com/idanyekutiel/wispah",
-          "summary": "Free, open source voice-to-text for macOS. Press a hotkey, speak, and your words appear at the cursor — adapted to what's on screen.   Open source Wispr Flow alternative.",
-          "interactions": 3,
-          "views": 286,
-          "impressions": 286,
-          "published_at": "2026-02-20T19:46:32Z",
-          "confidence": 0.45
+          "headline": "larchanka/manbot",
+          "url": "https://github.com/larchanka/manbot",
+          "summary": "🧬 ManBot — Multi-process AI platform with type-safe IPC and capability graph execution",
+          "interactions": 15,
+          "views": 341,
+          "impressions": 341,
+          "published_at": "2026-02-21T15:18:30Z",
+          "confidence": 0.51
         }
       ]
     },
     {
-      "entity_key": "ohmyclaude",
-      "entity": "Oh My Claude",
+      "entity_key": "shadcndirectory",
+      "entity": "Shadcn Directory",
       "confidence": 0.45,
-      "trend_score": 7.24,
-      "impressions": 285,
+      "trend_score": 7.27,
+      "impressions": 490,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
       "spike_detected": false,
@@ -2123,12 +1872,12 @@
         "github": 1
       },
       "top_keywords": [
-        "claude",
-        "oh-my-zsh",
-        "plugins",
-        "statusline",
-        "themes",
-        "ai-coding"
+        "typescript",
+        "opensource",
+        "shadcn-components",
+        "shadcn-ui",
+        "shadcnblocks",
+        "open-source"
       ],
       "quality_signals": [
         "full_name_present",
@@ -2137,26 +1886,26 @@
       "node_count": 1,
       "top_nodes": [
         {
-          "id": "github-1160692151-oh-my-claude",
+          "id": "github-1162622360-shadcn-directory",
           "source_id": "github",
           "source_name": "GitHub",
-          "headline": "npow/oh-my-claude",
-          "url": "https://github.com/npow/oh-my-claude",
-          "summary": "Like oh-my-zsh, but for Claude Code. An extensible statusline framework with themes and plugins.",
-          "interactions": 3,
-          "views": 285,
-          "impressions": 285,
-          "published_at": "2026-02-20T22:07:49Z",
+          "headline": "Avijit07x/shadcn-directory",
+          "url": "https://github.com/Avijit07x/shadcn-directory",
+          "summary": "An open-source, definitive catalog of premium components, templates, and UI kits crafted for modern web experiences.",
+          "interactions": 10,
+          "views": 490,
+          "impressions": 490,
+          "published_at": "2026-02-21T07:04:16Z",
           "confidence": 0.45
         }
       ]
     },
     {
-      "entity_key": "vanta",
-      "entity": "Vanta",
-      "confidence": 0.45,
-      "trend_score": 7.16,
-      "impressions": 273,
+      "entity_key": "devaiprompts",
+      "entity": "Devai Prompts",
+      "confidence": 0.51,
+      "trend_score": 7.03,
+      "impressions": 237,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
       "spike_detected": false,
@@ -2167,12 +1916,12 @@
         "github": 1
       },
       "top_keywords": [
-        "rust",
-        "scriptable",
-        "svelte",
-        "wayland",
-        "command-palette",
-        "customizable"
+        "prompts",
+        "ai",
+        "ai-agent",
+        "ai-agents",
+        "ai-assistant",
+        "dev"
       ],
       "quality_signals": [
         "full_name_present",
@@ -2181,17 +1930,74 @@
       "node_count": 1,
       "top_nodes": [
         {
-          "id": "github-1160396778-vanta",
+          "id": "github-1159521192-devai-prompts",
           "source_id": "github",
           "source_name": "GitHub",
-          "headline": "Misiix9/Vanta",
-          "url": "https://github.com/Misiix9/Vanta",
-          "summary": "A hyper-fast, scriptable command palette for Wayland (Rust + Svelte).",
-          "interactions": 3,
-          "views": 273,
-          "impressions": 273,
-          "published_at": "2026-02-20T18:45:26Z",
-          "confidence": 0.45
+          "headline": "gabrielcardoso30/devai-prompts",
+          "url": "https://github.com/gabrielcardoso30/devai-prompts",
+          "summary": "Aumente sua produtividade com prompts validados para desenvolvimento e gestão. Do Code Review ao Planejamento de MVP, extraia o máximo das IAs Generativas no seu fluxo de trabalho diário.",
+          "interactions": 7,
+          "views": 237,
+          "impressions": 237,
+          "published_at": "2026-02-21T15:05:04Z",
+          "confidence": 0.51
+        }
+      ]
+    },
+    {
+      "entity_key": "tinyvllm",
+      "entity": "Tiny Vllm",
+      "confidence": 0.45,
+      "trend_score": 6.89,
+      "impressions": 390,
+      "mention_count_1h": 0,
+      "mention_count_24h": 2,
+      "spike_detected": true,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 2
+      },
+      "top_keywords": [
+        "llm",
+        "vllm",
+        "ai",
+        "cpp",
+        "cuda",
+        "hpc"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "node_count": 2,
+      "top_nodes": [
+        {
+          "id": "github-1153764295-tiny-vllm",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "jmaczan/tiny-vllm",
+          "url": "https://github.com/jmaczan/tiny-vllm",
+          "summary": "High performance LLM inference engine, a younger sibling of vLLM",
+          "interactions": 6,
+          "views": 195,
+          "impressions": 195,
+          "published_at": "2026-02-21T15:26:00Z",
+          "confidence": 0.41
+        },
+        {
+          "id": "github-1153764295-tiny-vllm",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "jmaczan/tiny-vllm",
+          "url": "https://github.com/jmaczan/tiny-vllm",
+          "summary": "High performance LLM inference engine, a younger sibling of vLLM",
+          "interactions": 6,
+          "views": 195,
+          "impressions": 195,
+          "published_at": "2026-02-21T15:26:00Z",
+          "confidence": 0.41
         }
       ]
     },
@@ -2199,7 +2005,7 @@
       "entity_key": "agentpassport",
       "entity": "Agent Passport",
       "confidence": 0.47,
-      "trend_score": 7.1,
+      "trend_score": 6.82,
       "impressions": 158,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -2242,318 +2048,10 @@
       ]
     },
     {
-      "entity_key": "privateworkcontributionsmirror",
-      "entity": "Private Work Contributions Mirror",
-      "confidence": 0.45,
-      "trend_score": 7.1,
-      "impressions": 263,
-      "mention_count_1h": 0,
-      "mention_count_24h": 1,
-      "spike_detected": false,
-      "sources": [
-        "github"
-      ],
-      "source_counts": {
-        "github": 1
-      },
-      "top_keywords": [
-        "github",
-        "cli",
-        "contribution-graph",
-        "developer-tools",
-        "git",
-        "hacktoberfest"
-      ],
-      "quality_signals": [
-        "full_name_present",
-        "repo_name"
-      ],
-      "node_count": 1,
-      "top_nodes": [
-        {
-          "id": "github-1146277146-private-work-contributions-mirror",
-          "source_id": "github",
-          "source_name": "GitHub",
-          "headline": "yuvrajangadsingh/private-work-contributions-mirror",
-          "url": "https://github.com/yuvrajangadsingh/private-work-contributions-mirror",
-          "summary": "Mirror commit timestamps from private work repos to your GitHub contribution graph—without exposing any code",
-          "interactions": 4,
-          "views": 263,
-          "impressions": 263,
-          "published_at": "2026-02-20T19:31:49Z",
-          "confidence": 0.45
-        }
-      ]
-    },
-    {
-      "entity_key": "dailycli",
-      "entity": "Daily Cli",
-      "confidence": 0.45,
-      "trend_score": 7.1,
-      "impressions": 263,
-      "mention_count_1h": 0,
-      "mention_count_24h": 0,
-      "spike_detected": false,
-      "sources": [
-        "github"
-      ],
-      "source_counts": {
-        "github": 1
-      },
-      "top_keywords": [
-        "cli",
-        "minimalist",
-        "python",
-        "scrum",
-        "for",
-        "agile"
-      ],
-      "quality_signals": [
-        "full_name_present",
-        "repo_name"
-      ],
-      "node_count": 1,
-      "top_nodes": [
-        {
-          "id": "github-1142542332-daily-cli",
-          "source_id": "github",
-          "source_name": "GitHub",
-          "headline": "creusvictor/daily-cli",
-          "url": "https://github.com/creusvictor/daily-cli",
-          "summary": "Minimalist CLI for engineers to log daily work. Fast capture, Markdown-based, and smart weekend logic for perfect Scrum standups.",
-          "interactions": 11,
-          "views": 263,
-          "impressions": 263,
-          "published_at": "2026-02-20T10:26:55Z",
-          "confidence": 0.45
-        }
-      ]
-    },
-    {
-      "entity_key": "bond",
-      "entity": "BOND",
-      "confidence": 0.45,
-      "trend_score": 7.09,
-      "impressions": 262,
-      "mention_count_1h": 0,
-      "mention_count_24h": 0,
-      "spike_detected": false,
-      "sources": [
-        "github"
-      ],
-      "source_counts": {
-        "github": 1
-      },
-      "top_keywords": [
-        "ai-assistant",
-        "ai-tools",
-        "anthropic",
-        "claude",
-        "context-management",
-        "memory"
-      ],
-      "quality_signals": [
-        "full_name_present",
-        "repo_name"
-      ],
-      "node_count": 1,
-      "top_nodes": [
-        {
-          "id": "github-1142809500-bond",
-          "source_id": "github",
-          "source_name": "GitHub",
-          "headline": "moneyjarrod/BOND",
-          "url": "https://github.com/moneyjarrod/BOND",
-          "summary": "A governed runtime for persistent human-AI collaboration",
-          "interactions": 6,
-          "views": 262,
-          "impressions": 262,
-          "published_at": "2026-02-20T13:13:56Z",
-          "confidence": 0.45
-        }
-      ]
-    },
-    {
-      "entity_key": "pinnotes",
-      "entity": "Pin Notes",
-      "confidence": 0.45,
-      "trend_score": 7.07,
-      "impressions": 258,
-      "mention_count_1h": 0,
-      "mention_count_24h": 1,
-      "spike_detected": false,
-      "sources": [
-        "github"
-      ],
-      "source_counts": {
-        "github": 1
-      },
-      "top_keywords": [
-        "typescript",
-        "windows",
-        "notes",
-        "always",
-        "always-on-top",
-        "desktop-app"
-      ],
-      "quality_signals": [
-        "full_name_present",
-        "repo_name"
-      ],
-      "node_count": 1,
-      "top_nodes": [
-        {
-          "id": "github-1158806816-pin-notes",
-          "source_id": "github",
-          "source_name": "GitHub",
-          "headline": "AleenaTahir1/Pin-Notes",
-          "url": "https://github.com/AleenaTahir1/Pin-Notes",
-          "summary": "Floating sticky notes for Windows — pin notes to your desktop, always on top, always within reach. Fast, local, no  account needed.",
-          "interactions": 3,
-          "views": 258,
-          "impressions": 258,
-          "published_at": "2026-02-20T16:41:25Z",
-          "confidence": 0.45
-        }
-      ]
-    },
-    {
-      "entity_key": "groaskrelease",
-      "entity": "Groask Release",
-      "confidence": 0.45,
-      "trend_score": 7.06,
-      "impressions": 256,
-      "mention_count_1h": 0,
-      "mention_count_24h": 0,
-      "spike_detected": false,
-      "sources": [
-        "github"
-      ],
-      "source_counts": {
-        "github": 1
-      },
-      "top_keywords": [
-        "claude",
-        "launcher",
-        "macos",
-        "ai",
-        "chatgpt",
-        "deepseek"
-      ],
-      "quality_signals": [
-        "full_name_present",
-        "repo_name"
-      ],
-      "node_count": 1,
-      "top_nodes": [
-        {
-          "id": "github-1151169566-groask-release",
-          "source_id": "github",
-          "source_name": "GitHub",
-          "headline": "ThinkerJack/groask-release",
-          "url": "https://github.com/ThinkerJack/groask-release",
-          "summary": "GroAsk — Your Claude Code Control Center. Agent Dashboard + AI Launcher for macOS. Monitor every session, launch 10 AIs with ⌥Space.",
-          "interactions": 4,
-          "views": 256,
-          "impressions": 256,
-          "published_at": "2026-02-20T14:37:22Z",
-          "confidence": 0.45
-        }
-      ]
-    },
-    {
-      "entity_key": "ccgate",
-      "entity": "Ccgate",
-      "confidence": 0.45,
-      "trend_score": 7.05,
-      "impressions": 255,
-      "mention_count_1h": 0,
-      "mention_count_24h": 1,
-      "spike_detected": false,
-      "sources": [
-        "github"
-      ],
-      "source_counts": {
-        "github": 1
-      },
-      "top_keywords": [
-        "claude",
-        "macos",
-        "ai",
-        "ai-tools",
-        "anthropic",
-        "claude-code"
-      ],
-      "quality_signals": [
-        "full_name_present",
-        "repo_name"
-      ],
-      "node_count": 1,
-      "top_nodes": [
-        {
-          "id": "github-1152281676-ccgate",
-          "source_id": "github",
-          "source_name": "GitHub",
-          "headline": "ai-fresh/ccgate",
-          "url": "https://github.com/ai-fresh/ccgate",
-          "summary": "macOS menu bar app for managing Claude Code sessions, permissions, and auto-accept hooks",
-          "interactions": 3,
-          "views": 255,
-          "impressions": 255,
-          "published_at": "2026-02-20T21:26:21Z",
-          "confidence": 0.45
-        }
-      ]
-    },
-    {
-      "entity_key": "olcli",
-      "entity": "Olcli",
-      "confidence": 0.45,
-      "trend_score": 7.02,
-      "impressions": 251,
-      "mention_count_1h": 0,
-      "mention_count_24h": 0,
-      "spike_detected": false,
-      "sources": [
-        "github"
-      ],
-      "source_counts": {
-        "github": 1
-      },
-      "top_keywords": [
-        "cli",
-        "command-line",
-        "latex",
-        "overleaf",
-        "academic-writing",
-        "automation"
-      ],
-      "quality_signals": [
-        "full_name_present",
-        "repo_name"
-      ],
-      "node_count": 1,
-      "top_nodes": [
-        {
-          "id": "github-1147798916-olcli",
-          "source_id": "github",
-          "source_name": "GitHub",
-          "headline": "aloth/olcli",
-          "url": "https://github.com/aloth/olcli",
-          "summary": "Overleaf CLI — Command-line interface to sync, manage, and compile LaTeX projects from your terminal.",
-          "interactions": 11,
-          "views": 251,
-          "impressions": 251,
-          "published_at": "2026-02-19T20:58:06Z",
-          "confidence": 0.45
-        }
-      ]
-    },
-    {
       "entity_key": "gituncommit",
       "entity": "Git uncommit",
       "confidence": 0.47,
-      "trend_score": 6.98,
+      "trend_score": 6.72,
       "impressions": 145,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -2599,7 +2097,7 @@
       "entity_key": "aicouncil",
       "entity": "AI Council",
       "confidence": 0.47,
-      "trend_score": 6.92,
+      "trend_score": 6.67,
       "impressions": 139,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -2642,98 +2140,10 @@
       ]
     },
     {
-      "entity_key": "rolloutio",
-      "entity": "Rollout io",
-      "confidence": 0.45,
-      "trend_score": 6.9,
-      "impressions": 232,
-      "mention_count_1h": 0,
-      "mention_count_24h": 1,
-      "spike_detected": false,
-      "sources": [
-        "github"
-      ],
-      "source_counts": {
-        "github": 1
-      },
-      "top_keywords": [
-        "and",
-        "centralized",
-        "feature",
-        "configuration",
-        "management",
-        "configuration-management"
-      ],
-      "quality_signals": [
-        "full_name_present",
-        "repo_name"
-      ],
-      "node_count": 1,
-      "top_nodes": [
-        {
-          "id": "github-1153816981-rollout-io",
-          "source_id": "github",
-          "source_name": "GitHub",
-          "headline": "TechParaglide/Rollout.io",
-          "url": "https://github.com/TechParaglide/Rollout.io",
-          "summary": "Rollout.io – Remote Config is a centralized feature flag and configuration management system that allows applications to change behavior dynamically at runtime without redeployment. It supports controlled feature rollouts, instant rollback, and centralized configuration management, improving reliability and operational",
-          "interactions": 8,
-          "views": 232,
-          "impressions": 232,
-          "published_at": "2026-02-20T17:40:43Z",
-          "confidence": 0.45
-        }
-      ]
-    },
-    {
-      "entity_key": "producthuntskills",
-      "entity": "Producthunt Skills",
-      "confidence": 0.45,
-      "trend_score": 6.82,
-      "impressions": 220,
-      "mention_count_1h": 0,
-      "mention_count_24h": 0,
-      "spike_detected": false,
-      "sources": [
-        "github"
-      ],
-      "source_counts": {
-        "github": 1
-      },
-      "top_keywords": [
-        "codex",
-        "cursor",
-        "marketing",
-        "skills",
-        "for",
-        "ai"
-      ],
-      "quality_signals": [
-        "full_name_present",
-        "repo_name"
-      ],
-      "node_count": 1,
-      "top_nodes": [
-        {
-          "id": "github-1141314793-producthunt-skills",
-          "source_id": "github",
-          "source_name": "GitHub",
-          "headline": "yoanbernabeu/producthunt-skills",
-          "url": "https://github.com/yoanbernabeu/producthunt-skills",
-          "summary": "🚀 31 AI Agent Skills for Product Hunt launches. Expert guidance for strategy, content, marketing, compliance & more. Works with Claude Code, Cursor, Codex, and 20+ AI agents.",
-          "interactions": 18,
-          "views": 220,
-          "impressions": 220,
-          "published_at": "2026-01-30T09:09:10Z",
-          "confidence": 0.45
-        }
-      ]
-    },
-    {
       "entity_key": "assay",
       "entity": "Assay",
       "confidence": 0.47,
-      "trend_score": 6.79,
+      "trend_score": 6.57,
       "impressions": 125,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -2779,7 +2189,7 @@
       "entity_key": "yamlschemarouter",
       "entity": "YAML-schema-router",
       "confidence": 0.47,
-      "trend_score": 6.77,
+      "trend_score": 6.55,
       "impressions": 123,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -2824,7 +2234,7 @@
       "entity_key": "typstme",
       "entity": "TypstMe",
       "confidence": 0.47,
-      "trend_score": 6.77,
+      "trend_score": 6.55,
       "impressions": 123,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -2870,7 +2280,7 @@
       "entity_key": "murl",
       "entity": "Murl",
       "confidence": 0.47,
-      "trend_score": 6.77,
+      "trend_score": 6.55,
       "impressions": 123,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -2916,7 +2326,7 @@
       "entity_key": "velo",
       "entity": "Velo",
       "confidence": 0.47,
-      "trend_score": 6.74,
+      "trend_score": 6.53,
       "impressions": 119,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -2962,7 +2372,7 @@
       "entity_key": "fixmymic",
       "entity": "Fix-my-mic",
       "confidence": 0.47,
-      "trend_score": 6.73,
+      "trend_score": 6.52,
       "impressions": 118,
       "mention_count_1h": 1,
       "mention_count_24h": 1,
@@ -3008,7 +2418,7 @@
       "entity_key": "crtx",
       "entity": "CRTX",
       "confidence": 0.47,
-      "trend_score": 6.73,
+      "trend_score": 6.52,
       "impressions": 118,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -3054,7 +2464,7 @@
       "entity_key": "hnstories",
       "entity": "HN-Stories",
       "confidence": 0.47,
-      "trend_score": 6.72,
+      "trend_score": 6.51,
       "impressions": 117,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -3100,7 +2510,7 @@
       "entity_key": "resilientopenclawbrowserrelay",
       "entity": "Resilient OpenClaw Browser Relay",
       "confidence": 0.47,
-      "trend_score": 6.67,
+      "trend_score": 6.47,
       "impressions": 112,
       "mention_count_1h": 1,
       "mention_count_24h": 1,
@@ -3146,7 +2556,7 @@
       "entity_key": "mukokoweather",
       "entity": "Mukoko weather",
       "confidence": 0.47,
-      "trend_score": 6.67,
+      "trend_score": 6.47,
       "impressions": 112,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -3192,7 +2602,7 @@
       "entity_key": "wp2txt",
       "entity": "WP2TXT",
       "confidence": 0.47,
-      "trend_score": 6.67,
+      "trend_score": 6.47,
       "impressions": 112,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -3238,7 +2648,7 @@
       "entity_key": "aicodereviewagent",
       "entity": "AI Code Review Agent",
       "confidence": 0.47,
-      "trend_score": 6.67,
+      "trend_score": 6.47,
       "impressions": 112,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -3284,7 +2694,7 @@
       "entity_key": "nf1",
       "entity": "NF-1",
       "confidence": 0.47,
-      "trend_score": 6.67,
+      "trend_score": 6.47,
       "impressions": 112,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -3330,7 +2740,7 @@
       "entity_key": "watchturm",
       "entity": "WatchTurm",
       "confidence": 0.47,
-      "trend_score": 6.67,
+      "trend_score": 6.47,
       "impressions": 112,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -3376,7 +2786,7 @@
       "entity_key": "claudechromeparallel",
       "entity": "Claude Chrome Parallel",
       "confidence": 0.47,
-      "trend_score": 6.66,
+      "trend_score": 6.47,
       "impressions": 111,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -3422,7 +2832,7 @@
       "entity_key": "openalinuxcontainer",
       "entity": "Open a Linux Container",
       "confidence": 0.47,
-      "trend_score": 6.66,
+      "trend_score": 6.47,
       "impressions": 111,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -3468,7 +2878,7 @@
       "entity_key": "localaidocumentintelligence",
       "entity": "Local AI document intelligence",
       "confidence": 0.47,
-      "trend_score": 6.66,
+      "trend_score": 6.46,
       "impressions": 110,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -3511,10 +2921,54 @@
       ]
     },
     {
+      "entity_key": "iara",
+      "entity": "Iara",
+      "confidence": 0.45,
+      "trend_score": 6.44,
+      "impressions": 273,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "openrouter",
+        "python",
+        "ai-agents",
+        "codereviewer",
+        "github-actions",
+        "gitlab-ci"
+      ],
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "node_count": 1,
+      "top_nodes": [
+        {
+          "id": "github-1153830831-iara",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "felipefernandes/iara",
+          "url": "https://github.com/felipefernandes/iara",
+          "summary": "🧜‍♀️Iara is an automated, project-agnostic, and configurable code review tool designed to run in CI/CD pipelines or locally via CLI. It uses the OpenRouter API to access various LLM models (Llama 3, Gemini 2.0, etc.) for free or through paid plans.",
+          "interactions": 14,
+          "views": 273,
+          "impressions": 273,
+          "published_at": "2026-02-21T04:07:00Z",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
       "entity_key": "routype",
       "entity": "Routype",
       "confidence": 0.47,
-      "trend_score": 6.61,
+      "trend_score": 6.42,
       "impressions": 105,
       "mention_count_1h": 0,
       "mention_count_24h": 1,
@@ -3557,11 +3011,11 @@
       ]
     },
     {
-      "entity_key": "flaskit",
-      "entity": "Flaskit",
+      "entity_key": "opencardinal",
+      "entity": "Open Cardinal",
       "confidence": 0.45,
-      "trend_score": 6.53,
-      "impressions": 175,
+      "trend_score": 6.24,
+      "impressions": 221,
       "mention_count_1h": 0,
       "mention_count_24h": 0,
       "spike_detected": false,
@@ -3572,12 +3026,12 @@
         "github": 1
       },
       "top_keywords": [
-        "flask",
-        "cli",
-        "cross-platform",
-        "mvp",
-        "python",
-        "saas"
+        "rust",
+        "sidecar",
+        "for",
+        "and",
+        "devops",
+        "embedded"
       ],
       "quality_signals": [
         "full_name_present",
@@ -3586,28 +3040,28 @@
       "node_count": 1,
       "top_nodes": [
         {
-          "id": "github-1159648358-flaskit",
+          "id": "github-1154070699-open-cardinal",
           "source_id": "github",
           "source_name": "GitHub",
-          "headline": "MaswiliK/flaskit",
-          "url": "https://github.com/MaswiliK/flaskit",
-          "summary": "🚀 FlaskIt — Premium Flask Project Generator CLI with MVP & SAAS templates, Rich progress bars, and cross-platform support. Just flask it",
-          "interactions": 13,
-          "views": 175,
-          "impressions": 175,
-          "published_at": "2026-02-19T08:37:15Z",
+          "headline": "Poluxin21/Open-Cardinal",
+          "url": "https://github.com/Poluxin21/Open-Cardinal",
+          "summary": "Deterministic Sidecar daemon designed for low-infrastructure and high-infrastructure environments. Implements the Observe-Decide-Act (ODA) cycle using Rust (Tokio/Tonic) and LuaJIT for automating critical systems.",
+          "interactions": 4,
+          "views": 221,
+          "impressions": 221,
+          "published_at": "2026-02-19T23:59:48Z",
           "confidence": 0.45
         }
       ]
     },
     {
-      "entity_key": "myuserjourney",
-      "entity": "Myuserjourney",
-      "confidence": 0.45,
-      "trend_score": 6.42,
-      "impressions": 157,
+      "entity_key": "agentdiscordrs",
+      "entity": "Agent Discord Rs",
+      "confidence": 0.41,
+      "trend_score": 5.62,
+      "impressions": 183,
       "mention_count_1h": 0,
-      "mention_count_24h": 0,
+      "mention_count_24h": 1,
       "spike_detected": false,
       "sources": [
         "github"
@@ -3616,12 +3070,12 @@
         "github": 1
       },
       "top_keywords": [
-        "analytics",
-        "gdpr",
-        "privacy-first",
-        "self-hosted",
-        "typescript",
-        "ai"
+        "agent",
+        "discord",
+        "ai",
+        "ai-agents",
+        "rust",
+        "daemon"
       ],
       "quality_signals": [
         "full_name_present",
@@ -3630,26 +3084,26 @@
       "node_count": 1,
       "top_nodes": [
         {
-          "id": "github-1157248839-myuserjourney",
+          "id": "github-1156105033-agent-discord-rs",
           "source_id": "github",
           "source_name": "GitHub",
-          "headline": "RakshakIT/myuserjourney",
-          "url": "https://github.com/RakshakIT/myuserjourney",
-          "summary": "AI-powered privacy-first digital analytics platform with predictive insights, cookieless tracking, and full GDPR/PECR compliance. Self-hosted alternative to Google Analytics.",
-          "interactions": 6,
-          "views": 157,
-          "impressions": 157,
-          "published_at": "2026-02-18T11:00:27Z",
-          "confidence": 0.45
+          "headline": "darkautism/agent-discord-rs",
+          "url": "https://github.com/darkautism/agent-discord-rs",
+          "summary": "A daemon for discord bot and multiple agent.",
+          "interactions": 4,
+          "views": 183,
+          "impressions": 183,
+          "published_at": "2026-02-21T15:15:27Z",
+          "confidence": 0.41
         }
       ]
     },
     {
-      "entity_key": "claudesaasevalskills",
-      "entity": "Claude Saas Eval Skills",
-      "confidence": 0.45,
-      "trend_score": 6.38,
-      "impressions": 152,
+      "entity_key": "openmailcli",
+      "entity": "Open Mail Cli",
+      "confidence": 0.41,
+      "trend_score": 5.36,
+      "impressions": 114,
       "mention_count_1h": 0,
       "mention_count_24h": 0,
       "spike_detected": false,
@@ -3660,12 +3114,12 @@
         "github": 1
       },
       "top_keywords": [
-        "saas",
-        "claude-code",
-        "claude-skills",
-        "indie-hacker",
-        "lifestyle-business",
-        "niche-research"
+        "email",
+        "for",
+        "agents",
+        "agent",
+        "email-cli",
+        "imap"
       ],
       "quality_signals": [
         "full_name_present",
@@ -3674,17 +3128,17 @@
       "node_count": 1,
       "top_nodes": [
         {
-          "id": "github-1141398507-claude-saas-eval-skills",
+          "id": "github-1152589585-open-mail-cli",
           "source_id": "github",
           "source_name": "GitHub",
-          "headline": "kirillpolevoy/claude-saas-eval-skills",
-          "url": "https://github.com/kirillpolevoy/claude-saas-eval-skills",
-          "summary": "Claude Code skills for evaluating niche SaaS opportunities through a lifestyle business lens",
-          "interactions": 8,
-          "views": 152,
-          "impressions": 152,
-          "published_at": "2026-01-26T20:53:49Z",
-          "confidence": 0.45
+          "headline": "eric8810/open-mail-cli",
+          "url": "https://github.com/eric8810/open-mail-cli",
+          "summary": "Open Mail CLI is a complete local email infrastructure specifically designed for AI agents and automation tools. It provides a reliable, programmatic interface for email operations that AI agents can use autonomously",
+          "interactions": 12,
+          "views": 114,
+          "impressions": 114,
+          "published_at": "2026-02-12T07:12:40Z",
+          "confidence": 0.41
         }
       ]
     }

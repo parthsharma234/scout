@@ -55,7 +55,7 @@ async function apiFetch(path, options = {}) {
  *   error    — Error | null
  *   refetch  — manually trigger a refresh
  */
-export function useTrends({ enabled = true, pollInterval = 10000 } = {}) {
+export function useTrends({ enabled = true, pollInterval = 10000, leaderboardMode = 'global_prominence' } = {}) {
   const [trends, setTrends]   = useState([])
   const [loading, setLoading] = useState(false)
   const [error, setError]     = useState(null)
@@ -65,7 +65,8 @@ export function useTrends({ enabled = true, pollInterval = 10000 } = {}) {
     setLoading(true)
     setError(null)
     try {
-      const data = await apiFetch('/api/trends/')
+      const mode = encodeURIComponent(leaderboardMode || 'global_prominence')
+      const data = await apiFetch(`/api/trends/?leaderboard=${mode}`)
       // Expected: { entities: TrendEntity[] } or TrendEntity[]
       setTrends(Array.isArray(data) ? data : (data.entities ?? []))
     } catch (err) {
@@ -73,7 +74,7 @@ export function useTrends({ enabled = true, pollInterval = 10000 } = {}) {
     } finally {
       setLoading(false)
     }
-  }, [enabled])
+  }, [enabled, leaderboardMode])
 
   useEffect(() => {
     fetch()

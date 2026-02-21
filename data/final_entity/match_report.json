@@ -1,0 +1,21 @@
+{
+  "_meta": {
+    "description": "Entity match decisions and pairwise links used for cross-source merge.",
+    "source": "scout_final_entity",
+    "schema_version": "1.0"
+  },
+  "generated_at": "2026-02-21T19:09:26.844520+00:00",
+  "min_match_score": 0.8,
+  "input_entity_count": 68,
+  "merged_entity_count": 67,
+  "match_edges": [
+    {
+      "a_source": "hackernews",
+      "a_entity": "Mukoko",
+      "b_source": "hackernews",
+      "b_entity": "Mukoko weather",
+      "score": 0.9,
+      "reason": "substring_key"
+    }
+  ]
+}

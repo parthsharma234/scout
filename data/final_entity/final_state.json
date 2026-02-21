@@ -1,0 +1,13 @@
+{
+  "_meta": {
+    "description": "Run metadata for final cross-source entity merge job.",
+    "source": "scout_final_entity",
+    "schema_version": "1.0"
+  },
+  "last_run_started_at": "2026-02-21T19:09:26.796538+00:00",
+  "last_run_finished_at": "2026-02-21T19:09:26.845080+00:00",
+  "input_entity_count": 68,
+  "output_entity_count": 67,
+  "output_node_count": 72,
+  "match_edge_count": 1
+}

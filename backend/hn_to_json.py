@@ -115,6 +115,61 @@ BUILDER_SIGNAL_PATTERNS = [
     r"\bshow hn\b",
 ]
 
+MARKET_MOMENTUM_PATTERNS = [
+    r"\bpre[- ]seed\b",
+    r"\bseed round\b",
+    r"\bseries [abc]\b",
+    r"\braised \$?\d",
+    r"\bpilot customers?\b",
+    r"\benterprise customers?\b",
+    r"\bopen beta\b",
+    r"\bnow live\b",
+    r"\bga\b",
+    r"\bwent live\b",
+    r"\blaunch(ed|ing)?\b",
+    r"\bwaitlist\b",
+    r"\bbacked by\b",
+    r"\baccelerator\b",
+    r"\by combinator\b",
+    r"\byc\b",
+]
+
+HIGH_GROWTH_VERTICAL_KEYWORDS = {
+    "biotech",
+    "healthtech",
+    "medtech",
+    "fintech",
+    "insurtech",
+    "regtech",
+    "govtech",
+    "climate",
+    "battery",
+    "energy",
+    "robotics",
+    "autonomous",
+    "defense",
+    "supply",
+    "logistics",
+    "manufacturing",
+    "semiconductor",
+    "developer",
+    "devtools",
+    "security",
+    "cybersecurity",
+    "compliance",
+    "enterprise",
+    "payments",
+    "analytics",
+    "marketplace",
+    "infrastructure",
+    "observability",
+    "legaltech",
+    "edtech",
+    "agtech",
+    "foodtech",
+    "proptech",
+}
+
 STARTUP_TITLE_PATTERNS = [
     re.compile(r"^(show hn)\s*[:\-]\s*", re.IGNORECASE),
     re.compile(r"\b(i built|we built|i made|we made|i launched|we launched)\b", re.IGNORECASE),
@@ -270,6 +325,17 @@ def has_builder_signal(text: str) -> bool:
     return any(re.search(pattern, lower) for pattern in BUILDER_SIGNAL_PATTERNS)
 
 
+def market_momentum_signal(text: str) -> bool:
+    lower = text.lower()
+    return any(re.search(pattern, lower) for pattern in MARKET_MOMENTUM_PATTERNS)
+
+
+def has_growth_vertical_keyword(text: str) -> bool:
+    lower = text.lower()
+    tokens = set(re.findall(r"[a-z][a-z0-9\-\+]{2,}", lower))
+    return bool(tokens & HIGH_GROWTH_VERTICAL_KEYWORDS)
+
+
 def score_impressions(score: int, descendants: int, created_unix: int) -> int:
     age_hours = max(1.0, (time.time() - created_unix) / 3600.0)
     base = score * 6 + descendants * 10
@@ -324,7 +390,9 @@ def extract_story_candidates(story: dict[str, Any], comments: list[str]) -> list
     showcase_story = is_showcase_title(title)
     builder_signal = has_builder_signal(author_haystack)
     startup_title_signal = has_startup_title_signal(title)
-    startup_context = showcase_story or builder_signal or startup_title_signal
+    momentum_signal = market_momentum_signal(haystack)
+    vertical_signal = has_growth_vertical_keyword(haystack)
+    startup_context = showcase_story or builder_signal or startup_title_signal or momentum_signal
 
     candidates: dict[str, dict[str, Any]] = {}
 
@@ -332,14 +400,16 @@ def extract_story_candidates(story: dict[str, Any], comments: list[str]) -> list
         return []
 
     domain = normalize_domain(story.get("url"))
-    if domain and domain not in DOMAIN_BLOCKLIST and (showcase_story or builder_signal):
+    if domain and domain not in DOMAIN_BLOCKLIST and (showcase_story or builder_signal or momentum_signal):
         name = domain_to_company(domain)
         if is_valid_entity(name):
             entry = candidates.setdefault(name, {"entity": name, "confidence": 0.0, "reasons": []})
-            entry["confidence"] = max(entry["confidence"], 0.62 if showcase_story else 0.54)
+            entry["confidence"] = max(entry["confidence"], 0.62 if showcase_story else (0.56 if momentum_signal else 0.54))
             entry["reasons"].append("domain_entity")
             if showcase_story:
                 entry["reasons"].append("showcase_story")
+            if momentum_signal:
+                entry["reasons"].append("market_momentum")
 
     for entity in extract_title_entities(title):
         entry = candidates.setdefault(entity, {"entity": entity, "confidence": 0.0, "reasons": []})
@@ -352,6 +422,16 @@ def extract_story_candidates(story: dict[str, Any], comments: list[str]) -> list
         for entry in candidates.values():
             entry["confidence"] += 0.15
             entry["reasons"].append("builder_signal")
+
+    if momentum_signal:
+        for entry in candidates.values():
+            entry["confidence"] += 0.12
+            entry["reasons"].append("market_momentum")
+
+    if vertical_signal:
+        for entry in candidates.values():
+            entry["confidence"] += 0.06
+            entry["reasons"].append("growth_vertical")
 
     lower_haystack = haystack.lower()
     for entry in candidates.values():
@@ -406,7 +486,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--max-items", type=int, default=320, help="Hard cap after dedupe")
     parser.add_argument("--max-comments", type=int, default=8, help="Max comments fetched per story")
     parser.add_argument("--max-depth", type=int, default=2, help="Comment traversal depth")
-    parser.add_argument("--entity-threshold", type=float, default=0.66, help="Confidence threshold")
+    parser.add_argument("--entity-threshold", type=float, default=0.6, help="Confidence threshold")
     parser.add_argument("--raw-out", type=Path, default=Path("data/hn_data/hn_raw.jsonl"))
     parser.add_argument("--entities-out", type=Path, default=Path("data/hn_data/hn_entities.json"))
     parser.add_argument("--nodes-out", type=Path, default=Path("data/hn_data/hn_source_nodes.json"))
@@ -518,18 +598,21 @@ def main() -> None:
         all_reasons = {reason for mention in mentions for reason in mention["reasons"]}
         has_high_signal = bool({"title_pattern", "showcase_story"} & all_reasons)
 
+        has_market_signal = bool({"market_momentum", "growth_vertical"} & all_reasons)
         if boosted_conf < args.entity_threshold:
             if has_high_signal and boosted_conf >= 0.45:
                 pass
-            elif count >= 2 and boosted_conf >= 0.58:
+            elif count >= 2 and boosted_conf >= 0.56:
+                pass
+            elif has_market_signal and boosted_conf >= 0.52:
                 pass
             else:
                 continue
-        if not has_high_signal and count < 3:
+        if not has_high_signal and not has_market_signal and count < 3:
             continue
 
         impressions_total = sum(m["impressions"] for m in mentions)
-        if impressions_total < 120 and count < 2 and "showcase_story" not in all_reasons:
+        if impressions_total < 90 and count < 2 and "showcase_story" not in all_reasons and not has_market_signal:
             continue
         mention_1h = sum(1 for m in mentions if (now_ts - m["hn_created_unix"]) <= 3600)
         mention_24h = sum(1 for m in mentions if (now_ts - m["hn_created_unix"]) <= 86400)
@@ -580,8 +663,11 @@ def main() -> None:
         impression_component = (row["impressions"] / max_impressions) * 70.0
         confidence_component = row["confidence"] * 30.0
         row["trend_score"] = round(impression_component + confidence_component, 2)
-        row["velocity_delta_pct"] = 0.0
-        row["spike_detected"] = row["mention_count_1h"] >= 3
+        row["velocity_delta_pct"] = round(
+            min(250.0, row["mention_count_1h"] * 32.0 + row["mention_count_24h"] * 3.5),
+            2,
+        )
+        row["spike_detected"] = row["mention_count_1h"] >= 3 or row["velocity_delta_pct"] >= 52.0
 
     entity_rows.sort(key=lambda r: r["trend_score"], reverse=True)
     node_rows.sort(key=lambda r: (r["interactions"] + r["views"] * 0.18), reverse=True)

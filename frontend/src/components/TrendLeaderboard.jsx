@@ -20,6 +20,8 @@ export default function TrendLeaderboard({
   selectedEntity,
   onSelectEntity,
   mode = 'compact',
+  leaderboardMode = 'global_prominence',
+  onLeaderboardModeChange,
 }) {
   const isTable = mode === 'table'
   const maxScore = useMemo(
@@ -35,7 +37,25 @@ export default function TrendLeaderboard({
             <p className="section-label">Rankings</p>
             <h3 className="lb-title">Entity Leaderboard</h3>
           </div>
-          <span className="lb-count mono">{entities.length} tracked</span>
+          <div className="lb-header-actions">
+            <div className="lb-mode-toggle" role="tablist" aria-label="Leaderboard mode">
+              <button
+                type="button"
+                className={`lb-mode-btn ${leaderboardMode === 'global_prominence' ? 'lb-mode-btn--active' : ''}`}
+                onClick={() => onLeaderboardModeChange?.('global_prominence')}
+              >
+                Global Prominence
+              </button>
+              <button
+                type="button"
+                className={`lb-mode-btn ${leaderboardMode === 'niche_opportunity' ? 'lb-mode-btn--active' : ''}`}
+                onClick={() => onLeaderboardModeChange?.('niche_opportunity')}
+              >
+                Niche Opportunity
+              </button>
+            </div>
+            <span className="lb-count mono">{entities.length} tracked</span>
+          </div>
         </header>
       )}
 

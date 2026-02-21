@@ -1,0 +1,2847 @@
+{
+  "_meta": {
+    "description": "Final unified entities merged across GitHub, Hacker News, and Product Hunt. This is the main cross-source ranking output for Scout.",
+    "source": "scout_final_entity",
+    "schema_version": "1.0"
+  },
+  "generated_at": "2026-02-21T19:09:26.839263+00:00",
+  "entity_count": 67,
+  "entities": [
+    {
+      "entity": "Weathr",
+      "aliases": [],
+      "confidence": 0.65,
+      "impressions": 23022,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "terminal",
+        "weather",
+        "cli",
+        "rust-lang",
+        "tui",
+        "rust"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-21T15:26:53+00:00",
+      "last_seen_at": "2026-02-21T15:26:53+00:00",
+      "velocity_delta_pct": 4.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "github",
+          "entity": "Weathr",
+          "confidence": 0.65,
+          "impressions": 23022
+        }
+      ],
+      "trend_score": 80.75
+    },
+    {
+      "entity": "Micasa",
+      "aliases": [],
+      "confidence": 1.0,
+      "impressions": 5802,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "micasa",
+        "but",
+        "track",
+        "need",
+        "some",
+        "demo"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "builder_signal",
+        "domain_entity",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "first_seen_at": "2026-02-19T15:54:14+00:00",
+      "last_seen_at": "2026-02-19T15:54:14+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "hackernews",
+          "entity": "Micasa",
+          "confidence": 1.0,
+          "impressions": 5802
+        }
+      ],
+      "trend_score": 32.64
+    },
+    {
+      "entity": "Rezi",
+      "aliases": [],
+      "confidence": 0.71,
+      "impressions": 4416,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "typescript",
+        "tui",
+        "bun",
+        "c",
+        "cli",
+        "console-application"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-21T15:11:35+00:00",
+      "last_seen_at": "2026-02-21T15:11:35+00:00",
+      "velocity_delta_pct": 4.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "github",
+          "entity": "Rezi",
+          "confidence": 0.71,
+          "impressions": 4416
+        }
+      ],
+      "trend_score": 25.08
+    },
+    {
+      "entity": "Xorbitsai",
+      "aliases": [],
+      "confidence": 0.8,
+      "impressions": 670,
+      "mention_count_1h": 0,
+      "mention_count_24h": 2,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 2
+      },
+      "top_keywords": [
+        "orchestration",
+        "agent",
+        "agentic-ai",
+        "claude",
+        "gemini",
+        "llm"
+      ],
+      "evidence_count": 2,
+      "quality_signals": [
+        "full_name_present",
+        "owner_org"
+      ],
+      "first_seen_at": "2026-02-21T15:16:12+00:00",
+      "last_seen_at": "2026-02-21T15:16:12+00:00",
+      "velocity_delta_pct": 8.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": true,
+      "source_entity_rows": [
+        {
+          "source_id": "github",
+          "entity": "Xorbitsai",
+          "confidence": 0.8,
+          "impressions": 670
+        }
+      ],
+      "trend_score": 22.04
+    },
+    {
+      "entity": "Myinvestpilot",
+      "aliases": [],
+      "confidence": 0.86,
+      "impressions": 2764,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "ai-native",
+        "dsl",
+        "investment",
+        "and",
+        "agent-driven-development",
+        "agentic-ai"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "owner_org"
+      ],
+      "first_seen_at": "2026-02-21T14:07:32+00:00",
+      "last_seen_at": "2026-02-21T14:07:32+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "github",
+          "entity": "Myinvestpilot",
+          "confidence": 0.86,
+          "impressions": 2764
+        }
+      ],
+      "trend_score": 21.3
+    },
+    {
+      "entity": "Makie",
+      "aliases": [],
+      "confidence": 0.87,
+      "impressions": 2053,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "julia",
+        "physically-based",
+        "gpu",
+        "ray",
+        "tracer",
+        "makie"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "builder_signal",
+        "domain_entity",
+        "showcase_story",
+        "text_presence"
+      ],
+      "first_seen_at": "2026-02-19T10:55:13+00:00",
+      "last_seen_at": "2026-02-19T10:55:13+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "hackernews",
+          "entity": "Makie",
+          "confidence": 0.87,
+          "impressions": 2053
+        }
+      ],
+      "trend_score": 19.29
+    },
+    {
+      "entity": "Tiny Vllm",
+      "aliases": [],
+      "confidence": 0.45,
+      "impressions": 390,
+      "mention_count_1h": 0,
+      "mention_count_24h": 2,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 2
+      },
+      "top_keywords": [
+        "llm",
+        "vllm",
+        "ai",
+        "cpp",
+        "cuda",
+        "hpc"
+      ],
+      "evidence_count": 2,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-21T15:26:03+00:00",
+      "last_seen_at": "2026-02-21T15:26:03+00:00",
+      "velocity_delta_pct": 8.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": true,
+      "source_entity_rows": [
+        {
+          "source_id": "github",
+          "entity": "Tiny Vllm",
+          "confidence": 0.45,
+          "impressions": 390
+        }
+      ],
+      "trend_score": 15.94
+    },
+    {
+      "entity": "Mines",
+      "aliases": [],
+      "confidence": 0.87,
+      "impressions": 897,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "mines",
+        "all",
+        "visualization",
+        "fyi",
+        "leaflet",
+        "downloaded"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "builder_signal",
+        "domain_entity",
+        "showcase_story",
+        "text_presence"
+      ],
+      "first_seen_at": "2026-02-20T21:22:27+00:00",
+      "last_seen_at": "2026-02-20T21:22:27+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "hackernews",
+          "entity": "Mines",
+          "confidence": 0.87,
+          "impressions": 897
+        }
+      ],
+      "trend_score": 15.78
+    },
+    {
+      "entity": "Script Snap",
+      "aliases": [],
+      "confidence": 1.0,
+      "impressions": 136,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "out",
+        "script",
+        "snap",
+        "code",
+        "extraction",
+        "extract"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "builder_signal",
+        "domain_entity",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "first_seen_at": "2026-02-21T04:39:20+00:00",
+      "last_seen_at": "2026-02-21T04:39:20+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "hackernews",
+          "entity": "Script Snap",
+          "confidence": 1.0,
+          "impressions": 136
+        }
+      ],
+      "trend_score": 15.41
+    },
+    {
+      "entity": "Opencrust Org",
+      "aliases": [],
+      "confidence": 0.86,
+      "impressions": 444,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "rust",
+        "ai",
+        "ai-assistant",
+        "chatbot",
+        "discord-bot",
+        "llm"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "owner_org"
+      ],
+      "first_seen_at": "2026-02-21T15:25:19+00:00",
+      "last_seen_at": "2026-02-21T15:25:19+00:00",
+      "velocity_delta_pct": 4.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "github",
+          "entity": "Opencrust Org",
+          "confidence": 0.86,
+          "impressions": 444
+        }
+      ],
+      "trend_score": 15.25
+    },
+    {
+      "entity": "Emailmarketingskill",
+      "aliases": [],
+      "confidence": 0.87,
+      "impressions": 174,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "email",
+        "skill",
+        "data",
+        "can",
+        "claude",
+        "bible"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "builder_signal",
+        "domain_entity",
+        "showcase_story",
+        "text_presence"
+      ],
+      "first_seen_at": "2026-02-21T01:08:21+00:00",
+      "last_seen_at": "2026-02-21T01:08:21+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "hackernews",
+          "entity": "Emailmarketingskill",
+          "confidence": 0.87,
+          "impressions": 174
+        }
+      ],
+      "trend_score": 13.58
+    },
+    {
+      "entity": "Netlify",
+      "aliases": [],
+      "confidence": 0.87,
+      "impressions": 123,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "rule",
+        "playground",
+        "engine",
+        "action",
+        "event",
+        "pipeline"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "builder_signal",
+        "domain_entity",
+        "showcase_story",
+        "text_presence"
+      ],
+      "first_seen_at": "2026-02-21T00:14:31+00:00",
+      "last_seen_at": "2026-02-21T00:14:31+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "hackernews",
+          "entity": "Netlify",
+          "confidence": 0.87,
+          "impressions": 123
+        }
+      ],
+      "trend_score": 13.42
+    },
+    {
+      "entity": "Webhookstream",
+      "aliases": [],
+      "confidence": 0.87,
+      "impressions": 122,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "webhookstream",
+        "receive",
+        "relay",
+        "send",
+        "debug",
+        "webhooks"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "builder_signal",
+        "domain_entity",
+        "showcase_story",
+        "text_presence"
+      ],
+      "first_seen_at": "2026-02-21T04:53:38+00:00",
+      "last_seen_at": "2026-02-21T04:53:38+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "hackernews",
+          "entity": "Webhookstream",
+          "confidence": 0.87,
+          "impressions": 122
+        }
+      ],
+      "trend_score": 13.42
+    },
+    {
+      "entity": "Awingender",
+      "aliases": [],
+      "confidence": 0.87,
+      "impressions": 118,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "native",
+        "react",
+        "web",
+        "animation",
+        "beautiful",
+        "number"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "builder_signal",
+        "domain_entity",
+        "showcase_story",
+        "text_presence"
+      ],
+      "first_seen_at": "2026-02-21T01:16:24+00:00",
+      "last_seen_at": "2026-02-21T01:16:24+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "hackernews",
+          "entity": "Awingender",
+          "confidence": 0.87,
+          "impressions": 118
+        }
+      ],
+      "trend_score": 13.41
+    },
+    {
+      "entity": "8Gent",
+      "aliases": [],
+      "confidence": 0.87,
+      "impressions": 115,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "mobile",
+        "workflow",
+        "automation",
+        "gent",
+        "around",
+        "native"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "builder_signal",
+        "domain_entity",
+        "showcase_story",
+        "text_presence"
+      ],
+      "first_seen_at": "2026-02-20T23:20:52+00:00",
+      "last_seen_at": "2026-02-20T23:20:52+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "hackernews",
+          "entity": "8Gent",
+          "confidence": 0.87,
+          "impressions": 115
+        }
+      ],
+      "trend_score": 13.4
+    },
+    {
+      "entity": "Unidocverse",
+      "aliases": [],
+      "confidence": 0.87,
+      "impressions": 110,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "document",
+        "local",
+        "cloud",
+        "runs",
+        "machine",
+        "documents"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "builder_signal",
+        "domain_entity",
+        "showcase_story",
+        "text_presence"
+      ],
+      "first_seen_at": "2026-02-20T23:41:55+00:00",
+      "last_seen_at": "2026-02-20T23:41:55+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "hackernews",
+          "entity": "Unidocverse",
+          "confidence": 0.87,
+          "impressions": 110
+        }
+      ],
+      "trend_score": 13.38
+    },
+    {
+      "entity": "Streakout",
+      "aliases": [],
+      "confidence": 0.87,
+      "impressions": 109,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "workout",
+        "tracker",
+        "stats",
+        "health",
+        "data",
+        "most"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "builder_signal",
+        "domain_entity",
+        "showcase_story",
+        "text_presence"
+      ],
+      "first_seen_at": "2026-02-20T15:06:51+00:00",
+      "last_seen_at": "2026-02-20T15:06:51+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "hackernews",
+          "entity": "Streakout",
+          "confidence": 0.87,
+          "impressions": 109
+        }
+      ],
+      "trend_score": 13.38
+    },
+    {
+      "entity": "Jvbar",
+      "aliases": [],
+      "confidence": 0.87,
+      "impressions": 109,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "remediation",
+        "server",
+        "script",
+        "windows",
+        "jvbar",
+        "cis"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "builder_signal",
+        "domain_entity",
+        "showcase_story",
+        "text_presence"
+      ],
+      "first_seen_at": "2026-02-21T03:11:02+00:00",
+      "last_seen_at": "2026-02-21T03:11:02+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "hackernews",
+          "entity": "Jvbar",
+          "confidence": 0.87,
+          "impressions": 109
+        }
+      ],
+      "trend_score": 13.38
+    },
+    {
+      "entity": "ModelTC",
+      "aliases": [],
+      "confidence": 0.75,
+      "impressions": 598,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "dpo",
+        "grpo",
+        "imagegeneration",
+        "infra",
+        "reinforcement-learning",
+        "rl"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "owner_org"
+      ],
+      "first_seen_at": "2026-02-20T04:19:43+00:00",
+      "last_seen_at": "2026-02-20T04:19:43+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "github",
+          "entity": "ModelTC",
+          "confidence": 0.75,
+          "impressions": 598
+        }
+      ],
+      "trend_score": 13.07
+    },
+    {
+      "entity": "Vivid Money",
+      "aliases": [],
+      "confidence": 0.76,
+      "impressions": 212,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "mcp",
+        "vivid",
+        "ai",
+        "banking",
+        "chatgpt",
+        "claude"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "owner_org"
+      ],
+      "first_seen_at": "2026-02-21T14:13:40+00:00",
+      "last_seen_at": "2026-02-21T14:13:40+00:00",
+      "velocity_delta_pct": 4.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "github",
+          "entity": "Vivid Money",
+          "confidence": 0.76,
+          "impressions": 212
+        }
+      ],
+      "trend_score": 13.04
+    },
+    {
+      "entity": "Novadev",
+      "aliases": [],
+      "confidence": 0.82,
+      "impressions": 237,
+      "mention_count_1h": 0,
+      "mention_count_24h": 2,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 2
+      },
+      "top_keywords": [
+        "check",
+        "ios",
+        "cert",
+        "status",
+        "via",
+        "our"
+      ],
+      "evidence_count": 2,
+      "quality_signals": [
+        "builder_signal",
+        "domain_entity",
+        "showcase_story"
+      ],
+      "first_seen_at": "2026-02-21T01:24:17+00:00",
+      "last_seen_at": "2026-02-21T02:03:40+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "hackernews",
+          "entity": "Novadev",
+          "confidence": 0.82,
+          "impressions": 237
+        }
+      ],
+      "trend_score": 13.02
+    },
+    {
+      "entity": "MinBZK",
+      "aliases": [],
+      "confidence": 0.7,
+      "impressions": 332,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "overheid",
+        "claude-code-marketplace",
+        "claude-code-plugin",
+        "interoperabiliteit",
+        "marketplace",
+        "minbzk"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "owner_org"
+      ],
+      "first_seen_at": "2026-02-21T12:34:04+00:00",
+      "last_seen_at": "2026-02-21T12:34:04+00:00",
+      "velocity_delta_pct": 4.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "github",
+          "entity": "MinBZK",
+          "confidence": 0.7,
+          "impressions": 332
+        }
+      ],
+      "trend_score": 12.51
+    },
+    {
+      "entity": "NiaExperience",
+      "aliases": [],
+      "confidence": 0.7,
+      "impressions": 479,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "intelligent",
+        "typescript",
+        "self-evolving",
+        "companion",
+        "memory",
+        "systems"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "owner_org"
+      ],
+      "first_seen_at": "2026-02-20T22:35:31+00:00",
+      "last_seen_at": "2026-02-20T22:35:31+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "github",
+          "entity": "NiaExperience",
+          "confidence": 0.7,
+          "impressions": 479
+        }
+      ],
+      "trend_score": 11.96
+    },
+    {
+      "entity": "Usevaultlink",
+      "aliases": [],
+      "confidence": 0.77,
+      "impressions": 118,
+      "mention_count_1h": 1,
+      "mention_count_24h": 1,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "key",
+        "password",
+        "vaultlink",
+        "api",
+        "don",
+        "use"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "builder_signal",
+        "domain_entity",
+        "showcase_story"
+      ],
+      "first_seen_at": "2026-02-21T05:02:27+00:00",
+      "last_seen_at": "2026-02-21T05:02:27+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "hackernews",
+          "entity": "Usevaultlink",
+          "confidence": 0.77,
+          "impressions": 118
+        }
+      ],
+      "trend_score": 11.91
+    },
+    {
+      "entity": "Crates",
+      "aliases": [],
+      "confidence": 0.77,
+      "impressions": 117,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "hn-stories",
+        "rust",
+        "cli",
+        "browse",
+        "open",
+        "stories"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "builder_signal",
+        "domain_entity",
+        "showcase_story"
+      ],
+      "first_seen_at": "2026-02-21T00:39:23+00:00",
+      "last_seen_at": "2026-02-21T00:39:23+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "hackernews",
+          "entity": "Crates",
+          "confidence": 0.77,
+          "impressions": 117
+        }
+      ],
+      "trend_score": 11.91
+    },
+    {
+      "entity": "Migratetoresponses",
+      "aliases": [],
+      "confidence": 0.77,
+      "impressions": 112,
+      "mention_count_1h": 1,
+      "mention_count_24h": 1,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "free",
+        "tool",
+        "migrate",
+        "openai",
+        "assistants"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "builder_signal",
+        "domain_entity",
+        "showcase_story"
+      ],
+      "first_seen_at": "2026-02-21T05:46:24+00:00",
+      "last_seen_at": "2026-02-21T05:46:24+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "hackernews",
+          "entity": "Migratetoresponses",
+          "confidence": 0.77,
+          "impressions": 112
+        }
+      ],
+      "trend_score": 11.89
+    },
+    {
+      "entity": "Polyasurn",
+      "aliases": [],
+      "confidence": 0.77,
+      "impressions": 109,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "polya",
+        "urn",
+        "essays",
+        "complexity",
+        "emergence"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "builder_signal",
+        "domain_entity",
+        "showcase_story"
+      ],
+      "first_seen_at": "2026-02-21T03:07:23+00:00",
+      "last_seen_at": "2026-02-21T03:07:23+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "hackernews",
+          "entity": "Polyasurn",
+          "confidence": 0.77,
+          "impressions": 109
+        }
+      ],
+      "trend_score": 11.88
+    },
+    {
+      "entity": "Humaboam",
+      "aliases": [],
+      "confidence": 0.77,
+      "impressions": 104,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "jobs",
+        "last",
+        "job",
+        "access",
+        "posted",
+        "feed"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "builder_signal",
+        "domain_entity",
+        "showcase_story"
+      ],
+      "first_seen_at": "2026-02-20T23:25:06+00:00",
+      "last_seen_at": "2026-02-20T23:25:06+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "hackernews",
+          "entity": "Humaboam",
+          "confidence": 0.77,
+          "impressions": 104
+        }
+      ],
+      "trend_score": 11.87
+    },
+    {
+      "entity": "Initrunner",
+      "aliases": [],
+      "confidence": 0.61,
+      "impressions": 470,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "cli",
+        "python",
+        "yaml",
+        "agent-framework",
+        "ai-agents",
+        "ai-automation"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-21T05:18:20+00:00",
+      "last_seen_at": "2026-02-21T05:18:20+00:00",
+      "velocity_delta_pct": 4.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "github",
+          "entity": "Initrunner",
+          "confidence": 0.61,
+          "impressions": 470
+        }
+      ],
+      "trend_score": 11.58
+    },
+    {
+      "entity": "Agentralabs",
+      "aliases": [],
+      "confidence": 0.66,
+      "impressions": 201,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "rust",
+        "mcp",
+        "memory",
+        "python",
+        "agent-memory",
+        "agentic"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "owner_org"
+      ],
+      "first_seen_at": "2026-02-21T15:26:56+00:00",
+      "last_seen_at": "2026-02-21T15:26:56+00:00",
+      "velocity_delta_pct": 4.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "github",
+          "entity": "Agentralabs",
+          "confidence": 0.66,
+          "impressions": 201
+        }
+      ],
+      "trend_score": 11.51
+    },
+    {
+      "entity": "MephistoMail",
+      "aliases": [],
+      "confidence": 0.72,
+      "impressions": 230,
+      "mention_count_1h": 0,
+      "mention_count_24h": 2,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 2
+      },
+      "top_keywords": [
+        "mephistomail",
+        "mail",
+        "ram-only",
+        "client",
+        "https",
+        "tracker-free"
+      ],
+      "evidence_count": 2,
+      "quality_signals": [
+        "builder_signal",
+        "domain_entity",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "first_seen_at": "2026-02-21T00:44:55+00:00",
+      "last_seen_at": "2026-02-21T00:46:00+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "hackernews",
+          "entity": "MephistoMail",
+          "confidence": 0.72,
+          "impressions": 230
+        }
+      ],
+      "trend_score": 11.5
+    },
+    {
+      "entity": "Mini-Diarium",
+      "aliases": [],
+      "confidence": 0.47,
+      "impressions": 1450,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "mini-diarium",
+        "encrypted",
+        "local",
+        "cross-platform",
+        "journaling",
+        "app"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "first_seen_at": "2026-02-19T11:54:21+00:00",
+      "last_seen_at": "2026-02-19T11:54:21+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "hackernews",
+          "entity": "Mini-Diarium",
+          "confidence": 0.47,
+          "impressions": 1450
+        }
+      ],
+      "trend_score": 11.46
+    },
+    {
+      "entity": "Mukoko",
+      "aliases": [
+        "Mukoko weather"
+      ],
+      "confidence": 0.67,
+      "impressions": 224,
+      "mention_count_1h": 0,
+      "mention_count_24h": 2,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 2
+      },
+      "top_keywords": [
+        "weather",
+        "zimbabwe",
+        "data",
+        "mukoko",
+        "global",
+        "approach"
+      ],
+      "evidence_count": 2,
+      "quality_signals": [
+        "builder_signal",
+        "domain_entity",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "first_seen_at": "2026-02-21T04:51:00+00:00",
+      "last_seen_at": "2026-02-21T04:51:00+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "hackernews",
+          "entity": "Mukoko",
+          "confidence": 0.87,
+          "impressions": 112
+        },
+        {
+          "source_id": "hackernews",
+          "entity": "Mukoko weather",
+          "confidence": 0.47,
+          "impressions": 112
+        }
+      ],
+      "trend_score": 10.73
+    },
+    {
+      "entity": "Opencrew",
+      "aliases": [],
+      "confidence": 0.61,
+      "impressions": 509,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "openclaw",
+        "multi-agent",
+        "slack",
+        "a2a-protocol",
+        "agent-deployment",
+        "agent-orchestration"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-21T15:14:44+00:00",
+      "last_seen_at": "2026-02-21T15:14:44+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "github",
+          "entity": "Opencrew",
+          "confidence": 0.61,
+          "impressions": 509
+        }
+      ],
+      "trend_score": 10.7
+    },
+    {
+      "entity": "Rebrain",
+      "aliases": [],
+      "confidence": 0.47,
+      "impressions": 1189,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "rebrain",
+        "llm",
+        "conversation",
+        "doom",
+        "learn",
+        "https"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "first_seen_at": "2026-02-18T12:18:26+00:00",
+      "last_seen_at": "2026-02-18T12:18:26+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "hackernews",
+          "entity": "Rebrain",
+          "confidence": 0.47,
+          "impressions": 1189
+        }
+      ],
+      "trend_score": 10.67
+    },
+    {
+      "entity": "Openclaw Opsdeck Core",
+      "aliases": [],
+      "confidence": 0.51,
+      "impressions": 564,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "dashboard",
+        "openclaw",
+        "agent",
+        "fastify",
+        "local-first",
+        "react"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-21T15:26:24+00:00",
+      "last_seen_at": "2026-02-21T15:26:24+00:00",
+      "velocity_delta_pct": 4.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "github",
+          "entity": "Openclaw Opsdeck Core",
+          "confidence": 0.51,
+          "impressions": 564
+        }
+      ],
+      "trend_score": 10.36
+    },
+    {
+      "entity": "Lalibela Cli",
+      "aliases": [],
+      "confidence": 0.55,
+      "impressions": 330,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "backend",
+        "cli",
+        "go",
+        "api",
+        "golang",
+        "golang-application"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-21T15:04:31+00:00",
+      "last_seen_at": "2026-02-21T15:04:31+00:00",
+      "velocity_delta_pct": 4.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "github",
+          "entity": "Lalibela Cli",
+          "confidence": 0.55,
+          "impressions": 330
+        }
+      ],
+      "trend_score": 10.25
+    },
+    {
+      "entity": "Backlink Pilot",
+      "aliases": [],
+      "confidence": 0.5,
+      "impressions": 805,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "awesome-lists",
+        "automation",
+        "backlinks",
+        "directory-submission",
+        "indie-hacker",
+        "link-building"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-21T03:29:44+00:00",
+      "last_seen_at": "2026-02-21T03:29:44+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "github",
+          "entity": "Backlink Pilot",
+          "confidence": 0.5,
+          "impressions": 805
+        }
+      ],
+      "trend_score": 9.95
+    },
+    {
+      "entity": "Manbot",
+      "aliases": [],
+      "confidence": 0.51,
+      "impressions": 341,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "agent",
+        "agentic-ai",
+        "agents",
+        "ai",
+        "assistant",
+        "bot"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-21T15:18:33+00:00",
+      "last_seen_at": "2026-02-21T15:18:33+00:00",
+      "velocity_delta_pct": 4.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "github",
+          "entity": "Manbot",
+          "confidence": 0.51,
+          "impressions": 341
+        }
+      ],
+      "trend_score": 9.69
+    },
+    {
+      "entity": "Devai Prompts",
+      "aliases": [],
+      "confidence": 0.51,
+      "impressions": 237,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "prompts",
+        "ai",
+        "ai-agent",
+        "ai-agents",
+        "ai-assistant",
+        "dev"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-21T15:05:07+00:00",
+      "last_seen_at": "2026-02-21T15:05:07+00:00",
+      "velocity_delta_pct": 4.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "github",
+          "entity": "Devai Prompts",
+          "confidence": 0.51,
+          "impressions": 237
+        }
+      ],
+      "trend_score": 9.37
+    },
+    {
+      "entity": "Torzon Darknet Link",
+      "aliases": [],
+      "confidence": 0.45,
+      "impressions": 531,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "free-for-dev",
+        "no-code",
+        "torzon-darknet-link",
+        "torzon",
+        "darknet",
+        "link"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-21T15:20:12+00:00",
+      "last_seen_at": "2026-02-21T15:20:12+00:00",
+      "velocity_delta_pct": 4.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "github",
+          "entity": "Torzon Darknet Link",
+          "confidence": 0.45,
+          "impressions": 531
+        }
+      ],
+      "trend_score": 9.36
+    },
+    {
+      "entity": "Shadcn Directory",
+      "aliases": [],
+      "confidence": 0.45,
+      "impressions": 490,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "typescript",
+        "opensource",
+        "shadcn-components",
+        "shadcn-ui",
+        "shadcnblocks",
+        "open-source"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-21T12:46:30+00:00",
+      "last_seen_at": "2026-02-21T12:46:30+00:00",
+      "velocity_delta_pct": 4.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "github",
+          "entity": "Shadcn Directory",
+          "confidence": 0.45,
+          "impressions": 490
+        }
+      ],
+      "trend_score": 9.24
+    },
+    {
+      "entity": "Iara",
+      "aliases": [],
+      "confidence": 0.45,
+      "impressions": 273,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "openrouter",
+        "python",
+        "ai-agents",
+        "codereviewer",
+        "github-actions",
+        "gitlab-ci"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-21T04:06:47+00:00",
+      "last_seen_at": "2026-02-21T04:06:47+00:00",
+      "velocity_delta_pct": 4.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "github",
+          "entity": "Iara",
+          "confidence": 0.45,
+          "impressions": 273
+        }
+      ],
+      "trend_score": 8.58
+    },
+    {
+      "entity": "PIrateRF",
+      "aliases": [],
+      "confidence": 0.47,
+      "impressions": 274,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "transmission",
+        "without",
+        "piraterf",
+        "raspberry",
+        "zero",
+        "mode"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "first_seen_at": "2026-02-17T14:00:56+00:00",
+      "last_seen_at": "2026-02-17T14:00:56+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "hackernews",
+          "entity": "PIrateRF",
+          "confidence": 0.47,
+          "impressions": 274
+        }
+      ],
+      "trend_score": 7.88
+    },
+    {
+      "entity": "Agent Discord Rs",
+      "aliases": [],
+      "confidence": 0.41,
+      "impressions": 183,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "agent",
+        "discord",
+        "ai",
+        "ai-agents",
+        "rust",
+        "daemon"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-21T15:15:31+00:00",
+      "last_seen_at": "2026-02-21T15:15:31+00:00",
+      "velocity_delta_pct": 4.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "github",
+          "entity": "Agent Discord Rs",
+          "confidence": 0.41,
+          "impressions": 183
+        }
+      ],
+      "trend_score": 7.71
+    },
+    {
+      "entity": "Agent Passport",
+      "aliases": [],
+      "confidence": 0.47,
+      "impressions": 158,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "agent",
+        "agents",
+        "identity",
+        "passport",
+        "github",
+        "verification"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "first_seen_at": "2026-02-21T00:39:37+00:00",
+      "last_seen_at": "2026-02-21T00:39:37+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "hackernews",
+          "entity": "Agent Passport",
+          "confidence": 0.47,
+          "impressions": 158
+        }
+      ],
+      "trend_score": 7.53
+    },
+    {
+      "entity": "Git uncommit",
+      "aliases": [],
+      "confidence": 0.47,
+      "impressions": 145,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "git",
+        "reset",
+        "uncommit",
+        "unpushed",
+        "committed",
+        "changes"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "first_seen_at": "2026-02-21T03:14:03+00:00",
+      "last_seen_at": "2026-02-21T03:14:03+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "hackernews",
+          "entity": "Git uncommit",
+          "confidence": 0.47,
+          "impressions": 145
+        }
+      ],
+      "trend_score": 7.49
+    },
+    {
+      "entity": "AI Council",
+      "aliases": [],
+      "confidence": 0.47,
+      "impressions": 139,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "council",
+        "model",
+        "deliberation",
+        "different",
+        "models",
+        "zero"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "first_seen_at": "2026-02-21T00:11:34+00:00",
+      "last_seen_at": "2026-02-21T00:11:34+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "hackernews",
+          "entity": "AI Council",
+          "confidence": 0.47,
+          "impressions": 139
+        }
+      ],
+      "trend_score": 7.47
+    },
+    {
+      "entity": "Assay",
+      "aliases": [],
+      "confidence": 0.47,
+      "impressions": 125,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "assay",
+        "found",
+        "bugs",
+        "litellm",
+        "lobechat",
+        "via"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "first_seen_at": "2026-02-21T02:52:43+00:00",
+      "last_seen_at": "2026-02-21T02:52:43+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "hackernews",
+          "entity": "Assay",
+          "confidence": 0.47,
+          "impressions": 125
+        }
+      ],
+      "trend_score": 7.43
+    },
+    {
+      "entity": "Open Cardinal",
+      "aliases": [],
+      "confidence": 0.45,
+      "impressions": 221,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "rust",
+        "sidecar",
+        "for",
+        "and",
+        "devops",
+        "embedded"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-19T23:49:26+00:00",
+      "last_seen_at": "2026-02-19T23:49:26+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "github",
+          "entity": "Open Cardinal",
+          "confidence": 0.45,
+          "impressions": 221
+        }
+      ],
+      "trend_score": 7.42
+    },
+    {
+      "entity": "YAML-schema-router",
+      "aliases": [],
+      "confidence": 0.47,
+      "impressions": 123,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "yaml-schema-router",
+        "content-based",
+        "schema",
+        "routing",
+        "yaml"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "first_seen_at": "2026-02-21T01:50:46+00:00",
+      "last_seen_at": "2026-02-21T01:50:46+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "hackernews",
+          "entity": "YAML-schema-router",
+          "confidence": 0.47,
+          "impressions": 123
+        }
+      ],
+      "trend_score": 7.42
+    },
+    {
+      "entity": "TypstMe",
+      "aliases": [],
+      "confidence": 0.47,
+      "impressions": 123,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "typstme",
+        "typst",
+        "wasm",
+        "monthly",
+        "subscriptions",
+        "ats"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "first_seen_at": "2026-02-21T01:49:16+00:00",
+      "last_seen_at": "2026-02-21T01:49:16+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "hackernews",
+          "entity": "TypstMe",
+          "confidence": 0.47,
+          "impressions": 123
+        }
+      ],
+      "trend_score": 7.42
+    },
+    {
+      "entity": "Murl",
+      "aliases": [],
+      "confidence": 0.47,
+      "impressions": 123,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "mcp",
+        "murl",
+        "tools",
+        "https",
+        "com",
+        "servers"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "first_seen_at": "2026-02-21T00:15:24+00:00",
+      "last_seen_at": "2026-02-21T00:15:24+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "hackernews",
+          "entity": "Murl",
+          "confidence": 0.47,
+          "impressions": 123
+        }
+      ],
+      "trend_score": 7.42
+    },
+    {
+      "entity": "Velo",
+      "aliases": [],
+      "confidence": 0.47,
+      "impressions": 119,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "velo",
+        "tauri",
+        "search",
+        "inbox",
+        "email",
+        "client"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "first_seen_at": "2026-02-21T01:34:10+00:00",
+      "last_seen_at": "2026-02-21T01:34:10+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "hackernews",
+          "entity": "Velo",
+          "confidence": 0.47,
+          "impressions": 119
+        }
+      ],
+      "trend_score": 7.41
+    },
+    {
+      "entity": "Fix-my-mic",
+      "aliases": [],
+      "confidence": 0.47,
+      "impressions": 118,
+      "mention_count_1h": 1,
+      "mention_count_24h": 1,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "airpods",
+        "mic",
+        "mac",
+        "fix-my-mic",
+        "keeps",
+        "stop"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "first_seen_at": "2026-02-21T05:34:53+00:00",
+      "last_seen_at": "2026-02-21T05:34:53+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "hackernews",
+          "entity": "Fix-my-mic",
+          "confidence": 0.47,
+          "impressions": 118
+        }
+      ],
+      "trend_score": 7.41
+    },
+    {
+      "entity": "CRTX",
+      "aliases": [],
+      "confidence": 0.47,
+      "impressions": 118,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "dev",
+        "time",
+        "crtx",
+        "code",
+        "different",
+        "tests"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "first_seen_at": "2026-02-21T02:10:03+00:00",
+      "last_seen_at": "2026-02-21T02:10:03+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "hackernews",
+          "entity": "CRTX",
+          "confidence": 0.47,
+          "impressions": 118
+        }
+      ],
+      "trend_score": 7.41
+    },
+    {
+      "entity": "HN-Stories",
+      "aliases": [],
+      "confidence": 0.47,
+      "impressions": 117,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "hn-stories",
+        "rust",
+        "cli",
+        "browse",
+        "open",
+        "stories"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "first_seen_at": "2026-02-21T00:39:23+00:00",
+      "last_seen_at": "2026-02-21T00:39:23+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "hackernews",
+          "entity": "HN-Stories",
+          "confidence": 0.47,
+          "impressions": 117
+        }
+      ],
+      "trend_score": 7.41
+    },
+    {
+      "entity": "Resilient OpenClaw Browser Relay",
+      "aliases": [],
+      "confidence": 0.47,
+      "impressions": 112,
+      "mention_count_1h": 1,
+      "mention_count_24h": 1,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "resilient",
+        "openclaw",
+        "browser",
+        "relay",
+        "survives",
+        "drops"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "first_seen_at": "2026-02-21T05:07:16+00:00",
+      "last_seen_at": "2026-02-21T05:07:16+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "hackernews",
+          "entity": "Resilient OpenClaw Browser Relay",
+          "confidence": 0.47,
+          "impressions": 112
+        }
+      ],
+      "trend_score": 7.39
+    },
+    {
+      "entity": "WP2TXT",
+      "aliases": [],
+      "confidence": 0.47,
+      "impressions": 112,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "wikipedia",
+        "dump",
+        "text",
+        "category",
+        "extract",
+        "wp2txt"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "first_seen_at": "2026-02-21T04:46:34+00:00",
+      "last_seen_at": "2026-02-21T04:46:34+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "hackernews",
+          "entity": "WP2TXT",
+          "confidence": 0.47,
+          "impressions": 112
+        }
+      ],
+      "trend_score": 7.39
+    },
+    {
+      "entity": "AI Code Review Agent",
+      "aliases": [],
+      "confidence": 0.47,
+      "impressions": 112,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "code",
+        "agent",
+        "reviews",
+        "google",
+        "adk",
+        "gemini"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "first_seen_at": "2026-02-21T04:46:23+00:00",
+      "last_seen_at": "2026-02-21T04:46:23+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "hackernews",
+          "entity": "AI Code Review Agent",
+          "confidence": 0.47,
+          "impressions": 112
+        }
+      ],
+      "trend_score": 7.39
+    },
+    {
+      "entity": "NF-1",
+      "aliases": [],
+      "confidence": 0.47,
+      "impressions": 112,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "nf-1",
+        "resource-zero",
+        "programming",
+        "language",
+        "low-end",
+        "hardware"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "first_seen_at": "2026-02-21T04:42:27+00:00",
+      "last_seen_at": "2026-02-21T04:42:27+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "hackernews",
+          "entity": "NF-1",
+          "confidence": 0.47,
+          "impressions": 112
+        }
+      ],
+      "trend_score": 7.39
+    },
+    {
+      "entity": "WatchTurm",
+      "aliases": [],
+      "confidence": 0.47,
+      "impressions": 112,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "watchturm",
+        "visibility",
+        "open-source",
+        "release",
+        "layer",
+        "work"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "first_seen_at": "2026-02-21T00:49:09+00:00",
+      "last_seen_at": "2026-02-21T00:49:09+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "hackernews",
+          "entity": "WatchTurm",
+          "confidence": 0.47,
+          "impressions": 112
+        }
+      ],
+      "trend_score": 7.39
+    },
+    {
+      "entity": "Claude Chrome Parallel",
+      "aliases": [],
+      "confidence": 0.47,
+      "impressions": 111,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "chrome",
+        "parallel",
+        "claude",
+        "ultrafast",
+        "browser",
+        "mcp"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "first_seen_at": "2026-02-21T04:24:02+00:00",
+      "last_seen_at": "2026-02-21T04:24:02+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "hackernews",
+          "entity": "Claude Chrome Parallel",
+          "confidence": 0.47,
+          "impressions": 111
+        }
+      ],
+      "trend_score": 7.39
+    },
+    {
+      "entity": "Open a Linux Container",
+      "aliases": [],
+      "confidence": 0.47,
+      "impressions": 111,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "open",
+        "container",
+        "ttyd",
+        "linux",
+        "mac",
+        "http"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "first_seen_at": "2026-02-21T00:02:14+00:00",
+      "last_seen_at": "2026-02-21T00:02:14+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "hackernews",
+          "entity": "Open a Linux Container",
+          "confidence": 0.47,
+          "impressions": 111
+        }
+      ],
+      "trend_score": 7.39
+    },
+    {
+      "entity": "Local AI document intelligence",
+      "aliases": [],
+      "confidence": 0.47,
+      "impressions": 110,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "document",
+        "local",
+        "cloud",
+        "runs",
+        "machine",
+        "documents"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "first_seen_at": "2026-02-20T23:41:55+00:00",
+      "last_seen_at": "2026-02-20T23:41:55+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "hackernews",
+          "entity": "Local AI document intelligence",
+          "confidence": 0.47,
+          "impressions": 110
+        }
+      ],
+      "trend_score": 7.38
+    },
+    {
+      "entity": "Routype",
+      "aliases": [],
+      "confidence": 0.47,
+      "impressions": 105,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "hackernews"
+      ],
+      "source_counts": {
+        "hackernews": 1
+      },
+      "top_keywords": [
+        "typed",
+        "user",
+        "rest",
+        "client",
+        "existing",
+        "routes"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "builder_signal",
+        "showcase_story",
+        "text_presence",
+        "title_pattern"
+      ],
+      "first_seen_at": "2026-02-21T00:29:41+00:00",
+      "last_seen_at": "2026-02-21T00:29:41+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "hackernews",
+          "entity": "Routype",
+          "confidence": 0.47,
+          "impressions": 105
+        }
+      ],
+      "trend_score": 7.37
+    },
+    {
+      "entity": "Open Mail Cli",
+      "aliases": [],
+      "confidence": 0.41,
+      "impressions": 114,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "email",
+        "for",
+        "agents",
+        "agent",
+        "email-cli",
+        "imap"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-19T15:26:40+00:00",
+      "last_seen_at": "2026-02-19T15:26:40+00:00",
+      "velocity_delta_pct": 0.0,
+      "growth_signal_score": 0.0,
+      "spike_detected": false,
+      "source_entity_rows": [
+        {
+          "source_id": "github",
+          "entity": "Open Mail Cli",
+          "confidence": 0.41,
+          "impressions": 114
+        }
+      ],
+      "trend_score": 6.5
+    }
+  ]
+}
