@@ -1,0 +1,13 @@
+{
+  "_meta": {
+    "description": "Pipeline run metadata for GitHub transform job.",
+    "source": "github",
+    "schema_version": "1.0"
+  },
+  "last_run_started_at": "2026-02-21T06:27:19.145407+00:00",
+  "last_run_finished_at": "2026-02-21T06:27:19.204872+00:00",
+  "input_repo_count": 485,
+  "repos_written": 37,
+  "entities_written": 37,
+  "nodes_written": 37
+}

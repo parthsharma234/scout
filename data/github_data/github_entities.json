@@ -1,0 +1,1197 @@
+{
+  "_meta": {
+    "description": "Entity-level aggregation from GitHub repository activity. Use for source-specific rankings and cross-source merge.",
+    "source": "github",
+    "schema_version": "1.0"
+  },
+  "generated_at": "2026-02-21T06:27:19.200872+00:00",
+  "input_repo_count": 485,
+  "repo_count": 37,
+  "entity_count": 37,
+  "entities": [
+    {
+      "entity": "Rtk Ai",
+      "confidence": 0.9,
+      "impressions": 13643,
+      "repos": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "rust",
+        "cli",
+        "llm",
+        "agentic-coding",
+        "ai-coding",
+        "anthropic"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "owner_org"
+      ],
+      "first_seen_at": "2026-02-20T22:49:46Z",
+      "last_seen_at": "2026-02-20T22:49:46Z",
+      "trend_score": 97.0,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Daymonio",
+      "confidence": 0.9,
+      "impressions": 3381,
+      "repos": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "ai",
+        "ai-agents",
+        "ai-assistant",
+        "automation",
+        "claude-code",
+        "claude-desktop"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "owner_org"
+      ],
+      "first_seen_at": "2026-02-20T22:28:16Z",
+      "last_seen_at": "2026-02-20T22:28:16Z",
+      "trend_score": 44.35,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Openbootdotdev",
+      "confidence": 0.9,
+      "impressions": 2465,
+      "repos": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "cli",
+        "go",
+        "dev-environment",
+        "developer-tools",
+        "devops",
+        "dotfiles"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "owner_org"
+      ],
+      "first_seen_at": "2026-02-20T14:52:18Z",
+      "last_seen_at": "2026-02-20T14:52:18Z",
+      "trend_score": 39.65,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Myinvestpilot",
+      "confidence": 0.8,
+      "impressions": 2736,
+      "repos": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "ai-native",
+        "dsl",
+        "investment",
+        "and",
+        "agent-driven-development",
+        "agentic-ai"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "owner_org"
+      ],
+      "first_seen_at": "2026-02-20T15:27:07Z",
+      "last_seen_at": "2026-02-20T15:27:07Z",
+      "trend_score": 38.04,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "BeyteFlow",
+      "confidence": 0.85,
+      "impressions": 713,
+      "repos": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "readme",
+        "ai",
+        "automation",
+        "developer-tool",
+        "github-api",
+        "markdown"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "owner_org"
+      ],
+      "first_seen_at": "2026-02-20T16:15:53Z",
+      "last_seen_at": "2026-02-20T16:15:53Z",
+      "trend_score": 29.16,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "App Vox",
+      "confidence": 0.8,
+      "impressions": 513,
+      "repos": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "llm",
+        "typescript",
+        "voice-to-text",
+        "whisper",
+        "dictation",
+        "electron"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "owner_org"
+      ],
+      "first_seen_at": "2026-02-20T21:39:19Z",
+      "last_seen_at": "2026-02-20T21:39:19Z",
+      "trend_score": 26.63,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Claudia",
+      "confidence": 0.6,
+      "impressions": 959,
+      "repos": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "ai-assistant",
+        "claude-code",
+        "productivity",
+        "relationship-management",
+        "terminal",
+        "python"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-19T21:39:36Z",
+      "last_seen_at": "2026-02-19T21:39:36Z",
+      "trend_score": 22.92,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Remember Md",
+      "confidence": 0.7,
+      "impressions": 289,
+      "repos": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "markdown",
+        "ai-brain",
+        "claude-code",
+        "knowledge-management",
+        "note-taking",
+        "obsidian"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "owner_org"
+      ],
+      "first_seen_at": "2026-02-20T22:32:15Z",
+      "last_seen_at": "2026-02-20T22:32:15Z",
+      "trend_score": 22.48,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Pm Claude Skills",
+      "confidence": 0.6,
+      "impressions": 679,
+      "repos": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "claude",
+        "skills",
+        "ai",
+        "claude-ai",
+        "product-management",
+        "productivity"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-20T12:15:59Z",
+      "last_seen_at": "2026-02-20T12:15:59Z",
+      "trend_score": 21.48,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Twig",
+      "confidence": 0.6,
+      "impressions": 617,
+      "repos": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "rust",
+        "tmux",
+        "cli",
+        "developer-tools",
+        "git-worktree",
+        "productivity"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-20T12:49:39Z",
+      "last_seen_at": "2026-02-20T12:49:39Z",
+      "trend_score": 21.17,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Backlink Pilot",
+      "confidence": 0.5,
+      "impressions": 794,
+      "repos": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "awesome-lists",
+        "automation",
+        "backlinks",
+        "directory-submission",
+        "indie-hacker",
+        "link-building"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-20T17:28:40Z",
+      "last_seen_at": "2026-02-20T17:28:40Z",
+      "trend_score": 19.07,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "SuperLocalMemoryV2",
+      "confidence": 0.55,
+      "impressions": 454,
+      "repos": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "memory",
+        "python",
+        "ai",
+        "ai-memory",
+        "ai-tools",
+        "claude"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-20T10:18:35Z",
+      "last_seen_at": "2026-02-20T10:18:35Z",
+      "trend_score": 18.83,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "AirSend",
+      "confidence": 0.55,
+      "impressions": 366,
+      "repos": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "localsend",
+        "macos",
+        "native",
+        "swift",
+        "file-transfer",
+        "productivity"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-20T15:23:35Z",
+      "last_seen_at": "2026-02-20T15:23:35Z",
+      "trend_score": 18.38,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Macronyx",
+      "confidence": 0.55,
+      "impressions": 360,
+      "repos": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "automation",
+        "cross-platform",
+        "macro",
+        "typescript",
+        "desktop-app",
+        "electron"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-20T21:45:44Z",
+      "last_seen_at": "2026-02-20T21:45:44Z",
+      "trend_score": 18.35,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Bat Zhiro Quicktools",
+      "confidence": 0.55,
+      "impressions": 327,
+      "repos": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "automation",
+        "batch-script",
+        "context-menu",
+        "ffmpeg",
+        "imagemagick",
+        "media-conversion"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-20T19:31:22Z",
+      "last_seen_at": "2026-02-20T19:31:22Z",
+      "trend_score": 18.18,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "DevTools UI",
+      "confidence": 0.55,
+      "impressions": 326,
+      "repos": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "groovy",
+        "javafx",
+        "and",
+        "developer-tools",
+        "devtools",
+        "productivity"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-20T18:16:51Z",
+      "last_seen_at": "2026-02-20T18:16:51Z",
+      "trend_score": 18.17,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Desk Tidy Sticky",
+      "confidence": 0.45,
+      "impressions": 432,
+      "repos": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "windows",
+        "desktop",
+        "hotkey",
+        "notes",
+        "sticky",
+        "dart"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-20T12:20:09Z",
+      "last_seen_at": "2026-02-20T12:20:09Z",
+      "trend_score": 15.72,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Gitv",
+      "confidence": 0.45,
+      "impressions": 393,
+      "repos": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "github",
+        "issues",
+        "cli",
+        "productivity",
+        "tui",
+        "rust"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-20T13:23:56Z",
+      "last_seen_at": "2026-02-20T13:23:56Z",
+      "trend_score": 15.52,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "AI SDK ECOSYSTEM",
+      "confidence": 0.45,
+      "impressions": 382,
+      "repos": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "anthropic",
+        "autogen",
+        "crewai",
+        "haystack",
+        "langchain",
+        "langgraph"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-20T08:24:44Z",
+      "last_seen_at": "2026-02-20T08:24:44Z",
+      "trend_score": 15.46,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Mission Control",
+      "confidence": 0.45,
+      "impressions": 382,
+      "repos": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "dashboard",
+        "kanban",
+        "moltbot",
+        "for",
+        "ai-assistant",
+        "clawdbot"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-20T16:03:47Z",
+      "last_seen_at": "2026-02-20T16:03:47Z",
+      "trend_score": 15.46,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Pr Bro",
+      "confidence": 0.45,
+      "impressions": 370,
+      "repos": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "tui",
+        "code-review",
+        "productivity",
+        "rust",
+        "app",
+        "prioritizes"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-20T16:56:03Z",
+      "last_seen_at": "2026-02-20T16:56:03Z",
+      "trend_score": 15.4,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "GhostType",
+      "confidence": 0.45,
+      "impressions": 315,
+      "repos": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "dictation",
+        "macos",
+        "productivity",
+        "swift",
+        "whisper",
+        "apple-silicon"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-20T03:06:01Z",
+      "last_seen_at": "2026-02-20T03:06:01Z",
+      "trend_score": 15.12,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Wispah",
+      "confidence": 0.45,
+      "impressions": 304,
+      "repos": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "macos",
+        "swift",
+        "voice-to-text",
+        "open",
+        "source",
+        "acessibility"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-20T19:46:34Z",
+      "last_seen_at": "2026-02-20T19:46:34Z",
+      "trend_score": 15.06,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Oh My Claude",
+      "confidence": 0.45,
+      "impressions": 303,
+      "repos": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "claude",
+        "oh-my-zsh",
+        "plugins",
+        "statusline",
+        "themes",
+        "ai-coding"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-20T22:07:52Z",
+      "last_seen_at": "2026-02-20T22:07:52Z",
+      "trend_score": 15.05,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Vanta",
+      "confidence": 0.45,
+      "impressions": 291,
+      "repos": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "rust",
+        "scriptable",
+        "svelte",
+        "wayland",
+        "command-palette",
+        "customizable"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-20T18:45:30Z",
+      "last_seen_at": "2026-02-20T18:45:30Z",
+      "trend_score": 14.99,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Private Work Contributions Mirror",
+      "confidence": 0.45,
+      "impressions": 281,
+      "repos": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "github",
+        "cli",
+        "contribution-graph",
+        "developer-tools",
+        "git",
+        "hacktoberfest"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-20T19:31:53Z",
+      "last_seen_at": "2026-02-20T19:31:53Z",
+      "trend_score": 14.94,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "BOND",
+      "confidence": 0.45,
+      "impressions": 280,
+      "repos": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "ai-assistant",
+        "ai-tools",
+        "anthropic",
+        "claude",
+        "context-management",
+        "memory"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-20T13:14:02Z",
+      "last_seen_at": "2026-02-20T13:14:02Z",
+      "trend_score": 14.94,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Daily Cli",
+      "confidence": 0.45,
+      "impressions": 281,
+      "repos": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "cli",
+        "minimalist",
+        "python",
+        "scrum",
+        "for",
+        "agile"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-20T21:08:10Z",
+      "last_seen_at": "2026-02-20T21:08:10Z",
+      "trend_score": 14.94,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Pin Notes",
+      "confidence": 0.45,
+      "impressions": 276,
+      "repos": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "typescript",
+        "windows",
+        "notes",
+        "always",
+        "always-on-top",
+        "desktop-app"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-20T16:33:37Z",
+      "last_seen_at": "2026-02-20T16:33:37Z",
+      "trend_score": 14.92,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Groask Release",
+      "confidence": 0.45,
+      "impressions": 274,
+      "repos": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "claude",
+        "launcher",
+        "macos",
+        "ai",
+        "chatgpt",
+        "deepseek"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-20T14:37:23Z",
+      "last_seen_at": "2026-02-20T14:37:23Z",
+      "trend_score": 14.91,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Ccgate",
+      "confidence": 0.45,
+      "impressions": 273,
+      "repos": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "claude",
+        "macos",
+        "ai",
+        "ai-tools",
+        "anthropic",
+        "claude-code"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-20T10:44:54Z",
+      "last_seen_at": "2026-02-20T10:44:54Z",
+      "trend_score": 14.9,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Olcli",
+      "confidence": 0.45,
+      "impressions": 270,
+      "repos": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "cli",
+        "command-line",
+        "latex",
+        "overleaf",
+        "academic-writing",
+        "automation"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-19T20:58:08Z",
+      "last_seen_at": "2026-02-19T20:58:08Z",
+      "trend_score": 14.89,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Rollout io",
+      "confidence": 0.45,
+      "impressions": 250,
+      "repos": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "and",
+        "centralized",
+        "feature",
+        "configuration",
+        "management",
+        "configuration-management"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-20T17:40:43Z",
+      "last_seen_at": "2026-02-20T17:40:43Z",
+      "trend_score": 14.78,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Producthunt Skills",
+      "confidence": 0.45,
+      "impressions": 220,
+      "repos": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "codex",
+        "cursor",
+        "marketing",
+        "skills",
+        "for",
+        "ai"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-17T23:24:17Z",
+      "last_seen_at": "2026-02-17T23:24:17Z",
+      "trend_score": 14.63,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Flaskit",
+      "confidence": 0.45,
+      "impressions": 193,
+      "repos": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "flask",
+        "cli",
+        "cross-platform",
+        "mvp",
+        "python",
+        "saas"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-20T04:09:11Z",
+      "last_seen_at": "2026-02-20T04:09:11Z",
+      "trend_score": 14.49,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Myuserjourney",
+      "confidence": 0.45,
+      "impressions": 166,
+      "repos": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "analytics",
+        "gdpr",
+        "privacy-first",
+        "self-hosted",
+        "typescript",
+        "ai"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-18T11:00:38Z",
+      "last_seen_at": "2026-02-18T11:00:38Z",
+      "trend_score": 14.35,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Claude Saas Eval Skills",
+      "confidence": 0.45,
+      "impressions": 152,
+      "repos": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "github"
+      ],
+      "source_counts": {
+        "github": 1
+      },
+      "top_keywords": [
+        "saas",
+        "claude-code",
+        "claude-skills",
+        "indie-hacker",
+        "lifestyle-business",
+        "niche-research"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "full_name_present",
+        "repo_name"
+      ],
+      "first_seen_at": "2026-02-04T19:45:18Z",
+      "last_seen_at": "2026-02-04T19:45:18Z",
+      "trend_score": 14.28,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    }
+  ]
+}

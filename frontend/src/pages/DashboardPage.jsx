@@ -103,11 +103,11 @@ export default function DashboardPage() {
   const sourceNodesForEntity = useMemo(() => {
     if (!drilledEntity) return []
     const trend = trends.find((item) => item.entity === drilledEntity)
-    const fromCsv = mock.sourceNodes.filter((node) => node.entity === drilledEntity)
+    const fromData = mock.sourceNodes.filter((node) => node.entity === drilledEntity)
 
-    const combined = fromCsv.length >= 20
-      ? fromCsv
-      : [...fromCsv, ...buildFallbackNodes(trend)]
+    const combined = fromData.length >= 20
+      ? fromData
+      : [...fromData, ...buildFallbackNodes(trend)]
 
     return combined
       .sort((a, b) => scoreNode(b) - scoreNode(a))
