@@ -20,6 +20,7 @@ import argparse
 import json
 import os
 import re
+import hashlib
 import threading
 import time
 import traceback
@@ -88,6 +89,22 @@ def _env_truthy(name: str, default: bool = False) -> bool:
     if not raw:
         return default
     return raw in {"1", "true", "yes", "on"}
+
+
+def _index_signature(path: Path = DEFAULT_INDEX) -> dict:
+    if not path.exists():
+        return {"exists": False, "sha256": "", "generated_at": "", "entity_count": 0}
+    raw = path.read_bytes()
+    sha = hashlib.sha256(raw).hexdigest()
+    generated_at = ""
+    entity_count = 0
+    try:
+        payload = json.loads(raw.decode("utf-8"))
+        generated_at = str((payload.get("_meta") or {}).get("generated_at") or "")
+        entity_count = int(payload.get("entity_count") or 0)
+    except Exception:
+        pass
+    return {"exists": True, "sha256": sha, "generated_at": generated_at, "entity_count": entity_count}
 
 TOP_MAP_EXCLUDED_KEYS = {
     "vercel",
@@ -517,11 +534,24 @@ class SearchHandler(BaseHTTPRequestHandler):
         params = parse_qs(parsed.query)
         if parsed.path == "/api/health":
             self._set_json(200)
+            sig = _index_signature(DEFAULT_INDEX)
             self.wfile.write(
                 json.dumps(
-                    {"ok": True, "service": "scout-search-api", "scheduler_running": SCHEDULER.is_running}
+                    {
+                        "ok": True,
+                        "service": "scout-search-api",
+                        "scheduler_running": SCHEDULER.is_running,
+                        "index_sha256": sig.get("sha256"),
+                        "index_generated_at": sig.get("generated_at"),
+                        "index_entity_count": sig.get("entity_count"),
+                    }
                 ).encode("utf-8")
             )
+            return
+
+        if parsed.path in {"/api/debug/index-signature", "/api/debug/index-signature/"}:
+            self._set_json(200)
+            self.wfile.write(json.dumps(_index_signature(DEFAULT_INDEX), ensure_ascii=False).encode("utf-8"))
             return
 
         if parsed.path in {"/api/trends", "/api/trends/"}:
@@ -671,7 +701,12 @@ def main() -> None:
             print(f"index rebuild on startup failed: {exc}")
     else:
         print("index rebuild on startup: disabled (set SCOUT_AUTO_REBUILD_INDEX=1 to enable)")
-    SCHEDULER.start()
+    enable_scheduler = _env_truthy("SCOUT_ENABLE_SCHEDULER", default=False)
+    if enable_scheduler:
+        SCHEDULER.start()
+        print("scheduler: enabled")
+    else:
+        print("scheduler: disabled (set SCOUT_ENABLE_SCHEDULER=1 to enable)")
     server = ThreadingHTTPServer((args.host, args.port), SearchHandler)
     print(f"Scout search API listening on http://{args.host}:{args.port}")
     try:

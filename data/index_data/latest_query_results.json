@@ -1,2394 +1,376 @@
 {
   "_meta": {
     "description": "Latest niche query results from Scout tool pipeline",
-    "query": "robotics"
+    "query": "weather"
   },
-  "result_count": 50,
+  "result_count": 9,
   "results": [
     {
-      "entity_key": "zerorobotics",
-      "entity": "Zero Robotics",
-      "final_score": 77.231,
-      "lexical_score": 77.231,
-      "relevance_score": null,
-      "entity_type": "unknown",
+      "entity_key": "weathertorun",
+      "entity": "Weathertorun",
+      "final_score": 69.696,
+      "lexical_score": 54.392,
+      "relevance_score": 85.0,
+      "entity_type": "startup_company",
       "include": true,
-      "reason": "",
-      "sources": [
-        "github"
-      ],
-      "top_keywords": [
-        "and",
-        "automation",
-        "built",
-        "dag-based",
-        "failure",
-        "monitoring",
-        "process",
-        "robotics",
-        "ros2",
-        "rust",
-        "systems",
-        "zero-robotics"
-      ],
-      "trend_score": 84.14,
-      "confidence": 0.99,
-      "top_nodes": [
-        {
-          "id": "github-1148134994-zero-robotics",
-          "source_id": "github",
-          "source_name": "GitHub",
-          "headline": "Zero-Robotics/krill",
-          "url": "https://github.com/Zero-Robotics/krill",
-          "summary": "Professional-grade DAG-based process orchestrator for robotics systems. Manage ROS2 nodes, Docker containers, and Python services with health monitoring, automatic restarts, and cascading failure handling. Built in Rust.",
-          "interactions": 67,
-          "views": 667,
-          "impressions": 667,
-          "published_at": "2026-02-20T22:17:07Z",
-          "confidence": 0.75,
-          "node_type": "source_raw"
-        }
-      ]
-    },
-    {
-      "entity_key": "roboticspapers",
-      "entity": "Robotics Papers",
-      "final_score": 49.631,
-      "lexical_score": 49.631,
-      "relevance_score": null,
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "",
-      "sources": [
-        "github"
-      ],
-      "top_keywords": [
-        "arxiv",
-        "iterature-review",
-        "paper-digest",
-        "research-tools",
-        "robotics",
-        "python"
-      ],
-      "trend_score": 27.89,
-      "confidence": 0.49,
-      "top_nodes": []
-    },
-    {
-      "entity_key": "codeberg",
-      "entity": "Codeberg",
-      "final_score": 30.81,
-      "lexical_score": 30.81,
-      "relevance_score": null,
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "",
+      "reason": "Weather-focused app for runners with clear product and HN launch, high lexical match.",
       "sources": [
         "hackernews"
       ],
       "top_keywords": [
-        "hn",
-        "is",
-        "to",
-        "of",
-        "this",
+        "weather",
+        "weathertorun",
+        "run",
+        "wear",
+        "on",
         "x27",
-        "desktop",
-        "fiat",
-        "crypto",
-        "gold"
+        "based",
+        "because",
+        "put",
+        "details"
       ],
-      "trend_score": 47.62,
-      "confidence": 0.814,
+      "trend_score": 23.65,
+      "confidence": 0.87,
       "top_nodes": [
         {
-          "id": "hn-46408016-codeberg",
+          "id": "hn-46580094-weathertorun",
           "source_id": "hackernews",
           "source_name": "Hacker News",
-          "headline": "Show HN: A 12KB Deterministic AI Kernel for Robotics (bestbrain-core)",
-          "url": "https://codeberg.org/ishrikantbhosale/bestbrain-core",
-          "summary": "Hey HN!<p>I&#x27;m tired of the ritual where we assume AI needs a GPU cluster and a prayer to avoid crashing.<p>I built BESTBRAIN Core to prove that intelligence—real, deterministic, safe intelligence—can live in the &quot;room at the bottom.&quot; This is a 12KB kernel designed ",
-          "interactions": 5,
-          "views": 26,
-          "impressions": 26,
-          "published_at": "2025-12-28T03:09:42+00:00",
-          "confidence": 0.87,
-          "node_type": "source_raw"
-        },
-        {
-          "id": "hn-46666522-codeberg",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "Show HN: Teamlibra/ry: a Zig framework for Cursor that makes prompting better",
-          "url": "https://codeberg.org/teamlibra/ry",
-          "summary": "We&#x27;ve been running Cursor Ultra ($200&#x2F;month) in Auto Mode for extended sessions — sometimes 8+ hours of autonomous development. This repository is the result: 170k+ lines of Zig, a complete RISC-V64 operating system.<p>*The Cursor Ultra Experience:*<p>Auto Mode changes ",
-          "interactions": 4,
-          "views": 22,
-          "impressions": 22,
-          "published_at": "2026-01-18T10:17:46+00:00",
-          "confidence": 0.77,
-          "node_type": "source_raw"
-        },
-        {
-          "id": "hn-45948273-codeberg",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "Show HN: desktop widget to show prices of crypto, fiat, gold/silver, stocks",
-          "url": "https://codeberg.org/ilius/price-widget",
-          "summary": "Show HN: desktop widget to show prices of crypto, fiat, gold/silver, stocks",
-          "interactions": 3,
-          "views": 16,
-          "impressions": 16,
-          "published_at": "2025-11-16T20:49:25+00:00",
-          "confidence": 0.77,
-          "node_type": "source_raw"
-        },
-        {
-          "id": "hn-46343909-codeberg",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "Show HN: OpenHands-AAAA",
-          "url": "https://codeberg.org/erkinalp/OpenHands-AAAA",
-          "summary": "Show HN: OpenHands-AAAA",
-          "interactions": 3,
-          "views": 16,
-          "impressions": 16,
-          "published_at": "2025-12-21T10:53:33+00:00",
-          "confidence": 0.77,
-          "node_type": "source_raw"
-        },
-        {
-          "id": "hn-45568451-codeberg",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "Show HN: Malloc – phy solver for constrained balanced partitioning problems",
-          "url": "https://codeberg.org/aninokuma/malloc",
-          "summary": "I’m releasing malloc (MultiplicativeConstraint), a production-grade, open-source library for solving large, constraint-rich partitioning problems—think resource allocation, scheduling, clustering, supply chain, EDA, and HPC.<p>Why is this interesting?<p>Physics-inspired math: Use",
+          "headline": "Show HN: WeatherToRun – What to wear and when to run based on weather",
+          "url": "https://www.weathertorun.app",
+          "summary": "I built this because I was tired of checking the weather app for all the details, doing mental math about wind chill, and still wearing the wrong thing on my runs, especially during the winter. It&#x27;s a simple tool: you put in your location and it fetches weather data, thinks ",
           "interactions": 1,
           "views": 10,
           "impressions": 6,
-          "published_at": "2025-10-13T14:01:28+00:00",
-          "confidence": 0.87,
-          "node_type": "source_raw"
-        },
-        {
-          "id": "hn-47022581-codeberg",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "Show HN: Ventoux – get insights into your FIT activities",
-          "url": "https://codeberg.org/eikek/ventoux",
-          "summary": "Ventoux is a web app where you can upload FIT files to get some insights into your activities. The main features currently include some basic stats, finding same routes and compare segments.",
-          "interactions": 1,
-          "views": 10,
-          "impressions": 6,
-          "published_at": "2026-02-15T10:16:11+00:00",
-          "confidence": 0.77,
-          "node_type": "source_raw"
-        }
-      ]
-    },
-    {
-      "entity_key": "umichrobotexploration",
-      "entity": "UMich RobotExploration",
-      "final_score": 28.225,
-      "lexical_score": 28.225,
-      "relevance_score": null,
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "",
-      "sources": [
-        "github"
-      ],
-      "top_keywords": [
-        "robotics",
-        "simulator",
-        "acoustics",
-        "autonomous-agents",
-        "kinematics",
-        "c++"
-      ],
-      "trend_score": 29.06,
-      "confidence": 0.74,
-      "top_nodes": []
-    },
-    {
-      "entity_key": "openclaw",
-      "entity": "OpenClaw",
-      "final_score": 25.09,
-      "lexical_score": 25.09,
-      "relevance_score": null,
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "",
-      "sources": [
-        "github",
-        "hackernews",
-        "producthunt"
-      ],
-      "top_keywords": [
-        "agent",
-        "agents",
-        "ai",
-        "ai-agent",
-        "auto-deploy",
-        "autonomous",
-        "claude",
-        "code",
-        "expo",
-        "hn",
-        "open-source",
-        "openclaw"
-      ],
-      "trend_score": 98.0,
-      "confidence": 0.525,
-      "top_nodes": [
-        {
-          "id": "github-1103012935-openclaw",
-          "source_id": "github",
-          "source_name": "GitHub",
-          "headline": "openclaw/openclaw",
-          "url": "https://github.com/openclaw/openclaw",
-          "summary": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞",
-          "interactions": 494972,
-          "views": 2627956,
-          "impressions": 2627956,
-          "published_at": "2026-02-21T19:08:34Z",
-          "confidence": 0.8,
-          "node_type": "source_raw"
-        },
-        {
-          "id": "ph-1068372-openclaw",
-          "source_id": "producthunt",
-          "source_name": "Product Hunt",
-          "headline": "OpenClaw — The AI that actually does things",
-          "url": "https://www.producthunt.com/products/clawdbot-2/launches/openclaw?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
-          "summary": "Formerly Moltbot and Clawbot, OpenClaw turns your computer into a 24/7 personal agent accessible from any chat app. Control your browser, execute shell commands, manage files, and automate workflows via WhatsApp or Telegram. Features persistent memory, full system access, local privacy, and 50+ integrations.",
-          "interactions": 879,
-          "views": 10766,
-          "impressions": 8983,
-          "published_at": "2026-01-27T08:01:00Z",
-          "confidence": 0.8,
-          "node_type": "source_raw"
-        },
-        {
-          "id": "github-1123446919-gmickel-claude-marketplace",
-          "source_id": "github",
-          "source_name": "GitHub",
-          "headline": "gmickel/gmickel-claude-marketplace",
-          "url": "https://github.com/gmickel/gmickel-claude-marketplace",
-          "summary": "Claude Code plugins for reliable AI coding. Flow-Next: plan-first workflows, Ralph autonomous mode (overnight coding with fresh context), multi-model review gates via RepoPrompt/Codex, re-anchoring to prevent drift, receipt-based gating.",
-          "interactions": 931,
-          "views": 6393,
-          "impressions": 6393,
-          "published_at": "2026-02-21T14:21:08Z",
-          "confidence": 0.55,
-          "node_type": "source_raw"
-        },
-        {
-          "id": "ph-1081207-clawmetry-for-openclaw",
-          "source_id": "producthunt",
-          "source_name": "Product Hunt",
-          "headline": "ClawMetry for OpenClaw — Real-time observability dashboard for OpenClaw AI agents",
-          "url": "https://www.producthunt.com/products/clawmetry?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
-          "summary": "ClawMetry is a free, open-source observability dashboard for OpenClaw AI agents. Think Grafana, but purpose-built for AI. One command install (pip install clawmetry), zero config. Monitor token costs, sub-agent activity, cron jobs, memory changes, and session history. All in real-time with a beautiful live flow visuali",
-          "interactions": 233,
-          "views": 2758,
-          "impressions": 2410,
-          "published_at": "2026-02-18T08:01:00Z",
-          "confidence": 0.8,
-          "node_type": "source_raw"
-        },
-        {
-          "id": "github-1140897918-claudia",
-          "source_id": "github",
-          "source_name": "GitHub",
-          "headline": "kbanc85/claudia",
-          "url": "https://github.com/kbanc85/claudia",
-          "summary": "Terminal-based AI chief of staff. Remembers relationships, tracks commitments, helps you think strategically. Runs on Claude Code.",
-          "interactions": 107,
-          "views": 941,
-          "impressions": 941,
-          "published_at": "2026-02-19T21:39:55Z",
-          "confidence": 0.6,
-          "node_type": "source_raw"
-        },
-        {
-          "id": "github-1144946140-pm-claude-skills",
-          "source_id": "github",
-          "source_name": "GitHub",
-          "headline": "mohitagw15856/pm-claude-skills",
-          "url": "https://github.com/mohitagw15856/pm-claude-skills",
-          "summary": "Product Management Skills for Claude AI - Save 8-9 hours per week",
-          "interactions": 73,
-          "views": 661,
-          "impressions": 661,
-          "published_at": "2026-02-20T12:15:55Z",
-          "confidence": 0.6,
-          "node_type": "source_raw"
-        },
-        {
-          "id": "github-1158960069-opencrust-org",
-          "source_id": "github",
-          "source_name": "GitHub",
-          "headline": "opencrust-org/opencrust",
-          "url": "https://github.com/opencrust-org/opencrust",
-          "summary": "Personal AI assistant platform, rewritten in Rust from OpenClaw",
-          "interactions": 74,
-          "views": 330,
-          "impressions": 330,
-          "published_at": "2026-02-21T18:55:28Z",
-          "confidence": 0.7,
-          "node_type": "source_raw"
-        },
-        {
-          "id": "github-1152536742-opencrew",
-          "source_id": "github",
-          "source_name": "GitHub",
-          "headline": "AlexAnys/opencrew",
-          "url": "https://github.com/AlexAnys/opencrew",
-          "summary": "Openclaw多智能体协同系统 | Multi-Agent OS for Decision Makers — 基于 OpenClaw (Clawbot) + Slack，让 AI 团队各司其职、自主稳定迭代。",
-          "interactions": 43,
-          "views": 404,
-          "impressions": 404,
-          "published_at": "2026-02-20T09:00:43Z",
-          "confidence": 0.45,
-          "node_type": "source_raw"
-        },
-        {
-          "id": "github-1141314793-producthunt-skills",
-          "source_id": "github",
-          "source_name": "GitHub",
-          "headline": "yoanbernabeu/producthunt-skills",
-          "url": "https://github.com/yoanbernabeu/producthunt-skills",
-          "summary": "🚀 31 AI Agent Skills for Product Hunt launches. Expert guidance for strategy, content, marketing, compliance & more. Works with Claude Code, Cursor, Codex, and 20+ AI agents.",
-          "interactions": 18,
-          "views": 220,
-          "impressions": 220,
-          "published_at": "2026-01-30T09:09:10Z",
-          "confidence": 0.45,
-          "node_type": "source_raw"
-        },
-        {
-          "id": "github-1160692151-oh-my-claude",
-          "source_id": "github",
-          "source_name": "GitHub",
-          "headline": "npow/oh-my-claude",
-          "url": "https://github.com/npow/oh-my-claude",
-          "summary": "Like oh-my-zsh, but for Claude Code. An extensible statusline framework with themes and plugins.",
-          "interactions": 3,
-          "views": 285,
-          "impressions": 285,
-          "published_at": "2026-02-20T22:07:49Z",
-          "confidence": 0.45,
-          "node_type": "source_raw"
-        },
-        {
-          "id": "github-1141398507-claude-saas-eval-skills",
-          "source_id": "github",
-          "source_name": "GitHub",
-          "headline": "kirillpolevoy/claude-saas-eval-skills",
-          "url": "https://github.com/kirillpolevoy/claude-saas-eval-skills",
-          "summary": "Claude Code skills for evaluating niche SaaS opportunities through a lifestyle business lens",
-          "interactions": 8,
-          "views": 152,
-          "impressions": 152,
-          "published_at": "2026-01-26T20:53:49Z",
-          "confidence": 0.45,
-          "node_type": "source_raw"
-        },
-        {
-          "id": "hn-47101805-claudeusage",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "Show HN: ClaudeUsage – macOS menu bar app to track your Claude Pro usage limits",
-          "url": "https://github.com/linuxlewis/claude-usage",
-          "summary": "No summary text available.",
-          "interactions": 5,
-          "views": 133,
-          "impressions": 133,
-          "published_at": "2026-02-21T15:44:25+00:00",
-          "confidence": 0.47,
-          "node_type": "source_raw"
-        },
-        {
-          "id": "hn-47099606-claude-code-open",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "Show HN: Claude Code Open – AI Coding Platform with Web IDE and Agents",
-          "url": "https://github.com/kill136/claude-code-open",
-          "summary": "No summary text available.",
-          "interactions": 2,
-          "views": 108,
-          "impressions": 108,
-          "published_at": "2026-02-21T11:03:15+00:00",
-          "confidence": 0.47,
-          "node_type": "source_raw"
-        },
-        {
-          "id": "hn-46845528-agentgram",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "Show HN: AgentGram – Open-source social network for AI agents",
-          "url": "https://github.com/agentgram/agentgram",
-          "summary": "Show HN: AgentGram – Open-source social network for AI agents",
-          "interactions": 4,
-          "views": 22,
-          "impressions": 22,
-          "published_at": "2026-02-01T11:50:25+00:00",
-          "confidence": 0.47,
-          "node_type": "source_raw"
-        },
-        {
-          "id": "hn-46847722-agentgram",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "Show HN: AgentGram – Open-source, self-hostable AI agent social network",
-          "url": "https://www.agentgram.co/",
-          "summary": "Hi HN! I&#x27;m building AgentGram, an open-source alternative for AI agent networking.<p>Why?<p>Recent security incidents in closed platforms reminded me why transparency matters. AI agents handle sensitive data and make autonomous decisions—trust can&#x27;t be optional.<p>What ",
-          "interactions": 2,
-          "views": 20,
-          "impressions": 12,
-          "published_at": "2026-02-01T17:29:45+00:00",
+          "published_at": "2026-01-11T21:08:57+00:00",
           "confidence": 0.87,
           "node_type": "source_raw"
         }
       ]
     },
     {
-      "entity_key": "robotanalyzerjs",
-      "entity": "Robot Analyzer Js",
-      "final_score": 21.681,
-      "lexical_score": 21.681,
-      "relevance_score": null,
-      "entity_type": "unknown",
+      "entity_key": "weatherhaiku",
+      "entity": "Weatherhaiku",
+      "final_score": 68.698,
+      "lexical_score": 55.395,
+      "relevance_score": 82.0,
+      "entity_type": "startup_company",
       "include": true,
-      "reason": "",
+      "reason": "Direct weather-related product with AI-generated poetry, clear startup signals via HN and dedicated domain.",
       "sources": [
-        "github"
+        "hackernews"
       ],
       "top_keywords": [
-        "dynamics",
-        "kinematics",
-        "pinocchio",
-        "react",
-        "webassembly",
-        "robotics"
-      ],
-      "trend_score": 28.51,
-      "confidence": 0.49,
-      "top_nodes": []
-    },
-    {
-      "entity_key": "cakeletteringwithrobotarm",
-      "entity": "Cake Lettering with RobotArm",
-      "final_score": 21.666,
-      "lexical_score": 21.666,
-      "relevance_score": null,
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "",
-      "sources": [
-        "github"
-      ],
-      "top_keywords": [
-        "ros2",
-        "algorithm",
-        "dfs-search",
-        "doosan-robotics",
-        "robotics",
-        "javascript"
-      ],
-      "trend_score": 28.33,
-      "confidence": 0.49,
-      "top_nodes": []
-    },
-    {
-      "entity_key": "soenningai",
-      "entity": "Soenning Ai",
-      "final_score": 21.285,
-      "lexical_score": 21.285,
-      "relevance_score": null,
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "",
-      "sources": [
-        "github"
-      ],
-      "top_keywords": [
-        "python",
-        "robotics",
-        "attention",
-        "autonomous-agents",
-        "binocular",
-        "computer-vision"
-      ],
-      "trend_score": 29.81,
-      "confidence": 0.64,
-      "top_nodes": []
-    },
-    {
-      "entity_key": "kinetrix",
-      "entity": "Kinetrix",
-      "final_score": 21.225,
-      "lexical_score": 21.225,
-      "relevance_score": null,
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "",
-      "sources": [
-        "github"
-      ],
-      "top_keywords": [
-        "arduino",
-        "robotics",
-        "and",
-        "compiler",
-        "embedded-systems",
-        "raspberry-pi"
-      ],
-      "trend_score": 35.31,
-      "confidence": 0.59,
-      "top_nodes": []
-    },
-    {
-      "entity_key": "nvidiapersonaplex",
-      "entity": "NVIDIA PersonaPlex",
-      "final_score": 20.958,
-      "lexical_score": 20.958,
-      "relevance_score": null,
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "",
-      "sources": [
-        "producthunt"
-      ],
-      "top_keywords": [
-        "personaplex",
+        "weather",
+        "haiku",
+        "location",
         "any",
-        "conversational",
-        "nvidia",
-        "natural",
-        "ai",
-        "role",
-        "introduce",
-        "systems",
-        "roles"
+        "current",
+        "poetry",
+        "generation",
+        "site",
+        "ai-generated",
+        "precipitation"
       ],
-      "trend_score": 80.72,
-      "confidence": 0.8,
-      "top_nodes": [
-        {
-          "id": "ph-1079988-nvidia-personaplex",
-          "source_id": "producthunt",
-          "source_name": "Product Hunt",
-          "headline": "NVIDIA PersonaPlex — Natural Conversational AI With Any Role and Voice",
-          "url": "https://www.producthunt.com/products/nvidia?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
-          "summary": "We introduce PersonaPlex, a full-duplex conversational AI model that enables natural conversations with customizable voices and roles. PersonaPlex handles interruptions and backchannels while maintaining any chosen persona, outperforming existing systems on conversational dynamics and task adherence.",
-          "interactions": 326,
-          "views": 4046,
-          "impressions": 3373,
-          "published_at": "2026-02-16T08:01:00Z",
-          "confidence": 0.8,
-          "node_type": "source_raw"
-        }
-      ]
-    },
-    {
-      "entity_key": "glm5",
-      "entity": "GLM-5",
-      "final_score": 20.958,
-      "lexical_score": 20.958,
-      "relevance_score": null,
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "",
-      "sources": [
-        "producthunt"
-      ],
-      "top_keywords": [
-        "agentic",
-        "model",
-        "glm-5",
-        "active",
-        "moe",
-        "engineering",
-        "open-weights",
-        "long-horizon",
-        "systems",
-        "open-source"
-      ],
-      "trend_score": 80.72,
-      "confidence": 0.8,
-      "top_nodes": [
-        {
-          "id": "ph-1078121-glm-5",
-          "source_id": "producthunt",
-          "source_name": "Product Hunt",
-          "headline": "GLM-5 — Open-weights model for long-horizon agentic engineering",
-          "url": "https://www.producthunt.com/products/z-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
-          "summary": "A 744B MoE model (40B active) built for complex systems & agentic tasks. #1 open-source on Vending Bench 2, narrowing the gap with Claude Opus 4.5. Features DeepSeek Sparse Attention and \"slime\" RL infra.",
-          "interactions": 187,
-          "views": 2128,
-          "impressions": 1859,
-          "published_at": "2026-02-13T08:01:00Z",
-          "confidence": 0.8,
-          "node_type": "source_raw"
-        }
-      ]
-    },
-    {
-      "entity_key": "reavion",
-      "entity": "Reavion",
-      "final_score": 20.945,
-      "lexical_score": 20.945,
-      "relevance_score": null,
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "",
-      "sources": [
-        "producthunt"
-      ],
-      "top_keywords": [
-        "reavion",
-        "outbound",
-        "browser",
-        "agents",
-        "ai-powered",
-        "autonomous",
-        "gtm",
-        "scale",
-        "founders",
-        "workflows"
-      ],
-      "trend_score": 80.56,
-      "confidence": 0.8,
-      "top_nodes": [
-        {
-          "id": "ph-1056377-reavion",
-          "source_id": "producthunt",
-          "source_name": "Product Hunt",
-          "headline": "Reavion — Autonomous browser agents for outbound and GTM execution",
-          "url": "https://www.producthunt.com/products/reavion/launches/reavion?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
-          "summary": "Reavion is an AI-powered browser that navigates, reads, decides, and acts for you. Automate outbound and go-to-market tasks, save hours on repetitive workflows, and scale growth without extra hires. Designed for founders, marketers, and teams who want smarter, faster, reliable automation.",
-          "interactions": 203,
-          "views": 2114,
-          "impressions": 1895,
-          "published_at": "2026-02-01T08:01:00Z",
-          "confidence": 0.8,
-          "node_type": "source_raw"
-        }
-      ]
-    },
-    {
-      "entity_key": "archimyst",
-      "entity": "Archimyst",
-      "final_score": 20.93,
-      "lexical_score": 20.93,
-      "relevance_score": null,
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "",
-      "sources": [
-        "producthunt"
-      ],
-      "top_keywords": [
-        "archimyst",
-        "ai-powered",
-        "system",
-        "architecture",
-        "design",
-        "minutes",
-        "simulate",
-        "systems",
-        "generate",
-        "intelligent"
-      ],
-      "trend_score": 80.38,
-      "confidence": 0.8,
-      "top_nodes": [
-        {
-          "id": "ph-1069990-archimyst",
-          "source_id": "producthunt",
-          "source_name": "Product Hunt",
-          "headline": "Archimyst — AI-powered platform for designing system architecture",
-          "url": "https://www.producthunt.com/products/archimyst/launches/archimyst?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
-          "summary": "The intelligent architecture diagramming tool for modern engineering teams. Design, simulate, and document in minutes.Archimyst is an AI-powered system design platform that transforms ideas into production-ready backend architectures. Generate, simulate, and validate cloud systems in minutes by stress-testing performan",
-          "interactions": 211,
-          "views": 2310,
-          "impressions": 2022,
-          "published_at": "2026-01-30T08:01:00Z",
-          "confidence": 0.8,
-          "node_type": "source_raw"
-        }
-      ]
-    },
-    {
-      "entity_key": "pages",
-      "entity": "Pages",
-      "final_score": 20.675,
-      "lexical_score": 20.675,
-      "relevance_score": null,
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "",
-      "sources": [
-        "hackernews"
-      ],
-      "top_keywords": [
-        "hn",
-        "to",
-        "that",
-        "in",
-        "it",
-        "of",
-        "ai",
-        "built",
-        "x2f",
-        "an"
-      ],
-      "trend_score": 69.44,
-      "confidence": 0.782,
-      "top_nodes": [
-        {
-          "id": "hn-46269673-pages",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "Show HN: I implemented generics in my programming language",
-          "url": "https://axe-docs.pages.dev/features/generics/",
-          "summary": "It took a while to implement, though now I have generic functions working in Axe. Documentation, repository and site attached.",
-          "interactions": 80,
-          "views": 438,
-          "impressions": 438,
-          "published_at": "2025-12-15T02:20:46+00:00",
-          "confidence": 0.77,
-          "node_type": "source_raw"
-        },
-        {
-          "id": "hn-46417514-pages",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "Show HN: Matchstick Puzzle Game in the Browser",
-          "url": "https://matchmath.pages.dev/",
-          "summary": "An older family member showed me these puzzle games that he was playing via YouTube videos. I wanted to make them more playable in a frictionless way, so I generated all possible combinations for these types of puzzles and put together an interface for them.",
-          "interactions": 15,
-          "views": 110,
-          "impressions": 86,
-          "published_at": "2025-12-29T04:37:34+00:00",
-          "confidence": 0.77,
-          "node_type": "source_raw"
-        },
-        {
-          "id": "hn-45405319-pages",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "Show HN: Engineering Offer Breakdown",
-          "url": "https://engineer-offer-breakdown.pages.dev/",
-          "summary": "It&#x27;s always a bit confusing trying to understand what each companies offer actually means for your total comp each year. I made a simple tool that lets you input the relevant info and gives you a visual breakdown of your total comp over the years. Static site, no backend slu",
-          "interactions": 8,
-          "views": 42,
-          "impressions": 42,
-          "published_at": "2025-09-28T15:59:06+00:00",
-          "confidence": 0.77,
-          "node_type": "source_raw"
-        },
-        {
-          "id": "hn-45488946-pages",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "Show HN: Toolbit – A unified, privacy-friendly toolbox for developers",
-          "url": "https://toolbit.pages.dev/",
-          "summary": "I built Toolbit — a fast, ad-free, privacy-respecting developer toolbox that runs entirely in your browser.<p>It brings together 20+ everyday utilities like:\n    JSON Formatter &amp; Validator\n    Base64 Encoder &#x2F; Decoder\n    JWT Decoder\n    Markdown Previewer\n    HTML &#x2F",
-          "interactions": 6,
-          "views": 40,
-          "impressions": 34,
-          "published_at": "2025-10-06T08:20:53+00:00",
-          "confidence": 0.87,
-          "node_type": "source_raw"
-        },
-        {
-          "id": "hn-45946199-pages",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "Show HN: ZTGI-AC – An AI that checks its internal stability before answering",
-          "url": "https://ztgiai.pages.dev/",
-          "summary": "Hi everyone,<p>This is a small experimental AI project I’ve been building called *ZTGI-AC*.<p>Most LLMs generate an answer immediately, but ZTGI-AC does something different:  \nbefore responding, it runs an internal stability check.<p>It evaluates:\n• risk  \n• jitter  \n• dissonance",
-          "interactions": 6,
-          "views": 32,
-          "impressions": 32,
-          "published_at": "2025-11-16T16:19:02+00:00",
-          "confidence": 0.87,
-          "node_type": "source_raw"
-        },
-        {
-          "id": "hn-46036235-pages",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "Show HN: A decision making framework for DevRel resource allocation",
-          "url": "https://drim.pages.dev/",
-          "summary": "Show HN: A decision making framework for DevRel resource allocation",
-          "interactions": 3,
-          "views": 30,
-          "impressions": 18,
-          "published_at": "2025-11-24T17:00:58+00:00",
-          "confidence": 0.77,
-          "node_type": "source_raw"
-        },
-        {
-          "id": "hn-46026120-pages",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "Show HN: OhNiceRepo – Easily discover trending GitHub gems and repos",
-          "url": "https://ohnicerepo.pages.dev",
-          "summary": "Show HN: OhNiceRepo – Easily discover trending GitHub gems and repos",
-          "interactions": 3,
-          "views": 30,
-          "impressions": 18,
-          "published_at": "2025-11-23T18:41:02+00:00",
-          "confidence": 0.77,
-          "node_type": "source_raw"
-        },
-        {
-          "id": "hn-46944039-pages",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "Show HN: An AI mock interviewer that keeps asking follow-ups (export transcript)",
-          "url": "https://interview-agent-en.pages.dev/",
-          "summary": "I often use GPT by asking it to challenge my thinking with questions, and that worked surprisingly well for clarifying my own ideas. I recently had an interview coming up, so I built this small web app (using Codex) that acts as an interviewer and drills follow-up questions—so I ",
-          "interactions": 2,
-          "views": 20,
-          "impressions": 12,
-          "published_at": "2026-02-09T11:20:38+00:00",
-          "confidence": 0.77,
-          "node_type": "source_raw"
-        },
-        {
-          "id": "hn-45714268-pages",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "Show HN: Cozy Keys, play MIDI keys in the browser",
-          "url": "https://cozykeys.pages.dev/",
-          "summary": "Hi HN, I&#x27;ve built a low-friction web app for playing and recording MIDI keys.<p>Cozy Keys serves as a sweet spot between full-blown DAW&#x2F;piano apps and lighter online tools. Former often have setup hassle, and might not be readily available on all devices and online opti",
-          "interactions": 2,
-          "views": 20,
-          "impressions": 12,
-          "published_at": "2025-10-26T18:50:56+00:00",
-          "confidence": 0.77,
-          "node_type": "source_raw"
-        },
-        {
-          "id": "hn-45560471-pages",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "Show HN: Create your own live channel from a list of video URLs",
-          "url": "https://livechannels.pages.dev",
-          "summary": "With just a list of video urls, you can create a pseudo live channel. Like on television, the videos play based on a predefined schedule. This website will allow people to create their own channel just like on TV and have other users watch their channel, all from just a list of v",
-          "interactions": 2,
-          "views": 20,
-          "impressions": 12,
-          "published_at": "2025-10-12T18:22:29+00:00",
-          "confidence": 0.77,
-          "node_type": "source_raw"
-        },
-        {
-          "id": "hn-47034465-pages",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "Show HN: Create new calendar systems to fix uneven months",
-          "url": "https://calendar-architect.pages.dev/",
-          "summary": "I was playing around with divisors of numbers near 365 and realized you can generate a ton of valid calendar systems by picking a highly composite base (like 360) and treating the leftover days as end-of-year extra holidays.<p>365 is nearly prime (5×73), which is why our months a",
-          "interactions": 1,
-          "views": 10,
-          "impressions": 6,
-          "published_at": "2026-02-16T13:00:57+00:00",
-          "confidence": 0.77,
-          "node_type": "source_raw"
-        },
-        {
-          "id": "hn-46670778-pages",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "Show HN: Built my portfolio in one Claude Code session – 145 repos, AI chat",
-          "url": "https://tasteful-vibes.pages.dev",
-          "summary": "Teacher by day, vibe coder by night. Built this portfolio in a single Claude Code session.<p>Features:\n- Terminal aesthetic UI\n- AI chat that knows my 145 repos (Groq&#x2F;Llama 3.3)\n- Searchable by vertical\n- Live GitHub activity feed\n- Stripe payments<p>Tech: Astro, Cloudflare ",
-          "interactions": 1,
-          "views": 10,
-          "impressions": 6,
-          "published_at": "2026-01-18T18:40:19+00:00",
-          "confidence": 0.87,
-          "node_type": "source_raw"
-        },
-        {
-          "id": "hn-46275324-pages",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "Show HN: Bookpace",
-          "url": "https://bookpace.pages.dev",
-          "summary": "It&#x27;s essentially a book progress tracker. Many apps allow you to add the books that you are currently reading, but not at what pace. It&#x27;s simple, no complicated stuff, no AI shenanigans.\nCreated as I was overwhelmed by the number of books I wanted to read, and thought i",
-          "interactions": 1,
-          "views": 10,
-          "impressions": 6,
-          "published_at": "2025-12-15T14:57:00+00:00",
-          "confidence": 0.87,
-          "node_type": "source_raw"
-        },
-        {
-          "id": "hn-47023422-pages",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "Show HN: RevenueBack – Stop losing MRR to failed payments",
-          "url": "https://revenueback.pages.dev",
-          "summary": "Show HN: RevenueBack – Stop losing MRR to failed payments",
-          "interactions": 1,
-          "views": 10,
-          "impressions": 6,
-          "published_at": "2026-02-15T13:17:34+00:00",
-          "confidence": 0.77,
-          "node_type": "source_raw"
-        }
-      ]
-    },
-    {
-      "entity_key": "niaexperience",
-      "entity": "NiaExperience",
-      "final_score": 20.517,
-      "lexical_score": 20.517,
-      "relevance_score": null,
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "",
-      "sources": [
-        "github"
-      ],
-      "top_keywords": [
-        "companion",
-        "intelligent",
-        "memory",
-        "multi-platform",
-        "niaexperience",
-        "openclaw",
-        "orchestration",
-        "os",
-        "self-evolving",
-        "systems",
-        "typescript"
-      ],
-      "trend_score": 77.71,
-      "confidence": 0.78,
-      "top_nodes": [
-        {
-          "id": "github-1160852606-niaexperience",
-          "source_id": "github",
-          "source_name": "GitHub",
-          "headline": "NiaExperience/PearlOS",
-          "url": "https://github.com/NiaExperience/PearlOS",
-          "summary": "Self-evolving Intelligent OS companion with memory systems, voice integration, and distributed architecture. Multi-platform support with OpenClaw intelligent agent orchestration. Early access for developers..",
-          "interactions": 26,
-          "views": 468,
-          "impressions": 468,
-          "published_at": "2026-02-20T16:54:57Z",
-          "confidence": 0.7,
-          "node_type": "source_raw"
-        }
-      ]
-    },
-    {
-      "entity_key": "cinegraphs",
-      "entity": "Cinegraphs",
-      "final_score": 20.106,
-      "lexical_score": 20.106,
-      "relevance_score": null,
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "",
-      "sources": [
-        "hackernews"
-      ],
-      "top_keywords": [
-        "but",
-        "cinegraphs",
-        "x27",
-        "films",
-        "hn",
-        "film",
-        "systems",
-        "story",
-        "idea",
-        "graphs"
-      ],
-      "trend_score": 70.08,
-      "confidence": 0.87,
-      "top_nodes": [
-        {
-          "id": "hn-46933515-cinegraphs",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "Show HN: Fine-tuned Qwen2.5-7B on 100 films for probabilistic story graphs",
-          "url": "https://cinegraphs.ai/",
-          "summary": "Hi HN, I&#x27;m a computer systems engineering student in Mexico who switched from film school. I built CineGraphs because my filmmaker friends and I kept hitting the same wall—we&#x27;d have a vague idea for a film but no structured way to explore where it could go. Every AI wri",
-          "interactions": 141,
-          "views": 1010,
-          "impressions": 806,
-          "published_at": "2026-02-08T12:00:02+00:00",
-          "confidence": 0.87,
-          "node_type": "source_raw"
-        }
-      ]
-    },
-    {
-      "entity_key": "opencastor",
-      "entity": "OpenCastor",
-      "final_score": 19.01,
-      "lexical_score": 19.01,
-      "relevance_score": null,
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "",
-      "sources": [
-        "github"
-      ],
-      "top_keywords": [
-        "python",
-        "robotics",
-        "self-improving",
-        "ai",
-        "hailo",
-        "machine-learning"
-      ],
-      "trend_score": 45.13,
-      "confidence": 0.69,
-      "top_nodes": []
-    },
-    {
-      "entity_key": "agentcheck",
-      "entity": "Agentcheck",
-      "final_score": 18.937,
-      "lexical_score": 18.937,
-      "relevance_score": null,
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "",
-      "sources": [
-        "hackernews"
-      ],
-      "top_keywords": [
-        "agentcheck",
-        "leaderboard",
-        "txt",
-        "posture",
-        "bot",
-        "robots",
-        "llms",
-        "ai",
-        "public",
-        "x2f"
-      ],
-      "trend_score": 55.46,
-      "confidence": 0.87,
-      "top_nodes": [
-        {
-          "id": "hn-47093933-agentcheck",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "Show HN: AgentCheck – AI bot posture leaderboard from robots.txt and llms.txt",
-          "url": "https://www.agentcheck.com",
-          "summary": "Hi HN — I built AgentCheck to make the agentic internet more legible.<p>AgentCheck is a public “AI bot posture leaderboard” built from declared public signals:\n- robots.txt allow&#x2F;deny rules\n- public capability&#x2F;interface files (e.g. &#x2F;llms.txt and &#x2F;.well-known&#",
-          "interactions": 3,
-          "views": 90,
-          "impressions": 90,
-          "published_at": "2026-02-20T21:04:09+00:00",
-          "confidence": 0.87,
-          "node_type": "source_raw"
-        }
-      ]
-    },
-    {
-      "entity_key": "gensecaihq",
-      "entity": "Gensecaihq",
-      "final_score": 18.495,
-      "lexical_score": 18.495,
-      "relevance_score": null,
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "",
-      "sources": [
-        "github"
-      ],
-      "top_keywords": [
-        "gensecaihq",
-        "agents",
-        "openclaw",
-        "mcp",
-        "autonomous",
-        "soc",
-        "wazuh",
-        "generate",
-        "correlate",
-        "auto-triage"
-      ],
-      "trend_score": 62.44,
-      "confidence": 0.7,
-      "top_nodes": [
-        {
-          "id": "github-1157041450-gensecaihq",
-          "source_id": "github",
-          "source_name": "GitHub",
-          "headline": "gensecaihq/Wazuh-Openclaw-Autopilot",
-          "url": "https://github.com/gensecaihq/Wazuh-Openclaw-Autopilot",
-          "summary": "Autonomous SOC layer for Wazuh using OpenClaw agents with MCP . Auto-triage alerts, correlate incidents,           generate response plans with human-in-the-loop approval. Evidence packs, Prometheus metrics, Slack       integration.",
-          "interactions": 36,
-          "views": 451,
-          "impressions": 451,
-          "published_at": "2026-02-21T18:39:55Z",
-          "confidence": 0.7,
-          "node_type": "source_raw"
-        }
-      ]
-    },
-    {
-      "entity_key": "worldflux",
-      "entity": "Worldflux",
-      "final_score": 18.427,
-      "lexical_score": 18.427,
-      "relevance_score": null,
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "",
-      "sources": [
-        "github"
-      ],
-      "top_keywords": [
-        "python",
-        "machine-learning",
-        "model-based-rl",
-        "pytorch",
-        "reinforcement-learning",
-        "robotics"
-      ],
-      "trend_score": 31.59,
-      "confidence": 0.74,
-      "top_nodes": []
-    },
-    {
-      "entity_key": "getnerve",
-      "entity": "Get Nerve",
-      "final_score": 18.277,
-      "lexical_score": 18.277,
-      "relevance_score": null,
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "",
-      "sources": [
-        "hackernews"
-      ],
-      "top_keywords": [
-        "nerve",
-        "sources",
-        "data",
-        "stitches",
-        "x27",
-        "hn",
-        "get",
-        "systems",
-        "solo",
-        "on"
-      ],
-      "trend_score": 50.96,
+      "trend_score": 39.94,
       "confidence": 0.77,
       "top_nodes": [
         {
-          "id": "hn-47019329-get-nerve",
+          "id": "hn-46856178-weatherhaiku",
           "source_id": "hackernews",
           "source_name": "Hacker News",
-          "headline": "Show HN: Nerve: Stitches all your data sources into one mega-API",
-          "url": "https://playground.get-nerve.com/",
-          "summary": "Hi HN!\nNerve is a solo project I&#x27;ve been working on for the last few years. It&#x27;s a developer tool that stitches together data from multiple sources in real-time.<p>A lot of high-leverage projects (AI or otherwise) involve tying data together from multiple systems of rec",
-          "interactions": 22,
-          "views": 160,
-          "impressions": 126,
-          "published_at": "2026-02-14T23:07:41+00:00",
-          "confidence": 0.77,
-          "node_type": "source_raw"
-        }
-      ]
-    },
-    {
-      "entity_key": "scitrera",
-      "entity": "Scitrera",
-      "final_score": 18.246,
-      "lexical_score": 18.246,
-      "relevance_score": null,
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "",
-      "sources": [
-        "github"
-      ],
-      "top_keywords": [
-        "scitrera",
-        "sparkrun",
-        "inference",
-        "systems",
-        "nvidia",
-        "spark",
-        "manage",
-        "llm",
-        "dgx",
-        "workloads"
-      ],
-      "trend_score": 59.32,
-      "confidence": 0.7,
-      "top_nodes": [
-        {
-          "id": "github-1159456624-scitrera",
-          "source_id": "github",
-          "source_name": "GitHub",
-          "headline": "scitrera/sparkrun",
-          "url": "https://github.com/scitrera/sparkrun",
-          "summary": "sparkrun - launch, manage, and stop LLM inference workloads on NVIDIA DGX Spark systems",
-          "interactions": 21,
-          "views": 294,
-          "impressions": 294,
-          "published_at": "2026-02-21T18:50:12Z",
-          "confidence": 0.7,
-          "node_type": "source_raw"
-        }
-      ]
-    },
-    {
-      "entity_key": "vect",
-      "entity": "Vect",
-      "final_score": 18.147,
-      "lexical_score": 18.147,
-      "relevance_score": null,
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "",
-      "sources": [
-        "hackernews"
-      ],
-      "top_keywords": [
-        "marketing",
-        "quot",
-        "hn",
-        "of",
-        "vect",
-        "built",
-        "autonomous",
-        "that",
-        "to",
-        "x2f"
-      ],
-      "trend_score": 33.09,
-      "confidence": 0.875,
-      "top_nodes": [
-        {
-          "id": "hn-46261174-vect",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "Show HN: I built an AI that scans 10k Reddit comments to find 'Blue Ocean' ideas",
-          "url": "https://blog.vect.pro/trend-hacking-guide",
-          "summary": "Hi HN,\nI dropped out of college 3 months ago to solve my own problem: I kept building SaaS products that nobody wanted.\nI realized I was guessing instead of measuring. So I built a system to automate &quot;Market Signal Detection&quot; using LLMs.\nThe Architecture:\n1. Ingests dat",
-          "interactions": 8,
-          "views": 44,
-          "impressions": 44,
-          "published_at": "2025-12-14T06:21:37+00:00",
-          "confidence": 0.87,
-          "node_type": "source_raw"
-        },
-        {
-          "id": "hn-46261182-vect",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "Show HN: I replaced a 5-person marketing team with a swarm of autonomous agents",
-          "url": "https://blog.vect.pro/automated-marketing-strategy-guide",
-          "summary": "Hi HN,\nI was frustrated by the standard startup advice: &quot;Hire a VP of Marketing, Hire a Content Lead, Hire a Video Editor.&quot;\nIt leads to massive burn ($30k&#x2F;mo) before finding product-market fit.\nI spent the last 3 months asking: &quot;How much of this can be automat",
-          "interactions": 3,
-          "views": 16,
-          "impressions": 16,
-          "published_at": "2025-12-14T06:23:09+00:00",
-          "confidence": 0.87,
-          "node_type": "source_raw"
-        },
-        {
-          "id": "hn-46108722-vect",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "Show HN: Vect AI– The \"Resonance Engine\" for high-growth marketing",
-          "url": "https://vect.pro/",
-          "summary": "Most marketing tools are just text editors. Vect is a strategist.\nWe built a platform that combines real-time market research with autonomous agent execution. It solves the problem of &quot;guessing&quot; what works by simulating audience reactions and auditing copy against prove",
-          "interactions": 1,
-          "views": 10,
-          "impressions": 6,
-          "published_at": "2025-12-01T15:43:38+00:00",
-          "confidence": 0.87,
-          "node_type": "source_raw"
-        }
-      ]
-    },
-    {
-      "entity_key": "bucketlabs",
-      "entity": "Bucketlabs",
-      "final_score": 18.107,
-      "lexical_score": 18.107,
-      "relevance_score": null,
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "",
-      "sources": [
-        "hackernews"
-      ],
-      "top_keywords": [
-        "file",
-        "x27",
-        "in",
-        "bucket",
-        "systems",
-        "getting",
-        "entire",
-        "spin",
-        "terminal",
-        "encrypted"
-      ],
-      "trend_score": 48.84,
-      "confidence": 0.77,
-      "top_nodes": [
-        {
-          "id": "hn-46755174-bucketlabs",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "Show HN: Bucket – Encrypted file sharing for people who live in the terminal",
-          "url": "https://bucketlabs.org",
-          "summary": "I built this because I am perpetually drowning in file transfer hell.<p>As a systems engineer, I am constantly moving massive files. Whether it&#x27;s getting new releases of custom ISOs to clients, downloading entire filesystems to spin up clones, or uploading massive support pa",
-          "interactions": 27,
-          "views": 144,
-          "impressions": 144,
-          "published_at": "2026-01-25T15:56:53+00:00",
-          "confidence": 0.87,
-          "node_type": "source_raw"
-        }
-      ]
-    },
-    {
-      "entity_key": "autonomousstocktradingagent",
-      "entity": "Autonomous Stock Trading Agent",
-      "final_score": 17.879,
-      "lexical_score": 17.879,
-      "relevance_score": null,
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "",
-      "sources": [
-        "github"
-      ],
-      "top_keywords": [
-        "agent",
-        "autonomous",
-        "finance",
-        "trading",
-        "python"
-      ],
-      "trend_score": 30.99,
-      "confidence": 0.49,
-      "top_nodes": []
-    },
-    {
-      "entity_key": "autonomousuavguide",
-      "entity": "Autonomous Uav Guide",
-      "final_score": 17.853,
-      "lexical_score": 17.853,
-      "relevance_score": null,
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "",
-      "sources": [
-        "github"
-      ],
-      "top_keywords": [
-        "algorithms",
-        "python",
-        "and",
-        "the",
-        "autonomous-flight",
-        "autonomous-navigation"
-      ],
-      "trend_score": 30.66,
-      "confidence": 0.49,
-      "top_nodes": []
-    },
-    {
-      "entity_key": "divinedevops",
-      "entity": "Divinedevops",
-      "final_score": 17.804,
-      "lexical_score": 17.804,
-      "relevance_score": null,
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "",
-      "sources": [
-        "hackernews"
-      ],
-      "top_keywords": [
-        "vector",
-        "databases",
-        "inspector",
-        "embeddings",
-        "systems",
-        "running",
-        "forensic",
-        "on",
-        "provider",
-        "every"
-      ],
-      "trend_score": 41.3,
-      "confidence": 0.87,
-      "top_nodes": [
-        {
-          "id": "hn-46850146-divinedevops",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "Show HN: Vector Inspector – A forensic tool for vector databases",
-          "url": "https://vector-inspector.divinedevops.com",
-          "summary": "I’ve been working with vector databases a lot recently and I kept running into the same problem: it’s really hard to <i>see</i> what’s going on.<p>Every provider has its own UI (or none), debugging embeddings is guesswork, and migrating data between systems is painful. I wanted a",
-          "interactions": 6,
-          "views": 32,
-          "impressions": 32,
-          "published_at": "2026-02-01T22:39:59+00:00",
-          "confidence": 0.87,
-          "node_type": "source_raw"
-        }
-      ]
-    },
-    {
-      "entity_key": "elegoorobotcar4",
-      "entity": "Elegoo Robot Car4",
-      "final_score": 17.606,
-      "lexical_score": 17.606,
-      "relevance_score": null,
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "",
-      "sources": [
-        "github"
-      ],
-      "top_keywords": [
-        "python",
-        "robot",
-        "arduino",
-        "artificial-intelligence",
-        "computer-vision",
-        "game"
-      ],
-      "trend_score": 27.57,
-      "confidence": 0.49,
-      "top_nodes": []
-    },
-    {
-      "entity_key": "joshmosier",
-      "entity": "Joshmosier",
-      "final_score": 17.439,
-      "lexical_score": 17.439,
-      "relevance_score": null,
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "",
-      "sources": [
-        "hackernews"
-      ],
-      "top_keywords": [
-        "hn",
-        "mario",
-        "win",
-        "party",
-        "minigames",
-        "robot",
-        "made",
-        "alarm",
-        "samsung",
-        "real"
-      ],
-      "trend_score": 33.36,
-      "confidence": 0.777,
-      "top_nodes": [
-        {
-          "id": "hn-46589783-joshmosier",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "Show HN: I built a robot to win at Mario Party minigames",
-          "url": "https://joshmosier.com/posts/deep-boo",
-          "summary": "Show HN: I built a robot to win at Mario Party minigames",
-          "interactions": 5,
-          "views": 50,
-          "impressions": 30,
-          "published_at": "2026-01-12T15:31:54+00:00",
-          "confidence": 0.77,
-          "node_type": "source_raw"
-        },
-        {
-          "id": "hn-46027966-joshmosier",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "Show HN: I made the Samsung alarm into a real music box",
-          "url": "https://joshmosier.com/posts/music-box",
-          "summary": "Show HN: I made the Samsung alarm into a real music box",
-          "interactions": 2,
-          "views": 20,
-          "impressions": 12,
-          "published_at": "2025-11-23T22:26:17+00:00",
-          "confidence": 0.77,
-          "node_type": "source_raw"
-        }
-      ]
-    },
-    {
-      "entity_key": "gobrane",
-      "entity": "Gobrane",
-      "final_score": 17.402,
-      "lexical_score": 17.402,
-      "relevance_score": null,
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "",
-      "sources": [
-        "hackernews"
-      ],
-      "top_keywords": [
-        "live",
-        "agents",
-        "openclaw",
-        "on",
-        "adversarial",
-        "documents",
-        "autonomous",
-        "one",
-        "agent",
-        "once"
-      ],
-      "trend_score": 40.02,
-      "confidence": 0.77,
-      "top_nodes": [
-        {
-          "id": "hn-46845910-gobrane",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "Show HN: We Ran a Live Red-Team Attack on OpenClaw Agents",
-          "url": "https://gobrane.com/observing-adversarial-ai-lessons-from-a-live-openclaw-agent-security-audit/",
-          "summary": "This report documents a live adversarial test between two autonomous AI agents running on OpenClaw.<p>One agent acted as a red team attacker. One acted as a defensive agent. The agents communicated directly over webhooks with real tooling access. No humans were involved once the ",
-          "interactions": 3,
-          "views": 30,
-          "impressions": 18,
-          "published_at": "2026-02-01T12:56:44+00:00",
-          "confidence": 0.77,
-          "node_type": "source_raw"
-        }
-      ]
-    },
-    {
-      "entity_key": "krishnabajpai",
-      "entity": "Krishnabajpai",
-      "final_score": 17.349,
-      "lexical_score": 17.349,
-      "relevance_score": null,
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "",
-      "sources": [
-        "hackernews"
-      ],
-      "top_keywords": [
-        "research",
-        "execution",
-        "trading",
-        "890",
-        "systems",
-        "latency",
-        "krishnabajpai",
-        "median",
-        "open-source",
-        "live"
-      ],
-      "trend_score": 35.61,
-      "confidence": 0.87,
-      "top_nodes": [
-        {
-          "id": "hn-46275004-krishnabajpai",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "Show HN: Sub-microsecond (890 ns) trading execution research system",
-          "url": "https://submicro.krishnabajpai.me/",
-          "summary": "I am sharing a research-grade, open-source trading execution framework that achieves a median end-to-end decision latency of 890 nanoseconds on commodity hardware.<p>The project is designed for education, systems research, and latency instrumentation, not for live trading. It foc",
-          "interactions": 23,
-          "views": 120,
-          "impressions": 120,
-          "published_at": "2025-12-15T14:30:15+00:00",
-          "confidence": 0.87,
-          "node_type": "source_raw"
-        }
-      ]
-    },
-    {
-      "entity_key": "na2ru2",
-      "entity": "Na2Ru2",
-      "final_score": 17.231,
-      "lexical_score": 17.231,
-      "relevance_score": null,
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "",
-      "sources": [
-        "hackernews"
-      ],
-      "top_keywords": [
-        "backend",
-        "framework",
-        "spine",
-        "go",
-        "systems",
-        "like",
-        "ech",
-        "built",
-        "building",
-        "on"
-      ],
-      "trend_score": 37.89,
-      "confidence": 0.77,
-      "top_nodes": [
-        {
-          "id": "hn-46759959-na2ru2",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "Show HN: Spine – an execution-centric backend framework for Go",
-          "url": "https://spine.na2ru2.me/en/",
-          "summary": "Hello Hacker News — greetings from South Korea \nI’m a backend engineer working primarily with Go, and I’d like to share a framework I’ve been building to solve a problem I’ve repeatedly encountered in production systems.<p>In my day-to-day work, our backend is built on top of Ech",
-          "interactions": 2,
-          "views": 20,
-          "impressions": 12,
-          "published_at": "2026-01-25T23:51:33+00:00",
-          "confidence": 0.77,
-          "node_type": "source_raw"
-        }
-      ]
-    },
-    {
-      "entity_key": "flippa",
-      "entity": "Flippa",
-      "final_score": 17.229,
-      "lexical_score": 17.229,
-      "relevance_score": null,
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "",
-      "sources": [
-        "hackernews"
-      ],
-      "top_keywords": [
-        "marketing",
-        "built",
-        "autonomous",
-        "it",
-        "an",
-        "instead",
-        "center",
-        "command",
-        "scaling",
-        "system"
-      ],
-      "trend_score": 34.74,
-      "confidence": 0.695,
-      "top_nodes": [
-        {
-          "id": "hn-46486656-flippa",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "I built an autonomous marketing system and turned it into a sellable SaaS asset",
-          "url": "https://flippa.com/12205760-vect-ai-is-an-autonomous-marketing-command-center-deploy-ai-agents-to-plan-campaigns-and-design-commercial-visuals-to-scale-growth-fast-https-vect-pro",
-          "summary": "I built an autonomous marketing system and turned it into a sellable SaaS asset",
+          "headline": "Show HN: Weather Haiku – AI-generated poetry for any location's current weather",
+          "url": "https://weatherhaiku.cc",
+          "summary": "I built a site that generates haiku about the current weather for any location worldwide, using Open-Meteo for weather data and Gemini (2.5-flash-lite) for generation.<p>The site will use temperature, wind, humidity, precipitation etc to compose the haiku. The background gradient",
           "interactions": 4,
           "views": 22,
           "impressions": 22,
-          "published_at": "2026-01-04T10:23:58+00:00",
-          "confidence": 0.69,
-          "node_type": "source_raw"
-        },
-        {
-          "id": "hn-46502612-flippa",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "I built an autonomous marketing command center instead of scaling it further",
-          "url": "https://flippa.com/12205760-vect-ai-is-an-autonomous-marketing-command-center-where-ai-agents-plan-campaigns-create-visuals-and-run-10-growth-tools-from-one-unified-system",
-          "summary": "I built an autonomous marketing command center instead of scaling it further",
-          "interactions": 3,
-          "views": 16,
-          "impressions": 16,
-          "published_at": "2026-01-05T18:26:03+00:00",
-          "confidence": 0.69,
-          "node_type": "source_raw"
-        },
-        {
-          "id": "hn-46481263-flippa",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "I built a state-aware Marketing OS with a custom credit economy(React Router v7)",
-          "url": "https://flippa.com/12205760-vect-ai-is-an-autonomous-marketing-command-center-deploy-ai-agents-to-plan-campaigns-and-design-commercial-visuals-to-scale-growth-fast-link-https-vect-pro",
-          "summary": "I built a state-aware Marketing OS with a custom credit economy(React Router v7)",
-          "interactions": 2,
-          "views": 20,
-          "impressions": 12,
-          "published_at": "2026-01-03T20:37:29+00:00",
-          "confidence": 0.69,
-          "node_type": "source_raw"
-        }
-      ]
-    },
-    {
-      "entity_key": "fieldbw",
-      "entity": "Fieldbw",
-      "final_score": 17.092,
-      "lexical_score": 17.092,
-      "relevance_score": null,
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "",
-      "sources": [
-        "hackernews"
-      ],
-      "top_keywords": [
-        "attractors",
-        "spatial",
-        "audio",
-        "x27",
-        "rotate",
-        "playdate",
-        "different",
-        "systems",
-        "studies",
-        "ios"
-      ],
-      "trend_score": 45.53,
-      "confidence": 0.695,
-      "top_nodes": [
-        {
-          "id": "hn-47023510-fieldbw",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "Show HN: Chaos Studies – attractors and spatial audio (iOS/Mac/Playdate)",
-          "url": "https://fieldbw.com/chaos-studies/",
-          "summary": "My friend built this and I&#x27;m blown away with how much fun it is and the high level of polish. It renders 9 different strange attractors (Lorenz, Rössler, Aizawa, Chen, etc.) as particle systems — thousands of particles tracing chaotic paths in real time. You can rotate and z",
-          "interactions": 10,
-          "views": 60,
-          "impressions": 56,
-          "published_at": "2026-02-15T13:30:04+00:00",
+          "published_at": "2026-02-02T14:06:29+00:00",
           "confidence": 0.77,
           "node_type": "source_raw"
         }
       ]
     },
     {
-      "entity_key": "muril0en",
-      "entity": "Muril0EN",
-      "final_score": 17.086,
-      "lexical_score": 17.086,
-      "relevance_score": null,
-      "entity_type": "unknown",
+      "entity_key": "weathermini",
+      "entity": "Weathermini",
+      "final_score": 67.096,
+      "lexical_score": 54.191,
+      "relevance_score": 80.0,
+      "entity_type": "startup_company",
       "include": true,
-      "reason": "",
-      "sources": [
-        "github"
-      ],
-      "top_keywords": [
-        "c++",
-        "and",
-        "arduino",
-        "robotics",
-        "stl",
-        "assistive-technology"
-      ],
-      "trend_score": 27.33,
-      "confidence": 0.64,
-      "top_nodes": []
-    },
-    {
-      "entity_key": "shayank1996",
-      "entity": "ShayanK1996",
-      "final_score": 17.086,
-      "lexical_score": 17.086,
-      "relevance_score": null,
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "",
-      "sources": [
-        "github"
-      ],
-      "top_keywords": [
-        "model",
-        "ycb",
-        "manipulation",
-        "robotics",
-        "ycb-objects",
-        "ycb-video"
-      ],
-      "trend_score": 27.33,
-      "confidence": 0.64,
-      "top_nodes": []
-    },
-    {
-      "entity_key": "agno",
-      "entity": "Agno",
-      "final_score": 16.924,
-      "lexical_score": 16.924,
-      "relevance_score": null,
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "",
+      "reason": "Trip weather forecasts using Apple Intelligence, startup signals via HN and .app domain.",
       "sources": [
         "hackernews"
       ],
       "top_keywords": [
-        "agno",
-        "runtime",
-        "multi-agent",
-        "framework",
-        "x2f",
+        "weather",
+        "mini",
+        "powered",
+        "trip",
+        "apple",
+        "forecasts",
+        "intelligence",
         "hn",
-        "agents",
-        "systems",
-        "agentic",
-        "plane"
+        "by",
+        "weathermini"
       ],
-      "trend_score": 30.3,
+      "trend_score": 24.89,
+      "confidence": 0.77,
+      "top_nodes": [
+        {
+          "id": "hn-46189617-weathermini",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Weather mini – Trip forecasts powered by Apple Intelligence",
+          "url": "https://weathermini.app",
+          "summary": "Show HN: Weather mini – Trip forecasts powered by Apple Intelligence",
+          "interactions": 3,
+          "views": 16,
+          "impressions": 16,
+          "published_at": "2025-12-08T08:02:23+00:00",
+          "confidence": 0.77,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "mukoko",
+      "entity": "Mukoko",
+      "final_score": 53.473,
+      "lexical_score": 28.946,
+      "relevance_score": 78.0,
+      "entity_type": "startup_company",
+      "include": true,
+      "reason": "AI weather intelligence for Zimbabwe, clear company signals and HN launch.",
+      "sources": [
+        "hackernews"
+      ],
+      "top_keywords": [
+        "weather",
+        "zimbabwe",
+        "mukoko",
+        "built",
+        "global",
+        "infrastructure",
+        "agricultural",
+        "no",
+        "generate",
+        "ai"
+      ],
+      "trend_score": 55.58,
+      "confidence": 0.87,
+      "top_nodes": [
+        {
+          "id": "hn-47097611-mukoko",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Mukoko weather – AI-powered weather intelligence built for Zimbabwe",
+          "url": "https://weather.mukoko.com/harare",
+          "summary": "Zimbabwe has 90+ towns and cities, a population of 15+ million, significant agricultural and mining sectors — and almost no weather infrastructure built specifically for it. Global apps cover Harare and Bulawayo at best, and the AI summaries they generate read like they were writ",
+          "interactions": 2,
+          "views": 98,
+          "impressions": 98,
+          "published_at": "2026-02-21T04:51:00+00:00",
+          "confidence": 0.87,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "plaincast",
+      "entity": "Plaincast",
+      "final_score": 51.709,
+      "lexical_score": 23.417,
+      "relevance_score": 80.0,
+      "entity_type": "startup_company",
+      "include": true,
+      "reason": "Plain English weather forecasts, strong startup indicators and direct niche match.",
+      "sources": [
+        "hackernews"
+      ],
+      "top_keywords": [
+        "plaincast",
+        "nws",
+        "area",
+        "discussions",
+        "forecast",
+        "english",
+        "afds",
+        "plain",
+        "multiple",
+        "but"
+      ],
+      "trend_score": 36.46,
       "confidence": 1.0,
       "top_nodes": [
         {
-          "id": "hn-45714551-agno",
+          "id": "hn-47029412-plaincast",
           "source_id": "hackernews",
           "source_name": "Hacker News",
-          "headline": "Show HN: Agno – multi-agent framework, runtime and control plane",
-          "url": "https://agno.link/gh",
-          "summary": "Hi HN,<p>Excited to share Agno, a framework and runtime for multi-agent systems. Think of it as FastAPI for AI Agents.<p>At its core is the AgentOS, a high-performance server&#x2F;runtime that helps you run and manage AI agents, multi-agent teams, and step-based agentic workflows",
-          "interactions": 11,
-          "views": 90,
-          "impressions": 64,
-          "published_at": "2025-10-26T19:29:47+00:00",
+          "headline": "Show HN: Plaincast – Plain English Translations of NWS Area Forecast Discussions",
+          "url": "https://plaincast.live",
+          "summary": "I built Plaincast to make NWS Area Forecast Discussions (AFDs) readable by normal humans. AFDs are the most detailed weather forecasts available in the US - written by local meteorologists multiple times a day - but they&#x27;re packed with jargon, abbreviations, and shorthand th",
+          "interactions": 1,
+          "views": 10,
+          "impressions": 6,
+          "published_at": "2026-02-16T00:37:35+00:00",
           "confidence": 1.0,
           "node_type": "source_raw"
         }
       ]
     },
     {
-      "entity_key": "autonomouslicensecompact",
-      "entity": "Autonomous License Compact",
-      "final_score": 16.748,
-      "lexical_score": 16.748,
-      "relevance_score": null,
-      "entity_type": "unknown",
+      "entity_key": "beach",
+      "entity": "Beach",
+      "final_score": 51.335,
+      "lexical_score": 27.67,
+      "relevance_score": 75.0,
+      "entity_type": "startup_company",
       "include": true,
-      "reason": "",
-      "sources": [
-        "github"
-      ],
-      "top_keywords": [
-        "ai-regulation",
-        "ai-safety",
-        "autonomous-agents",
-        "chain-of-custody",
-        "insurtech",
-        "liability-protocol"
-      ],
-      "trend_score": 24.35,
-      "confidence": 0.43,
-      "top_nodes": []
-    },
-    {
-      "entity_key": "hookverify",
-      "entity": "Hookverify",
-      "final_score": 16.706,
-      "lexical_score": 16.706,
-      "relevance_score": null,
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "",
+      "reason": "Real-time beach weather conditions, startup context from HN despite 'beach' keyword ambiguity.",
       "sources": [
         "hackernews"
       ],
       "top_keywords": [
-        "hookverify",
-        "delivery",
-        "systems",
-        "visibility",
-        "webhook",
-        "production",
+        "beach",
+        "weather",
+        "real-time",
+        "conditions",
+        "report",
+        "surf",
+        "reports",
         "hn"
       ],
-      "trend_score": 27.58,
+      "trend_score": 39.63,
       "confidence": 0.87,
       "top_nodes": [
         {
-          "id": "hn-46405410-hookverify",
+          "id": "hn-46760079-beach",
           "source_id": "hackernews",
           "source_name": "Hacker News",
-          "headline": "Show HN: HookVerify – Webhook delivery visibility for production systems",
-          "url": "https://hookverify.com",
-          "summary": "Show HN: HookVerify – Webhook delivery visibility for production systems",
-          "interactions": 4,
-          "views": 22,
-          "impressions": 22,
-          "published_at": "2025-12-27T21:27:44+00:00",
-          "confidence": 0.87,
-          "node_type": "source_raw"
-        }
-      ]
-    },
-    {
-      "entity_key": "unrag",
-      "entity": "Unrag",
-      "final_score": 16.68,
-      "lexical_score": 16.68,
-      "relevance_score": null,
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "",
-      "sources": [
-        "hackernews"
-      ],
-      "top_keywords": [
-        "unrag",
-        "rag",
-        "open-source",
-        "files",
-        "add",
-        "source",
-        "dependencies",
-        "not",
-        "systems",
-        "are"
-      ],
-      "trend_score": 27.25,
-      "confidence": 1.0,
-      "top_nodes": [
-        {
-          "id": "hn-46342762-unrag",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "Show HN: Unrag (open-source) – Add RAG as source files, not dependencies",
-          "url": "https://unrag.dev",
-          "summary": "Inspired by shadcn - we are building a simple system of ergonomically designed primitives that you can customize, extend, and build on to create versatile, robust and extendable RAG systems.",
+          "headline": "Show HN: Beach Report – Real-time beach conditions, weather, and surf reports",
+          "url": "https://beach.report",
+          "summary": "Show HN: Beach Report – Real-time beach conditions, weather, and surf reports",
           "interactions": 3,
           "views": 30,
           "impressions": 18,
-          "published_at": "2025-12-21T06:34:34+00:00",
-          "confidence": 1.0,
-          "node_type": "source_raw"
-        }
-      ]
-    },
-    {
-      "entity_key": "xxmllanguage",
-      "entity": "Xxml Language",
-      "final_score": 16.649,
-      "lexical_score": 16.649,
-      "relevance_score": null,
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "",
-      "sources": [
-        "hackernews"
-      ],
-      "top_keywords": [
-        "language",
-        "systems",
-        "reflection",
-        "runtime",
-        "xxml",
-        "ownership",
-        "hn",
-        "started",
-        "running",
-        "across"
-      ],
-      "trend_score": 30.61,
-      "confidence": 0.77,
-      "top_nodes": [
-        {
-          "id": "hn-46270296-xxml-language",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "Show HN: A systems language with runtime reflection and no GC",
-          "url": "https://xxml-language.com",
-          "summary": "Hi HN,<p>I’ve been working on an experimental programming language called XXML.\nThe project started from a frustration I kept running into across systems languages:<p>Languages with strong ownership tend to avoid runtime reflection.<p>Languages with rich reflection usually rely o",
-          "interactions": 8,
-          "views": 60,
-          "impressions": 46,
-          "published_at": "2025-12-15T03:57:41+00:00",
-          "confidence": 0.77,
-          "node_type": "source_raw"
-        }
-      ]
-    },
-    {
-      "entity_key": "alignmenter",
-      "entity": "Alignmenter",
-      "final_score": 16.616,
-      "lexical_score": 16.616,
-      "relevance_score": null,
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "",
-      "sources": [
-        "hackernews"
-      ],
-      "top_keywords": [
-        "across",
-        "voice",
-        "alignmenter",
-        "model",
-        "versions",
-        "brand",
-        "systems",
-        "right",
-        "copilot",
-        "built"
-      ],
-      "trend_score": 26.45,
-      "confidence": 1.0,
-      "top_nodes": [
-        {
-          "id": "hn-45870538-alignmenter",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "Show HN: Alignmenter – Measure brand voice and consistency across model versions",
-          "url": "https://www.alignmenter.com",
-          "summary": "I built a framework for measuring persona alignment in conversational AI systems.<p>*Problem:* \nWhen you ship an AI copilot, you need it to maintain a consistent brand voice across model versions. But &quot;sounds right&quot; is subjective. How do you make it measurable?<p>*Appro",
-          "interactions": 6,
-          "views": 32,
-          "impressions": 32,
-          "published_at": "2025-11-09T23:53:39+00:00",
-          "confidence": 1.0,
-          "node_type": "source_raw"
-        }
-      ]
-    },
-    {
-      "entity_key": "hireproof",
-      "entity": "Hireproof",
-      "final_score": 16.614,
-      "lexical_score": 16.614,
-      "relevance_score": null,
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "",
-      "sources": [
-        "hackernews"
-      ],
-      "top_keywords": [
-        "hireproof",
-        "descriptions",
-        "job",
-        "resumes",
-        "to",
-        "ai",
-        "hn",
-        "person",
-        "using",
-        "systems"
-      ],
-      "trend_score": 26.42,
-      "confidence": 0.87,
-      "top_nodes": [
-        {
-          "id": "hn-46487910-hireproof",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "Show HN: HireProof – An AI tool to align resumes with job descriptions",
-          "url": "https://hireproof.app",
-          "summary": "Hi HN — I’m a solo builder experimenting with how far one person can go using AI tools.<p>HireProof is a resume alignment tool that helps job seekers match their resumes to specific job descriptions while staying readable to both ATS systems and humans.<p>I built this end-to-end ",
-          "interactions": 2,
-          "views": 20,
-          "impressions": 12,
-          "published_at": "2026-01-04T13:48:09+00:00",
+          "published_at": "2026-01-26T00:07:46+00:00",
           "confidence": 0.87,
           "node_type": "source_raw"
         }
       ]
     },
     {
-      "entity_key": "bhaviavelayudhan",
-      "entity": "Bhaviavelayudhan",
-      "final_score": 16.582,
-      "lexical_score": 16.582,
-      "relevance_score": null,
-      "entity_type": "unknown",
+      "entity_key": "hypatia",
+      "entity": "Hypatia",
+      "final_score": 48.721,
+      "lexical_score": 27.442,
+      "relevance_score": 70.0,
+      "entity_type": "startup_company",
       "include": true,
-      "reason": "",
+      "reason": "Weather visualization tool with serverless tech, likely startup despite weaker lexical match.",
       "sources": [
         "hackernews"
       ],
       "top_keywords": [
-        "systems",
-        "irreversible",
-        "messages",
-        "support",
-        "authority",
-        "an",
-        "commitment",
-        "generate",
-        "business",
-        "across"
-      ],
-      "trend_score": 29.78,
-      "confidence": 0.77,
-      "top_nodes": [
-        {
-          "id": "hn-46481176-bhaviavelayudhan",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "Show HN: An authority gate for AI-generated customer communications",
-          "url": "https://authority.bhaviavelayudhan.com/",
-          "summary": "Many teams now allow AI systems to draft customer-facing messages across support, CRM, and billing workflows.<p>This introduces a specific failure mode:\nAI can generate text that constitutes an irreversible business commitment\n(refunds, credits, billing changes, contractual promi",
-          "interactions": 4,
-          "views": 40,
-          "impressions": 24,
-          "published_at": "2026-01-03T20:28:04+00:00",
-          "confidence": 0.77,
-          "node_type": "source_raw"
-        }
-      ]
-    },
-    {
-      "entity_key": "shellbreaker",
-      "entity": "Shellbreaker",
-      "final_score": 16.526,
-      "lexical_score": 16.526,
-      "relevance_score": null,
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "",
-      "sources": [
-        "hackernews"
-      ],
-      "top_keywords": [
-        "fixing",
-        "learn",
-        "breaker",
-        "linux",
-        "broken",
-        "shell",
-        "systems",
-        "real",
+        "weather",
+        "serverless",
+        "ecmwf",
+        "zero",
+        "visualization",
+        "webgpu",
         "hn",
-        "by"
+        "hypatia"
       ],
-      "trend_score": 29.07,
+      "trend_score": 40.53,
       "confidence": 0.77,
       "top_nodes": [
         {
-          "id": "hn-46266111-shellbreaker",
+          "id": "hn-46764776-hypatia",
           "source_id": "hackernews",
           "source_name": "Hacker News",
-          "headline": "Show HN: Shell Breaker – Learn Linux by fixing broken real systems",
-          "url": "https://shellbreaker.com/",
-          "summary": "Show HN: Shell Breaker – Learn Linux by fixing broken real systems",
+          "headline": "Show HN: Zero – Serverless ECMWF weather visualization (WebGPU)",
+          "url": "https://zero.hypatia.earth/",
+          "summary": "Show HN: Zero – Serverless ECMWF weather visualization (WebGPU)",
           "interactions": 5,
-          "views": 50,
-          "impressions": 30,
-          "published_at": "2025-12-14T19:44:05+00:00",
+          "views": 30,
+          "impressions": 28,
+          "published_at": "2026-01-26T12:17:36+00:00",
           "confidence": 0.77,
           "node_type": "source_raw"
         }
       ]
     },
     {
-      "entity_key": "hirelens",
-      "entity": "Hirelens",
-      "final_score": 16.518,
-      "lexical_score": 16.518,
-      "relevance_score": null,
-      "entity_type": "unknown",
+      "entity_key": "snowsignals",
+      "entity": "Snowsignals",
+      "final_score": 37.74,
+      "lexical_score": 25.48,
+      "relevance_score": 50.0,
+      "entity_type": "research_project",
       "include": true,
-      "reason": "",
+      "reason": "Snow metamorphosis model, niche weather relevance but lacks clear startup signals.",
       "sources": [
         "hackernews"
       ],
       "top_keywords": [
-        "hirelens",
-        "job",
-        "seekers",
-        "esl",
-        "x2f",
-        "https",
-        "resume",
-        "systems",
-        "analyzer",
-        "they"
+        "physical",
+        "snow",
+        "metamorphosis",
+        "model",
+        "weather",
+        "surface",
+        "numerical",
+        "point",
+        "alpine",
+        "conditions"
       ],
-      "trend_score": 25.22,
-      "confidence": 1.0,
-      "top_nodes": [
-        {
-          "id": "hn-45949496-hirelens",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "Show HN: Hirelens – AI Resume Analyzer for ESL and Global Job Seekers",
-          "url": "https://www.hirelens.co/",
-          "summary": "I built Hirelens (<a href=\"https:&#x2F;&#x2F;hirelens.co\" rel=\"nofollow\">https:&#x2F;&#x2F;hirelens.co</a>) after seeing many ESL and international job seekers struggle with resumes that don’t match job descriptions or parse cleanly in ATS systems, even when they have strong expe",
-          "interactions": 4,
-          "views": 22,
-          "impressions": 22,
-          "published_at": "2025-11-16T23:37:14+00:00",
-          "confidence": 1.0,
-          "node_type": "source_raw"
-        }
-      ]
-    },
-    {
-      "entity_key": "llmready",
-      "entity": "Llmready",
-      "final_score": 16.455,
-      "lexical_score": 16.455,
-      "relevance_score": null,
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "",
-      "sources": [
-        "hackernews"
-      ],
-      "top_keywords": [
-        "systems",
-        "understand",
-        "how",
-        "diagnostic",
-        "ai",
-        "public",
-        "product",
-        "see",
-        "explanations",
-        "rankings"
-      ],
-      "trend_score": 28.19,
-      "confidence": 0.77,
-      "top_nodes": [
-        {
-          "id": "hn-46478627-llmready",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "Show HN: A diagnostic tool to see how AI systems understand your product",
-          "url": "https://llmready.site/",
-          "summary": "AI systems learn from public explanations across the web.<p>LLM Ready is a diagnostic tool that estimates how consistently AI systems can understand and describe a product based on public information.<p>It does not track live AI responses, rankings, or prompts. It focuses on stru",
-          "interactions": 4,
-          "views": 22,
-          "impressions": 22,
-          "published_at": "2026-01-03T16:39:36+00:00",
-          "confidence": 0.77,
-          "node_type": "source_raw"
-        }
-      ]
-    },
-    {
-      "entity_key": "webship",
-      "entity": "Webship",
-      "final_score": 16.45,
-      "lexical_score": 16.45,
-      "relevance_score": null,
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "",
-      "sources": [
-        "hackernews"
-      ],
-      "top_keywords": [
-        "web",
-        "code",
-        "webship",
-        "systems",
-        "dev",
-        "custom",
-        "performance",
-        "legacy",
-        "management",
-        "any"
-      ],
-      "trend_score": 24.37,
-      "confidence": 0.87,
-      "top_nodes": [
-        {
-          "id": "hn-46674011-webship",
-          "source_id": "hackernews",
-          "source_name": "Hacker News",
-          "headline": "Show HN: Webship.dev – custom web systems, legacy code and performance",
-          "url": "https://webship.dev/",
-          "summary": "Website created with its own web management system without any external tools. Pure code, no clutter.",
-          "interactions": 1,
-          "views": 10,
-          "impressions": 6,
-          "published_at": "2026-01-19T01:24:16+00:00",
-          "confidence": 0.87,
-          "node_type": "source_raw"
-        }
-      ]
-    },
-    {
-      "entity_key": "systemsanalyticawebsite",
-      "entity": "Systems Analytica Website",
-      "final_score": 16.374,
-      "lexical_score": 16.374,
-      "relevance_score": null,
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "",
-      "sources": [
-        "github"
-      ],
-      "top_keywords": [
-        "html",
-        "website",
-        "for",
-        "systems",
-        "analytica",
-        "pre-seed"
-      ],
-      "trend_score": 19.67,
-      "confidence": 0.43,
-      "top_nodes": []
-    },
-    {
-      "entity_key": "muffinman",
-      "entity": "Muffinman",
-      "final_score": 16.291,
-      "lexical_score": 16.291,
-      "relevance_score": null,
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "",
-      "sources": [
-        "hackernews"
-      ],
-      "top_keywords": [
-        "bard",
-        "experiment",
-        "poetry",
-        "robot",
-        "in",
-        "an",
-        "2025",
-        "hn",
-        "muffinman"
-      ],
-      "trend_score": 35.51,
+      "trend_score": 25.37,
       "confidence": 0.695,
       "top_nodes": [
         {
-          "id": "hn-46841357-muffinman",
+          "id": "hn-46354906-snowsignals",
           "source_id": "hackernews",
           "source_name": "Hacker News",
-          "headline": "Show HN: Bard – an Experiment in Robot Poetry (2025)",
-          "url": "https://muffinman.io/bard/",
-          "summary": "Show HN: Bard – an Experiment in Robot Poetry (2025)",
-          "interactions": 1,
-          "views": 10,
-          "impressions": 6,
-          "published_at": "2026-01-31T22:03:32+00:00",
+          "headline": "Show HN: Physical snow metamorphosis model",
+          "url": "https://blog.snowsignals.com/p/introducing-alpine-intelligence",
+          "summary": "Alpine Intelligence is a numerical weather model that forecasts snow surface conditions in mountainous environments.<p>It combines a physical world model with terrain-adjusted weather and a snow metamorphosis engine to predict for every point on the mountain the surface state of ",
+          "interactions": 2,
+          "views": 20,
+          "impressions": 12,
+          "published_at": "2025-12-22T15:31:21+00:00",
           "confidence": 0.77,
           "node_type": "source_raw"
         }
       ]
+    },
+    {
+      "entity_key": "esptimecast",
+      "entity": "ESPTimeCast",
+      "final_score": 13.654,
+      "lexical_score": 7.308,
+      "relevance_score": 20.0,
+      "entity_type": "open_source_project",
+      "include": true,
+      "reason": "DIY weather station project, marginal relevance and weak signals.",
+      "sources": [
+        "hackernews"
+      ],
+      "top_keywords": [
+        "esptimecast",
+        "diy",
+        "wifi",
+        "clock",
+        "weather",
+        "station",
+        "esp32",
+        "esp8266",
+        "hn"
+      ],
+      "trend_score": 0.1,
+      "confidence": 0.47,
+      "top_nodes": []
     }
   ]
 }
