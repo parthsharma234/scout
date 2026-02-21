@@ -383,38 +383,6 @@ def ingest_source_artifacts(
                         ),
                     )
 
-            for entity_row in entity_rows:
-                if not isinstance(entity_row, dict):
-                    continue
-                entity_name = str(entity_row.get("entity") or "").strip()
-                mention_key = normalize_key(entity_name)
-                if not mention_key:
-                    continue
-                conn.execute(
-                    """
-                    INSERT OR IGNORE INTO entity_mentions(
-                      source, mention_key, entity_name, confidence, published_at, item_external_id,
-                      url, title, summary, keywords_json, raw_json, run_id, created_at
-                    )
-                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-                    """,
-                    (
-                        source,
-                        mention_key,
-                        entity_name,
-                        float(entity_row.get("confidence") or 0.0),
-                        str(entity_row.get("last_seen_at") or ""),
-                        entity_name,
-                        "",
-                        entity_name,
-                        "",
-                        json_dumps(entity_row.get("top_keywords") or []),
-                        json_dumps(entity_row),
-                        run_id,
-                        now_iso(),
-                    ),
-                )
-
             for row in node_rows:
                 if not isinstance(row, dict):
                     continue
@@ -468,30 +436,6 @@ def ingest_source_artifacts(
                         json_dumps(row),
                         stamp,
                         stamp,
-                    ),
-                )
-                conn.execute(
-                    """
-                    INSERT OR IGNORE INTO entity_mentions(
-                      source, mention_key, entity_name, confidence, published_at, item_external_id,
-                      url, title, summary, keywords_json, raw_json, run_id, created_at
-                    )
-                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-                    """,
-                    (
-                        source,
-                        alias_key,
-                        entity_name,
-                        float(row.get("confidence") or 0.0),
-                        str(row.get("published_at") or ""),
-                        node_id,
-                        str(row.get("url") or ""),
-                        str(row.get("headline") or ""),
-                        str(row.get("summary") or ""),
-                        "[]",
-                        json_dumps(row),
-                        run_id,
-                        now_iso(),
                     ),
                 )
                 written += 1

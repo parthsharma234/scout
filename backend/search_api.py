@@ -75,6 +75,56 @@ PIPELINE_THREAD: threading.Thread | None = None
 PIPELINE_LAST_RUN: dict | None = None
 PIPELINE_LAST_RUN_LOCK = threading.Lock()
 
+TOP_MAP_EXCLUDED_KEYS = {
+    "vercel",
+    "netlify",
+    "visualstudio",
+    "visualstudiocode",
+    "vscode",
+    "crates",
+    "npmjs",
+}
+TOP_MAP_BLOCKED_DOMAINS = {
+    "vercel.app",
+    "vercel.com",
+    "netlify.app",
+    "netlify.com",
+    "visualstudio.com",
+    "visualstudio.microsoft.com",
+}
+
+
+def _normalize_key(value: str) -> str:
+    return "".join(ch for ch in (value or "").lower() if ch.isalnum())
+
+
+def _domain_root(url: str) -> str:
+    from urllib.parse import urlparse
+
+    try:
+        host = (urlparse(url).hostname or "").lower().strip()
+    except ValueError:
+        return ""
+    if host.startswith("www."):
+        host = host[4:]
+    parts = host.split(".")
+    if len(parts) >= 2:
+        return ".".join(parts[-2:])
+    return host
+
+
+def _percentile(values: list[float], q: float) -> float:
+    if not values:
+        return 0.0
+    ordered = sorted(values)
+    if len(ordered) == 1:
+        return float(ordered[0])
+    idx = (len(ordered) - 1) * max(0.0, min(1.0, q))
+    lo = int(idx)
+    hi = min(len(ordered) - 1, lo + 1)
+    frac = idx - lo
+    return float(ordered[lo]) * (1.0 - frac) + float(ordered[hi]) * frac
+
 
 def _ensure_index_exists() -> dict:
     if not DEFAULT_INDEX.exists():
@@ -88,8 +138,39 @@ def build_trends_payload(index_payload: dict) -> dict:
     if not isinstance(entities, list):
         entities = []
     trends = []
+    raw_scores: list[float] = []
     source_totals: dict[str, int] = {}
+
+    def should_exclude(row: dict) -> bool:
+        key = _normalize_key(str(row.get("entity_key") or row.get("entity") or ""))
+        if not key:
+            return True
+        if bool(row.get("is_known_incumbent")):
+            return True
+        if key in TOP_MAP_EXCLUDED_KEYS:
+            return True
+        nodes = row.get("top_nodes") or []
+        if isinstance(nodes, list) and nodes:
+            blocked_hits = 0
+            url_hits = 0
+            for node in nodes[:8]:
+                if not isinstance(node, dict):
+                    continue
+                url = str(node.get("url") or "")
+                if not url:
+                    continue
+                url_hits += 1
+                if _domain_root(url) in TOP_MAP_BLOCKED_DOMAINS:
+                    blocked_hits += 1
+            if url_hits > 0 and blocked_hits / max(1, url_hits) >= 0.6:
+                return True
+        return False
+
     for row in entities:
+        if not isinstance(row, dict):
+            continue
+        if should_exclude(row):
+            continue
         source_counts = row.get("source_counts") or {}
         if isinstance(source_counts, dict):
             for src, count in source_counts.items():
@@ -97,11 +178,14 @@ def build_trends_payload(index_payload: dict) -> dict:
                     source_totals[str(src)] = int(source_totals.get(str(src), 0)) + int(count)
                 except (TypeError, ValueError):
                     continue
+        raw_score = float(row.get("trend_score") or 0.0)
+        raw_scores.append(raw_score)
         trends.append(
             {
                 "entity_key": row.get("entity_key"),
                 "entity": row.get("entity"),
-                "trend_score": float(row.get("trend_score") or 0.0),
+                "trend_score": raw_score,
+                "raw_trend_score": raw_score,
                 "momentum_score": float(row.get("momentum_score") or 0.0),
                 "is_known_incumbent": bool(row.get("is_known_incumbent")),
                 "velocity_delta_pct": 0.0,
@@ -118,6 +202,18 @@ def build_trends_payload(index_payload: dict) -> dict:
                 "activity_last_30d": int(row.get("activity_last_30d") or 0),
             }
         )
+
+    if trends:
+        lo = _percentile(raw_scores, 0.1)
+        hi = _percentile(raw_scores, 0.95)
+        span = max(1e-6, hi - lo)
+        for row in trends:
+            raw_score = float(row.get("raw_trend_score") or 0.0)
+            unit = max(0.0, min(1.0, (raw_score - lo) / span))
+            # 0.5-10 display scale for dashboard readability.
+            display_score = 0.5 + (unit**0.65) * 9.5
+            row["trend_score"] = round(display_score, 2)
+
     trends.sort(key=lambda row: row["trend_score"], reverse=True)
     return {"entities": trends, "count": len(trends), "source_totals": source_totals}
 
