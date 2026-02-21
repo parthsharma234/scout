@@ -1,32 +1,43 @@
 #!/usr/bin/env python3
 """
-Lightweight API server for Scout niche search prompts.
+Scout API server with daily pipeline scheduler.
 
 Endpoints:
   GET  /api/health
+  GET  /api/trends
+  GET  /api/sources
+  GET  /api/entity/{entity_key}/nodes?include_enriched=true&limit=40
+  GET  /api/entity/{entity_key}/history?window_days=180
+  GET  /api/pipeline/status
+  POST /api/pipeline/run
   POST /api/niche-search
   GET  /api/niche-search?query=...
-
-Run:
-  python backend/search_api.py --host 0.0.0.0 --port 8000
 """
 
 from __future__ import annotations
 
 import argparse
 import json
-import os
+import threading
 import traceback
-from collections import Counter
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
 try:
+    from config import load_env_file
+    from db import migrate
+    from index_store import (
+        export_index_json,
+        get_entity_history,
+        get_entity_nodes,
+        get_pipeline_status,
+        get_sources_payload,
+    )
+    from pipeline_runner import PipelineScheduler, run_full_pipeline, run_on_demand_enrichment
     from niche_search import (
         call_openrouter_nemotron,
         combine_scores,
-        load_env_file,
         load_index,
         parse_refresh_targets,
         save_latest_results,
@@ -35,10 +46,19 @@ try:
         tool_search_index,
     )
 except ModuleNotFoundError:
+    from backend.config import load_env_file  # type: ignore
+    from backend.db import migrate  # type: ignore
+    from backend.index_store import (  # type: ignore
+        export_index_json,
+        get_entity_history,
+        get_entity_nodes,
+        get_pipeline_status,
+        get_sources_payload,
+    )
+    from backend.pipeline_runner import PipelineScheduler, run_full_pipeline, run_on_demand_enrichment  # type: ignore
     from backend.niche_search import (  # type: ignore
         call_openrouter_nemotron,
         combine_scores,
-        load_env_file,
         load_index,
         parse_refresh_targets,
         save_latest_results,
@@ -50,86 +70,56 @@ except ModuleNotFoundError:
 
 DEFAULT_INDEX = Path("data/index_data/entity_index.json")
 DEFAULT_SAVE = Path("data/index_data/latest_query_results.json")
+SCHEDULER = PipelineScheduler()
+PIPELINE_THREAD: threading.Thread | None = None
+PIPELINE_LAST_RUN: dict | None = None
+PIPELINE_LAST_RUN_LOCK = threading.Lock()
+
+
+def _ensure_index_exists() -> dict:
+    if not DEFAULT_INDEX.exists():
+        payload = export_index_json(DEFAULT_INDEX)
+        return payload
+    return load_index(DEFAULT_INDEX)
 
 
 def build_trends_payload(index_payload: dict) -> dict:
     entities = index_payload.get("entities") or []
     if not isinstance(entities, list):
         entities = []
-
     trends = []
-    aggregate_sources: Counter[str] = Counter()
+    source_totals: dict[str, int] = {}
     for row in entities:
         source_counts = row.get("source_counts") or {}
         if isinstance(source_counts, dict):
             for src, count in source_counts.items():
                 try:
-                    aggregate_sources[str(src)] += int(count)
+                    source_totals[str(src)] = int(source_totals.get(str(src), 0)) + int(count)
                 except (TypeError, ValueError):
                     continue
-
         trends.append(
             {
+                "entity_key": row.get("entity_key"),
                 "entity": row.get("entity"),
                 "trend_score": float(row.get("trend_score") or 0.0),
+                "momentum_score": float(row.get("momentum_score") or 0.0),
+                "is_known_incumbent": bool(row.get("is_known_incumbent")),
                 "velocity_delta_pct": 0.0,
                 "sentiment": {"positive": 0.55, "neutral": 0.3, "negative": 0.15},
                 "mention_count_1h": int(row.get("mention_count_1h") or 0),
                 "mention_count_24h": int(row.get("mention_count_24h") or 0),
                 "spike_detected": bool(row.get("spike_detected")),
                 "sources": row.get("sources") or [],
-                "top_keywords": row.get("top_keywords") or [],
                 "source_counts": source_counts if isinstance(source_counts, dict) else {},
+                "source_interactions": row.get("source_interactions") or {},
+                "top_keywords": row.get("top_keywords") or [],
+                "first_seen_at": row.get("first_seen_at"),
+                "last_seen_at": row.get("last_seen_at"),
+                "activity_last_30d": int(row.get("activity_last_30d") or 0),
             }
         )
-
-    trends.sort(key=lambda t: t["trend_score"], reverse=True)
-
-    return {
-        "entities": trends,
-        "count": len(trends),
-        "source_totals": dict(aggregate_sources),
-    }
-
-
-def build_sources_payload(index_payload: dict) -> dict:
-    source_totals = Counter()
-    entities = index_payload.get("entities") or []
-    if not isinstance(entities, list):
-        entities = []
-
-    for row in entities:
-        counts = row.get("source_counts") or {}
-        if not isinstance(counts, dict):
-            continue
-        for src, value in counts.items():
-            try:
-                source_totals[str(src)] += int(value)
-            except (TypeError, ValueError):
-                continue
-
-    now = index_payload.get("_meta", {}).get("generated_at", "")
-    known = [
-        ("hackernews", "HN"),
-        ("github", "GitHub"),
-        ("producthunt", "PH"),
-        ("reddit", "Reddit"),
-        ("techcrunch", "RSS"),
-        ("twitter", "Twitter"),
-    ]
-    rows = []
-    for source_id, label in known:
-        items = int(source_totals.get(source_id, 0))
-        rows.append(
-            {
-                "id": source_id,
-                "label": label,
-                "status": "live" if items > 0 else "cached",
-                "items_ingested": items,
-                "last_scraped": now,
-            }
-        )
-    return {"sources": rows, "count": len(rows)}
+    trends.sort(key=lambda row: row["trend_score"], reverse=True)
+    return {"entities": trends, "count": len(trends), "source_totals": source_totals}
 
 
 def run_niche_pipeline(
@@ -141,12 +131,14 @@ def run_niche_pipeline(
     use_nemotron: bool = True,
     index_path: Path = DEFAULT_INDEX,
     save_out: Path = DEFAULT_SAVE,
+    enrich_on_demand: bool = False,
+    enrich_limit: int = 5,
 ) -> dict:
     if not query.strip():
         raise ValueError("query is required")
 
     load_env_file()
-
+    migrate()
     for target in parse_refresh_targets(refresh):
         tool_refresh_source(target)
 
@@ -160,36 +152,69 @@ def run_niche_pipeline(
 
     candidates = tool_search_index(query, entities, limit=max(limit * 5, 40))
     llm_payload = None
-
-    should_use_nemotron = use_nemotron and bool(os.getenv("OPENROUTER_API_KEY", "").strip())
-    if should_use_nemotron and candidates:
+    if use_nemotron and candidates:
         llm_payload = call_openrouter_nemotron(query, candidates)
-
     rows = combine_scores(candidates, llm_payload)
     filtered = [row for row in rows if row.get("include", True)] if llm_payload else rows
     final_rows = filtered if filtered else rows
     final_rows = [row for row in final_rows if float(row.get("final_score") or 0.0) >= min_score]
+    final_rows = final_rows[:limit]
+
+    enrichment_applied = False
+    enriched_links_added = 0
+    enrichment_result: dict | None = None
+    if enrich_on_demand and final_rows:
+        keys = [
+            str(row.get("entity_key") or "")
+            for row in final_rows[: max(1, min(int(enrich_limit), 10))]
+            if str(row.get("entity_key") or "").strip()
+        ]
+        if keys:
+            enrichment_result = run_on_demand_enrichment(keys, max_links=8)
+            enrichment_applied = True
+            enriched_links_added = int(enrichment_result.get("links_added") or 0)
 
     save_latest_results(save_out, query, final_rows[: max(limit, 25)])
-
     return {
         "query": query,
         "used_nemotron": bool(llm_payload),
-        "result_count": len(final_rows[:limit]),
-        "results": final_rows[:limit],
+        "result_count": len(final_rows),
+        "results": final_rows,
         "index_stats": index_payload.get("stats") or {},
         "index_entity_count": index_payload.get("entity_count") or len(entities),
+        "enrichment_applied": enrichment_applied,
+        "enriched_links_added": enriched_links_added,
+        "enrichment": enrichment_result,
     }
 
 
+def _run_pipeline_background(mode: str, do_backfill: bool, do_enrichment: bool) -> None:
+    global PIPELINE_LAST_RUN  # noqa: PLW0603
+    result = run_full_pipeline(mode=mode, do_backfill=do_backfill, do_enrichment=do_enrichment)
+    with PIPELINE_LAST_RUN_LOCK:
+        PIPELINE_LAST_RUN = result
+
+
+def trigger_pipeline_run(mode: str, do_backfill: bool, do_enrichment: bool, async_run: bool = True) -> dict:
+    global PIPELINE_THREAD  # noqa: PLW0603
+    if not async_run:
+        return run_full_pipeline(mode=mode, do_backfill=do_backfill, do_enrichment=do_enrichment)
+    if PIPELINE_THREAD and PIPELINE_THREAD.is_alive():
+        return {"ok": False, "error": "pipeline already running", "async": True}
+    PIPELINE_THREAD = threading.Thread(
+        target=_run_pipeline_background,
+        args=(mode, do_backfill, do_enrichment),
+        name="scout-pipeline-manual",
+        daemon=True,
+    )
+    PIPELINE_THREAD.start()
+    return {"ok": True, "async": True, "status": "started", "mode": mode}
+
+
 class SearchHandler(BaseHTTPRequestHandler):
-    server_version = "ScoutSearchAPI/0.1"
+    server_version = "ScoutSearchAPI/0.2"
 
     def log_message(self, format: str, *args) -> None:  # noqa: A003
-        """
-        Avoid hard-failing requests when launched detached on Windows where stderr
-        may be unavailable.
-        """
         try:
             super().log_message(format, *args)
         except Exception:
@@ -216,19 +241,47 @@ class SearchHandler(BaseHTTPRequestHandler):
     def do_OPTIONS(self) -> None:
         self._set_json(204)
 
+    def _handle_get_entity_nodes(self, path: str, parsed_query: dict[str, list[str]]) -> bool:
+        parts = [p for p in path.split("/") if p]
+        # /api/entity/{entity_key}/nodes
+        if len(parts) == 4 and parts[0] == "api" and parts[1] == "entity" and parts[3] == "nodes":
+            entity_key = parts[2]
+            include_enriched = (parsed_query.get("include_enriched") or ["true"])[0].lower() != "false"
+            limit = int((parsed_query.get("limit") or ["40"])[0])
+            nodes = get_entity_nodes(entity_key=entity_key, include_enriched=include_enriched, limit=max(1, min(limit, 200)))
+            self._set_json(200)
+            self.wfile.write(json.dumps({"entity_key": entity_key, "count": len(nodes), "nodes": nodes}, ensure_ascii=False).encode("utf-8"))
+            return True
+        return False
+
+    def _handle_get_entity_history(self, path: str, parsed_query: dict[str, list[str]]) -> bool:
+        parts = [p for p in path.split("/") if p]
+        # /api/entity/{entity_key}/history
+        if len(parts) == 4 and parts[0] == "api" and parts[1] == "entity" and parts[3] == "history":
+            entity_key = parts[2]
+            window_days = int((parsed_query.get("window_days") or ["180"])[0])
+            history = get_entity_history(entity_key=entity_key, window_days=max(1, min(window_days, 730)))
+            self._set_json(200)
+            self.wfile.write(json.dumps({"entity_key": entity_key, "count": len(history), "history": history}, ensure_ascii=False).encode("utf-8"))
+            return True
+        return False
+
     def do_GET(self) -> None:
         parsed = urlparse(self.path)
+        params = parse_qs(parsed.query)
         if parsed.path == "/api/health":
             self._set_json(200)
-            self.wfile.write(json.dumps({"ok": True, "service": "scout-search-api"}).encode("utf-8"))
+            self.wfile.write(
+                json.dumps(
+                    {"ok": True, "service": "scout-search-api", "scheduler_running": SCHEDULER.is_running}
+                ).encode("utf-8")
+            )
             return
 
         if parsed.path in {"/api/trends", "/api/trends/"}:
             try:
                 load_env_file()
-                if not DEFAULT_INDEX.exists():
-                    tool_build_index(DEFAULT_INDEX)
-                payload = build_trends_payload(load_index(DEFAULT_INDEX))
+                payload = build_trends_payload(_ensure_index_exists())
                 self._set_json(200)
                 self.wfile.write(json.dumps(payload, ensure_ascii=False).encode("utf-8"))
             except Exception as exc:  # noqa: BLE001
@@ -239,9 +292,7 @@ class SearchHandler(BaseHTTPRequestHandler):
         if parsed.path in {"/api/sources", "/api/sources/"}:
             try:
                 load_env_file()
-                if not DEFAULT_INDEX.exists():
-                    tool_build_index(DEFAULT_INDEX)
-                payload = build_sources_payload(load_index(DEFAULT_INDEX))
+                payload = get_sources_payload()
                 self._set_json(200)
                 self.wfile.write(json.dumps(payload, ensure_ascii=False).encode("utf-8"))
             except Exception as exc:  # noqa: BLE001
@@ -249,19 +300,41 @@ class SearchHandler(BaseHTTPRequestHandler):
                 self.wfile.write(json.dumps({"error": str(exc)}).encode("utf-8"))
             return
 
+        if parsed.path in {"/api/pipeline/status", "/api/pipeline/status/"}:
+            try:
+                payload = get_pipeline_status()
+                payload["scheduler_running"] = SCHEDULER.is_running
+                payload["manual_pipeline_running"] = bool(PIPELINE_THREAD and PIPELINE_THREAD.is_alive())
+                with PIPELINE_LAST_RUN_LOCK:
+                    payload["manual_last_result"] = PIPELINE_LAST_RUN
+                self._set_json(200)
+                self.wfile.write(json.dumps(payload, ensure_ascii=False).encode("utf-8"))
+            except Exception as exc:  # noqa: BLE001
+                self._set_json(400)
+                self.wfile.write(json.dumps({"error": str(exc)}).encode("utf-8"))
+            return
+
+        if self._handle_get_entity_nodes(parsed.path, params):
+            return
+
+        if self._handle_get_entity_history(parsed.path, params):
+            return
+
         if parsed.path == "/api/niche-search":
-            params = parse_qs(parsed.query)
             query = (params.get("query") or params.get("q") or [""])[0]
             limit = int((params.get("limit") or ["12"])[0])
             min_score = float((params.get("min_score") or ["10"])[0])
             use_nemotron = ((params.get("use_nemotron") or ["true"])[0]).lower() != "false"
-
+            enrich_on_demand = ((params.get("enrich_on_demand") or ["false"])[0]).lower() == "true"
+            enrich_limit = int((params.get("enrich_limit") or ["5"])[0])
             try:
                 payload = run_niche_pipeline(
                     query=query,
                     limit=max(1, min(limit, 50)),
                     min_score=min_score,
                     use_nemotron=use_nemotron,
+                    enrich_on_demand=enrich_on_demand,
+                    enrich_limit=max(1, min(enrich_limit, 10)),
                 )
                 self._set_json(200)
                 self.wfile.write(json.dumps(payload, ensure_ascii=False).encode("utf-8"))
@@ -275,6 +348,26 @@ class SearchHandler(BaseHTTPRequestHandler):
 
     def do_POST(self) -> None:
         parsed = urlparse(self.path)
+        if parsed.path in {"/api/pipeline/run", "/api/pipeline/run/"}:
+            try:
+                body = self._read_json_body()
+                mode = str(body.get("mode") or "manual")
+                do_backfill = bool(body.get("do_backfill", True))
+                do_enrichment = bool(body.get("do_enrichment", True))
+                async_run = bool(body.get("async", True))
+                payload = trigger_pipeline_run(
+                    mode=mode,
+                    do_backfill=do_backfill,
+                    do_enrichment=do_enrichment,
+                    async_run=async_run,
+                )
+                self._set_json(200 if payload.get("ok") else 409)
+                self.wfile.write(json.dumps(payload, ensure_ascii=False).encode("utf-8"))
+            except Exception as exc:  # noqa: BLE001
+                self._set_json(400)
+                self.wfile.write(json.dumps({"error": str(exc), "trace": traceback.format_exc(limit=1)}).encode("utf-8"))
+            return
+
         if parsed.path != "/api/niche-search":
             self._set_json(404)
             self.wfile.write(json.dumps({"error": "Not found"}).encode("utf-8"))
@@ -285,7 +378,6 @@ class SearchHandler(BaseHTTPRequestHandler):
             query = str(body.get("query") or body.get("prompt") or "").strip()
             if not query:
                 raise ValueError("query is required")
-
             payload = run_niche_pipeline(
                 query=query,
                 limit=max(1, min(int(body.get("limit", 12)), 50)),
@@ -295,6 +387,8 @@ class SearchHandler(BaseHTTPRequestHandler):
                 use_nemotron=bool(body.get("use_nemotron", True)),
                 index_path=Path(body.get("index_path") or DEFAULT_INDEX),
                 save_out=Path(body.get("save_out") or DEFAULT_SAVE),
+                enrich_on_demand=bool(body.get("enrich_on_demand", False)),
+                enrich_limit=max(1, min(int(body.get("enrich_limit", 5)), 10)),
             )
             self._set_json(200)
             self.wfile.write(json.dumps(payload, ensure_ascii=False).encode("utf-8"))
@@ -312,7 +406,7 @@ class SearchHandler(BaseHTTPRequestHandler):
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Run Scout niche search API server")
+    parser = argparse.ArgumentParser(description="Run Scout API server")
     parser.add_argument("--host", default="0.0.0.0")
     parser.add_argument("--port", type=int, default=8000)
     return parser.parse_args()
@@ -321,6 +415,12 @@ def parse_args() -> argparse.Namespace:
 def main() -> None:
     args = parse_args()
     load_env_file()
+    migrate()
+    try:
+        export_index_json(DEFAULT_INDEX)
+    except Exception:
+        pass
+    SCHEDULER.start()
     server = ThreadingHTTPServer((args.host, args.port), SearchHandler)
     print(f"Scout search API listening on http://{args.host}:{args.port}")
     try:
@@ -328,6 +428,7 @@ def main() -> None:
     except KeyboardInterrupt:
         pass
     finally:
+        SCHEDULER.stop()
         server.server_close()
 
 

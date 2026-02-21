@@ -20,6 +20,15 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+try:
+    from config import load_env_file
+    from db import migrate
+    from pipeline_store import ingest_source_artifacts
+except ModuleNotFoundError:
+    from backend.config import load_env_file  # type: ignore
+    from backend.db import migrate  # type: ignore
+    from backend.pipeline_store import ingest_source_artifacts  # type: ignore
+
 SOURCE_ID = "github"
 SOURCE_NAME = "GitHub"
 
@@ -36,6 +45,48 @@ ENTITY_STOP = {
     "Template",
     "Starter",
     "Example",
+    "Crate",
+    "Crates",
+    "Cargo",
+    "Rust",
+    "Library",
+    "Libraries",
+    "Package",
+    "Packages",
+    "Plugin",
+    "Plugins",
+    "Boilerplate",
+    "Awesome",
+    "Template",
+    "Netlify",
+    "Vercel",
+    "Visual Studio",
+    "Visual Studio Code",
+    "VS Code",
+    "Vscode",
+}
+
+GENERIC_SINGLE_TOKEN_STOP = {
+    "crate",
+    "crates",
+    "cargo",
+    "rust",
+    "library",
+    "libraries",
+    "package",
+    "packages",
+    "plugin",
+    "plugins",
+    "template",
+    "starter",
+    "example",
+    "boilerplate",
+    "awesome",
+    "tools",
+    "tooling",
+    "sdk",
+    "cli",
+    "api",
 }
 
 
@@ -82,6 +133,9 @@ def is_valid_entity(value: str) -> bool:
     if len(value) < 2 or len(value) > 48:
         return False
     if value in ENTITY_STOP:
+        return False
+    lowered = value.lower().strip()
+    if " " not in lowered and lowered in GENERIC_SINGLE_TOKEN_STOP:
         return False
     if len(value.split()) > 4:
         return False
@@ -220,11 +274,13 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--state-out", type=Path, default=Path("data/github_data/github_state.json"))
     parser.add_argument("--min-stars", type=int, default=5)
     parser.add_argument("--min-confidence", type=float, default=0.45)
+    parser.add_argument("--no-db-sync", action="store_true", help="Skip SQLite sync step")
     return parser.parse_args()
 
 
 def main() -> None:
     args = parse_args()
+    load_env_file()
     started_at = now_iso()
 
     repo_rows = read_jsonl(args.input_path)
@@ -463,6 +519,16 @@ def main() -> None:
             "nodes_written": len(node_rows),
         },
     )
+
+    if not args.no_db_sync:
+        migrate()
+        ingest_source_artifacts(
+            source=SOURCE_ID,
+            raw_path=args.raw_out,
+            entities_path=args.entities_out,
+            nodes_path=args.nodes_out,
+            mode="manual",
+        )
 
     print(
         f"done: repos={len(transformed)} entities={len(entity_rows)} nodes={len(node_rows)} "

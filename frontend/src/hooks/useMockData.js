@@ -26,6 +26,7 @@ function normalizeEntityKey(value = '') {
 function buildTrends(payload) {
   const entities = Array.isArray(payload?.entities) ? payload.entities : []
   return entities.map((item) => ({
+    entity_key: normalizeEntityKey(item.entity_key || item.entity || ''),
     entity: item.entity,
     trend_score: toNumber(item.trend_score, 0),
     velocity_delta_pct: toNumber(item.velocity_delta_pct, 0),
@@ -36,6 +37,9 @@ function buildTrends(payload) {
     sources: Array.isArray(item.sources) ? item.sources : ['hackernews'],
     top_keywords: Array.isArray(item.top_keywords) ? item.top_keywords : [],
     source_counts: item.source_counts ?? { hackernews: toNumber(item.stories, 1) },
+    first_seen_at: item.first_seen_at ?? null,
+    last_seen_at: item.last_seen_at ?? null,
+    activity_last_30d: toNumber(item.activity_last_30d, 0),
   }))
 }
 
@@ -50,6 +54,7 @@ function mergeTrends(...collections) {
     if (!existing) {
       map.set(key, {
         ...trend,
+        entity_key: key,
         sources: [...new Set(trend.sources ?? [])],
         source_counts: { ...(trend.source_counts ?? {}) },
         top_keywords: [...new Set(trend.top_keywords ?? [])].slice(0, 8),
@@ -64,6 +69,13 @@ function mergeTrends(...collections) {
     existing.velocity_delta_pct = Number(((existing.velocity_delta_pct + toNumber(trend.velocity_delta_pct)) / 2).toFixed(2))
     existing.sources = [...new Set([...(existing.sources ?? []), ...(trend.sources ?? [])])]
     existing.top_keywords = [...new Set([...(existing.top_keywords ?? []), ...(trend.top_keywords ?? [])])].slice(0, 8)
+    if (trend.first_seen_at && (!existing.first_seen_at || trend.first_seen_at < existing.first_seen_at)) {
+      existing.first_seen_at = trend.first_seen_at
+    }
+    if (trend.last_seen_at && (!existing.last_seen_at || trend.last_seen_at > existing.last_seen_at)) {
+      existing.last_seen_at = trend.last_seen_at
+    }
+    existing.activity_last_30d = toNumber(existing.activity_last_30d) + toNumber(trend.activity_last_30d)
 
     const mergedSourceCounts = { ...(existing.source_counts ?? {}) }
     Object.entries(trend.source_counts ?? {}).forEach(([sourceId, count]) => {

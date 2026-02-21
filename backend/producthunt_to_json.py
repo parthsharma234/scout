@@ -19,13 +19,45 @@ import time
 import urllib.error
 import urllib.request
 from collections import Counter, defaultdict
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
+
+try:
+    from config import get_producthunt_token, load_env_file
+    from db import migrate
+    from pipeline_store import ingest_source_artifacts
+except ModuleNotFoundError:
+    from backend.config import get_producthunt_token, load_env_file  # type: ignore
+    from backend.db import migrate  # type: ignore
+    from backend.pipeline_store import ingest_source_artifacts  # type: ignore
 
 API_ENDPOINT = "https://api.producthunt.com/v2/api/graphql"
 SOURCE_ID = "producthunt"
 SOURCE_NAME = "Product Hunt"
+
+EXCLUDED_INCUMBENTS = {
+    "OpenAI",
+    "Anthropic",
+    "Google",
+    "Microsoft",
+    "Meta",
+    "Amazon",
+    "Apple",
+    "GitHub",
+    "Gitlab",
+    "Stripe",
+    "Databricks",
+    "Cloudflare",
+    "Notion",
+    "Figma",
+    "Netlify",
+    "Vercel",
+    "Visual Studio",
+    "Visual Studio Code",
+    "VS Code",
+    "Vscode",
+}
 
 QUERY_POSTS = """
 query Posts($first: Int!, $after: String, $order: PostsOrder) {
@@ -57,7 +89,7 @@ def now_iso() -> str:
 
 
 def get_token() -> str:
-    return os.getenv("PHUNT", "").strip() or os.getenv("PRODUCTHUNT_DEVELOPER_TOKEN", "").strip()
+    return get_producthunt_token() or os.getenv("PHUNT", "").strip() or os.getenv("PRODUCTHUNT_DEVELOPER_TOKEN", "").strip()
 
 
 def parse_iso(value: str | None) -> datetime | None:
@@ -90,6 +122,10 @@ def is_valid_entity(value: str) -> bool:
     if len(value) < 2 or len(value) > 60:
         return False
     if value.isdigit():
+        return False
+    if value.title() in EXCLUDED_INCUMBENTS:
+        return False
+    if value.lower().strip() in {"netlify", "vercel", "visual studio", "visual studio code", "vscode", "vs code"}:
         return False
     return True
 
@@ -132,11 +168,22 @@ def graphql_request(token: str, query: str, variables: dict[str, Any], timeout_s
         return json.loads(response.read().decode("utf-8"))
 
 
-def fetch_posts(token: str, limit_posts: int, order: str, sleep_seconds: float, timeout_seconds: int) -> list[dict[str, Any]]:
+def fetch_posts(
+    token: str,
+    limit_posts: int,
+    order: str,
+    sleep_seconds: float,
+    timeout_seconds: int,
+    min_created_days: int = 0,
+) -> list[dict[str, Any]]:
     posts: list[dict[str, Any]] = []
     after: str | None = None
+    cutoff = None
+    if int(min_created_days) > 0:
+        cutoff = datetime.now(timezone.utc) - timedelta(days=int(min_created_days))
 
     while len(posts) < limit_posts:
+        reached_cutoff = False
         first = min(20, limit_posts - len(posts))
         payload = graphql_request(token, QUERY_POSTS, {"first": first, "after": after, "order": order}, timeout_seconds)
         if payload.get("errors"):
@@ -146,8 +193,21 @@ def fetch_posts(token: str, limit_posts: int, order: str, sleep_seconds: float, 
         edges = bucket.get("edges", [])
         for edge in edges:
             node = edge.get("node") or {}
-            if isinstance(node, dict):
-                posts.append(node)
+            if not isinstance(node, dict):
+                continue
+            if cutoff:
+                created = parse_iso(str(node.get("createdAt") or ""))
+                if created and created < cutoff:
+                    if order == "NEWEST":
+                        reached_cutoff = True
+                        break
+                    continue
+            posts.append(node)
+            if len(posts) >= limit_posts:
+                break
+
+        if reached_cutoff:
+            break
 
         page_info = bucket.get("pageInfo", {})
         if not page_info.get("hasNextPage"):
@@ -188,6 +248,12 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Product Hunt to JSON pipeline for Scout")
     parser.add_argument("--limit-posts", type=int, default=240)
     parser.add_argument("--order", choices=["RANKING", "VOTES", "NEWEST"], default="VOTES")
+    parser.add_argument(
+        "--min-created-days",
+        type=int,
+        default=0,
+        help="When >0, keep only posts with createdAt within this many days (best with --order NEWEST).",
+    )
     parser.add_argument("--sleep-seconds", type=float, default=0.15)
     parser.add_argument("--timeout-seconds", type=int, default=20)
     parser.add_argument("--min-votes", type=int, default=2)
@@ -195,15 +261,17 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--entities-out", type=Path, default=Path("data/producthunt_data/producthunt_entities.json"))
     parser.add_argument("--nodes-out", type=Path, default=Path("data/producthunt_data/producthunt_source_nodes.json"))
     parser.add_argument("--state-out", type=Path, default=Path("data/producthunt_data/producthunt_state.json"))
+    parser.add_argument("--no-db-sync", action="store_true", help="Skip SQLite sync step")
     return parser.parse_args()
 
 
 def main() -> None:
     args = parse_args()
+    load_env_file()
     started_at = now_iso()
     token = get_token()
     if not token:
-        raise ValueError("Missing Product Hunt token. Set PHUNT or PRODUCTHUNT_DEVELOPER_TOKEN.")
+        raise ValueError("Missing Product Hunt token. Set PRODUCT_HUNT, PHUNT, or PRODUCTHUNT_DEVELOPER_TOKEN.")
 
     posts = fetch_posts(
         token=token,
@@ -211,6 +279,7 @@ def main() -> None:
         order=args.order,
         sleep_seconds=args.sleep_seconds,
         timeout_seconds=args.timeout_seconds,
+        min_created_days=max(0, int(args.min_created_days)),
     )
 
     raw_rows: list[dict[str, Any]] = []
@@ -410,12 +479,23 @@ def main() -> None:
             },
             "last_run_started_at": started_at,
             "last_run_finished_at": now_iso(),
+            "min_created_days": max(0, int(args.min_created_days)),
             "input_post_count": len(posts),
             "posts_written": len(raw_rows),
             "entities_written": len(entity_rows),
             "nodes_written": len(node_rows),
         },
     )
+
+    if not args.no_db_sync:
+        migrate()
+        ingest_source_artifacts(
+            source=SOURCE_ID,
+            raw_path=args.raw_out,
+            entities_path=args.entities_out,
+            nodes_path=args.nodes_out,
+            mode="manual",
+        )
 
     print(
         f"done: posts={len(raw_rows)} entities={len(entity_rows)} nodes={len(node_rows)} "

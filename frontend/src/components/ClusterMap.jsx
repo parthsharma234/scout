@@ -85,12 +85,16 @@ function packCircles(items, width, height) {
   const maxDim = Math.min(width, height)
 
   const sorted = [...items].sort((a, b) => b.trend_score - a.trend_score)
-  const topScore = sorted[0].trend_score
   const minScore = sorted[sorted.length - 1].trend_score
+  const p95Index = Math.max(0, Math.floor((sorted.length - 1) * 0.05))
+  const p95Score = sorted[p95Index]?.trend_score ?? sorted[0].trend_score
+  const scaleMax = Math.max(minScore + 0.0001, p95Score)
 
   const circles = sorted.map((item) => {
-    const t = topScore === minScore ? 0.5 : (item.trend_score - minScore) / (topScore - minScore)
-    const r = maxDim * (0.035 + t * 0.085)
+    const clampedScore = Math.min(item.trend_score, scaleMax)
+    const tRaw = scaleMax === minScore ? 0.5 : (clampedScore - minScore) / (scaleMax - minScore)
+    const t = Math.sqrt(Math.max(0, tRaw))
+    const r = maxDim * (0.04 + t * 0.07)
     const cat = CATEGORY[item.entity] ?? 'ai'
     const color = CAT_COLOR[cat] ?? CAT_COLOR.ai
     return { ...item, r, cat, color, x: cx, y: cy }
@@ -342,6 +346,7 @@ export default function ClusterMap({
     const onPointerDown = (event) => {
       if (event.button !== 0) return
       if (cameraRef.current.zoom <= 1.01) return
+      if (event.target instanceof Element && event.target.closest('.cm-bubble')) return
 
       const point = getPoint(event)
       panRef.current = {
@@ -379,8 +384,13 @@ export default function ClusterMap({
     }
 
     const endPan = () => {
+      const pan = panRef.current
+      if (pan && typeof pan.pointerId === 'number' && element.hasPointerCapture(pan.pointerId)) {
+        element.releasePointerCapture(pan.pointerId)
+      }
       setIsPanning(false)
       panRef.current = null
+      movedRef.current = false
     }
 
     element.addEventListener('pointerdown', onPointerDown)
@@ -483,7 +493,10 @@ export default function ClusterMap({
                 onMouseEnter={() => setHovered(circle.entity)}
                 onMouseLeave={() => setHovered(null)}
                 onClick={() => {
-                  if (movedRef.current) return
+                  if (movedRef.current) {
+                    movedRef.current = false
+                    return
+                  }
                   onSelectEntity?.(circle.entity)
                 }}
               >

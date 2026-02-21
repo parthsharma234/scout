@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "dev:api": "python backend/search_api.py --host 127.0.0.1 --port 8000",
+    "pipeline:run": "python -c \"from backend.pipeline_runner import run_full_pipeline; import json; print(json.dumps(run_full_pipeline(mode='manual', do_backfill=True, do_enrichment=True), indent=2))\"",
     "dev":     "npm run dev --prefix frontend",
     "build":   "npm run build --prefix frontend",
     "preview": "npm run preview --prefix frontend",

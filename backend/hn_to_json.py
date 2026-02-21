@@ -24,6 +24,15 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+try:
+    from config import load_env_file
+    from db import migrate
+    from pipeline_store import ingest_source_artifacts
+except ModuleNotFoundError:
+    from backend.config import load_env_file  # type: ignore
+    from backend.db import migrate  # type: ignore
+    from backend.pipeline_store import ingest_source_artifacts  # type: ignore
+
 HN_BASE = "https://hacker-news.firebaseio.com/v0"
 
 FEEDS = [
@@ -71,6 +80,36 @@ DOMAIN_BLOCKLIST = {
     "www.wired.com",
     "theverge.com",
     "www.theverge.com",
+    "netlify.app",
+    "vercel.app",
+    "herokuapp.com",
+    "onrender.com",
+    "railway.app",
+    "fly.dev",
+    "pages.dev",
+    "github.io",
+    "web.app",
+    "firebaseapp.com",
+    "appspot.com",
+    "azurewebsites.net",
+    "visualstudio.com",
+    "visualstudio.microsoft.com",
+}
+
+HOSTING_PROVIDER_CORES = {
+    "netlify",
+    "vercel",
+    "herokuapp",
+    "onrender",
+    "railway",
+    "fly",
+    "pages",
+    "github",
+    "firebaseapp",
+    "appspot",
+    "azurewebsites",
+    "visualstudio",
+    "replit",
 }
 
 DOMAIN_CORE_BLOCKLIST = {
@@ -85,6 +124,7 @@ STOP_ENTITIES = {
     "Chrome", "Firefox", "Linux", "Windows", "Mac", "App", "Tool",
     "They", "This", "That", "These", "Those", "Lawyer", "Vulnerability",
     "Turn", "Keep", "Are", "Can", "Use", "Free", "Open", "New",
+    "Netlify", "Vercel", "Visual Studio", "Visual Studio Code", "VS Code", "Vscode",
 }
 
 EXCLUDED_INCUMBENTS = {
@@ -92,6 +132,7 @@ EXCLUDED_INCUMBENTS = {
     "NVIDIA", "Github", "GitHub", "GitLab", "Stripe", "Databricks",
     "Cloudflare", "Notion", "Figma", "Shopify", "Reddit", "Twitter", "X",
     "Tesla", "SpaceX", "Adobe", "Oracle", "Salesforce", "IBM", "Intel",
+    "Vercel", "Netlify", "Visual Studio", "Visual Studio Code", "VS Code", "Vscode",
 }
 
 KEYWORD_STOPWORDS = {
@@ -180,10 +221,14 @@ def normalize_domain(url: str | None) -> str:
 def domain_to_company(domain: str) -> str:
     if not domain:
         return ""
+    if domain in DOMAIN_BLOCKLIST:
+        return ""
     parts = domain.split(".")
     if len(parts) < 2:
         return ""
     core = parts[-2]
+    if core in HOSTING_PROVIDER_CORES:
+        return ""
     if not core or core in DOMAIN_CORE_BLOCKLIST:
         return ""
     return core.replace("-", " ").title()
@@ -218,6 +263,9 @@ def is_valid_entity(candidate: str) -> bool:
     if candidate.lower() in {"show hn", "ask hn", "tell hn"}:
         return False
     if candidate.title() in EXCLUDED_INCUMBENTS:
+        return False
+    lowered = candidate.lower().strip()
+    if lowered in {"netlify", "vercel", "visual studio", "visual studio code", "vscode", "vs code"}:
         return False
     if len(candidate.split()) > 4:
         return False
@@ -332,6 +380,10 @@ def extract_story_candidates(story: dict[str, Any], comments: list[str]) -> list
         return []
 
     domain = normalize_domain(story.get("url"))
+    if domain:
+        root = ".".join(domain.split(".")[-2:]) if "." in domain else domain
+        if root in DOMAIN_BLOCKLIST:
+            domain = ""
     if domain and domain not in DOMAIN_BLOCKLIST and (showcase_story or builder_signal):
         name = domain_to_company(domain)
         if is_valid_entity(name):
@@ -411,6 +463,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--entities-out", type=Path, default=Path("data/hn_data/hn_entities.json"))
     parser.add_argument("--nodes-out", type=Path, default=Path("data/hn_data/hn_source_nodes.json"))
     parser.add_argument("--state-out", type=Path, default=Path("data/hn_data/hn_state.json"))
+    parser.add_argument("--no-db-sync", action="store_true", help="Skip SQLite sync step")
     return parser.parse_args()
 
 
@@ -432,6 +485,7 @@ def collect_story_ids(mode: str, per_feed: int, max_items: int) -> list[int]:
 
 def main() -> None:
     args = parse_args()
+    load_env_file()
     started_at = now_iso()
 
     story_ids = collect_story_ids(args.mode, args.per_feed, args.max_items)
@@ -646,6 +700,16 @@ def main() -> None:
             "nodes_written": len(node_rows),
         },
     )
+
+    if not args.no_db_sync:
+        migrate()
+        ingest_source_artifacts(
+            source=SOURCE_ID,
+            raw_path=args.raw_out,
+            entities_path=args.entities_out,
+            nodes_path=args.nodes_out,
+            mode="manual",
+        )
 
     print(
         f"done: stories={len(raw_rows)} entities={len(entity_rows)} nodes={len(node_rows)} "

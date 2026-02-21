@@ -21,5 +21,10 @@ Thumbs.db
 .idea/
 .vscode/
 
+# Local pipeline database
+data/scout.db
+data/scout.db-shm
+data/scout.db-wal
+
 # Local agent settings
 .claude/settings.local.json

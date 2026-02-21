@@ -5,8 +5,7 @@ import ClusterMap from '../components/ClusterMap'
 import FundingTimeline from '../components/FundingTimeline'
 import TrendLeaderboard from '../components/TrendLeaderboard'
 import { useWebSocket } from '../hooks/useWebSocket'
-import { searchNiche, useTrends } from '../hooks/useApi'
-import { useMockData } from '../hooks/useMockData'
+import { fetchEntityNodes, searchNiche, useSourceStatus, useTrends } from '../hooks/useApi'
 import './DashboardPage.css'
 
 function scoreNode(node) {
@@ -19,6 +18,13 @@ function normalizeEntityKey(value = '') {
     .replace(/[^a-z0-9]+/g, '')
 }
 
+function formatDate(value) {
+  if (!value) return 'N/A'
+  const date = new Date(value)
+  if (Number.isNaN(date.getTime())) return 'N/A'
+  return date.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' })
+}
+
 export default function DashboardPage() {
   const [drilledEntity, setDrilledEntity] = useState(null)
   const [secondaryTab, setSecondaryTab] = useState(null)
@@ -27,6 +33,9 @@ export default function DashboardPage() {
   const [nicheError, setNicheError] = useState('')
   const [nicheResults, setNicheResults] = useState([])
   const [nicheUsedNemotron, setNicheUsedNemotron] = useState(false)
+  const [clusterScope, setClusterScope] = useState('top')
+  const [apiEntityNodes, setApiEntityNodes] = useState([])
+  const [apiEntityNodesLoading, setApiEntityNodesLoading] = useState(false)
 
   const {
     connected: wsConnected,
@@ -38,24 +47,68 @@ export default function DashboardPage() {
     enabled: !wsConnected,
     pollInterval: 10000,
   })
+  const { sources: apiSources } = useSourceStatus({ pollInterval: 15000 })
 
-  const mock = useMockData()
+  const connected = wsConnected || apiTrends.length > 0
+  const hasLiveData = connected
+  const trendsRaw = wsConnected ? wsTrends : apiTrends
+  const trendsTopPool = useMemo(
+    () => trendsRaw.filter((row) => !Boolean(row?.is_known_incumbent)),
+    [trendsRaw],
+  )
+  const trendsTop = useMemo(() => {
+    const base = trendsTopPool.length > 0 ? trendsTopPool : trendsRaw
+    return [...base]
+      .sort((a, b) => Number(b?.momentum_score ?? b?.trend_score ?? 0) - Number(a?.momentum_score ?? a?.trend_score ?? 0))
+      .slice(0, 50)
+  }, [trendsTopPool, trendsRaw])
 
-  const hasLiveData = wsConnected || apiTrends.length > 0
-  const connected = wsConnected || mock.connected
+  const nicheClusterTrends = useMemo(
+    () =>
+      nicheResults.map((row, idx) => ({
+        entity_key: row.entity_key || normalizeEntityKey(row.entity),
+        entity: row.entity,
+        trend_score: Number(row.final_score || 0),
+        mention_count_1h: Number(row.mention_count_1h || 0),
+        mention_count_24h: Number(row.mention_count_24h || 0),
+        spike_detected: Boolean(row.spike_detected),
+        sources: Array.isArray(row.sources) ? row.sources : [],
+        source_counts: row.source_counts ?? {},
+        top_keywords: row.top_keywords ?? [],
+        first_seen_at: row.first_seen_at ?? null,
+        last_seen_at: row.last_seen_at ?? null,
+        activity_last_30d: Number(row.activity_last_30d || 0),
+        _rank: idx + 1,
+      })),
+    [nicheResults],
+  )
 
-  const trends = wsConnected
-    ? wsTrends
-    : apiTrends.length > 0
-      ? apiTrends
-      : mock.trends
+  const trends = clusterScope === 'niche' && nicheClusterTrends.length > 0 ? nicheClusterTrends : trendsTop
+  const sources = wsSources.length > 0 ? wsSources : apiSources
 
-  const sources = wsSources.length > 0 ? wsSources : mock.sources
+  const selectedTrend = [...trendsTop, ...nicheClusterTrends].find((item) => {
+    if (!drilledEntity) return false
+    const drilledKey = normalizeEntityKey(drilledEntity)
+    if (item.entity_key && item.entity_key === drilledKey) return true
+    return normalizeEntityKey(item.entity) === drilledKey
+  })
 
   const sourceNodesForEntity = useMemo(() => {
     if (!drilledEntity) return []
+    const selectedKey = selectedTrend?.entity_key || normalizeEntityKey(drilledEntity)
     const drilledKey = normalizeEntityKey(drilledEntity)
-    const fromData = mock.sourceNodes.filter((node) => normalizeEntityKey(node.entity) === drilledKey)
+    const fromApi = (apiEntityNodes || []).map((node, idx) => ({
+      id: node.id || `api-${selectedKey}-${idx}`,
+      entity: drilledEntity,
+      source_id: node.source_id || 'unknown',
+      source_name: node.source_name || node.source_id || 'Source',
+      headline: node.headline || 'Untitled source',
+      url: node.url || '',
+      summary: node.summary || 'No summary available.',
+      interactions: Number(node.interactions || 0),
+      views: Number(node.views || 0),
+      node_type: node.node_type || 'source_raw',
+    }))
     const fromNiche = nicheResults
       .find((row) => normalizeEntityKey(row.entity) === drilledKey)
       ?.top_nodes ?? []
@@ -70,18 +123,51 @@ export default function DashboardPage() {
       summary: node.summary || 'No summary available.',
       interactions: Number(node.interactions || 0),
       views: Number(node.views || 0),
+      node_type: node.node_type || 'source_raw',
     }))
 
-    const combined = [...fromData, ...normalizedNicheNodes]
+    const combined = [...fromApi, ...normalizedNicheNodes]
     const deduped = Array.from(new Map(combined.map((node) => [node.id, node])).values())
 
     return deduped
       .sort((a, b) => scoreNode(b) - scoreNode(a))
       .slice(0, 20)
-  }, [mock.sourceNodes, nicheResults, drilledEntity])
+  }, [apiEntityNodes, nicheResults, drilledEntity, selectedTrend?.entity_key])
 
-  const selectedTrend = trends.find((item) => normalizeEntityKey(item.entity) === normalizeEntityKey(drilledEntity))
-  const isLoading = trendsLoading && !connected && mock.loading
+  const isLoading = !wsConnected && trendsLoading && trendsRaw.length === 0
+
+  useEffect(() => {
+    let cancelled = false
+    async function loadEntityNodes() {
+      if (!drilledEntity) {
+        setApiEntityNodes([])
+        return
+      }
+      const entityKey = selectedTrend?.entity_key || normalizeEntityKey(drilledEntity)
+      if (!entityKey) {
+        setApiEntityNodes([])
+        return
+      }
+      setApiEntityNodesLoading(true)
+      try {
+        const payload = await fetchEntityNodes(entityKey, {
+          includeEnriched: true,
+          limit: 40,
+        })
+        if (!cancelled) {
+          setApiEntityNodes(Array.isArray(payload?.nodes) ? payload.nodes : [])
+        }
+      } catch {
+        if (!cancelled) setApiEntityNodes([])
+      } finally {
+        if (!cancelled) setApiEntityNodesLoading(false)
+      }
+    }
+    loadEntityNodes()
+    return () => {
+      cancelled = true
+    }
+  }, [drilledEntity, selectedTrend?.entity_key])
 
   function handleSelectEntity(entity) {
     setDrilledEntity(entity)
@@ -93,6 +179,14 @@ export default function DashboardPage() {
     setSecondaryTab(null)
   }
 
+  function handleShowTopCluster() {
+    setClusterScope('top')
+  }
+
+  function handleShowNicheCluster() {
+    if (nicheClusterTrends.length > 0) setClusterScope('niche')
+  }
+
   async function handleRunNicheSearch() {
     if (!nicheQuery.trim() || nicheLoading) return
     setNicheLoading(true)
@@ -100,11 +194,14 @@ export default function DashboardPage() {
     try {
       const payload = await searchNiche({
         query: nicheQuery.trim(),
-        limit: 10,
+        limit: 50,
         useNemotron: true,
+        enrichOnDemand: true,
+        enrichLimit: 5,
       })
       setNicheResults(payload.results ?? [])
       setNicheUsedNemotron(Boolean(payload.used_nemotron))
+      setClusterScope('niche')
     } catch (error) {
       const rawMessage = String(error?.message || '').toLowerCase()
       if (rawMessage.includes('failed to fetch')) {
@@ -150,6 +247,14 @@ export default function DashboardPage() {
                     <span className="db-stat-label">Mentions/h</span>
                     <span className="db-stat-value">{selectedTrend.mention_count_1h}</span>
                   </span>
+                  <span className="db-drilled-stat">
+                    <span className="db-stat-label">First seen</span>
+                    <span className="db-stat-value">{formatDate(selectedTrend.first_seen_at)}</span>
+                  </span>
+                  <span className="db-drilled-stat">
+                    <span className="db-stat-label">Last seen</span>
+                    <span className="db-stat-value">{formatDate(selectedTrend.last_seen_at)}</span>
+                  </span>
                 </>
               )}
             </>
@@ -173,6 +278,21 @@ export default function DashboardPage() {
           >
             Funding
           </button>
+          <button
+            type="button"
+            className={`db-nav-btn ${clusterScope === 'top' && !secondaryTab && !drilledEntity ? 'db-nav-btn--active' : ''}`}
+            onClick={handleShowTopCluster}
+          >
+            Top 50
+          </button>
+          <button
+            type="button"
+            className={`db-nav-btn ${clusterScope === 'niche' && !secondaryTab && !drilledEntity ? 'db-nav-btn--active' : ''}`}
+            onClick={handleShowNicheCluster}
+            disabled={nicheClusterTrends.length === 0}
+          >
+            Niche Map
+          </button>
           <span className="db-entity-count mono">{trends.length} entities</span>
         </div>
       </nav>
@@ -195,7 +315,7 @@ export default function DashboardPage() {
               <NodeGraph
                 company={drilledEntity}
                 nodes={sourceNodesForEntity}
-                loading={isLoading}
+                loading={sourceNodesForEntity.length === 0 && (isLoading || apiEntityNodesLoading)}
               />
             </div>
           )}
@@ -214,7 +334,7 @@ export default function DashboardPage() {
 
           {showTimeline && (
             <div className="db-view">
-              <FundingTimeline data={mock.fundingData} loading={isLoading} />
+              <FundingTimeline data={[]} loading={isLoading} />
             </div>
           )}
         </div>
@@ -276,7 +396,7 @@ export default function DashboardPage() {
       <footer className="db-statusbar">
         <span className="db-status-item mono">
           <span className={`db-status-dot ${connected ? 'db-status-dot--live' : 'db-status-dot--off'}`} />
-          {wsConnected ? 'WS Live' : hasLiveData ? 'REST' : 'Demo'}
+          {wsConnected ? 'WS Live' : hasLiveData ? 'REST' : 'Offline'}
         </span>
         <span className="db-status-item mono">{drilledEntity || 'All entities'}</span>
         <span className="db-status-item mono">{trends.length} tracked</span>

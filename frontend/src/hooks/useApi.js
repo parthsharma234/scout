@@ -162,6 +162,8 @@ export async function searchNiche({
   refresh = '',
   rebuildIndex = false,
   useNemotron = true,
+  enrichOnDemand = true,
+  enrichLimit = 5,
 } = {}) {
   if (!query || !String(query).trim()) {
     throw new Error('query is required')
@@ -176,6 +178,40 @@ export async function searchNiche({
       refresh,
       rebuild_index: rebuildIndex,
       use_nemotron: useNemotron,
+      enrich_on_demand: enrichOnDemand,
+      enrich_limit: enrichLimit,
+    }),
+  })
+}
+
+export async function fetchEntityNodes(entityKey, { includeEnriched = true, limit = 40 } = {}) {
+  if (!entityKey) return { nodes: [] }
+  const params = new URLSearchParams({
+    include_enriched: includeEnriched ? 'true' : 'false',
+    limit: String(limit),
+  })
+  return apiFetch(`/api/entity/${encodeURIComponent(entityKey)}/nodes?${params.toString()}`)
+}
+
+export async function fetchEntityHistory(entityKey, { windowDays = 180 } = {}) {
+  if (!entityKey) return { history: [] }
+  const params = new URLSearchParams({
+    window_days: String(windowDays),
+  })
+  return apiFetch(`/api/entity/${encodeURIComponent(entityKey)}/history?${params.toString()}`)
+}
+
+export async function getPipelineStatus() {
+  return apiFetch('/api/pipeline/status')
+}
+
+export async function triggerPipelineRun({ mode = 'manual', doBackfill = true, doEnrichment = true } = {}) {
+  return apiFetch('/api/pipeline/run', {
+    method: 'POST',
+    body: JSON.stringify({
+      mode,
+      do_backfill: doBackfill,
+      do_enrichment: doEnrichment,
     }),
   })
 }

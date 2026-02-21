@@ -4,8 +4,8297 @@
     "source": "producthunt",
     "schema_version": "1.0"
   },
-  "generated_at": "",
-  "post_count": 0,
-  "entity_count": 0,
-  "entities": []
+  "generated_at": "2026-02-21T18:58:48.528515+00:00",
+  "post_count": 260,
+  "entity_count": 259,
+  "entities": [
+    {
+      "entity": "happycapy",
+      "confidence": 0.8,
+      "impressions": 12851,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "happycapy",
+        "agent-native",
+        "computer",
+        "browser",
+        "everyday",
+        "done"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-11T08:01:00Z",
+      "last_seen_at": "2026-02-11T08:01:00Z",
+      "trend_score": 94.0,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Kilo Code Reviewer",
+      "confidence": 0.8,
+      "impressions": 10773,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "code",
+        "kilo",
+        "reviewer",
+        "automatic",
+        "ai-powered",
+        "reviews"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-27T08:01:00Z",
+      "last_seen_at": "2026-01-27T08:01:00Z",
+      "trend_score": 82.68,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "SuperX",
+      "confidence": 0.8,
+      "impressions": 10460,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "superx",
+        "all-in-one",
+        "growth",
+        "get",
+        "posts",
+        "serious"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-09T08:01:00Z",
+      "last_seen_at": "2026-02-09T08:01:00Z",
+      "trend_score": 80.98,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "DataFast",
+      "confidence": 0.8,
+      "impressions": 9894,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "datafast",
+        "revenue-first",
+        "analytics",
+        "discover",
+        "which",
+        "marketing"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-28T08:01:00Z",
+      "last_seen_at": "2026-01-28T08:01:00Z",
+      "trend_score": 77.89,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Pandada AI",
+      "confidence": 0.8,
+      "impressions": 9309,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "data",
+        "pandada",
+        "wealth",
+        "files",
+        "mckinsey-level",
+        "turns"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-29T08:01:00Z",
+      "last_seen_at": "2026-01-29T08:01:00Z",
+      "trend_score": 74.71,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "OpenClaw",
+      "confidence": 0.8,
+      "impressions": 8983,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "openclaw",
+        "actually",
+        "does",
+        "things",
+        "formerly",
+        "moltbot"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-27T08:01:00Z",
+      "last_seen_at": "2026-01-27T08:01:00Z",
+      "trend_score": 72.93,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Lovon AI Therapy",
+      "confidence": 0.8,
+      "impressions": 8722,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "therapy",
+        "talk",
+        "lovon",
+        "out",
+        "feel",
+        "better"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-13T08:01:00Z",
+      "last_seen_at": "2026-02-13T08:01:00Z",
+      "trend_score": 71.51,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "TravelAnimator",
+      "confidence": 0.8,
+      "impressions": 8576,
+      "posts": 2,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 2
+      },
+      "top_keywords": [
+        "map",
+        "travelanimator",
+        "google",
+        "maps",
+        "urls",
+        "turn"
+      ],
+      "evidence_count": 2,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-29T08:01:00Z",
+      "last_seen_at": "2026-02-18T08:01:00Z",
+      "trend_score": 70.71,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Supaboard",
+      "confidence": 0.8,
+      "impressions": 8177,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "data",
+        "get",
+        "answers",
+        "business",
+        "supaboard",
+        "ask"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-05T08:01:00Z",
+      "last_seen_at": "2026-02-05T08:01:00Z",
+      "trend_score": 68.54,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Claude Opus 4.6",
+      "confidence": 0.8,
+      "impressions": 8093,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "claude",
+        "opus",
+        "most",
+        "model",
+        "agentic",
+        "tasks"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-06T08:01:00Z",
+      "last_seen_at": "2026-02-06T08:01:00Z",
+      "trend_score": 68.08,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Atoms",
+      "confidence": 0.8,
+      "impressions": 8088,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "atoms",
+        "ideas",
+        "business",
+        "turn",
+        "sell",
+        "vibe"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-03T08:01:00Z",
+      "last_seen_at": "2026-02-03T08:01:00Z",
+      "trend_score": 68.06,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "CreateOS",
+      "confidence": 0.8,
+      "impressions": 7810,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "createos",
+        "deploy",
+        "apps",
+        "tool",
+        "any",
+        "coding"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-04T08:01:00Z",
+      "last_seen_at": "2026-02-04T08:01:00Z",
+      "trend_score": 66.54,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Base44 Backend Platform",
+      "confidence": 0.8,
+      "impressions": 7645,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "backend",
+        "apps",
+        "base44",
+        "agents",
+        "platform",
+        "age"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-16T08:01:00Z",
+      "last_seen_at": "2026-02-16T08:01:00Z",
+      "trend_score": 65.64,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Sonnet 4.6",
+      "confidence": 0.8,
+      "impressions": 7349,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "sonnet",
+        "across",
+        "computer",
+        "use",
+        "also",
+        "most"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-18T08:01:00Z",
+      "last_seen_at": "2026-02-18T08:01:00Z",
+      "trend_score": 64.03,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Starnus",
+      "confidence": 0.8,
+      "impressions": 7255,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "starnus",
+        "find",
+        "end",
+        "reach",
+        "next",
+        "customers"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-12T08:01:00Z",
+      "last_seen_at": "2026-02-12T08:01:00Z",
+      "trend_score": 63.52,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Inspector",
+      "confidence": 0.8,
+      "impressions": 7198,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "inspector",
+        "claude",
+        "code",
+        "figma",
+        "visual",
+        "editor"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-08T08:01:00Z",
+      "last_seen_at": "2026-02-08T08:01:00Z",
+      "trend_score": 63.21,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Lunair",
+      "confidence": 0.8,
+      "impressions": 7156,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "video",
+        "lunair",
+        "videos",
+        "custom",
+        "scenes",
+        "not"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-15T08:01:00Z",
+      "last_seen_at": "2026-02-15T08:01:00Z",
+      "trend_score": 62.98,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Meme Dealer",
+      "confidence": 0.8,
+      "impressions": 7152,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "meme",
+        "mode",
+        "dealer",
+        "what",
+        "chats",
+        "keyboard"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-13T08:01:00Z",
+      "last_seen_at": "2026-02-13T08:01:00Z",
+      "trend_score": 62.96,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Minara",
+      "confidence": 0.8,
+      "impressions": 7091,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "minara",
+        "chat",
+        "invest",
+        "one",
+        "investment",
+        "research"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-26T08:01:00Z",
+      "last_seen_at": "2026-01-26T08:01:00Z",
+      "trend_score": 62.63,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "kuku",
+      "confidence": 0.8,
+      "impressions": 7019,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "kuku",
+        "obsidian",
+        "electron",
+        "files",
+        "but",
+        "lot"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-28T08:01:00Z",
+      "last_seen_at": "2026-01-28T08:01:00Z",
+      "trend_score": 62.23,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "moltbook",
+      "confidence": 0.8,
+      "impressions": 6900,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "agents",
+        "social",
+        "network",
+        "moltbook",
+        "built",
+        "exclusively"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-02T08:01:00Z",
+      "last_seen_at": "2026-02-02T08:01:00Z",
+      "trend_score": 61.58,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Hugo",
+      "confidence": 0.8,
+      "impressions": 6831,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "hugo",
+        "support",
+        "agent",
+        "built",
+        "doesn",
+        "charge"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-03T08:01:00Z",
+      "last_seen_at": "2026-02-03T08:01:00Z",
+      "trend_score": 61.21,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "ChartGen AI",
+      "confidence": 0.8,
+      "impressions": 6723,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "data",
+        "chartgen",
+        "charts",
+        "insights",
+        "seconds",
+        "stop"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-22T08:01:00Z",
+      "last_seen_at": "2026-01-22T08:01:00Z",
+      "trend_score": 60.62,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Moda",
+      "confidence": 0.8,
+      "impressions": 6700,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "moda",
+        "design",
+        "finally",
+        "designs",
+        "edit",
+        "helps"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-18T08:01:00Z",
+      "last_seen_at": "2026-02-18T08:01:00Z",
+      "trend_score": 60.5,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Humans in the Loop",
+      "confidence": 0.8,
+      "impressions": 6417,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "humans",
+        "loop",
+        "free",
+        "community",
+        "code",
+        "talk"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-24T08:01:00Z",
+      "last_seen_at": "2026-01-24T08:01:00Z",
+      "trend_score": 58.95,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Rork Max",
+      "confidence": 0.8,
+      "impressions": 6344,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "rork",
+        "max",
+        "apps",
+        "iphone",
+        "app",
+        "best"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-21T08:01:00Z",
+      "last_seen_at": "2026-02-21T08:01:00Z",
+      "trend_score": 58.56,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Figr AI",
+      "confidence": 0.8,
+      "impressions": 6245,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "figr",
+        "app",
+        "product-aware",
+        "thinks",
+        "through",
+        "agent"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-17T08:01:00Z",
+      "last_seen_at": "2026-02-17T08:01:00Z",
+      "trend_score": 58.02,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Leapility",
+      "confidence": 0.8,
+      "impressions": 6029,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "leapility",
+        "output",
+        "tools",
+        "turn",
+        "repetitive",
+        "workflows"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-30T08:01:00Z",
+      "last_seen_at": "2026-01-30T08:01:00Z",
+      "trend_score": 56.84,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Tinkerer Club",
+      "confidence": 0.8,
+      "impressions": 5966,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "club",
+        "private",
+        "access",
+        "tinkerer",
+        "own",
+        "ppl"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-10T08:01:00Z",
+      "last_seen_at": "2026-02-10T08:01:00Z",
+      "trend_score": 56.5,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Origami.chat",
+      "confidence": 0.8,
+      "impressions": 5841,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "perfect",
+        "get",
+        "origami",
+        "chat",
+        "find",
+        "leads"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-19T08:01:00Z",
+      "last_seen_at": "2026-02-19T08:01:00Z",
+      "trend_score": 55.82,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Unicorne",
+      "confidence": 0.8,
+      "impressions": 5826,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "fastest",
+        "growing",
+        "startups",
+        "data",
+        "unicorne",
+        "based"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-09T08:01:00Z",
+      "last_seen_at": "2026-02-09T08:01:00Z",
+      "trend_score": 55.73,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Gemini 3.1 Pro",
+      "confidence": 0.8,
+      "impressions": 5741,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "pro",
+        "gemini",
+        "smarter",
+        "complex",
+        "tasks",
+        "model"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-20T08:01:00Z",
+      "last_seen_at": "2026-02-20T08:01:00Z",
+      "trend_score": 55.27,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Agent Builder by Thesys",
+      "confidence": 0.8,
+      "impressions": 5672,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "agents",
+        "respond",
+        "agent",
+        "builder",
+        "thesys",
+        "instead"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-10T08:01:00Z",
+      "last_seen_at": "2026-02-10T08:01:00Z",
+      "trend_score": 54.9,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Imagine",
+      "confidence": 0.8,
+      "impressions": 5609,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "imagine",
+        "most",
+        "complete",
+        "builder",
+        "cloud",
+        "something"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-28T08:01:00Z",
+      "last_seen_at": "2026-01-28T08:01:00Z",
+      "trend_score": 54.55,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "ZenMux",
+      "confidence": 0.8,
+      "impressions": 5371,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "zenmux",
+        "enterprise-grade",
+        "llm",
+        "gateway",
+        "automatic",
+        "compensation"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-13T08:01:00Z",
+      "last_seen_at": "2026-02-13T08:01:00Z",
+      "trend_score": 53.26,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "ChaChing",
+      "confidence": 0.8,
+      "impressions": 5359,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "stripe",
+        "chaching",
+        "billing",
+        "cut",
+        "fees",
+        "half"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-02T08:01:00Z",
+      "last_seen_at": "2026-02-02T08:01:00Z",
+      "trend_score": 53.19,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Thumbfa.st",
+      "confidence": 0.8,
+      "impressions": 5355,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "youtube",
+        "face",
+        "thumbnail",
+        "thumbfa",
+        "midjourney",
+        "thumbnails"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-25T08:01:00Z",
+      "last_seen_at": "2026-01-25T08:01:00Z",
+      "trend_score": 53.17,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Normain",
+      "confidence": 0.8,
+      "impressions": 5309,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "normain",
+        "insights",
+        "complex",
+        "documents",
+        "trusted",
+        "extraction-first"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-10T08:01:00Z",
+      "last_seen_at": "2026-02-10T08:01:00Z",
+      "trend_score": 52.92,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Genstore.ai",
+      "confidence": 0.8,
+      "impressions": 5208,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "genstore",
+        "test",
+        "iterate",
+        "minutes",
+        "agents",
+        "launch"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-04T08:01:00Z",
+      "last_seen_at": "2026-02-04T08:01:00Z",
+      "trend_score": 52.37,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Gro",
+      "confidence": 0.8,
+      "impressions": 5162,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "gro",
+        "sales",
+        "teams",
+        "intent",
+        "end",
+        "best"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-12T08:01:00Z",
+      "last_seen_at": "2026-02-12T08:01:00Z",
+      "trend_score": 52.12,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "LobeHub",
+      "confidence": 0.8,
+      "impressions": 5155,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "lobehub",
+        "agent",
+        "teammates",
+        "grow",
+        "today",
+        "agents"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-27T08:01:00Z",
+      "last_seen_at": "2026-01-27T08:01:00Z",
+      "trend_score": 52.08,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Dottie",
+      "confidence": 0.8,
+      "impressions": 5150,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "data",
+        "private",
+        "journal",
+        "dottie",
+        "helps",
+        "reflect"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-01T08:01:00Z",
+      "last_seen_at": "2026-02-01T08:01:00Z",
+      "trend_score": 52.05,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Toolspend",
+      "confidence": 0.8,
+      "impressions": 5138,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "toolspend",
+        "spend",
+        "tools",
+        "usage",
+        "across",
+        "track"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-16T08:01:00Z",
+      "last_seen_at": "2026-02-16T08:01:00Z",
+      "trend_score": 51.99,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Tonkotsu",
+      "confidence": 0.8,
+      "impressions": 5127,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "tonkotsu",
+        "manage",
+        "team",
+        "coding",
+        "agents",
+        "doc"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-23T08:01:00Z",
+      "last_seen_at": "2026-01-23T08:01:00Z",
+      "trend_score": 51.93,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "findable",
+      "confidence": 0.8,
+      "impressions": 5116,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "findable",
+        "free",
+        "optimization",
+        "google",
+        "marketing",
+        "chatgpt"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-03T08:01:00Z",
+      "last_seen_at": "2026-02-03T08:01:00Z",
+      "trend_score": 51.87,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "ClaudeUsageBar",
+      "confidence": 0.8,
+      "impressions": 5070,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "claude",
+        "claudeusagebar",
+        "know",
+        "exactly",
+        "how",
+        "much"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-31T08:01:00Z",
+      "last_seen_at": "2026-01-31T08:01:00Z",
+      "trend_score": 51.62,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Rumora",
+      "confidence": 0.8,
+      "impressions": 5070,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "videos",
+        "rumora",
+        "brand",
+        "viral",
+        "tiktok",
+        "promote"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-28T08:01:00Z",
+      "last_seen_at": "2026-01-28T08:01:00Z",
+      "trend_score": 51.62,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Seedance 2.0",
+      "confidence": 0.8,
+      "impressions": 5010,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "video",
+        "seedance",
+        "advanced",
+        "narrative",
+        "control",
+        "creation"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-14T08:01:00Z",
+      "last_seen_at": "2026-02-14T08:01:00Z",
+      "trend_score": 51.29,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "The new v0",
+      "confidence": 0.8,
+      "impressions": 4964,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "new",
+        "coding",
+        "full",
+        "stack",
+        "vibe",
+        "platform"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-05T08:01:00Z",
+      "last_seen_at": "2026-02-05T08:01:00Z",
+      "trend_score": 51.04,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "EditWithAva",
+      "confidence": 0.8,
+      "impressions": 4945,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "assistant",
+        "video",
+        "editor",
+        "works",
+        "footage",
+        "editwithava"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-12T08:01:00Z",
+      "last_seen_at": "2026-02-12T08:01:00Z",
+      "trend_score": 50.94,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Extrovert",
+      "confidence": 0.8,
+      "impressions": 4814,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "linkedin",
+        "extrovert",
+        "lead",
+        "nurturing",
+        "warm",
+        "outreach"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-08T08:01:00Z",
+      "last_seen_at": "2026-02-08T08:01:00Z",
+      "trend_score": 50.22,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Clawi.ai",
+      "confidence": 0.8,
+      "impressions": 4799,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "openclaw",
+        "clawi",
+        "cloud",
+        "zero",
+        "setup",
+        "stop"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-19T08:01:00Z",
+      "last_seen_at": "2026-02-19T08:01:00Z",
+      "trend_score": 50.14,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Boost.space v5",
+      "confidence": 0.8,
+      "impressions": 4766,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "context",
+        "agents",
+        "automations",
+        "boost",
+        "space",
+        "shared"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-17T08:01:00Z",
+      "last_seen_at": "2026-02-17T08:01:00Z",
+      "trend_score": 49.96,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Kalendar.work",
+      "confidence": 0.8,
+      "impressions": 4759,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "kalendar",
+        "free",
+        "fully",
+        "calendly",
+        "not",
+        "work"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-30T08:01:00Z",
+      "last_seen_at": "2026-01-30T08:01:00Z",
+      "trend_score": 49.92,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Google Pomelli",
+      "confidence": 0.8,
+      "impressions": 4731,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "image",
+        "create",
+        "pomelli",
+        "photoshoot",
+        "google",
+        "turn"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-20T08:01:00Z",
+      "last_seen_at": "2026-02-20T08:01:00Z",
+      "trend_score": 49.77,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Revo AI Email Assistant",
+      "confidence": 0.8,
+      "impressions": 4709,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "revo",
+        "email",
+        "assistant",
+        "accurate",
+        "replies",
+        "tackle"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-11T08:01:00Z",
+      "last_seen_at": "2026-02-11T08:01:00Z",
+      "trend_score": 49.65,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "minimalist phone app for iOS",
+      "confidence": 0.8,
+      "impressions": 4673,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "phone",
+        "minimalist",
+        "app",
+        "ios",
+        "digital",
+        "detox"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-28T08:01:00Z",
+      "last_seen_at": "2026-01-28T08:01:00Z",
+      "trend_score": 49.45,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "BayesLab",
+      "confidence": 0.8,
+      "impressions": 4663,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "analysis",
+        "deep",
+        "slides",
+        "data",
+        "bayeslab",
+        "premium"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-06T08:01:00Z",
+      "last_seen_at": "2026-02-06T08:01:00Z",
+      "trend_score": 49.4,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Tines",
+      "confidence": 0.8,
+      "impressions": 4644,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "tines",
+        "agents",
+        "automations",
+        "integrated",
+        "across",
+        "workspace"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-11T08:01:00Z",
+      "last_seen_at": "2026-02-11T08:01:00Z",
+      "trend_score": 49.3,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "AutoSend",
+      "confidence": 0.8,
+      "impressions": 4585,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "autosend",
+        "email",
+        "developers",
+        "marketers",
+        "agents",
+        "platform"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-28T08:01:00Z",
+      "last_seen_at": "2026-01-28T08:01:00Z",
+      "trend_score": 48.97,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Helply",
+      "confidence": 0.8,
+      "impressions": 4576,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "support",
+        "helply",
+        "resolution",
+        "rate",
+        "days",
+        "pay"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-03T08:01:00Z",
+      "last_seen_at": "2026-02-03T08:01:00Z",
+      "trend_score": 48.93,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Web search API by Crustdata",
+      "confidence": 0.8,
+      "impressions": 4459,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "search",
+        "web",
+        "api",
+        "crustdata",
+        "accurate",
+        "fastest"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-22T08:01:00Z",
+      "last_seen_at": "2026-01-22T08:01:00Z",
+      "trend_score": 48.29,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Mochi Focus",
+      "confidence": 0.8,
+      "impressions": 4455,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "mochi",
+        "focus",
+        "timer",
+        "grow",
+        "grows",
+        "meet"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-25T08:01:00Z",
+      "last_seen_at": "2026-01-25T08:01:00Z",
+      "trend_score": 48.27,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Migma AI",
+      "confidence": 0.8,
+      "impressions": 4423,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "emails",
+        "sending",
+        "migma",
+        "make",
+        "sexy",
+        "again"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-11T08:01:00Z",
+      "last_seen_at": "2026-02-11T08:01:00Z",
+      "trend_score": 48.09,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Amara",
+      "confidence": 0.8,
+      "impressions": 4321,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "create",
+        "amara",
+        "environment",
+        "exploration",
+        "help",
+        "imagine"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-02T08:01:00Z",
+      "last_seen_at": "2026-02-02T08:01:00Z",
+      "trend_score": 47.54,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Pretty Prompt 1.0 Extension and Web App",
+      "confidence": 0.8,
+      "impressions": 4240,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "prompts",
+        "pretty",
+        "prompt",
+        "extension",
+        "web",
+        "app"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-31T08:01:00Z",
+      "last_seen_at": "2026-01-31T08:01:00Z",
+      "trend_score": 47.1,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "TabAI",
+      "confidence": 0.8,
+      "impressions": 4199,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "tasks",
+        "tabai",
+        "everywhere",
+        "keeps",
+        "focused",
+        "organizes"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-06T08:01:00Z",
+      "last_seen_at": "2026-02-06T08:01:00Z",
+      "trend_score": 46.87,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Umbrel Pro",
+      "confidence": 0.8,
+      "impressions": 4193,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "home",
+        "cloud",
+        "server",
+        "run",
+        "openclaw",
+        "umbrel"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-09T08:01:00Z",
+      "last_seen_at": "2026-02-09T08:01:00Z",
+      "trend_score": 46.84,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Architect by Lyzr",
+      "confidence": 0.8,
+      "impressions": 4189,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "every",
+        "architect",
+        "lyzr",
+        "works",
+        "what",
+        "n8n"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-20T08:01:00Z",
+      "last_seen_at": "2026-02-20T08:01:00Z",
+      "trend_score": 46.82,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Time Ledger",
+      "confidence": 0.8,
+      "impressions": 4157,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "time",
+        "ledger",
+        "manage",
+        "like",
+        "money",
+        "now"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-01T08:01:00Z",
+      "last_seen_at": "2026-02-01T08:01:00Z",
+      "trend_score": 46.64,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Reloop",
+      "confidence": 0.8,
+      "impressions": 4130,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "reloop",
+        "prompts",
+        "creative",
+        "agent",
+        "idea",
+        "video"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-19T08:01:00Z",
+      "last_seen_at": "2026-02-19T08:01:00Z",
+      "trend_score": 46.5,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Omnia",
+      "confidence": 0.8,
+      "impressions": 4122,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "brand",
+        "omnia",
+        "visibility",
+        "become",
+        "recommends",
+        "tool"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-18T08:01:00Z",
+      "last_seen_at": "2026-02-18T08:01:00Z",
+      "trend_score": 46.45,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Cue",
+      "confidence": 0.8,
+      "impressions": 4100,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "schedule",
+        "post",
+        "cue",
+        "smarter",
+        "everywhere",
+        "grow"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-26T08:01:00Z",
+      "last_seen_at": "2026-01-26T08:01:00Z",
+      "trend_score": 46.33,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Prompt Library",
+      "confidence": 0.8,
+      "impressions": 4077,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "prompts",
+        "prompt",
+        "library",
+        "best",
+        "one",
+        "shortcut"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-15T08:01:00Z",
+      "last_seen_at": "2026-02-15T08:01:00Z",
+      "trend_score": 46.21,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Codex by OpenAI",
+      "confidence": 0.8,
+      "impressions": 4028,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "codex",
+        "agents",
+        "software",
+        "command",
+        "center",
+        "app"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-03T08:01:00Z",
+      "last_seen_at": "2026-02-03T08:01:00Z",
+      "trend_score": 45.94,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Xcode 26.3",
+      "confidence": 0.8,
+      "impressions": 4020,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "xcode",
+        "coding",
+        "agents",
+        "tasks",
+        "agentic",
+        "using"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-04T08:01:00Z",
+      "last_seen_at": "2026-02-04T08:01:00Z",
+      "trend_score": 45.9,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "BetterBugs MCP",
+      "confidence": 0.8,
+      "impressions": 3981,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "betterbugs",
+        "mcp",
+        "context",
+        "full",
+        "bug",
+        "across"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-06T08:01:00Z",
+      "last_seen_at": "2026-02-06T08:01:00Z",
+      "trend_score": 45.68,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Krisp Mobile Call Recorder",
+      "confidence": 0.8,
+      "impressions": 3978,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "krisp",
+        "mobile",
+        "call",
+        "calls",
+        "outgoing",
+        "get"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-23T08:01:00Z",
+      "last_seen_at": "2026-01-23T08:01:00Z",
+      "trend_score": 45.67,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "NMTV",
+      "confidence": 0.8,
+      "impressions": 3934,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "mtv",
+        "nmtv",
+        "built",
+        "time",
+        "machine",
+        "wife"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-30T08:01:00Z",
+      "last_seen_at": "2026-01-30T08:01:00Z",
+      "trend_score": 45.43,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Higgsfield Vibe-Motion",
+      "confidence": 0.8,
+      "impressions": 3876,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "higgsfield",
+        "create",
+        "motion",
+        "videos",
+        "vibe-motion",
+        "images"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-05T08:01:00Z",
+      "last_seen_at": "2026-02-05T08:01:00Z",
+      "trend_score": 45.11,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "InspireNote",
+      "confidence": 0.8,
+      "impressions": 3842,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "creative",
+        "cards",
+        "inspirenote",
+        "app",
+        "help",
+        "brainstorming"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-07T08:01:00Z",
+      "last_seen_at": "2026-02-07T08:01:00Z",
+      "trend_score": 44.93,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Meet-Ting",
+      "confidence": 0.8,
+      "impressions": 3833,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "ting",
+        "gives",
+        "schedule",
+        "brain",
+        "calendar",
+        "over"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-29T08:01:00Z",
+      "last_seen_at": "2026-01-29T08:01:00Z",
+      "trend_score": 44.88,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "skills.sh",
+      "confidence": 0.8,
+      "impressions": 3787,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "skills",
+        "agents",
+        "install",
+        "open",
+        "agent",
+        "ecosystem"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-31T08:01:00Z",
+      "last_seen_at": "2026-01-31T08:01:00Z",
+      "trend_score": 44.63,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "BrainLoom",
+      "confidence": 0.8,
+      "impressions": 3788,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "brainloom",
+        "turn",
+        "flashcards",
+        "local-first",
+        "learning",
+        "study"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-24T08:01:00Z",
+      "last_seen_at": "2026-01-24T08:01:00Z",
+      "trend_score": 44.63,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Verdent",
+      "confidence": 0.8,
+      "impressions": 3778,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "verdent",
+        "coding",
+        "ai-native",
+        "partner",
+        "new",
+        "way"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-26T08:01:00Z",
+      "last_seen_at": "2026-01-26T08:01:00Z",
+      "trend_score": 44.58,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Demonstrate by Notte",
+      "confidence": 0.8,
+      "impressions": 3771,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "automation",
+        "code",
+        "demonstrate",
+        "browser",
+        "notte",
+        "workflows"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-22T08:01:00Z",
+      "last_seen_at": "2026-01-22T08:01:00Z",
+      "trend_score": 44.54,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Subscription Day² for iOS",
+      "confidence": 0.8,
+      "impressions": 3769,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "subscription",
+        "day",
+        "ios",
+        "track",
+        "paid",
+        "subscriptions"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-11T08:01:00Z",
+      "last_seen_at": "2026-02-11T08:01:00Z",
+      "trend_score": 44.53,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Lindy Assistant",
+      "confidence": 0.8,
+      "impressions": 3719,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "assistant",
+        "lindy",
+        "takes",
+        "meetings",
+        "proactive",
+        "does"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-12T08:01:00Z",
+      "last_seen_at": "2026-02-12T08:01:00Z",
+      "trend_score": 44.26,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Formaly",
+      "confidence": 0.8,
+      "impressions": 3686,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "forms",
+        "formaly",
+        "feel",
+        "like",
+        "conversations",
+        "create"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-15T08:01:00Z",
+      "last_seen_at": "2026-02-15T08:01:00Z",
+      "trend_score": 44.08,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "LocateStore",
+      "confidence": 0.8,
+      "impressions": 3615,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "google",
+        "store",
+        "locatestore",
+        "map",
+        "sheet",
+        "create"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-22T08:01:00Z",
+      "last_seen_at": "2026-01-22T08:01:00Z",
+      "trend_score": 43.69,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Cline CLI 2.0",
+      "confidence": 0.8,
+      "impressions": 3516,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "cline",
+        "cli",
+        "parallel",
+        "agents",
+        "headless",
+        "terminal"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-14T08:01:00Z",
+      "last_seen_at": "2026-02-14T08:01:00Z",
+      "trend_score": 43.15,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "JDoodle.ai 2.0",
+      "confidence": 0.8,
+      "impressions": 3471,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "jdoodle",
+        "figma",
+        "editable",
+        "website",
+        "starting",
+        "clone"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-26T08:01:00Z",
+      "last_seen_at": "2026-01-26T08:01:00Z",
+      "trend_score": 42.91,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Code Arena",
+      "confidence": 0.8,
+      "impressions": 3455,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "code",
+        "arena",
+        "prompt",
+        "once",
+        "compare",
+        "apps"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-13T08:01:00Z",
+      "last_seen_at": "2026-02-13T08:01:00Z",
+      "trend_score": 42.82,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Axel",
+      "confidence": 0.8,
+      "impressions": 3405,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "axel",
+        "agents",
+        "todoist",
+        "coding",
+        "helps",
+        "run"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-08T08:01:00Z",
+      "last_seen_at": "2026-02-08T08:01:00Z",
+      "trend_score": 42.55,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "AI Doc Writer by Trupeer",
+      "confidence": 0.8,
+      "impressions": 3397,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "recordings",
+        "doc",
+        "trupeer",
+        "finished",
+        "docs",
+        "guide"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-03T08:01:00Z",
+      "last_seen_at": "2026-02-03T08:01:00Z",
+      "trend_score": 42.5,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Molthunt",
+      "confidence": 0.8,
+      "impressions": 3374,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "discover",
+        "agents",
+        "molthunt",
+        "place",
+        "next",
+        "favorite"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-02T08:01:00Z",
+      "last_seen_at": "2026-02-02T08:01:00Z",
+      "trend_score": 42.38,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "NVIDIA PersonaPlex",
+      "confidence": 0.8,
+      "impressions": 3373,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "personaplex",
+        "conversational",
+        "natural",
+        "any",
+        "nvidia",
+        "role"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-16T08:01:00Z",
+      "last_seen_at": "2026-02-16T08:01:00Z",
+      "trend_score": 42.37,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "PayPing",
+      "confidence": 0.8,
+      "impressions": 3367,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "recurring",
+        "manage",
+        "payping",
+        "payments",
+        "one",
+        "place"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-23T08:01:00Z",
+      "last_seen_at": "2026-01-23T08:01:00Z",
+      "trend_score": 42.34,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Monologue for iOS",
+      "confidence": 0.8,
+      "impressions": 3365,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "monologue",
+        "writing",
+        "turn",
+        "voice",
+        "polished",
+        "texts"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-19T08:01:00Z",
+      "last_seen_at": "2026-02-19T08:01:00Z",
+      "trend_score": 42.33,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Forums",
+      "confidence": 0.8,
+      "impressions": 3361,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "forums",
+        "ai-powered",
+        "github",
+        "repositories",
+        "ask",
+        "questions"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-25T08:01:00Z",
+      "last_seen_at": "2026-01-25T08:01:00Z",
+      "trend_score": 42.31,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "ClawApp",
+      "confidence": 0.8,
+      "impressions": 3351,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "clawapp",
+        "openclaw",
+        "local",
+        "easiest",
+        "way",
+        "automate"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-06T08:01:00Z",
+      "last_seen_at": "2026-02-06T08:01:00Z",
+      "trend_score": 42.25,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Qwen3.5",
+      "confidence": 0.8,
+      "impressions": 3346,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "native",
+        "model",
+        "qwen3",
+        "multimodal",
+        "agent",
+        "active"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-17T08:01:00Z",
+      "last_seen_at": "2026-02-17T08:01:00Z",
+      "trend_score": 42.23,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Mozart for iOS",
+      "confidence": 0.8,
+      "impressions": 3334,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "mozart",
+        "music",
+        "video",
+        "while",
+        "ios",
+        "make"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-17T08:01:00Z",
+      "last_seen_at": "2026-02-17T08:01:00Z",
+      "trend_score": 42.16,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Yomio",
+      "confidence": 0.8,
+      "impressions": 3321,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "yomio",
+        "turns",
+        "expenses",
+        "spending",
+        "receipts",
+        "item"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-01T08:01:00Z",
+      "last_seen_at": "2026-02-01T08:01:00Z",
+      "trend_score": 42.09,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Obooko",
+      "confidence": 0.8,
+      "impressions": 3299,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "obooko",
+        "free",
+        "books",
+        "reading",
+        "across",
+        "authors"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-07T08:01:00Z",
+      "last_seen_at": "2026-02-07T08:01:00Z",
+      "trend_score": 41.97,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Claudebin",
+      "confidence": 0.8,
+      "impressions": 3261,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "claude",
+        "code",
+        "session",
+        "claudebin",
+        "export",
+        "locally"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-20T08:01:00Z",
+      "last_seen_at": "2026-02-20T08:01:00Z",
+      "trend_score": 41.76,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Atyla",
+      "confidence": 0.8,
+      "impressions": 3259,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "atyla",
+        "search",
+        "chatgpt",
+        "gemini",
+        "engines",
+        "improve"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-11T08:01:00Z",
+      "last_seen_at": "2026-02-11T08:01:00Z",
+      "trend_score": 41.75,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Meteroid",
+      "confidence": 0.8,
+      "impressions": 3229,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "meteroid",
+        "platform",
+        "scale",
+        "business",
+        "billing",
+        "launch"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-29T08:01:00Z",
+      "last_seen_at": "2026-01-29T08:01:00Z",
+      "trend_score": 41.59,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Timeless",
+      "confidence": 0.8,
+      "impressions": 3230,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "timeless",
+        "agents",
+        "conversations",
+        "let",
+        "conversation",
+        "client"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-27T08:01:00Z",
+      "last_seen_at": "2026-01-27T08:01:00Z",
+      "trend_score": 41.59,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Callum",
+      "confidence": 0.8,
+      "impressions": 3223,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "calendar",
+        "callum",
+        "assistant",
+        "teams",
+        "meetings",
+        "supercharge"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-22T08:01:00Z",
+      "last_seen_at": "2026-01-22T08:01:00Z",
+      "trend_score": 41.56,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "GetThis",
+      "confidence": 0.8,
+      "impressions": 3219,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "getthis",
+        "tasks",
+        "generate",
+        "voice",
+        "text",
+        "screenshots"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-24T08:01:00Z",
+      "last_seen_at": "2026-01-24T08:01:00Z",
+      "trend_score": 41.53,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Voxtral Transcribe 2 by Mistral",
+      "confidence": 0.8,
+      "impressions": 3215,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "voxtral",
+        "transcribe",
+        "real-time",
+        "speech-to-text",
+        "speaker",
+        "diarization"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-05T08:01:00Z",
+      "last_seen_at": "2026-02-05T08:01:00Z",
+      "trend_score": 41.51,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Skillkit",
+      "confidence": 0.8,
+      "impressions": 3194,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "skillkit",
+        "package",
+        "manager",
+        "agent",
+        "skills",
+        "universal"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-07T08:01:00Z",
+      "last_seen_at": "2026-02-07T08:01:00Z",
+      "trend_score": 41.4,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "rivva",
+      "confidence": 0.8,
+      "impressions": 3183,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "rivva",
+        "tasks",
+        "planner",
+        "around",
+        "energy",
+        "calendar"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-09T08:01:00Z",
+      "last_seen_at": "2026-02-09T08:01:00Z",
+      "trend_score": 41.34,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Y Bombinator",
+      "confidence": 0.8,
+      "impressions": 3176,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "built",
+        "their",
+        "bombinator",
+        "bombed",
+        "times",
+        "shouldn"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-06T08:01:00Z",
+      "last_seen_at": "2026-02-06T08:01:00Z",
+      "trend_score": 41.3,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "GPT5.3CodexSpark",
+      "confidence": 0.8,
+      "impressions": 3172,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "model",
+        "codex-spark",
+        "gpt5",
+        "codexspark",
+        "ultra-fast",
+        "real-time"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-13T08:01:00Z",
+      "last_seen_at": "2026-02-13T08:01:00Z",
+      "trend_score": 41.28,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Lyria 3 by Google Deepmind",
+      "confidence": 0.8,
+      "impressions": 3168,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "gemini",
+        "lyria",
+        "turn",
+        "app",
+        "second",
+        "google"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-21T08:01:00Z",
+      "last_seen_at": "2026-02-21T08:01:00Z",
+      "trend_score": 41.26,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "The Prompting Company",
+      "confidence": 0.8,
+      "impressions": 3104,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "prompting",
+        "company",
+        "seo",
+        "dead",
+        "cited",
+        "chatgpt"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-29T08:01:00Z",
+      "last_seen_at": "2026-01-29T08:01:00Z",
+      "trend_score": 40.91,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Bunny Database",
+      "confidence": 0.8,
+      "impressions": 3087,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "bunny",
+        "database",
+        "like",
+        "sqlite",
+        "but",
+        "web"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-04T08:01:00Z",
+      "last_seen_at": "2026-02-04T08:01:00Z",
+      "trend_score": 40.82,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "TexTab",
+      "confidence": 0.8,
+      "impressions": 3031,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "keyboard",
+        "textab",
+        "turn",
+        "any",
+        "task",
+        "shortcut"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-14T08:01:00Z",
+      "last_seen_at": "2026-02-14T08:01:00Z",
+      "trend_score": 40.51,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "AI Chrome Extension Builder",
+      "confidence": 0.8,
+      "impressions": 3012,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "chrome",
+        "extension",
+        "extensions",
+        "builder",
+        "talking",
+        "prompt"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-29T08:01:00Z",
+      "last_seen_at": "2026-01-29T08:01:00Z",
+      "trend_score": 40.41,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Webflow AI site builder",
+      "confidence": 0.8,
+      "impressions": 2966,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "webflow",
+        "site",
+        "builder",
+        "turn",
+        "prompt",
+        "production-ready"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-05T08:01:00Z",
+      "last_seen_at": "2026-02-05T08:01:00Z",
+      "trend_score": 40.16,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Layers",
+      "confidence": 0.8,
+      "impressions": 2909,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "layers",
+        "marketing",
+        "agents",
+        "code",
+        "know",
+        "better"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-17T08:01:00Z",
+      "last_seen_at": "2026-02-17T08:01:00Z",
+      "trend_score": 39.85,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Good Assistant",
+      "confidence": 0.8,
+      "impressions": 2871,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "assistant",
+        "good",
+        "goals",
+        "partner",
+        "matter",
+        "passion"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-01T08:01:00Z",
+      "last_seen_at": "2026-02-01T08:01:00Z",
+      "trend_score": 39.64,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Pola Browser",
+      "confidence": 0.8,
+      "impressions": 2862,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "browser",
+        "pola",
+        "productivity",
+        "way",
+        "productivity-focused",
+        "mac"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-25T08:01:00Z",
+      "last_seen_at": "2026-01-25T08:01:00Z",
+      "trend_score": 39.59,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "stagecaptions.io",
+      "confidence": 0.8,
+      "impressions": 2860,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "live",
+        "events",
+        "captioning",
+        "software",
+        "stagecaptions",
+        "real-time"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-07T08:01:00Z",
+      "last_seen_at": "2026-02-07T08:01:00Z",
+      "trend_score": 39.58,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "FF Designer",
+      "confidence": 0.8,
+      "impressions": 2820,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "designer",
+        "edit",
+        "generate",
+        "beautiful",
+        "designs",
+        "instantly"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-19T08:01:00Z",
+      "last_seen_at": "2026-02-19T08:01:00Z",
+      "trend_score": 39.36,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Herodot AI",
+      "confidence": 0.8,
+      "impressions": 2804,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "herodot",
+        "travel",
+        "like",
+        "local",
+        "guide",
+        "app"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-31T08:01:00Z",
+      "last_seen_at": "2026-01-31T08:01:00Z",
+      "trend_score": 39.27,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Obi",
+      "confidence": 0.8,
+      "impressions": 2788,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "obi",
+        "every",
+        "real",
+        "runs",
+        "onboarding",
+        "calls"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-06T08:01:00Z",
+      "last_seen_at": "2026-02-06T08:01:00Z",
+      "trend_score": 39.19,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "ClawdTalk",
+      "confidence": 0.8,
+      "impressions": 2764,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "clawdtalk",
+        "clawdbot",
+        "phone",
+        "number",
+        "agent",
+        "call"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-09T08:01:00Z",
+      "last_seen_at": "2026-02-09T08:01:00Z",
+      "trend_score": 39.06,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Doraverses All-in-One AI for Meetings",
+      "confidence": 0.8,
+      "impressions": 2763,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "all-in-one",
+        "meetings",
+        "live",
+        "work",
+        "end",
+        "bot"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-11T08:01:00Z",
+      "last_seen_at": "2026-02-11T08:01:00Z",
+      "trend_score": 39.05,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "ShapedQL",
+      "confidence": 0.8,
+      "impressions": 2752,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "sql",
+        "shapedql",
+        "engine",
+        "search",
+        "feeds",
+        "real-time"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-27T08:01:00Z",
+      "last_seen_at": "2026-01-27T08:01:00Z",
+      "trend_score": 38.99,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Dropstone 3",
+      "confidence": 0.8,
+      "impressions": 2747,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "dropstone",
+        "first",
+        "multiplayer",
+        "code",
+        "share",
+        "chat"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-09T08:01:00Z",
+      "last_seen_at": "2026-02-09T08:01:00Z",
+      "trend_score": 38.96,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "EasyClaw",
+      "confidence": 0.8,
+      "impressions": 2726,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "openclaw",
+        "install",
+        "easyclaw",
+        "easy",
+        "installer",
+        "agents"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-02T08:01:00Z",
+      "last_seen_at": "2026-02-02T08:01:00Z",
+      "trend_score": 38.85,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Sheetsbase",
+      "confidence": 0.8,
+      "impressions": 2712,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "formulas",
+        "sheetsbase",
+        "shortcuts",
+        "google",
+        "sheets",
+        "chrome"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-30T08:01:00Z",
+      "last_seen_at": "2026-01-30T08:01:00Z",
+      "trend_score": 38.77,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Spawned",
+      "confidence": 0.8,
+      "impressions": 2692,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "launch",
+        "like",
+        "spawned",
+        "want",
+        "discover",
+        "single"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-10T08:01:00Z",
+      "last_seen_at": "2026-02-10T08:01:00Z",
+      "trend_score": 38.66,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "nlsh",
+      "confidence": 0.8,
+      "impressions": 2689,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "terminal",
+        "nlsh",
+        "talk",
+        "natural",
+        "language",
+        "interface"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-23T08:01:00Z",
+      "last_seen_at": "2026-01-23T08:01:00Z",
+      "trend_score": 38.65,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Valentine Online",
+      "confidence": 0.8,
+      "impressions": 2682,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "valentine",
+        "online",
+        "surprise",
+        "page",
+        "personalized",
+        "loved"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-14T08:01:00Z",
+      "last_seen_at": "2026-02-14T08:01:00Z",
+      "trend_score": 38.61,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Flixier Generate AI Video in Timeline",
+      "confidence": 0.8,
+      "impressions": 2670,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "generate",
+        "flixier",
+        "video",
+        "timeline",
+        "extend",
+        "connect"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-18T08:01:00Z",
+      "last_seen_at": "2026-02-18T08:01:00Z",
+      "trend_score": 38.54,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Arcmark",
+      "confidence": 0.8,
+      "impressions": 2651,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "browser",
+        "sidebar",
+        "any",
+        "arcmark",
+        "bookmarks",
+        "attached"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-20T08:01:00Z",
+      "last_seen_at": "2026-02-20T08:01:00Z",
+      "trend_score": 38.44,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Relay.app Agents",
+      "confidence": 0.8,
+      "impressions": 2630,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "relay",
+        "app",
+        "agents",
+        "team",
+        "work",
+        "works"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-03T08:01:00Z",
+      "last_seen_at": "2026-02-03T08:01:00Z",
+      "trend_score": 38.33,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Unlimited eSign for founders by Gitlaw",
+      "confidence": 0.8,
+      "impressions": 2622,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "esign",
+        "trials",
+        "sign",
+        "unlimited",
+        "founders",
+        "gitlaw"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-28T08:01:00Z",
+      "last_seen_at": "2026-01-28T08:01:00Z",
+      "trend_score": 38.28,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Edgee",
+      "confidence": 0.8,
+      "impressions": 2597,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "edgee",
+        "tokens",
+        "gateway",
+        "compresses",
+        "prompts",
+        "before"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-12T08:01:00Z",
+      "last_seen_at": "2026-02-12T08:01:00Z",
+      "trend_score": 38.15,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Netlify Capsules",
+      "confidence": 0.8,
+      "impressions": 2552,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "netlify",
+        "capsules",
+        "orbit",
+        "developers",
+        "capsule",
+        "launch"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-22T08:01:00Z",
+      "last_seen_at": "2026-01-22T08:01:00Z",
+      "trend_score": 37.9,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "JDoodle.ai MCP",
+      "confidence": 0.8,
+      "impressions": 2534,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "jdoodle",
+        "chatgpt",
+        "claude",
+        "mcp",
+        "web",
+        "apps"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-16T08:01:00Z",
+      "last_seen_at": "2026-02-16T08:01:00Z",
+      "trend_score": 37.8,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Nexuscale AI",
+      "confidence": 0.8,
+      "impressions": 2524,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "nexuscale",
+        "sales",
+        "assistant",
+        "finds",
+        "leads",
+        "books"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-04T08:01:00Z",
+      "last_seen_at": "2026-02-04T08:01:00Z",
+      "trend_score": 37.75,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Ask Ellie",
+      "confidence": 0.8,
+      "impressions": 2522,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "ask",
+        "ellie",
+        "slack",
+        "github",
+        "jira",
+        "linear"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-02T08:01:00Z",
+      "last_seen_at": "2026-02-02T08:01:00Z",
+      "trend_score": 37.74,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Kimi K2.5",
+      "confidence": 0.8,
+      "impressions": 2517,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "kimi",
+        "model",
+        "agent",
+        "native",
+        "multimodal",
+        "most"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-28T08:01:00Z",
+      "last_seen_at": "2026-01-28T08:01:00Z",
+      "trend_score": 37.71,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "git-lrc",
+      "confidence": 0.8,
+      "impressions": 2514,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "git-lrc",
+        "code",
+        "commit",
+        "without",
+        "free",
+        "unlimited"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-21T08:01:00Z",
+      "last_seen_at": "2026-02-21T08:01:00Z",
+      "trend_score": 37.69,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "keychains.dev",
+      "confidence": 0.8,
+      "impressions": 2492,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "keychains",
+        "credentials",
+        "dev",
+        "access",
+        "curl",
+        "api"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-20T08:01:00Z",
+      "last_seen_at": "2026-02-20T08:01:00Z",
+      "trend_score": 37.57,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "PingPolls v1.0",
+      "confidence": 0.8,
+      "impressions": 2492,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "feel",
+        "pingpolls",
+        "forms",
+        "natural",
+        "like",
+        "chat"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-26T08:01:00Z",
+      "last_seen_at": "2026-01-26T08:01:00Z",
+      "trend_score": 37.57,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Hyoi",
+      "confidence": 0.8,
+      "impressions": 2488,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "drag",
+        "files",
+        "hyoi",
+        "shelf",
+        "when",
+        "magical"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-25T08:01:00Z",
+      "last_seen_at": "2026-01-25T08:01:00Z",
+      "trend_score": 37.55,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Habit Island",
+      "confidence": 0.8,
+      "impressions": 2429,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "island",
+        "habit",
+        "habits",
+        "kingdom",
+        "turns",
+        "daily"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-15T08:01:00Z",
+      "last_seen_at": "2026-02-15T08:01:00Z",
+      "trend_score": 37.23,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Oz by Warp",
+      "confidence": 0.8,
+      "impressions": 2429,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "cloud",
+        "agents",
+        "warp",
+        "hundreds",
+        "run",
+        "parallel"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-11T08:01:00Z",
+      "last_seen_at": "2026-02-11T08:01:00Z",
+      "trend_score": 37.23,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "DubStream by CAMB.AI",
+      "confidence": 0.8,
+      "impressions": 2427,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "dubstream",
+        "camb",
+        "live",
+        "languages",
+        "voice",
+        "dub"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-09T08:01:00Z",
+      "last_seen_at": "2026-02-09T08:01:00Z",
+      "trend_score": 37.22,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Video Forms",
+      "confidence": 0.8,
+      "impressions": 2419,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "video",
+        "forms",
+        "videos",
+        "questions",
+        "embed",
+        "feedback"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-10T08:01:00Z",
+      "last_seen_at": "2026-02-10T08:01:00Z",
+      "trend_score": 37.18,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "ClawMetry for OpenClaw",
+      "confidence": 0.8,
+      "impressions": 2410,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "clawmetry",
+        "openclaw",
+        "real-time",
+        "observability",
+        "dashboard",
+        "agents"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-18T08:01:00Z",
+      "last_seen_at": "2026-02-18T08:01:00Z",
+      "trend_score": 37.13,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Sometimes A Poem Arrives",
+      "confidence": 0.8,
+      "impressions": 2371,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "poetry",
+        "when",
+        "app",
+        "sometimes",
+        "poem",
+        "arrives"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-24T08:01:00Z",
+      "last_seen_at": "2026-01-24T08:01:00Z",
+      "trend_score": 36.91,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Plus AI Presentation Agent",
+      "confidence": 0.8,
+      "impressions": 2352,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "plus",
+        "powerpoint",
+        "slides",
+        "agent",
+        "presentation",
+        "helps"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-15T08:01:00Z",
+      "last_seen_at": "2026-02-15T08:01:00Z",
+      "trend_score": 36.81,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Clippy but on Steroids",
+      "confidence": 0.8,
+      "impressions": 2348,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "local",
+        "clippy",
+        "voice",
+        "but",
+        "steroids",
+        "hey"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-22T08:01:00Z",
+      "last_seen_at": "2026-01-22T08:01:00Z",
+      "trend_score": 36.79,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Atomic Bot",
+      "confidence": 0.8,
+      "impressions": 2340,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "atomic",
+        "bot",
+        "openclaw",
+        "one-click",
+        "macos",
+        "app"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-13T08:01:00Z",
+      "last_seen_at": "2026-02-13T08:01:00Z",
+      "trend_score": 36.75,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "PenguinBot AI",
+      "confidence": 0.8,
+      "impressions": 2340,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "penguinbot",
+        "what",
+        "ai-employee",
+        "working",
+        "action-first",
+        "turns"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-16T08:01:00Z",
+      "last_seen_at": "2026-02-16T08:01:00Z",
+      "trend_score": 36.75,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "VolumeHub",
+      "confidence": 0.8,
+      "impressions": 2332,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "audio",
+        "per-app",
+        "volume",
+        "control",
+        "volumehub",
+        "macos"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-08T08:01:00Z",
+      "last_seen_at": "2026-02-08T08:01:00Z",
+      "trend_score": 36.7,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "MiniMax-M2.5",
+      "confidence": 0.8,
+      "impressions": 2314,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "model",
+        "productivity",
+        "minimax-m2",
+        "first",
+        "open",
+        "beat"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-17T08:01:00Z",
+      "last_seen_at": "2026-02-17T08:01:00Z",
+      "trend_score": 36.6,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Zenflow by Zencoder",
+      "confidence": 0.8,
+      "impressions": 2271,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "zenflow",
+        "specification-driven",
+        "zencoder",
+        "development",
+        "streamlines",
+        "al-first"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-22T08:01:00Z",
+      "last_seen_at": "2026-01-22T08:01:00Z",
+      "trend_score": 36.37,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Guideless",
+      "confidence": 0.8,
+      "impressions": 2271,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "guideless",
+        "guides",
+        "built",
+        "output",
+        "create",
+        "ai-narrated"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-20T08:01:00Z",
+      "last_seen_at": "2026-02-20T08:01:00Z",
+      "trend_score": 36.37,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "CapslockMute",
+      "confidence": 0.8,
+      "impressions": 2253,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "mute",
+        "capslockmute",
+        "fastest",
+        "way",
+        "yourself",
+        "video"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-27T08:01:00Z",
+      "last_seen_at": "2026-01-27T08:01:00Z",
+      "trend_score": 36.27,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Termsy",
+      "confidence": 0.8,
+      "impressions": 2248,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "termsy",
+        "scans",
+        "terms",
+        "conditions",
+        "automatically",
+        "service"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-14T08:01:00Z",
+      "last_seen_at": "2026-02-14T08:01:00Z",
+      "trend_score": 36.24,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Design In The Browser",
+      "confidence": 0.8,
+      "impressions": 2243,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "code",
+        "design",
+        "browser",
+        "point",
+        "click",
+        "change"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-02T08:01:00Z",
+      "last_seen_at": "2026-02-02T08:01:00Z",
+      "trend_score": 36.22,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "GitHub Agent HQ",
+      "confidence": 0.8,
+      "impressions": 2240,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "github",
+        "copilot",
+        "claude",
+        "codex",
+        "code",
+        "agent"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-05T08:01:00Z",
+      "last_seen_at": "2026-02-05T08:01:00Z",
+      "trend_score": 36.2,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Lightfern for Email",
+      "confidence": 0.8,
+      "impressions": 2209,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "lightfern",
+        "finish",
+        "email",
+        "telepathic",
+        "writing",
+        "tool"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-03T08:01:00Z",
+      "last_seen_at": "2026-02-03T08:01:00Z",
+      "trend_score": 36.03,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Youtube Custom Playback",
+      "confidence": 0.8,
+      "impressions": 2175,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "playback",
+        "who",
+        "need",
+        "youtube",
+        "custom",
+        "unlock"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-24T08:01:00Z",
+      "last_seen_at": "2026-01-24T08:01:00Z",
+      "trend_score": 35.85,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Unblocked Code Review",
+      "confidence": 0.8,
+      "impressions": 2176,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "code",
+        "review",
+        "unblocked",
+        "context",
+        "knows",
+        "when"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-04T08:01:00Z",
+      "last_seen_at": "2026-02-04T08:01:00Z",
+      "trend_score": 35.85,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Screentell",
+      "confidence": 0.8,
+      "impressions": 2171,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "screentell",
+        "cinematic",
+        "effects",
+        "simple",
+        "browser",
+        "in-browser"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-26T08:01:00Z",
+      "last_seen_at": "2026-01-26T08:01:00Z",
+      "trend_score": 35.83,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Kids Cash Register",
+      "confidence": 0.8,
+      "impressions": 2169,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "kids",
+        "cash",
+        "register",
+        "pos",
+        "system",
+        "play"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-23T08:01:00Z",
+      "last_seen_at": "2026-01-23T08:01:00Z",
+      "trend_score": 35.81,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Total addressable Market calculator",
+      "confidence": 0.8,
+      "impressions": 2149,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "market",
+        "real",
+        "companies",
+        "total",
+        "addressable",
+        "calculator"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-10T08:01:00Z",
+      "last_seen_at": "2026-02-10T08:01:00Z",
+      "trend_score": 35.71,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Agentic Vision in Gemini",
+      "confidence": 0.8,
+      "impressions": 2144,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "agentic",
+        "vision",
+        "gemini",
+        "visual",
+        "reasoning",
+        "code"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-29T08:01:00Z",
+      "last_seen_at": "2026-01-29T08:01:00Z",
+      "trend_score": 35.68,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "WANotifier",
+      "confidence": 0.8,
+      "impressions": 2122,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "whatsapp",
+        "wanotifier",
+        "all-in-one",
+        "marketing",
+        "automation",
+        "official"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-21T08:01:00Z",
+      "last_seen_at": "2026-02-21T08:01:00Z",
+      "trend_score": 35.56,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Portal",
+      "confidence": 0.8,
+      "impressions": 2107,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "portal",
+        "any",
+        "still",
+        "send",
+        "session",
+        "links"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-02T08:01:00Z",
+      "last_seen_at": "2026-02-02T08:01:00Z",
+      "trend_score": 35.48,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Kipps AI WhatsApp Agent",
+      "confidence": 0.8,
+      "impressions": 2102,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "whatsapp",
+        "kipps",
+        "agent",
+        "turn",
+        "chats",
+        "revenue"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-29T08:01:00Z",
+      "last_seen_at": "2026-01-29T08:01:00Z",
+      "trend_score": 35.45,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Prism Videos",
+      "confidence": 0.8,
+      "impressions": 2100,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "prism",
+        "videos",
+        "generate",
+        "video",
+        "without",
+        "asset"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-21T08:01:00Z",
+      "last_seen_at": "2026-02-21T08:01:00Z",
+      "trend_score": 35.44,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Quash",
+      "confidence": 0.8,
+      "impressions": 2098,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "tests",
+        "quash",
+        "run",
+        "mobile",
+        "scripts",
+        "devices"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-07T08:01:00Z",
+      "last_seen_at": "2026-02-07T08:01:00Z",
+      "trend_score": 35.43,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "One Minute News",
+      "confidence": 0.8,
+      "impressions": 2094,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "what",
+        "they",
+        "one",
+        "minute",
+        "news",
+        "happened"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-08T08:01:00Z",
+      "last_seen_at": "2026-02-08T08:01:00Z",
+      "trend_score": 35.41,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "StoryChief AI Canvas",
+      "confidence": 0.8,
+      "impressions": 2095,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "canvas",
+        "storychief",
+        "marketing",
+        "strategy",
+        "research",
+        "content"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-22T08:01:00Z",
+      "last_seen_at": "2026-01-22T08:01:00Z",
+      "trend_score": 35.41,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Visual Editing by DatoCMS",
+      "confidence": 0.8,
+      "impressions": 2064,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "visual",
+        "editing",
+        "datocms",
+        "headless",
+        "cms",
+        "making"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-12T08:01:00Z",
+      "last_seen_at": "2026-02-12T08:01:00Z",
+      "trend_score": 35.24,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Snap",
+      "confidence": 0.8,
+      "impressions": 2062,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "snap",
+        "floating",
+        "dock",
+        "developers",
+        "cursor",
+        "claude"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-08T08:01:00Z",
+      "last_seen_at": "2026-02-08T08:01:00Z",
+      "trend_score": 35.23,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Prism",
+      "confidence": 0.8,
+      "impressions": 2056,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "prism",
+        "free",
+        "workspace",
+        "scientists",
+        "latex-native",
+        "introducing"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-28T08:01:00Z",
+      "last_seen_at": "2026-01-28T08:01:00Z",
+      "trend_score": 35.2,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Willow on Windows",
+      "confidence": 0.8,
+      "impressions": 2039,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "willow",
+        "write",
+        "windows",
+        "anywhere",
+        "computer",
+        "voice"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-29T08:01:00Z",
+      "last_seen_at": "2026-01-29T08:01:00Z",
+      "trend_score": 35.11,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Archimyst",
+      "confidence": 0.8,
+      "impressions": 2022,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "archimyst",
+        "ai-powered",
+        "platform",
+        "system",
+        "architecture",
+        "design"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-30T08:01:00Z",
+      "last_seen_at": "2026-01-30T08:01:00Z",
+      "trend_score": 35.01,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Alfi",
+      "confidence": 0.8,
+      "impressions": 1997,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "chat",
+        "alfi",
+        "together",
+        "group",
+        "social",
+        "real"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-27T08:01:00Z",
+      "last_seen_at": "2026-01-27T08:01:00Z",
+      "trend_score": 34.88,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Sway",
+      "confidence": 0.8,
+      "impressions": 1997,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "sway",
+        "thoughts",
+        "clear",
+        "speak",
+        "turn",
+        "spoken"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-08T08:01:00Z",
+      "last_seen_at": "2026-02-08T08:01:00Z",
+      "trend_score": 34.88,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Usagebar",
+      "confidence": 0.8,
+      "impressions": 1985,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "claude",
+        "code",
+        "usage",
+        "menu",
+        "bar",
+        "usagebar"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-23T08:01:00Z",
+      "last_seen_at": "2026-01-23T08:01:00Z",
+      "trend_score": 34.81,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "HyNote End-to-End Publish",
+      "confidence": 0.8,
+      "impressions": 1964,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "hynote",
+        "end-to-end",
+        "insights",
+        "second",
+        "brain",
+        "publish"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-03T08:01:00Z",
+      "last_seen_at": "2026-02-03T08:01:00Z",
+      "trend_score": 34.7,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "GPT-5.3-Codex",
+      "confidence": 0.8,
+      "impressions": 1959,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "codex",
+        "computer",
+        "work",
+        "gpt-5",
+        "expanding",
+        "full"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-06T08:01:00Z",
+      "last_seen_at": "2026-02-06T08:01:00Z",
+      "trend_score": 34.67,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Kling 3.0",
+      "confidence": 0.8,
+      "impressions": 1934,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "native",
+        "kling",
+        "output",
+        "extended",
+        "video",
+        "time"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-05T08:01:00Z",
+      "last_seen_at": "2026-02-05T08:01:00Z",
+      "trend_score": 34.53,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "OpenAI Frontier",
+      "confidence": 0.8,
+      "impressions": 1922,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "work",
+        "frontier",
+        "coworkers",
+        "platform",
+        "agents",
+        "openai"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-09T08:01:00Z",
+      "last_seen_at": "2026-02-09T08:01:00Z",
+      "trend_score": 34.47,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "claw.fm",
+      "confidence": 0.8,
+      "impressions": 1921,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "agent",
+        "music",
+        "claw",
+        "give",
+        "openclaw",
+        "career"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-10T08:01:00Z",
+      "last_seen_at": "2026-02-10T08:01:00Z",
+      "trend_score": 34.46,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "NotchPrompt",
+      "confidence": 0.8,
+      "impressions": 1921,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "notchprompt",
+        "invisible",
+        "macbook",
+        "notch",
+        "teleprompter",
+        "lives"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-20T08:01:00Z",
+      "last_seen_at": "2026-02-20T08:01:00Z",
+      "trend_score": 34.46,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "CRML",
+      "confidence": 0.8,
+      "impressions": 1916,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "code",
+        "crml",
+        "risk",
+        "language",
+        "cyber",
+        "simulation"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-09T08:01:00Z",
+      "last_seen_at": "2026-02-09T08:01:00Z",
+      "trend_score": 34.44,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "StoryCV",
+      "confidence": 0.8,
+      "impressions": 1915,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "resume",
+        "storycv",
+        "guided",
+        "write",
+        "interviews",
+        "writes"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-29T08:01:00Z",
+      "last_seen_at": "2026-01-29T08:01:00Z",
+      "trend_score": 34.43,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Reactive Resume v5",
+      "confidence": 0.8,
+      "impressions": 1914,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "resume",
+        "free",
+        "open-source",
+        "builder",
+        "reactive",
+        "simplifies"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-26T08:01:00Z",
+      "last_seen_at": "2026-01-26T08:01:00Z",
+      "trend_score": 34.43,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "JumprAI",
+      "confidence": 0.8,
+      "impressions": 1898,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "youtube",
+        "videos",
+        "search",
+        "jumprai",
+        "moment",
+        "inside"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-11T08:01:00Z",
+      "last_seen_at": "2026-02-11T08:01:00Z",
+      "trend_score": 34.34,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Optibase Beyond AB Testing",
+      "confidence": 0.8,
+      "impressions": 1895,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "optibase",
+        "testing",
+        "run",
+        "what",
+        "beyond",
+        "split"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-02T08:01:00Z",
+      "last_seen_at": "2026-02-02T08:01:00Z",
+      "trend_score": 34.32,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Reavion",
+      "confidence": 0.8,
+      "impressions": 1895,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "reavion",
+        "browser",
+        "outbound",
+        "autonomous",
+        "agents",
+        "gtm"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-01T08:01:00Z",
+      "last_seen_at": "2026-02-01T08:01:00Z",
+      "trend_score": 34.32,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Jotform AI Chatbot for Canva",
+      "confidence": 0.8,
+      "impressions": 1894,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "canva",
+        "chatbot",
+        "jotform",
+        "design",
+        "bring",
+        "designs"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-27T08:01:00Z",
+      "last_seen_at": "2026-01-27T08:01:00Z",
+      "trend_score": 34.32,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Walme Wallet",
+      "confidence": 0.8,
+      "impressions": 1891,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "walme",
+        "wallet",
+        "wallets",
+        "unified",
+        "hub",
+        "web3"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-13T08:01:00Z",
+      "last_seen_at": "2026-02-13T08:01:00Z",
+      "trend_score": 34.3,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Universal-3 Pro",
+      "confidence": 0.8,
+      "impressions": 1876,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "language",
+        "universal-3",
+        "pro",
+        "speech",
+        "model",
+        "first"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-04T08:01:00Z",
+      "last_seen_at": "2026-02-04T08:01:00Z",
+      "trend_score": 34.22,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Macky",
+      "confidence": 0.8,
+      "impressions": 1872,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "connect",
+        "mac",
+        "terminal",
+        "macky",
+        "iphone",
+        "bar"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-21T08:01:00Z",
+      "last_seen_at": "2026-02-21T08:01:00Z",
+      "trend_score": 34.2,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "GLM-5",
+      "confidence": 0.8,
+      "impressions": 1859,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "model",
+        "agentic",
+        "glm-5",
+        "open-weights",
+        "long-horizon",
+        "engineering"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-13T08:01:00Z",
+      "last_seen_at": "2026-02-13T08:01:00Z",
+      "trend_score": 34.13,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Coda by Conductor Quantum",
+      "confidence": 0.8,
+      "impressions": 1859,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "quantum",
+        "coda",
+        "problems",
+        "computing",
+        "natural",
+        "language"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-22T08:01:00Z",
+      "last_seen_at": "2026-01-22T08:01:00Z",
+      "trend_score": 34.13,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Grok Imagine 1.0",
+      "confidence": 0.8,
+      "impressions": 1854,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "video",
+        "grok",
+        "imagine",
+        "never",
+        "been",
+        "easier"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-03T08:01:00Z",
+      "last_seen_at": "2026-02-03T08:01:00Z",
+      "trend_score": 34.1,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Apple Creator Studio",
+      "confidence": 0.8,
+      "impressions": 1836,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "pro",
+        "apple",
+        "apps",
+        "premium",
+        "productivity",
+        "features"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-09T08:01:00Z",
+      "last_seen_at": "2026-02-09T08:01:00Z",
+      "trend_score": 34.0,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Moltweet",
+      "confidence": 0.8,
+      "impressions": 1821,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "moltweet",
+        "agents",
+        "twitter",
+        "world",
+        "first",
+        "agent"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-02T08:01:00Z",
+      "last_seen_at": "2026-02-02T08:01:00Z",
+      "trend_score": 33.92,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Qwen3-TTS",
+      "confidence": 0.8,
+      "impressions": 1819,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "voice",
+        "design",
+        "cloning",
+        "streaming",
+        "qwen3-tts",
+        "family"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-23T08:01:00Z",
+      "last_seen_at": "2026-01-23T08:01:00Z",
+      "trend_score": 33.91,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Analog Reader",
+      "confidence": 0.8,
+      "impressions": 1814,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "analog",
+        "turn",
+        "printable",
+        "newspaper",
+        "internet",
+        "digital"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-27T08:01:00Z",
+      "last_seen_at": "2026-01-27T08:01:00Z",
+      "trend_score": 33.88,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Miro MCP",
+      "confidence": 0.8,
+      "impressions": 1811,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "code",
+        "miro",
+        "visual",
+        "docs",
+        "board",
+        "context"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-05T08:01:00Z",
+      "last_seen_at": "2026-02-05T08:01:00Z",
+      "trend_score": 33.86,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Voice Anywhere",
+      "confidence": 0.8,
+      "impressions": 1809,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "anywhere",
+        "voice",
+        "floating",
+        "mic",
+        "there",
+        "fast"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-02T08:01:00Z",
+      "last_seen_at": "2026-02-02T08:01:00Z",
+      "trend_score": 33.85,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Compressor",
+      "confidence": 0.8,
+      "impressions": 1793,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "compressor",
+        "video",
+        "fastest",
+        "android",
+        "completely",
+        "native"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-01T08:01:00Z",
+      "last_seen_at": "2026-02-01T08:01:00Z",
+      "trend_score": 33.77,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Empirical Health for web",
+      "confidence": 0.8,
+      "impressions": 1783,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "health",
+        "heart",
+        "test",
+        "empirical",
+        "when",
+        "blood"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-18T08:01:00Z",
+      "last_seen_at": "2026-02-18T08:01:00Z",
+      "trend_score": 33.71,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Willow for Developers",
+      "confidence": 0.8,
+      "impressions": 1779,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "dictation",
+        "willow",
+        "developers",
+        "cursor",
+        "ides",
+        "built-in"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-11T08:01:00Z",
+      "last_seen_at": "2026-02-11T08:01:00Z",
+      "trend_score": 33.69,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Scribeist V2",
+      "confidence": 0.8,
+      "impressions": 1773,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "tools",
+        "scribeist",
+        "blog",
+        "research",
+        "writing",
+        "workspaces"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-04T08:01:00Z",
+      "last_seen_at": "2026-02-04T08:01:00Z",
+      "trend_score": 33.66,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Design Rails",
+      "confidence": 0.8,
+      "impressions": 1758,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "get",
+        "agent-ready",
+        "brand",
+        "minutes",
+        "files",
+        "design"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-18T08:01:00Z",
+      "last_seen_at": "2026-02-18T08:01:00Z",
+      "trend_score": 33.58,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Vela",
+      "confidence": 0.8,
+      "impressions": 1751,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "vela",
+        "scheduling",
+        "works",
+        "way",
+        "great",
+        "does"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-17T08:01:00Z",
+      "last_seen_at": "2026-02-17T08:01:00Z",
+      "trend_score": 33.54,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Model Council in Perplexity",
+      "confidence": 0.8,
+      "impressions": 1745,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "council",
+        "model",
+        "models",
+        "perplexity",
+        "consult",
+        "multiple"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-06T08:01:00Z",
+      "last_seen_at": "2026-02-06T08:01:00Z",
+      "trend_score": 33.51,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Product Front",
+      "confidence": 0.8,
+      "impressions": 1738,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "front",
+        "discovery",
+        "getting",
+        "users",
+        "place",
+        "get"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-13T08:01:00Z",
+      "last_seen_at": "2026-02-13T08:01:00Z",
+      "trend_score": 33.47,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "OpenGraph+",
+      "confidence": 0.8,
+      "impressions": 1737,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "images",
+        "opengraph+",
+        "open",
+        "graph",
+        "every",
+        "page"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-17T08:01:00Z",
+      "last_seen_at": "2026-02-17T08:01:00Z",
+      "trend_score": 33.46,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Logo Link by Brand.dev",
+      "confidence": 0.8,
+      "impressions": 1733,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "logo",
+        "brand",
+        "api",
+        "link",
+        "dev",
+        "display"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-03T08:01:00Z",
+      "last_seen_at": "2026-02-03T08:01:00Z",
+      "trend_score": 33.44,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "PinMe",
+      "confidence": 0.8,
+      "impressions": 1731,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "pinme",
+        "deployment",
+        "sites",
+        "deploy",
+        "zero-config",
+        "frontend"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-07T08:01:00Z",
+      "last_seen_at": "2026-02-07T08:01:00Z",
+      "trend_score": 33.43,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Overlead",
+      "confidence": 0.8,
+      "impressions": 1726,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "overlead",
+        "asking",
+        "literally",
+        "threads",
+        "where",
+        "find"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-06T08:01:00Z",
+      "last_seen_at": "2026-02-06T08:01:00Z",
+      "trend_score": 33.4,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Meteorite",
+      "confidence": 0.8,
+      "impressions": 1724,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "minimal",
+        "menu",
+        "bar",
+        "notetaker",
+        "macos",
+        "meteorite"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-16T08:01:00Z",
+      "last_seen_at": "2026-02-16T08:01:00Z",
+      "trend_score": 33.39,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Kollect Voice Agent",
+      "confidence": 0.8,
+      "impressions": 1723,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "kollect",
+        "forms",
+        "voice",
+        "agent",
+        "feels",
+        "human"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-19T08:01:00Z",
+      "last_seen_at": "2026-02-19T08:01:00Z",
+      "trend_score": 33.39,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Runo 2.0",
+      "confidence": 0.8,
+      "impressions": 1721,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "cadence",
+        "runo",
+        "app",
+        "running",
+        "pace",
+        "runners"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-27T08:01:00Z",
+      "last_seen_at": "2026-01-27T08:01:00Z",
+      "trend_score": 33.37,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Marketing Agents Squad",
+      "confidence": 0.8,
+      "impressions": 1719,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "marketing",
+        "agents",
+        "squad",
+        "agent",
+        "find",
+        "delegate"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-16T08:01:00Z",
+      "last_seen_at": "2026-02-16T08:01:00Z",
+      "trend_score": 33.36,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Sheetful",
+      "confidence": 0.8,
+      "impressions": 1717,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "rest",
+        "google",
+        "sheets",
+        "free",
+        "get",
+        "sheetful"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-04T08:01:00Z",
+      "last_seen_at": "2026-02-04T08:01:00Z",
+      "trend_score": 33.35,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Liquid Timer v2",
+      "confidence": 0.8,
+      "impressions": 1706,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "timer",
+        "liquid",
+        "new",
+        "our",
+        "style",
+        "styles"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-25T08:01:00Z",
+      "last_seen_at": "2026-01-25T08:01:00Z",
+      "trend_score": 33.29,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Sunday",
+      "confidence": 0.8,
+      "impressions": 1690,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "sunday",
+        "get",
+        "reading",
+        "beautiful",
+        "way",
+        "save"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-08T08:01:00Z",
+      "last_seen_at": "2026-02-08T08:01:00Z",
+      "trend_score": 33.21,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Superagent from Airtable",
+      "confidence": 0.8,
+      "impressions": 1687,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "superagent",
+        "delivers",
+        "work",
+        "like",
+        "airtable",
+        "multi-agent"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-30T08:01:00Z",
+      "last_seen_at": "2026-01-30T08:01:00Z",
+      "trend_score": 33.19,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Calendarly",
+      "confidence": 0.8,
+      "impressions": 1668,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "calendarly",
+        "calendar",
+        "live",
+        "lock",
+        "screen",
+        "wallpaper"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-18T08:01:00Z",
+      "last_seen_at": "2026-02-18T08:01:00Z",
+      "trend_score": 33.09,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Agent Bar",
+      "confidence": 0.8,
+      "impressions": 1664,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "bar",
+        "agent",
+        "claude",
+        "code",
+        "menu",
+        "run"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-16T08:01:00Z",
+      "last_seen_at": "2026-02-16T08:01:00Z",
+      "trend_score": 33.06,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "HeyTraders",
+      "confidence": 0.8,
+      "impressions": 1652,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "heytraders",
+        "personal",
+        "quant",
+        "research",
+        "natural",
+        "language"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-26T08:01:00Z",
+      "last_seen_at": "2026-01-26T08:01:00Z",
+      "trend_score": 33.0,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Enough Cream",
+      "confidence": 0.8,
+      "impressions": 1651,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "cream",
+        "coffee",
+        "enough",
+        "perfect",
+        "every",
+        "time"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-16T08:01:00Z",
+      "last_seen_at": "2026-02-16T08:01:00Z",
+      "trend_score": 32.99,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Lost Post",
+      "confidence": 0.8,
+      "impressions": 1651,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "world",
+        "whole",
+        "answers",
+        "question",
+        "day",
+        "every"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-30T08:01:00Z",
+      "last_seen_at": "2026-01-30T08:01:00Z",
+      "trend_score": 32.99,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Evra",
+      "confidence": 0.8,
+      "impressions": 1646,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "therapy",
+        "evra",
+        "talk",
+        "gen",
+        "mental",
+        "support"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-10T08:01:00Z",
+      "last_seen_at": "2026-02-10T08:01:00Z",
+      "trend_score": 32.97,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Scout Program",
+      "confidence": 0.8,
+      "impressions": 1645,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "public",
+        "scout",
+        "program",
+        "early-stage",
+        "prove",
+        "each"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-12T08:01:00Z",
+      "last_seen_at": "2026-02-12T08:01:00Z",
+      "trend_score": 32.96,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Whats in that direction",
+      "confidence": 0.8,
+      "impressions": 1640,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "direction",
+        "compass",
+        "shows",
+        "sunrise",
+        "sunset",
+        "fun"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-28T08:01:00Z",
+      "last_seen_at": "2026-01-28T08:01:00Z",
+      "trend_score": 32.93,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "DestMate",
+      "confidence": 0.8,
+      "impressions": 1637,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "alarm",
+        "destmate",
+        "location",
+        "wake-up",
+        "earphone-only",
+        "sound"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-31T08:01:00Z",
+      "last_seen_at": "2026-01-31T08:01:00Z",
+      "trend_score": 32.92,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Visla AI Director Mode",
+      "confidence": 0.8,
+      "impressions": 1625,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "visla",
+        "video",
+        "scene",
+        "director",
+        "mode",
+        "storyboard"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-12T08:01:00Z",
+      "last_seen_at": "2026-02-12T08:01:00Z",
+      "trend_score": 32.85,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "chowder.dev",
+      "confidence": 0.8,
+      "impressions": 1617,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "api",
+        "chowder",
+        "single",
+        "openclaw",
+        "instances",
+        "manage"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-16T08:01:00Z",
+      "last_seen_at": "2026-02-16T08:01:00Z",
+      "trend_score": 32.81,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Hyta",
+      "confidence": 0.8,
+      "impressions": 1608,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "hyta",
+        "talent",
+        "training",
+        "building",
+        "scaling",
+        "breakthrough"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-01T08:01:00Z",
+      "last_seen_at": "2026-02-01T08:01:00Z",
+      "trend_score": 32.76,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Doclific",
+      "confidence": 0.8,
+      "impressions": 1603,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "docs",
+        "doclific",
+        "documentation",
+        "code",
+        "live",
+        "drift"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-22T08:01:00Z",
+      "last_seen_at": "2026-01-22T08:01:00Z",
+      "trend_score": 32.73,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Typeletter",
+      "confidence": 0.8,
+      "impressions": 1588,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "typeletter",
+        "turn",
+        "browser",
+        "cozy",
+        "nostalgic",
+        "writing"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-13T08:01:00Z",
+      "last_seen_at": "2026-02-13T08:01:00Z",
+      "trend_score": 32.65,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Sylvian AI Forms",
+      "confidence": 0.8,
+      "impressions": 1581,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "sylvian",
+        "fill",
+        "form",
+        "forms",
+        "pdf",
+        "never"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-05T08:01:00Z",
+      "last_seen_at": "2026-02-05T08:01:00Z",
+      "trend_score": 32.61,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "claude-devtools",
+      "confidence": 0.8,
+      "impressions": 1579,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "every",
+        "claude",
+        "code",
+        "claude-devtools",
+        "everything",
+        "hides"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-17T08:01:00Z",
+      "last_seen_at": "2026-02-17T08:01:00Z",
+      "trend_score": 32.6,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Doctective",
+      "confidence": 0.8,
+      "impressions": 1577,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "documentation",
+        "doctective",
+        "stop",
+        "updating",
+        "accurately",
+        "install"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-26T08:01:00Z",
+      "last_seen_at": "2026-01-26T08:01:00Z",
+      "trend_score": 32.59,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Polyglotta",
+      "confidence": 0.8,
+      "impressions": 1571,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "learn",
+        "language",
+        "polyglotta",
+        "translate",
+        "many",
+        "languages"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-01-28T08:01:00Z",
+      "last_seen_at": "2026-01-28T08:01:00Z",
+      "trend_score": 32.56,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "FocalRead",
+      "confidence": 0.8,
+      "impressions": 1569,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "focalread",
+        "articles",
+        "threads",
+        "speed",
+        "reading",
+        "read"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-12T08:01:00Z",
+      "last_seen_at": "2026-02-12T08:01:00Z",
+      "trend_score": 32.55,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Heuris",
+      "confidence": 0.8,
+      "impressions": 1568,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "heuris",
+        "wikipedia",
+        "people",
+        "learn",
+        "history",
+        "claude"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-03T08:01:00Z",
+      "last_seen_at": "2026-02-03T08:01:00Z",
+      "trend_score": 32.54,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Menta",
+      "confidence": 0.8,
+      "impressions": 1509,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "menta",
+        "administrative",
+        "software",
+        "runs",
+        "clinic",
+        "admin"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-02T08:01:00Z",
+      "last_seen_at": "2026-02-02T08:01:00Z",
+      "trend_score": 32.22,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    },
+    {
+      "entity": "Postproxy",
+      "confidence": 0.8,
+      "impressions": 1500,
+      "posts": 1,
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "sources": [
+        "producthunt"
+      ],
+      "source_counts": {
+        "producthunt": 1
+      },
+      "top_keywords": [
+        "postproxy",
+        "one",
+        "api",
+        "publish",
+        "instagram",
+        "tiktok"
+      ],
+      "evidence_count": 1,
+      "quality_signals": [
+        "post_name",
+        "votes_threshold"
+      ],
+      "first_seen_at": "2026-02-04T08:01:00Z",
+      "last_seen_at": "2026-02-04T08:01:00Z",
+      "trend_score": 32.17,
+      "velocity_delta_pct": 0.0,
+      "spike_detected": false
+    }
+  ]
 }

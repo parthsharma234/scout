@@ -21,6 +21,11 @@ import urllib.request
 from pathlib import Path
 from typing import Any
 
+try:
+    from config import load_env_file as shared_load_env_file
+except ModuleNotFoundError:
+    from backend.config import load_env_file as shared_load_env_file  # type: ignore
+
 
 ALIAS_MAP: dict[str, list[str]] = {
     "protein_folding": [
@@ -54,17 +59,7 @@ QUERY_STOPWORDS = {
 
 
 def load_env_file(path: Path = Path(".env")) -> None:
-    if not path.exists():
-        return
-    for raw_line in path.read_text(encoding="utf-8").splitlines():
-        line = raw_line.strip()
-        if not line or line.startswith("#") or "=" not in line:
-            continue
-        key, value = line.split("=", 1)
-        key = key.strip()
-        value = value.strip().strip('"').strip("'")
-        if key and key not in os.environ:
-            os.environ[key] = value
+    shared_load_env_file(path)
 
 
 def normalize_token(value: str) -> str:
@@ -230,6 +225,40 @@ def tool_search_index(query: str, entities: list[dict[str, Any]], limit: int) ->
     return scored[:limit]
 
 
+def _build_retrieval_context(query: str, candidates: list[dict[str, Any]], max_chunks: int = 36) -> list[dict[str, Any]]:
+    chunks: list[dict[str, Any]] = []
+    for rank, item in enumerate(candidates[:16], start=1):
+        entity = item.get("entity") or {}
+        entity_name = str(entity.get("entity") or "")
+        if not entity_name:
+            continue
+        top_keywords = [str(token) for token in (entity.get("top_keywords") or [])[:8] if str(token).strip()]
+        nodes = entity.get("top_nodes") or []
+        for idx, node in enumerate(nodes[:3], start=1):
+            headline = str(node.get("headline") or "").strip()
+            summary = str(node.get("summary") or "").strip()
+            url = str(node.get("url") or "").strip()
+            source_id = str(node.get("source_id") or "").strip()
+            if not headline and not summary:
+                continue
+            text_parts = [part for part in [headline, summary] if part]
+            text = " ".join(text_parts)[:420]
+            chunks.append(
+                {
+                    "entity": entity_name,
+                    "candidate_rank": rank,
+                    "node_rank": idx,
+                    "source": source_id,
+                    "keywords": top_keywords,
+                    "url": url,
+                    "text": text,
+                }
+            )
+            if len(chunks) >= max_chunks:
+                return chunks
+    return chunks
+
+
 def call_openrouter_nemotron(query: str, candidates: list[dict[str, Any]], timeout_seconds: int = 40) -> dict[str, Any]:
     api_key = os.getenv("OPENROUTER_API_KEY", "").strip()
     if not api_key:
@@ -262,6 +291,8 @@ def call_openrouter_nemotron(query: str, candidates: list[dict[str, Any]], timeo
             }
         )
 
+    retrieval_context = _build_retrieval_context(query=query, candidates=candidates)
+
     system_prompt = (
         "You are a VC intelligence ranking assistant. "
         "Classify each candidate into entity_type and score relevance to the niche query. "
@@ -282,7 +313,9 @@ def call_openrouter_nemotron(query: str, candidates: list[dict[str, Any]], timeo
             "Set include=true only if relevant to the query niche.",
             "relevance_score must be 0-100.",
             "Do not invent URLs.",
+            "Use retrieval_context as grounding evidence before deciding relevance.",
         ],
+        "retrieval_context": retrieval_context,
         "candidates": condensed,
         "output_schema": {
             "results": [
@@ -353,6 +386,7 @@ def combine_scores(
             if key:
                 llm_map[key] = row
 
+    lexical_max = max((float(item.get("lexical_score") or 0.0) for item in candidates), default=1.0)
     output: list[dict[str, Any]] = []
     for item in candidates:
         entity = item["entity"]
@@ -364,7 +398,13 @@ def combine_scores(
         reason = str(llm.get("reason") or "")
 
         lexical = float(item.get("lexical_score") or 0.0)
-        final_score = round(lexical * 0.5 + relevance * 0.5, 3) if llm else lexical
+        lexical_norm = 100.0 * lexical / max(1.0, lexical_max)
+        momentum = float(entity.get("momentum_score") or entity.get("trend_score") or 0.0)
+        final_score = (
+            round(lexical_norm * 0.3 + relevance * 0.55 + momentum * 0.15, 3)
+            if llm
+            else round(lexical_norm * 0.7 + momentum * 0.3, 3)
+        )
         if llm and not include:
             final_score *= 0.5
 
@@ -374,6 +414,7 @@ def combine_scores(
                 "entity": entity.get("entity"),
                 "final_score": final_score,
                 "lexical_score": lexical,
+                "lexical_score_norm": round(lexical_norm, 3),
                 "relevance_score": relevance if llm else None,
                 "entity_type": entity_type,
                 "include": include,
@@ -381,7 +422,17 @@ def combine_scores(
                 "sources": entity.get("sources") or [],
                 "top_keywords": entity.get("top_keywords") or [],
                 "trend_score": entity.get("trend_score"),
+                "momentum_score": momentum,
                 "confidence": entity.get("confidence"),
+                "is_known_incumbent": bool(entity.get("is_known_incumbent")),
+                "first_seen_at": entity.get("first_seen_at"),
+                "last_seen_at": entity.get("last_seen_at"),
+                "activity_last_30d": entity.get("activity_last_30d"),
+                "source_counts": entity.get("source_counts") or {},
+                "source_interactions": entity.get("source_interactions") or {},
+                "mention_count_1h": entity.get("mention_count_1h") or 0,
+                "mention_count_24h": entity.get("mention_count_24h") or 0,
+                "spike_detected": bool(entity.get("spike_detected")),
                 "top_nodes": entity.get("top_nodes") or [],
             }
         )

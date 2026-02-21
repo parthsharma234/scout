@@ -2,16 +2,23 @@ import { useMemo } from 'react'
 import './TrendLeaderboard.css'
 
 const CAT_COLORS = {
-  'OpenAI': '#3b82f6', 'Anthropic': '#3b82f6', 'Mistral AI': '#3b82f6',
-  'Cursor': '#38bdf8', 'Groq': '#3b82f6', 'Runway': '#f472b6',
-  'Perplexity': '#3b82f6', 'Scale AI': '#3b82f6', 'Databricks': '#3b82f6',
-  'Stripe': '#fbbf24', 'Vercel': '#38bdf8', 'Supabase': '#38bdf8',
-  'Linear': '#38bdf8', 'Replit': '#38bdf8', 'Warp': '#38bdf8',
-  'Anduril': '#4ade80', 'SpaceX': '#4ade80', 'Figma': '#38bdf8',
-  'Notion': '#38bdf8', 'Rippling': '#fbbf24', 'Cohere': '#3b82f6',
-  'Plaid': '#fbbf24', 'Ramp': '#fbbf24', 'Cloudflare': '#38bdf8',
-  'ElevenLabs': '#3b82f6', 'Neon': '#38bdf8', 'Resend': '#38bdf8',
-  'Midjourney': '#f472b6', 'Hugging Face': '#3b82f6', 'Together AI': '#3b82f6',
+  OpenAI: '#3b82f6', Anthropic: '#3b82f6', 'Mistral AI': '#3b82f6',
+  Cursor: '#38bdf8', Groq: '#3b82f6', Runway: '#f472b6',
+  Perplexity: '#3b82f6', 'Scale AI': '#3b82f6', Databricks: '#3b82f6',
+  Stripe: '#fbbf24', Vercel: '#38bdf8', Supabase: '#38bdf8',
+  Linear: '#38bdf8', Replit: '#38bdf8', Warp: '#38bdf8',
+  Anduril: '#4ade80', SpaceX: '#4ade80', Figma: '#38bdf8',
+  Notion: '#38bdf8', Rippling: '#fbbf24', Cohere: '#3b82f6',
+  Plaid: '#fbbf24', Ramp: '#fbbf24', Cloudflare: '#38bdf8',
+  ElevenLabs: '#3b82f6', Neon: '#38bdf8', Resend: '#38bdf8',
+  Midjourney: '#f472b6', 'Hugging Face': '#3b82f6', 'Together AI': '#3b82f6',
+}
+
+function formatDate(value) {
+  if (!value) return '-'
+  const date = new Date(value)
+  if (Number.isNaN(date.getTime())) return '-'
+  return date.toLocaleDateString(undefined, { month: 'short', day: 'numeric' })
 }
 
 export default function TrendLeaderboard({
@@ -50,6 +57,8 @@ export default function TrendLeaderboard({
         <div className="lb-table-head">
           <span className="lb-th lb-th--rank">#</span>
           <span className="lb-th lb-th--name">Entity</span>
+          <span className="lb-th lb-th--mentions">First Seen</span>
+          <span className="lb-th lb-th--mentions">Last Seen</span>
           <span className="lb-th lb-th--mentions">Mentions/h</span>
           <span className="lb-th lb-th--sources">Sources</span>
           <span className="lb-th lb-th--score">Score</span>
@@ -79,20 +88,16 @@ export default function TrendLeaderboard({
                 className={`lb-table-row ${isActive ? 'lb-table-row--active' : ''}`}
                 onClick={() => onSelectEntity?.(entity.entity)}
               >
-                <span className="lb-td lb-td--rank mono">
-                  {String(index + 1).padStart(2, '0')}
-                </span>
+                <span className="lb-td lb-td--rank mono">{String(index + 1).padStart(2, '0')}</span>
                 <span className="lb-td lb-td--name">
                   <span className="lb-dot" style={{ background: color }} />
                   <span className="lb-entity-name">{entity.entity}</span>
                   {spike && <span className="lb-spike" />}
                 </span>
-                <span className="lb-td lb-td--mentions mono">
-                  {entity.mention_count_1h ?? '—'}
-                </span>
-                <span className="lb-td lb-td--sources mono">
-                  {entity.sources?.length ?? '—'}
-                </span>
+                <span className="lb-td lb-td--mentions mono">{formatDate(entity.first_seen_at)}</span>
+                <span className="lb-td lb-td--mentions mono">{formatDate(entity.last_seen_at)}</span>
+                <span className="lb-td lb-td--mentions mono">{entity.mention_count_1h ?? '-'}</span>
+                <span className="lb-td lb-td--sources mono">{entity.sources?.length ?? '-'}</span>
                 <span className="lb-td lb-td--score">
                   <span className="lb-score-bar-track">
                     <span className="lb-score-bar" style={{ width: `${barWidth}%`, background: color }} />
@@ -121,3 +126,4 @@ export default function TrendLeaderboard({
     </section>
   )
 }
+

@@ -8,6 +8,7 @@ const SOURCE_COLORS = {
   twitter: { fill: '#5bc7ff', bg: 'rgba(91,199,255,0.15)' },
   techcrunch: { fill: '#37d67a', bg: 'rgba(55,214,122,0.15)' },
   producthunt: { fill: '#ff9865', bg: 'rgba(255,152,101,0.15)' },
+  web_enriched: { fill: '#22c55e', bg: 'rgba(34,197,94,0.15)' },
 }
 
 function engagementScore(node) {
@@ -28,7 +29,7 @@ function clamp(v, min, max) {
 }
 
 function shortSource(sourceId) {
-  const map = { hackernews: 'HN', github: 'GH', reddit: 'RD', twitter: 'X', techcrunch: 'TC', producthunt: 'PH' }
+  const map = { hackernews: 'HN', github: 'GH', reddit: 'RD', twitter: 'X', techcrunch: 'TC', producthunt: 'PH', web_enriched: 'WEB' }
   return map[sourceId] ?? 'SRC'
 }
 
