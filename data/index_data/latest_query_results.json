@@ -1,8 +1,174 @@
 {
   "_meta": {
     "description": "Latest niche query results from Scout tool pipeline",
-    "query": "pilots"
+    "query": "mail"
   },
-  "result_count": 0,
-  "results": []
+  "result_count": 4,
+  "results": [
+    {
+      "entity_key": "emailmarketingskill",
+      "entity": "Emailmarketingskill",
+      "final_score": 53.438,
+      "lexical_score": 53.438,
+      "relevance_score": null,
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "hackernews"
+      ],
+      "top_keywords": [
+        "email",
+        "skill",
+        "data",
+        "can",
+        "claude",
+        "bible"
+      ],
+      "trend_score": 11.73,
+      "confidence": 0.87,
+      "top_nodes": [
+        {
+          "id": "hn-47096335-emailmarketingskill",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: I built a 55K-word email marketing knowledge base and Claude Code skill",
+          "url": "https://www.emailmarketingskill.com/",
+          "summary": "I co-founded SmartrMail (email marketing SaaS, 12K ecommerce customers, acquired 2022). When I left, I no longer had access to the sending data I'd spent years learning from, billions of sent emails, deliverability patterns, things that actually move email engagement Cos' I don't",
+          "interactions": 13,
+          "views": 174,
+          "impressions": 174,
+          "published_at": "2026-02-21T01:08:21+00:00",
+          "confidence": 0.87
+        }
+      ]
+    },
+    {
+      "entity_key": "mephistomail",
+      "entity": "MephistoMail",
+      "final_score": 53.028,
+      "lexical_score": 53.028,
+      "relevance_score": null,
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "hackernews"
+      ],
+      "top_keywords": [
+        "mephistomail",
+        "mail",
+        "ram-only",
+        "client",
+        "https",
+        "tracker-free"
+      ],
+      "trend_score": 10.35,
+      "confidence": 0.72,
+      "top_nodes": [
+        {
+          "id": "hn-47096177-mephistomail",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: MephistoMail – A RAM-only, tracker-free disposable email client",
+          "url": "https://news.ycombinator.com/item?id=47096177",
+          "summary": "Hi HN, I got frustrated with the current landscape of 10-minute mail services. They are often full of ads, Google Analytics trackers, and clunky interfaces—completely defeating the purpose of a \"privacy\" tool. I built MephistoMail as a clean, RAM-only frontend alternative. It use",
+          "interactions": 3,
+          "views": 118,
+          "impressions": 118,
+          "published_at": "2026-02-21T00:46:00+00:00",
+          "confidence": 0.47
+        },
+        {
+          "id": "hn-47096170-mephistomail",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: MephistoMail – A RAM-only, tracker-free disposable email client",
+          "url": "https://mephistomail.site?1",
+          "summary": "Hi HN, I got frustrated with the current landscape of 10-minute mail services. They are often full of ads, Google Analytics trackers, and clunky interfaces--completely defeating the purpose of a \"privacy\" tool. I built MephistoMail as a clean, RAM-only frontend alternative. It us",
+          "interactions": 2,
+          "views": 112,
+          "impressions": 112,
+          "published_at": "2026-02-21T00:44:55+00:00",
+          "confidence": 0.87
+        }
+      ]
+    },
+    {
+      "entity_key": "openmailcli",
+      "entity": "Open Mail Cli",
+      "final_score": 49.029,
+      "lexical_score": 49.029,
+      "relevance_score": null,
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "github"
+      ],
+      "top_keywords": [
+        "email",
+        "for",
+        "agents",
+        "agent",
+        "email-cli",
+        "imap"
+      ],
+      "trend_score": 5.36,
+      "confidence": 0.41,
+      "top_nodes": [
+        {
+          "id": "github-1152589585-open-mail-cli",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "eric8810/open-mail-cli",
+          "url": "https://github.com/eric8810/open-mail-cli",
+          "summary": "Open Mail CLI is a complete local email infrastructure specifically designed for AI agents and automation tools. It provides a reliable, programmatic interface for email operations that AI agents can use autonomously",
+          "interactions": 12,
+          "views": 114,
+          "impressions": 114,
+          "published_at": "2026-02-12T07:12:40Z",
+          "confidence": 0.41
+        }
+      ]
+    },
+    {
+      "entity_key": "velo",
+      "entity": "Velo",
+      "final_score": 21.722,
+      "lexical_score": 21.722,
+      "relevance_score": null,
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "hackernews"
+      ],
+      "top_keywords": [
+        "velo",
+        "tauri",
+        "search",
+        "inbox",
+        "email",
+        "client"
+      ],
+      "trend_score": 6.53,
+      "confidence": 0.47,
+      "top_nodes": [
+        {
+          "id": "hn-47096524-velo",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Velo – Open-source, keyboard-first email client in Tauri and Rust",
+          "url": "https://news.ycombinator.com/item?id=47096524",
+          "summary": "I built Velo because I wanted Superhuman's speed and keyboard workflow without the $30/month price tag or sending all my data through someone else's servers. Velo is a local-first desktop email client. Your emails live in a local SQLite database - no middleman servers, no cloud s",
+          "interactions": 3,
+          "views": 119,
+          "impressions": 119,
+          "published_at": "2026-02-21T01:34:10+00:00",
+          "confidence": 0.47
+        }
+      ]
+    }
+  ]
 }

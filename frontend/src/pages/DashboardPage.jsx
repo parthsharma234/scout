@@ -27,6 +27,19 @@ function normalizeScores(values = []) {
   return values.map((value) => ((value - low) / (high - low)) * 100)
 }
 
+function effectiveMentionsPerHour(row) {
+  const m1h = Number(row?.mention_count_1h || 0)
+  if (m1h > 0) return m1h
+  const m24h = Number(row?.mention_count_24h || 0)
+  if (m24h > 0) return Number((m24h / 24).toFixed(1))
+  const sourceCounts = row?.source_counts
+  if (sourceCounts && typeof sourceCounts === 'object') {
+    const total = Object.values(sourceCounts).reduce((acc, value) => acc + Number(value || 0), 0)
+    if (total > 0) return Number((total / 24).toFixed(1))
+  }
+  return 0
+}
+
 function applyLeaderboardMode(inputRows = [], leaderboardMode = 'global_prominence') {
   const mode = leaderboardMode === 'niche_opportunity' ? 'niche_opportunity' : 'global_prominence'
   const rows = (Array.isArray(inputRows) ? inputRows : []).map((row) => {
@@ -59,11 +72,14 @@ function applyLeaderboardMode(inputRows = [], leaderboardMode = 'global_prominen
   const enriched = rows.map((row, idx) => {
     const globalScore = Number((globalNorm[idx] ?? 0).toFixed(2))
     const nicheScore = Number((nicheNorm[idx] ?? 0).toFixed(2))
+    const softenedGlobal = globalScore > 0 ? Number((20 + globalScore * 0.8).toFixed(2)) : 0
+    const softenedNiche = nicheScore > 0 ? Number((20 + nicheScore * 0.8).toFixed(2)) : 0
     return {
       ...row,
-      global_prominence_score: globalScore,
-      niche_opportunity_score: nicheScore,
-      trend_score: mode === 'niche_opportunity' ? nicheScore : globalScore,
+      global_prominence_score: softenedGlobal,
+      niche_opportunity_score: softenedNiche,
+      trend_score: mode === 'niche_opportunity' ? softenedNiche : softenedGlobal,
+      mention_count_1h: effectiveMentionsPerHour(row),
       leaderboard_mode: mode,
     }
   })
@@ -114,11 +130,23 @@ export default function DashboardPage() {
   )
 
   const sources = wsSources.length > 0 ? wsSources : mock.sources
+  const selectedTrend = trends.find((item) => normalizeEntityKey(item.entity) === normalizeEntityKey(drilledEntity))
 
   const sourceNodesForEntity = useMemo(() => {
     if (!drilledEntity) return []
     const drilledKey = normalizeEntityKey(drilledEntity)
-    const fromData = mock.sourceNodes.filter((node) => normalizeEntityKey(node.entity) === drilledKey)
+    const aliasKeys = new Set([drilledKey])
+    if (selectedTrend) {
+      ;(selectedTrend.aliases || []).forEach((alias) => aliasKeys.add(normalizeEntityKey(alias)))
+      ;(selectedTrend.source_entity_rows || []).forEach((row) => aliasKeys.add(normalizeEntityKey(row?.entity)))
+    }
+    const fromData = mock.sourceNodes.filter((node) => {
+      const nodeKey = normalizeEntityKey(node.entity)
+      if (!nodeKey) return false
+      if (aliasKeys.has(nodeKey)) return true
+      if (drilledKey.length >= 5 && (nodeKey.includes(drilledKey) || drilledKey.includes(nodeKey))) return true
+      return false
+    })
     const fromNiche = nicheResults
       .find((row) => normalizeEntityKey(row.entity) === drilledKey)
       ?.top_nodes ?? []
@@ -136,14 +164,19 @@ export default function DashboardPage() {
     }))
 
     const combined = [...fromData, ...normalizedNicheNodes]
-    const deduped = Array.from(new Map(combined.map((node) => [node.id, node])).values())
+    const deduped = Array.from(
+      new Map(
+        combined.map((node) => [
+          node.id || `${node.source_id}-${normalizeEntityKey(node.entity)}-${node.url || ''}`,
+          node,
+        ]),
+      ).values(),
+    )
 
     return deduped
       .sort((a, b) => scoreNode(b) - scoreNode(a))
       .slice(0, 20)
-  }, [mock.sourceNodes, nicheResults, drilledEntity])
-
-  const selectedTrend = trends.find((item) => normalizeEntityKey(item.entity) === normalizeEntityKey(drilledEntity))
+  }, [mock.sourceNodes, nicheResults, drilledEntity, selectedTrend])
   const isLoading = trendsLoading && !connected && mock.loading
 
   function handleSelectEntity(entity) {

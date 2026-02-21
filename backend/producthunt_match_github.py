@@ -135,6 +135,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--producthunt-nodes", type=Path, default=Path("data/producthunt_data/producthunt_source_nodes.json"))
     parser.add_argument("--out-dir", type=Path, default=Path("data/final_entity"))
     parser.add_argument("--min-match-score", type=float, default=0.8)
+    parser.add_argument(
+        "--allow-empty-sources",
+        type=str,
+        default="",
+        help="Comma-separated source ids allowed to be empty (e.g. producthunt).",
+    )
     return parser.parse_args()
 
 
@@ -260,10 +266,31 @@ def main() -> None:
     args = parse_args()
     started_at = now_iso()
 
+    allowed_empty_sources = {
+        part.strip().lower()
+        for part in str(args.allow_empty_sources or "").split(",")
+        if part.strip()
+    }
+
+    source_mentions = {
+        "github": load_mentions(args.github_entities, "github"),
+        "hackernews": load_mentions(args.hn_entities, "hackernews"),
+        "producthunt": load_mentions(args.producthunt_entities, "producthunt"),
+    }
+    for source_id, rows in source_mentions.items():
+        if rows:
+            continue
+        if source_id in allowed_empty_sources:
+            continue
+        raise RuntimeError(
+            f"Input source '{source_id}' has 0 entities. "
+            f"Fix upstream scrape/transform or pass --allow-empty-sources {source_id} to bypass."
+        )
+
     mentions = [
-        *load_mentions(args.github_entities, "github"),
-        *load_mentions(args.hn_entities, "hackernews"),
-        *load_mentions(args.producthunt_entities, "producthunt"),
+        *source_mentions["github"],
+        *source_mentions["hackernews"],
+        *source_mentions["producthunt"],
     ]
     if not mentions:
         raise RuntimeError("No entities found in input files.")

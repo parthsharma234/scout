@@ -14,6 +14,19 @@ const CAT_COLORS = {
   'Midjourney': '#f472b6', 'Hugging Face': '#3b82f6', 'Together AI': '#3b82f6',
 }
 
+function effectiveMentionsPerHour(entity) {
+  const m1h = Number(entity?.mention_count_1h ?? 0)
+  if (m1h > 0) return m1h
+  const m24h = Number(entity?.mention_count_24h ?? 0)
+  if (m24h > 0) return Number((m24h / 24).toFixed(1))
+  const sourceCounts = entity?.source_counts
+  if (sourceCounts && typeof sourceCounts === 'object') {
+    const total = Object.values(sourceCounts).reduce((acc, value) => acc + Number(value || 0), 0)
+    if (total > 0) return Number((total / 24).toFixed(1))
+  }
+  return 0
+}
+
 export default function TrendLeaderboard({
   entities = [],
   loading = false,
@@ -108,7 +121,7 @@ export default function TrendLeaderboard({
                   {spike && <span className="lb-spike" />}
                 </span>
                 <span className="lb-td lb-td--mentions mono">
-                  {entity.mention_count_1h ?? '—'}
+                  {effectiveMentionsPerHour(entity)}
                 </span>
                 <span className="lb-td lb-td--sources mono">
                   {entity.sources?.length ?? '—'}

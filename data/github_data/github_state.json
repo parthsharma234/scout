@@ -4,10 +4,10 @@
     "source": "github",
     "schema_version": "1.0"
   },
-  "last_run_started_at": "2026-02-21T19:09:12.869425+00:00",
-  "last_run_finished_at": "2026-02-21T19:09:12.878608+00:00",
-  "input_repo_count": 236,
-  "repos_written": 26,
-  "entities_written": 24,
-  "nodes_written": 26
+  "last_run_started_at": "2026-02-21T19:45:20.190542+00:00",
+  "last_run_finished_at": "2026-02-21T19:45:20.456425+00:00",
+  "input_repo_count": 2576,
+  "repos_written": 2280,
+  "entities_written": 2154,
+  "nodes_written": 2280
 }

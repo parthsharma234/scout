@@ -153,9 +153,8 @@ export function useMockData({ paused = false, leaderboardMode = 'global_prominen
 
   useEffect(() => {
     const parsedTrends = buildTrends(finalEntitiesTopRaw, leaderboardMode).slice(0, 50)
-    const topEntityKeys = new Set(parsedTrends.map((trend) => normalizeEntityKey(trend.entity)))
     const parsedNodes = dedupeSourceNodes(
-      buildSourceNodes(finalNodesRaw).filter((node) => topEntityKeys.has(normalizeEntityKey(node.entity))),
+      buildSourceNodes(finalNodesRaw),
     )
 
     const nowIso = new Date().toISOString()
