@@ -69,6 +69,14 @@ export default function DashboardPage() {
   })
   const { sources: apiSources } = useSourceStatus({ pollInterval: 15000 })
 
+  // ── DEBUG: Log API data flow ──
+  useEffect(() => {
+    console.log('[Scout Debug] API trends received:', apiTrends.length, 'entities')
+    if (apiTrends.length > 0) {
+      console.log('[Scout Debug] First 3 entities:', apiTrends.slice(0, 3).map(t => ({ name: t.entity, score: t.trend_score, cat: t.cat })))
+    }
+  }, [apiTrends])
+
   const connected = wsConnected || apiTrends.length > 0
   const hasLiveData = connected
   const trendsRaw = apiTrends.length > 0 ? apiTrends : (wsConnected ? wsTrends : apiTrends)
@@ -93,6 +101,8 @@ export default function DashboardPage() {
         entity_key: row.entity_key || normalizeEntityKey(row.entity),
         entity: row.entity,
         trend_score: Number(row.final_score || 0),
+        cat: row.cat || undefined,
+        vertical: row.vertical || undefined,
         mention_count_1h: Number(row.mention_count_1h || 0),
         mention_count_24h: Number(row.mention_count_24h || 0),
         spike_detected: Boolean(row.spike_detected),
@@ -244,7 +254,7 @@ export default function DashboardPage() {
     try {
       const payload = await searchNiche({
         query: resolvedQuery || 'vc startup profile',
-        limit: 50,
+        limit: 15,
         useNemotron: true,
         enrichOnDemand: true,
         enrichLimit: 5,
@@ -323,13 +333,7 @@ export default function DashboardPage() {
           >
             Rankings
           </button>
-          <button
-            type="button"
-            className={`db-nav-btn ${showTimeline ? 'db-nav-btn--active' : ''}`}
-            onClick={() => setSecondaryTab(showTimeline ? null : 'timeline')}
-          >
-            Funding
-          </button>
+
           <button
             type="button"
             className={`db-nav-btn ${clusterScope === 'top' && !secondaryTab && !drilledEntity ? 'db-nav-btn--active' : ''}`}
@@ -343,7 +347,7 @@ export default function DashboardPage() {
             onClick={handleShowNicheCluster}
             disabled={nicheClusterTrends.length === 0}
           >
-            Niche Map
+            Discover
           </button>
           <span className="db-entity-count mono">{trends.length} entities</span>
         </div>
@@ -394,7 +398,7 @@ export default function DashboardPage() {
         <aside className="db-sidepanel">
           <section className="db-search-panel">
             <header className="db-search-head">
-              <span className="section-label">Niche Query</span>
+              <span className="section-label">VC Thesis</span>
               {nicheUsedNemotron && <span className="db-search-chip mono">Nemotron</span>}
             </header>
 

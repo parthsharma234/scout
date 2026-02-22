@@ -1,0 +1,727 @@
+{
+  "_meta": {
+    "description": "Latest niche query results from Scout tool pipeline",
+    "query": "cybersecuity",
+    "query_profile": {
+      "sector": "cybersecuity",
+      "customer_pain": "automation"
+    },
+    "dimension_priority_rank": {
+      "sector": 1,
+      "customer_pain": 2,
+      "buyer_gtm": 3,
+      "business_model": 4,
+      "stage_traction": 5,
+      "moat_defensibility": 6,
+      "timing_tailwinds": 7,
+      "risk_filter": 8
+    }
+  },
+  "result_count": 15,
+  "results": [
+    {
+      "entity_key": "anthropic",
+      "entity": "Anthropic",
+      "final_score": 77.272,
+      "lexical_score": 19.486,
+      "lexical_score_norm": 84.209,
+      "relevance_score": 98.0,
+      "profile_match_score": 41.66,
+      "llm_profile_matched": true,
+      "dimension_match_scores": {
+        "sector": 100,
+        "customer_pain": 100
+      },
+      "entity_type": "startup_company",
+      "include": true,
+      "reason": "Claude Code Security product directly matches cybersecurity and automation. High confidence from multiple signals.",
+      "sources": [
+        "hackernews",
+        "hackernews"
+      ],
+      "top_keywords": [
+        "AI/ML",
+        "B2B",
+        "Early revenue",
+        "hackernews",
+        "hackernews"
+      ],
+      "trend_score": 87.32,
+      "momentum_score": 87.32,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-22T03:08:27.165124+00:00",
+      "last_seen_at": "2026-02-22T04:16:19.673924+00:00",
+      "activity_last_30d": null,
+      "source_counts": {},
+      "source_interactions": {},
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "headline": "Makes frontier cybersecurity capabilities available to defenders through its product Claude",
+          "summary": "Title: Making frontier cybersecurity capabilities available to defenders\nURL: https://www.anthropic.com/news/claude-code-security\nDescription: ",
+          "url": "https://code.claude.com/docs/en/legal-and-compliance,https://www.anthropic.com/news/claude-code-security"
+        }
+      ],
+      "vertical": "AI/ML",
+      "one_liner": "Makes frontier cybersecurity capabilities available to defenders through its product Claude",
+      "source_url": "https://code.claude.com/docs/en/legal-and-compliance,https://www.anthropic.com/news/claude-code-security",
+      "cat": "ai"
+    },
+    {
+      "entity_key": "claudecodesecurity",
+      "entity": "Claude Code Security",
+      "final_score": 76.298,
+      "lexical_score": 23.14,
+      "lexical_score_norm": 100.0,
+      "relevance_score": 95.0,
+      "profile_match_score": 41.66,
+      "llm_profile_matched": true,
+      "dimension_match_scores": {
+        "sector": 100,
+        "customer_pain": 100
+      },
+      "entity_type": "startup_company",
+      "include": true,
+      "reason": "Directly addresses cybersecurity (sector) and automation of vulnerability detection/patching (customer_pain). Clear startup signals via Product Hunt launch.",
+      "sources": [
+        "producthunt"
+      ],
+      "top_keywords": [
+        "Dev Tools",
+        "B2B",
+        "Just launched",
+        "producthunt"
+      ],
+      "trend_score": 58,
+      "momentum_score": 58.0,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-22T04:16:20.928810+00:00",
+      "last_seen_at": "2026-02-22T04:16:20.928810+00:00",
+      "activity_last_30d": null,
+      "source_counts": {},
+      "source_interactions": {},
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "headline": "Finds and fixes security vulnerabilities in entire codebases with validation and suggested patches.",
+          "summary": "Title: Claude Code Security\nTagline: Find and fix security vulnerabilities with Claude\nURL: https://www.producthunt.com/products/claude-code?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29\nDescription: Claude scans your entire codebase for vulnerabilities, validates each finding to minimize false positives, and suggests patches you can revi",
+          "url": "https://www.producthunt.com/products/claude-code?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29"
+        }
+      ],
+      "vertical": "Dev Tools",
+      "one_liner": "Finds and fixes security vulnerabilities in entire codebases with validation and suggested patches.",
+      "source_url": "https://www.producthunt.com/products/claude-code?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+      "cat": "devtools"
+    },
+    {
+      "entity_key": "socketdev",
+      "entity": "Socket.dev",
+      "final_score": 72.99,
+      "lexical_score": 22.757,
+      "lexical_score_norm": 98.345,
+      "relevance_score": 90.0,
+      "profile_match_score": 40.0,
+      "llm_profile_matched": true,
+      "dimension_match_scores": {
+        "sector": 100,
+        "customer_pain": 80
+      },
+      "entity_type": "startup_company",
+      "include": true,
+      "reason": "Focuses on securing AI toolchains and CI workflows (cybersecurity sector) with automation implications. HackerNews presence indicates early traction.",
+      "sources": [
+        "hackernews"
+      ],
+      "top_keywords": [
+        "Dev Tools",
+        "Just launched",
+        "hackernews"
+      ],
+      "trend_score": 53.21,
+      "momentum_score": 53.21,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-22T03:23:41.292147+00:00",
+      "last_seen_at": "2026-02-22T03:23:41.292147+00:00",
+      "activity_last_30d": null,
+      "source_counts": {},
+      "source_interactions": {},
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "headline": "Develops security solutions for protecting AI toolchains and CI workflows from hijacking and poisoning",
+          "summary": "Title: Shai-Hulud-Style NPM Worm Hijacks CI Workflows and Poisons AI Toolchains\nURL: https://socket.dev/blog/sandworm-mode-npm-worm-ai-toolchain-poisoning\nDescription: ",
+          "url": "https://socket.dev/blog/sandworm-mode-npm-worm-ai-toolchain-poisoning"
+        }
+      ],
+      "vertical": "Dev Tools",
+      "one_liner": "Develops security solutions for protecting AI toolchains and CI workflows from hijacking and poisoning",
+      "source_url": "https://socket.dev/blog/sandworm-mode-npm-worm-ai-toolchain-poisoning",
+      "cat": "devtools"
+    },
+    {
+      "entity_key": "nanovms",
+      "entity": "NanoVMs",
+      "final_score": 65.871,
+      "lexical_score": 20.1,
+      "lexical_score_norm": 86.863,
+      "relevance_score": 85.0,
+      "profile_match_score": 41.66,
+      "llm_profile_matched": true,
+      "dimension_match_scores": {
+        "sector": 100,
+        "customer_pain": 100
+      },
+      "entity_type": "startup_company",
+      "include": true,
+      "reason": "Container security solutions (cybersecurity) with implied automation in threat detection. Early revenue indicates traction.",
+      "sources": [
+        "lobsters"
+      ],
+      "top_keywords": [
+        "Cybersecurity",
+        "B2B",
+        "Early revenue",
+        "lobsters"
+      ],
+      "trend_score": 20,
+      "momentum_score": 20.0,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-22T03:22:09.174069+00:00",
+      "last_seen_at": "2026-02-22T03:22:09.174069+00:00",
+      "activity_last_30d": null,
+      "source_counts": {},
+      "source_interactions": {},
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "headline": "Provides container security solutions",
+          "summary": "Title: Last Year in Container Security\nURL: https://nanovms.com/blog/last-year-in-container-security\nDescription: ",
+          "url": "https://nanovms.com/blog/last-year-in-container-security"
+        }
+      ],
+      "vertical": "Cybersecurity",
+      "one_liner": "Provides container security solutions",
+      "source_url": "https://nanovms.com/blog/last-year-in-container-security",
+      "cat": "defense"
+    },
+    {
+      "entity_key": "minidiarium",
+      "entity": "Mini-Diarium",
+      "final_score": 61.275,
+      "lexical_score": 22.34,
+      "lexical_score_norm": 96.543,
+      "relevance_score": 70.0,
+      "profile_match_score": 22.22,
+      "llm_profile_matched": true,
+      "dimension_match_scores": {
+        "sector": 100,
+        "customer_pain": 0
+      },
+      "entity_type": "open_source_project",
+      "include": true,
+      "reason": "Provides encryption (cybersecurity sector) but lacks automation focus. GitHub-hosted with no clear company signals.",
+      "sources": [
+        "hackernews"
+      ],
+      "top_keywords": [
+        "Cybersecurity",
+        "B2C",
+        "Pre-revenue",
+        "hackernews"
+      ],
+      "trend_score": 73,
+      "momentum_score": 73.0,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-22T04:09:50.854691+00:00",
+      "last_seen_at": "2026-02-22T04:09:50.854691+00:00",
+      "activity_last_30d": null,
+      "source_counts": {},
+      "source_interactions": {},
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "headline": "An encrypted, local, cross-platform journaling app",
+          "summary": "Title: Show HN: Mini-Diarium - An encrypted, local, cross-platform journaling app\nURL: https://github.com/fjrevoredo/mini-diarium\nDescription: ",
+          "url": "https://github.com/fjrevoredo/mini-diarium"
+        }
+      ],
+      "vertical": "Cybersecurity",
+      "one_liner": "An encrypted, local, cross-platform journaling app",
+      "source_url": "https://github.com/fjrevoredo/mini-diarium",
+      "cat": "defense"
+    },
+    {
+      "entity_key": "fulu",
+      "entity": "FULU",
+      "final_score": 51.899,
+      "lexical_score": 20.98,
+      "lexical_score_norm": 90.666,
+      "relevance_score": 60.0,
+      "profile_match_score": 22.22,
+      "llm_profile_matched": true,
+      "dimension_match_scores": {
+        "sector": 100,
+        "customer_pain": 0
+      },
+      "entity_type": "startup_company",
+      "include": true,
+      "reason": "Offers security bounties (cybersecurity sector) but no explicit automation connection. Bounties suggest early-stage company.",
+      "sources": [
+        "hackernews"
+      ],
+      "top_keywords": [
+        "Cybersecurity",
+        "Pre-revenue",
+        "hackernews"
+      ],
+      "trend_score": 31,
+      "momentum_score": 31.0,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-22T04:02:18.262417+00:00",
+      "last_seen_at": "2026-02-22T04:02:18.262417+00:00",
+      "activity_last_30d": null,
+      "source_counts": {},
+      "source_interactions": {},
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "headline": "Offers bounties for hacking Ring Video Doorbells, presumably for security research or vulnerability discovery",
+          "summary": "Title: FULU Bounties – Ring Video Doorbells\nURL: https://bounties.fulu.org/bounties/ring-video-doorbells\nDescription: ",
+          "url": "https://bounties.fulu.org/bounties/ring-video-doorbells"
+        }
+      ],
+      "vertical": "Cybersecurity",
+      "one_liner": "Offers bounties for hacking Ring Video Doorbells, presumably for security research or vulnerability discovery",
+      "source_url": "https://bounties.fulu.org/bounties/ring-video-doorbells",
+      "cat": "defense"
+    },
+    {
+      "entity_key": "emberot",
+      "entity": "EmberOT",
+      "final_score": 51.024,
+      "lexical_score": 19.62,
+      "lexical_score_norm": 84.788,
+      "relevance_score": 65.0,
+      "profile_match_score": 22.22,
+      "llm_profile_matched": true,
+      "dimension_match_scores": {
+        "sector": 100,
+        "customer_pain": 0
+      },
+      "entity_type": "startup_company",
+      "include": true,
+      "reason": "OT security insights (cybersecurity sector) but no automation focus. Resources suggest thought leadership.",
+      "sources": [
+        "hackernews"
+      ],
+      "top_keywords": [
+        "Cybersecurity",
+        "hackernews"
+      ],
+      "trend_score": 14,
+      "momentum_score": 14.0,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-22T03:36:20.897647+00:00",
+      "last_seen_at": "2026-02-22T03:36:20.897647+00:00",
+      "activity_last_30d": null,
+      "source_counts": {},
+      "source_interactions": {},
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "headline": "Provides resources and insights on Operational Technology (OT) security consequences",
+          "summary": "Title: Understanding Real-World Consequences in OT\nURL: https://www.emberot.com/resources/blog/ot-security-consequences-it-org-now-ot-curious-part-3/\nDescription: ",
+          "url": "https://www.emberot.com/resources/blog/ot-security-consequences-it-org-now-ot-curious-part-3/"
+        }
+      ],
+      "vertical": "Cybersecurity",
+      "one_liner": "Provides resources and insights on Operational Technology (OT) security consequences",
+      "source_url": "https://www.emberot.com/resources/blog/ot-security-consequences-it-org-now-ot-curious-part-3/",
+      "cat": "defense"
+    },
+    {
+      "entity_key": "macky",
+      "entity": "Macky",
+      "final_score": 16.292,
+      "lexical_score": 15.08,
+      "lexical_score_norm": 65.169,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "llm_profile_matched": false,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "Downranked: no LLM profile match returned.",
+      "sources": [
+        "producthunt"
+      ],
+      "top_keywords": [
+        "Dev Tools",
+        "Just launched",
+        "producthunt"
+      ],
+      "trend_score": 66,
+      "momentum_score": 66.0,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-22T04:17:13.013111+00:00",
+      "last_seen_at": "2026-02-22T04:17:13.013111+00:00",
+      "activity_last_30d": null,
+      "source_counts": {},
+      "source_interactions": {},
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "headline": "Enables remote connection to Mac terminal from an iPhone",
+          "summary": "Title: Macky\nTagline: Connect to your Mac terminal from iPhone\nURL: https://www.producthunt.com/products/macky-2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29\nDescription: Connect to your Mac terminal from the bar, your bed, and lets be real your bathroom.",
+          "url": "https://www.producthunt.com/products/macky-2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29"
+        }
+      ],
+      "vertical": "Dev Tools",
+      "one_liner": "Enables remote connection to Mac terminal from an iPhone",
+      "source_url": "https://www.producthunt.com/products/macky-2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+      "cat": "devtools"
+    },
+    {
+      "entity_key": "huntscout",
+      "entity": "HuntScout",
+      "final_score": 16.206,
+      "lexical_score": 15.0,
+      "lexical_score_norm": 64.823,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "llm_profile_matched": false,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "Downranked: no LLM profile match returned.",
+      "sources": [
+        "producthunt"
+      ],
+      "top_keywords": [
+        "Consumer",
+        "B2C",
+        "Early revenue",
+        "producthunt"
+      ],
+      "trend_score": 65,
+      "momentum_score": 65.0,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-22T04:15:30.707455+00:00",
+      "last_seen_at": "2026-02-22T04:15:30.707455+00:00",
+      "activity_last_30d": null,
+      "source_counts": {},
+      "source_interactions": {},
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "headline": "An all-in-one hunting companion app for Canada with AI, offline maps, and real-time season tracking.",
+          "summary": "Title: HuntScout\nTagline: Canada's all-in-one hunting companion with AI & offline maps\nURL: https://www.producthunt.com/products/huntscout?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29\nDescription: Canadian hunters waste hours digging through provincial PDFs and government websites just to figure out what's in season. HuntScout puts every",
+          "url": "https://www.producthunt.com/products/huntscout?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29"
+        }
+      ],
+      "vertical": "Consumer",
+      "one_liner": "An all-in-one hunting companion app for Canada with AI, offline maps, and real-time season tracking.",
+      "source_url": "https://www.producthunt.com/products/huntscout?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+      "cat": "media"
+    },
+    {
+      "entity_key": "indiestack",
+      "entity": "IndieStack",
+      "final_score": 15.946,
+      "lexical_score": 14.76,
+      "lexical_score_norm": 63.786,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "llm_profile_matched": false,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "Downranked: no LLM profile match returned.",
+      "sources": [
+        "producthunt"
+      ],
+      "top_keywords": [
+        "Dev Tools",
+        "B2B",
+        "Just launched",
+        "producthunt"
+      ],
+      "trend_score": 62,
+      "momentum_score": 62.0,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-22T04:12:03.714320+00:00",
+      "last_seen_at": "2026-02-22T04:12:03.714320+00:00",
+      "activity_last_30d": null,
+      "source_counts": {},
+      "source_interactions": {},
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "headline": "A curated index of 100+ indie dev tools with a JSON API, helping AI coding assistants avoid rebuilding existing solutions",
+          "summary": "Title: IndieStack\nTagline:  Find indie dev tools your AI can search before building  \nURL: https://www.producthunt.com/products/indiestack-2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29\nDescription: AI coding assistants burn thousands of tokens rebuilding auth, analytics, and billing from scratch --because they don't know indie alternati",
+          "url": "https://www.producthunt.com/products/indiestack-2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29"
+        }
+      ],
+      "vertical": "Dev Tools",
+      "one_liner": "A curated index of 100+ indie dev tools with a JSON API, helping AI coding assistants avoid rebuilding existing solutions",
+      "source_url": "https://www.producthunt.com/products/indiestack-2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+      "cat": "devtools"
+    },
+    {
+      "entity_key": "pikaaiselves",
+      "entity": "Pika AI Selves",
+      "final_score": 15.946,
+      "lexical_score": 14.76,
+      "lexical_score_norm": 63.786,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "llm_profile_matched": false,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "Downranked: no LLM profile match returned.",
+      "sources": [
+        "producthunt"
+      ],
+      "top_keywords": [
+        "AI/ML",
+        "Just launched",
+        "producthunt"
+      ],
+      "trend_score": 62,
+      "momentum_score": 62.0,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-22T04:16:16.337245+00:00",
+      "last_seen_at": "2026-02-22T04:16:16.337245+00:00",
+      "activity_last_30d": null,
+      "source_counts": {},
+      "source_interactions": {},
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "headline": "Create and raise a living, AI-powered digital extension of yourself with persistent memory and customizable traits.",
+          "summary": "Title: Pika AI Selves\nTagline: Birth, raise & set loose to be a living extension of AI you!\nURL: https://www.producthunt.com/products/pika-ai-selves?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29\nDescription: Create your Pika AI Self - AI you birth, raise, and set loose to be a living extension of you. They’re rich, multi-faceted beings wi",
+          "url": "https://www.producthunt.com/products/pika-ai-selves?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29"
+        }
+      ],
+      "vertical": "AI/ML",
+      "one_liner": "Create and raise a living, AI-powered digital extension of yourself with persistent memory and customizable traits.",
+      "source_url": "https://www.producthunt.com/products/pika-ai-selves?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+      "cat": "ai"
+    },
+    {
+      "entity_key": "eleccirai",
+      "entity": "ElecCir AI",
+      "final_score": 15.687,
+      "lexical_score": 14.52,
+      "lexical_score_norm": 62.748,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "llm_profile_matched": false,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "Downranked: no LLM profile match returned.",
+      "sources": [
+        "producthunt"
+      ],
+      "top_keywords": [
+        "AI/ML",
+        "Just launched",
+        "producthunt"
+      ],
+      "trend_score": 59,
+      "momentum_score": 59.0,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-22T04:10:50.743012+00:00",
+      "last_seen_at": "2026-02-22T04:10:50.743012+00:00",
+      "activity_last_30d": null,
+      "source_counts": {},
+      "source_interactions": {},
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "headline": "AI tool for designing and analyzing electrical circuits through descriptive input",
+          "summary": "Title: ElecCir AI\nTagline: ElecCir AI is an AI tool for electrical circuits design\nURL: https://www.producthunt.com/products/eleccir-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29\nDescription: ElecCir AI is a AI tool that helps you design and analyze electrical circuits. Built with cutting-edge technology, whether you're an engineer, st",
+          "url": "https://www.producthunt.com/products/eleccir-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29"
+        }
+      ],
+      "vertical": "AI/ML",
+      "one_liner": "AI tool for designing and analyzing electrical circuits through descriptive input",
+      "source_url": "https://www.producthunt.com/products/eleccir-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+      "cat": "ai"
+    },
+    {
+      "entity_key": "grouptube",
+      "entity": "GroupTube",
+      "final_score": 15.601,
+      "lexical_score": 14.44,
+      "lexical_score_norm": 62.403,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "llm_profile_matched": false,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "Downranked: no LLM profile match returned.",
+      "sources": [
+        "producthunt"
+      ],
+      "top_keywords": [
+        "Consumer",
+        "Just launched",
+        "producthunt"
+      ],
+      "trend_score": 58,
+      "momentum_score": 58.0,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-22T04:11:10.627323+00:00",
+      "last_seen_at": "2026-02-22T04:11:10.627323+00:00",
+      "activity_last_30d": null,
+      "source_counts": {},
+      "source_interactions": {},
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "headline": "Platform for synchronized YouTube video watching, music listening, and game nights with friends remotely",
+          "summary": "Title: GroupTube\nTagline: GroupTube 1.10 – Apps & Games\nURL: https://www.producthunt.com/products/grouptube?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29\nDescription: Watch YouTube videos together, listen to music, or host a game night. Have a great time together with friends – anywhere, anytime.",
+          "url": "https://www.producthunt.com/products/grouptube?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29"
+        }
+      ],
+      "vertical": "Consumer",
+      "one_liner": "Platform for synchronized YouTube video watching, music listening, and game nights with friends remotely",
+      "source_url": "https://www.producthunt.com/products/grouptube?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+      "cat": "media"
+    },
+    {
+      "entity_key": "fluxui",
+      "entity": "FLUX UI",
+      "final_score": 15.428,
+      "lexical_score": 14.28,
+      "lexical_score_norm": 61.711,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "llm_profile_matched": false,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "Downranked: no LLM profile match returned.",
+      "sources": [
+        "producthunt"
+      ],
+      "top_keywords": [
+        "Dev Tools",
+        "Just launched",
+        "producthunt"
+      ],
+      "trend_score": 56,
+      "momentum_score": 56.0,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-22T04:11:36.656272+00:00",
+      "last_seen_at": "2026-02-22T04:11:36.656272+00:00",
+      "activity_last_30d": null,
+      "source_counts": {},
+      "source_interactions": {},
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "headline": "A React UI library with 40 physics-based motion primitives powered by a unified physics engine.",
+          "summary": "Title: FLUX UI\nTagline: 40 physics-based motion primitives for React\nURL: https://www.producthunt.com/products/flux-ui?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29\nDescription: Every UI library treats animation as decoration. FLUX UI treats it as a language. 40 composable motion primitives powered by a unified physics engine with 7 named",
+          "url": "https://www.producthunt.com/products/flux-ui?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29"
+        }
+      ],
+      "vertical": "Dev Tools",
+      "one_liner": "A React UI library with 40 physics-based motion primitives powered by a unified physics engine.",
+      "source_url": "https://www.producthunt.com/products/flux-ui?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+      "cat": "devtools"
+    },
+    {
+      "entity_key": "excelformulabotplatform",
+      "entity": "Excel Formula Bot Platform",
+      "final_score": 15.082,
+      "lexical_score": 13.96,
+      "lexical_score_norm": 60.328,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "llm_profile_matched": false,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "Downranked: no LLM profile match returned.",
+      "sources": [
+        "indiehackers"
+      ],
+      "top_keywords": [
+        "AI/ML",
+        "B2B",
+        "Early revenue",
+        "indiehackers"
+      ],
+      "trend_score": 52,
+      "momentum_score": 52.0,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-22T03:53:14.276435+00:00",
+      "last_seen_at": "2026-02-22T03:53:14.276435+00:00",
+      "activity_last_30d": null,
+      "source_counts": {},
+      "source_interactions": {},
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "headline": "AI-driven platform for Excel formula automation, generating $500k ARR",
+          "summary": "Title: May 17, 2025\n\n        Getting serious about marketing after hitting $500k ARR\n    \n\n        David Bressler built one of the first AI-driven Excel formula bots. Then, he turned it into a platform making $500k ARR. Here's how.\n        \n \n \n\n\n\n\nby James Fleischmann\nURL: https://www.indiehackers.com/post/8XGnzrxG1neA3jy37x2D",
+          "url": "https://www.indiehackers.com/post/8XGnzrxG1neA3jy37x2D"
+        }
+      ],
+      "vertical": "AI/ML",
+      "one_liner": "AI-driven platform for Excel formula automation, generating $500k ARR",
+      "source_url": "https://www.indiehackers.com/post/8XGnzrxG1neA3jy37x2D",
+      "cat": "ai"
+    }
+  ]
+}

@@ -32,14 +32,14 @@ from urllib.parse import parse_qs, urlparse
 
 try:
     from config import load_env_file
-    from db import migrate
+    from db import migrate, get_top50, get_startup_by_id
     from index_store import (
         export_index_json,
         get_entity_history,
-        get_entity_nodes,
         get_pipeline_status,
         get_sources_payload,
     )
+    from enrich_links import serper_search
     from pipeline_runner import PipelineScheduler, run_full_pipeline, run_on_demand_enrichment
     from niche_search import (
         build_profile_query_text,
@@ -56,14 +56,14 @@ try:
     )
 except ModuleNotFoundError:
     from backend.config import load_env_file  # type: ignore
-    from backend.db import migrate  # type: ignore
+    from backend.db import migrate, get_top50, get_startup_by_id  # type: ignore
     from backend.index_store import (  # type: ignore
         export_index_json,
         get_entity_history,
-        get_entity_nodes,
         get_pipeline_status,
         get_sources_payload,
     )
+    from backend.enrich_links import serper_search # type: ignore
     from backend.pipeline_runner import PipelineScheduler, run_full_pipeline, run_on_demand_enrichment  # type: ignore
     from backend.niche_search import (  # type: ignore
         build_profile_query_text,
@@ -400,10 +400,79 @@ def build_trends_payload(index_payload: dict) -> dict:
     return {"entities": trends, "count": len(trends), "source_totals": source_totals}
 
 
+def load_entities_from_scout_db() -> list[dict[str, Any]]:
+    """Load all startups from scout.db and convert to the entity format
+    that lexical_score_entity() and call_openrouter_nemotron() expect."""
+    import sqlite3 as _sql
+    _db = _sql.connect("c:/scout/data/scout.db", timeout=10)
+    _db.row_factory = _sql.Row
+    rows = [dict(r) for r in _db.execute(
+        "SELECT * FROM Startups ORDER BY scout_score DESC"
+    ).fetchall()]
+    _db.close()
+
+    entities = []
+    _junk_prefixes = ['unknown', 'unspecified', 'untitled', 'n/a', 'none']
+    for row in rows:
+        # Skip junk-named startups
+        name = (row.get('startup_name') or '').strip()
+        name_lower = name.lower()
+        if len(name) < 2 or name_lower in _junk_prefixes:
+            continue
+        if any(name_lower.startswith(j) for j in _junk_prefixes):
+            continue
+        if '(unspecified' in name_lower or '(referenced' in name_lower:
+            continue
+        # Build keyword list from structured fields
+        keywords = []
+        for field in ['vertical', 'business_model', 'stage']:
+            val = row.get(field, '')
+            if val and val.lower() not in ('unknown', 'unspecified', 'unclear', ''):
+                keywords.append(val)
+        # Add source as a keyword
+        if row.get('source'):
+            keywords.extend(str(row['source']).split(','))
+
+        # Build top_nodes (for lexical matching context)
+        top_nodes = []
+        one_liner = row.get('one_liner', '') or ''
+        raw_text = row.get('raw_text', '') or ''
+        source_url = row.get('source_url', '') or ''
+        if one_liner or raw_text or source_url:
+            top_nodes.append({
+                "headline": one_liner,
+                "summary": raw_text[:400] if raw_text else one_liner,
+                "url": source_url,
+            })
+
+        entities.append({
+            "entity_key": row['id'],
+            "entity": row['startup_name'],
+            "trend_score": row.get('scout_score', 0),
+            "momentum_score": row.get('scout_score', 0),
+            "confidence": 0.8,
+            "sources": str(row.get('source', '')).split(',') if row.get('source') else [],
+            "top_keywords": keywords,
+            "top_nodes": top_nodes,
+            "first_seen_at": row.get('first_seen', ''),
+            "last_seen_at": row.get('last_updated', ''),
+            "node_count": 1 if source_url else 0,
+            # Pass through extra fields for the frontend
+            "one_liner": one_liner,
+            "vertical": row.get('vertical', 'Unknown'),
+            "stage": row.get('stage', 'Unknown'),
+            "business_model": row.get('business_model', 'Unknown'),
+            "source_url": source_url,
+        })
+
+    print(f"[NICHE] Loaded {len(entities)} startups from scout.db")
+    return entities
+
+
 def run_niche_pipeline(
     query: str,
     limit: int = 12,
-    min_score: float = 10.0,
+    min_score: float = 2.0,  # Lowered for small DB
     refresh: str = "",
     rebuild_index: bool = False,
     use_nemotron: bool = True,
@@ -418,31 +487,40 @@ def run_niche_pipeline(
         raise ValueError("query is required")
 
     load_env_file()
-    migrate()
-    for target in parse_refresh_targets(refresh):
-        tool_refresh_source(target)
 
-    if rebuild_index or not index_path.exists():
-        tool_build_index(index_path)
-
-    index_payload = load_index(index_path)
-    entities = index_payload.get("entities") or []
-    if not isinstance(entities, list) or not entities:
-        raise RuntimeError("Entity index is empty. Build/refresh data first.")
+    # Load entities directly from scout.db (replaces entity_index.py)
+    entities = load_entities_from_scout_db()
+    if not entities:
+        raise RuntimeError("No startups in scout.db yet. Wait for the scraper to populate it.")
 
     profile_payload = normalize_query_profile(query_profile)
     priority_payload = normalize_priority_map(dimension_priority_rank)
     effective_query = build_profile_query_text(query, profile_payload) or query
+    print(f"[NICHE] Query: '{effective_query}', profile: {profile_payload}")
 
+    # Lexical scoring against all entities
     candidates = tool_search_index(effective_query, entities, limit=max(limit * 5, 40))
+    print(f"[NICHE] Lexical matches: {len(candidates)}")
+
+    # If no lexical matches, fall back to returning top scored startups
+    if not candidates:
+        print("[NICHE] No lexical matches — falling back to top startups by score")
+        candidates = [{"entity": e, "lexical_score": e.get("trend_score", 0) * 0.1} for e in entities[:limit]]
+
+    # Nemotron LLM reranking
     llm_payload = None
     if use_nemotron and candidates:
-        llm_payload = call_openrouter_nemotron(
-            query=query,
-            candidates=candidates,
-            query_profile=profile_payload,
-            priority_map=priority_payload,
-        )
+        try:
+            llm_payload = call_openrouter_nemotron(
+                query=query,
+                candidates=candidates,
+                query_profile=profile_payload,
+                priority_map=priority_payload,
+            )
+            print(f"[NICHE] Nemotron reranked: {bool(llm_payload)}")
+        except Exception as exc:
+            print(f"[NICHE] Nemotron failed (continuing without): {exc}")
+
     rows = combine_scores(
         candidates,
         llm_payload,
@@ -453,28 +531,16 @@ def run_niche_pipeline(
     final_rows = filtered if filtered else rows
     final_rows = [row for row in final_rows if float(row.get("final_score") or 0.0) >= min_score]
     final_rows = final_rows[:limit]
+    print(f"[NICHE] Final results: {len(final_rows)}")
 
-    enrichment_applied = False
-    enriched_links_added = 0
-    enrichment_result: dict | None = None
-    if enrich_on_demand and final_rows:
-        keys = [
-            str(row.get("entity_key") or "")
-            for row in final_rows[: max(1, min(int(enrich_limit), 10))]
-            if str(row.get("entity_key") or "").strip()
-        ]
-        if keys:
-            enrichment_result = run_on_demand_enrichment(keys, max_links=8)
-            enrichment_applied = True
-            enriched_links_added = int(enrichment_result.get("links_added") or 0)
+    try:
+        save_latest_results(
+            save_out, query, final_rows[: max(limit, 25)],
+            query_profile=profile_payload, priority_map=priority_payload,
+        )
+    except Exception:
+        pass  # Non-critical
 
-    save_latest_results(
-        save_out,
-        query,
-        final_rows[: max(limit, 25)],
-        query_profile=profile_payload,
-        priority_map=priority_payload,
-    )
     return {
         "query": query,
         "effective_query": effective_query,
@@ -483,11 +549,11 @@ def run_niche_pipeline(
         "used_nemotron": bool(llm_payload),
         "result_count": len(final_rows),
         "results": final_rows,
-        "index_stats": index_payload.get("stats") or {},
-        "index_entity_count": index_payload.get("entity_count") or len(entities),
-        "enrichment_applied": enrichment_applied,
-        "enriched_links_added": enriched_links_added,
-        "enrichment": enrichment_result,
+        "index_stats": {"source": "scout.db"},
+        "index_entity_count": len(entities),
+        "enrichment_applied": False,
+        "enriched_links_added": 0,
+        "enrichment": None,
     }
 
 
@@ -548,10 +614,90 @@ class SearchHandler(BaseHTTPRequestHandler):
         parts = [p for p in path.split("/") if p]
         # /api/entity/{entity_key}/nodes
         if len(parts) == 4 and parts[0] == "api" and parts[1] == "entity" and parts[3] == "nodes":
-            entity_key = parts[2]
-            include_enriched = (parsed_query.get("include_enriched") or ["true"])[0].lower() != "false"
-            limit = int((parsed_query.get("limit") or ["40"])[0])
-            nodes = get_entity_nodes(entity_key=entity_key, include_enriched=include_enriched, limit=max(1, min(limit, 200)))
+            load_env_file()  # Ensure Serper API key is loaded
+            from urllib.parse import unquote
+            entity_key = unquote(parts[2])
+            
+            # Find the startup by id first, then fall back to name search
+            startup = get_startup_by_id(entity_key)
+            if not startup:
+                # Try searching by name (the frontend passes entity name via fetchEntityNodes)
+                import sqlite3 as _sql
+                _db = _sql.connect("c:/scout/data/scout.db", timeout=10)
+                _db.row_factory = _sql.Row
+                row = _db.execute(
+                    "SELECT * FROM Startups WHERE startup_name = ? COLLATE NOCASE LIMIT 1",
+                    (entity_key,),
+                ).fetchone()
+                _db.close()
+                startup = dict(row) if row else None
+
+            if not startup:
+                self._set_json(200)
+                self.wfile.write(json.dumps({"entity_key": entity_key, "count": 0, "nodes": []}).encode("utf-8"))
+                return True
+            
+            nodes = []
+            
+            # Node 0: The ORIGINAL scraped source link
+            source_url = startup.get('source_url', '')
+            if source_url:
+                nodes.append({
+                    "id": f"scraped-{entity_key}-0",
+                    "source_id": startup.get('source', 'scraped'),
+                    "source_name": startup.get('source', 'Scraped').upper(),
+                    "headline": f"Original source: {startup.get('startup_name', '')}",
+                    "url": source_url,
+                    "summary": startup.get('one_liner', '') or startup.get('raw_text', '')[:200] or "Original scraped source",
+                    "interactions": 200,
+                    "views": 500,
+                    "node_type": "source_raw"
+                })
+                
+            # Nodes 1+: Live Serper Search results (inline to avoid silent failures)
+            search_query = f"{startup.get('startup_name')} startup"
+            serper_results = []
+            serper_key = os.environ.get("GOOGLE_SERPER_KEY", "")
+            print(f"[NODES] Querying Serper: '{search_query}', key_len={len(serper_key)}")
+            if serper_key:
+                try:
+                    import urllib.request as _ureq
+                    _payload = json.dumps({"q": search_query, "num": 10}).encode("utf-8")
+                    _req = _ureq.Request(
+                        "https://google.serper.dev/search",
+                        data=_payload,
+                        headers={"X-API-KEY": serper_key, "Content-Type": "application/json"},
+                        method="POST",
+                    )
+                    with _ureq.urlopen(_req, timeout=12) as _resp:
+                        _raw = json.loads(_resp.read())
+                        for item in (_raw.get("organic") or []):
+                            link = str(item.get("link") or "").strip()
+                            if link:
+                                serper_results.append({
+                                    "url": link,
+                                    "title": str(item.get("title") or ""),
+                                    "snippet": str(item.get("snippet") or ""),
+                                })
+                    print(f"[NODES] Serper OK: {len(serper_results)} organic results")
+                except Exception as exc:
+                    print(f"[NODES] Serper FAILED: {type(exc).__name__}: {exc}")
+            else:
+                print("[NODES] No GOOGLE_SERPER_KEY in env!")
+            
+            for i, res in enumerate(serper_results):
+                nodes.append({
+                    "id": f"web-{entity_key}-{i}",
+                    "source_id": "web_serper",
+                    "source_name": "WEB",
+                    "headline": res.get("title", ""),
+                    "url": res.get("url", ""),
+                    "summary": res.get("snippet", ""),
+                    "interactions": 100 - (i * 5),
+                    "views": 200 - (i * 10),
+                    "node_type": "source_enriched"
+                })
+
             self._set_json(200)
             self.wfile.write(json.dumps({"entity_key": entity_key, "count": len(nodes), "nodes": nodes}, ensure_ascii=False).encode("utf-8"))
             return True
@@ -597,7 +743,74 @@ class SearchHandler(BaseHTTPRequestHandler):
         if parsed.path in {"/api/trends", "/api/trends/"}:
             try:
                 load_env_file()
-                payload = build_trends_payload(_ensure_index_exists())
+                
+                # Query scout.db – filter out junk names, prioritize classified startups
+                import sqlite3 as _sql
+                _db = _sql.connect("c:/scout/data/scout.db", timeout=10)
+                _db.row_factory = _sql.Row
+                
+                # Filter out garbage names + prioritize properly classified startups
+                _junk_names = ['unknown', 'unspecified', 'untitled', 'n/a', 'none']
+                all_rows = [dict(r) for r in _db.execute(
+                    "SELECT * FROM Startups ORDER BY scout_score DESC"
+                ).fetchall()]
+                _db.close()
+                
+                # Filter out junk names but keep everything else for Top 50
+                top50 = []
+                for row in all_rows:
+                    name = (row.get('startup_name') or '').strip().lower()
+                    if len(name) < 2:
+                        continue
+                    if name in _junk_names or any(name.startswith(j) for j in _junk_names):
+                        continue
+                    if '(unspecified' in name or '(referenced' in name:
+                        continue
+                    top50.append(row)
+                    if len(top50) >= 50:
+                        break
+                
+                formatted_trends = []
+                for s in top50:
+                    sources = str(s.get('source', '')).split(',') if s.get('source') else []
+                    
+                    # Expanded vertical-to-category mapping
+                    v = (s.get('vertical') or 'Unknown').lower()
+                    cat = 'other'
+                    if any(k in v for k in ['ai', 'machine learning', 'ml', 'llm', 'nlp', 'deep learning', 'generative']):
+                        cat = 'ai'
+                    elif any(k in v for k in ['fintech', 'finance', 'payment', 'banking', 'insurance', 'crypto', 'defi']):
+                        cat = 'fintech'
+                    elif any(k in v for k in ['dev', 'developer', 'saas', 'infra', 'cloud', 'api', 'platform', 'tool', 'software']):
+                        cat = 'devtools'
+                    elif any(k in v for k in ['health', 'biotech', 'pharma', 'medical', 'defense', 'security', 'cyber', 'aerospace']):
+                        cat = 'defense'
+                    elif any(k in v for k in ['consumer', 'media', 'social', 'e-commerce', 'ecommerce', 'retail', 'food', 'education', 'edtech', 'entertainment']):
+                        cat = 'media'
+                    
+                    # Keep unknown/unspecified as 'other' -> gray
+                    if 'unknown' in v or 'unspecified' in v or v.strip() == '':
+                        cat = 'other'
+                
+                    formatted_trends.append({
+                        "id": s['id'],
+                        "entity_key": s['id'],
+                        "entity": s['startup_name'],
+                        "trend_score": s['scout_score'],
+                        "raw_trend_score": s['scout_score'],
+                        "momentum_score": s['scout_score'],
+                        "cat": cat,
+                        "vertical": s.get('vertical', 'Unknown'),
+                        "one_liner": s.get('one_liner', ''),
+                        "stage": s.get('stage', 'Unknown'),
+                        "business_model": s.get('business_model', 'Unknown'),
+                        "source_url": s.get('source_url', ''),
+                        "sources": sources,
+                        "mention_count_1h": len(sources),
+                    })
+                    
+                payload = {"entities": formatted_trends}
+                
                 self._set_json(200)
                 self.wfile.write(json.dumps(payload, ensure_ascii=False).encode("utf-8"))
             except Exception as exc:  # noqa: BLE001

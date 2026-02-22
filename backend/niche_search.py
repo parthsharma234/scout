@@ -468,6 +468,23 @@ def call_openrouter_nemotron(
                 pass
         return {"results": [], "raw": content}
 
+def _vertical_to_cat(vertical: str) -> str:
+    """Map a Nemotron-classified vertical to a cluster map color category."""
+    v = (vertical or '').lower()
+    if any(k in v for k in ['ai', 'machine learning', 'ml', 'llm', 'nlp', 'deep learning', 'generative', 'robotics']):
+        return 'ai'
+    if any(k in v for k in ['fintech', 'finance', 'payment', 'banking', 'insurance', 'crypto', 'defi']):
+        return 'fintech'
+    if any(k in v for k in ['dev', 'developer', 'saas', 'infra', 'cloud', 'api', 'platform', 'tool', 'software', 'b2b']):
+        return 'devtools'
+    if any(k in v for k in ['health', 'biotech', 'pharma', 'medical', 'defense', 'security', 'cyber', 'aerospace', 'climate']):
+        return 'defense'
+    if any(k in v for k in ['consumer', 'media', 'social', 'e-commerce', 'ecommerce', 'retail', 'food', 'education', 'edtech', 'entertainment']):
+        return 'media'
+    if 'unknown' in v or 'unspecified' in v or not v.strip():
+        return 'other'
+    return 'other'
+
 
 def combine_scores(
     candidates: list[dict[str, Any]],
@@ -551,6 +568,11 @@ def combine_scores(
                 "mention_count_24h": entity.get("mention_count_24h") or 0,
                 "spike_detected": bool(entity.get("spike_detected")),
                 "top_nodes": entity.get("top_nodes") or [],
+                # Extra fields for cluster map coloring
+                "vertical": entity.get("vertical", "Unknown"),
+                "one_liner": entity.get("one_liner", ""),
+                "source_url": entity.get("source_url", ""),
+                "cat": _vertical_to_cat(entity.get("vertical", "")),
             }
         )
 

@@ -56,19 +56,24 @@ async function apiFetch(path, options = {}) {
  *   refetch  — manually trigger a refresh
  */
 export function useTrends({ enabled = true, pollInterval = 10000 } = {}) {
-  const [trends, setTrends]   = useState([])
+  const [trends, setTrends] = useState([])
   const [loading, setLoading] = useState(false)
-  const [error, setError]     = useState(null)
+  const [error, setError] = useState(null)
 
   const fetch = useCallback(async () => {
     if (!enabled) return
     setLoading(true)
     setError(null)
     try {
+      console.log('[Scout Debug] Fetching /api/trends/ ...')
       const data = await apiFetch('/api/trends/')
+      console.log('[Scout Debug] Raw API response:', JSON.stringify(data).substring(0, 500))
       // Expected: { entities: TrendEntity[] } or TrendEntity[]
-      setTrends(Array.isArray(data) ? data : (data.entities ?? []))
+      const entities = Array.isArray(data) ? data : (data.entities ?? [])
+      console.log('[Scout Debug] Parsed', entities.length, 'entities from API')
+      setTrends(entities)
     } catch (err) {
+      console.error('[Scout Debug] API fetch FAILED:', err.message)
       setError(err)
     } finally {
       setLoading(false)
@@ -93,7 +98,7 @@ export function useTrends({ enabled = true, pollInterval = 10000 } = {}) {
 export function useSourceStatus({ pollInterval = 15000 } = {}) {
   const [sources, setSources] = useState([])
   const [loading, setLoading] = useState(false)
-  const [error, setError]     = useState(null)
+  const [error, setError] = useState(null)
 
   const fetch = useCallback(async () => {
     setLoading(true)
@@ -124,10 +129,10 @@ export function useSourceStatus({ pollInterval = 15000 } = {}) {
  * GET /api/velocity/?window=1h  (or 6h / 24h)
  */
 export function useVelocityHistory(window = '1h') {
-  const [data, setData]       = useState([])
+  const [data, setData] = useState([])
   const [entities, setEntities] = useState([])
   const [loading, setLoading] = useState(false)
-  const [error, setError]     = useState(null)
+  const [error, setError] = useState(null)
 
   const fetch = useCallback(async () => {
     setLoading(true)

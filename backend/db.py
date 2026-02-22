@@ -1,4 +1,5 @@
 import sqlite3
+import json
 import threading
 from typing import Optional, List, Dict, Any
 from pathlib import Path
@@ -9,8 +10,36 @@ RAW_DB_PATH = Path("c:/scout/data/scout_raw.db")
 MIGRATIONS_PATH = Path("c:/scout/backend/migrations")
 _DB_LOCK = threading.RLock()
 
+# ── Teammate compatibility layer ──────────────────────────────────
+# index_store.py / enrich_links.py expect these public names.
+
+TEAMMATE_DB = Path("c:/scout/data/scout.db")
+
 def now_iso() -> str:
     return datetime.now(timezone.utc).isoformat()
+
+def get_conn() -> sqlite3.Connection:
+    """Public connection getter used by teammate's index_store / enrich_links."""
+    return _get_conn(TEAMMATE_DB)
+
+def json_loads(raw, default=None):
+    """Safe JSON loader used by teammate modules."""
+    if raw is None:
+        return default if default is not None else None
+    try:
+        return json.loads(raw)
+    except (json.JSONDecodeError, TypeError):
+        return default if default is not None else None
+
+def json_dumps(obj) -> str:
+    """JSON serialiser used by teammate modules."""
+    return json.dumps(obj, ensure_ascii=False)
+
+def migrate():
+    """Stub – our schema is auto-created in init_dbs()."""
+    init_dbs()
+
+# ── Core private connection helper ────────────────────────────────
 
 def _get_conn(path: Path) -> sqlite3.Connection:
     path.parent.mkdir(parents=True, exist_ok=True)

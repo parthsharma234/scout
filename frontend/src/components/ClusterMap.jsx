@@ -20,6 +20,8 @@ const CAT_COLOR = {
   fintech: '#fbbf24',
   defense: '#4ade80',
   media: '#f472b6',
+  other: '#6b7280',
+  unknown: '#6b7280',
 }
 
 function clamp(value, min, max) {
@@ -99,8 +101,8 @@ function packCircles(items, width, height) {
     const tRaw = scaleMax === minScore ? 0.5 : (clampedScore - minScore) / (scaleMax - minScore)
     const t = Math.sqrt(Math.max(0, tRaw))
     const r = maxDim * (0.04 + t * 0.07)
-    const cat = CATEGORY[item.entity] ?? 'ai'
-    const color = CAT_COLOR[cat] ?? CAT_COLOR.ai
+    const cat = item.cat || CATEGORY[item.entity] || 'other'
+    const color = CAT_COLOR[cat] ?? CAT_COLOR.other
     return { ...item, r, cat, color, x: cx, y: cy }
   })
 

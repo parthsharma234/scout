@@ -9,7 +9,7 @@ import os
 from pathlib import Path
 
 
-DEFAULT_ENV_PATH = Path(".env")
+DEFAULT_ENV_PATH = Path(__file__).resolve().parent.parent / ".env"
 
 
 def load_env_file(path: Path = DEFAULT_ENV_PATH) -> None:
