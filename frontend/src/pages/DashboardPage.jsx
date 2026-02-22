@@ -223,10 +223,14 @@ export default function DashboardPage() {
 
   function handleShowTopCluster() {
     setClusterScope('top')
+    setSecondaryTab(null)
   }
 
   function handleShowNicheCluster() {
-    if (nicheClusterTrends.length > 0) setClusterScope('niche')
+    if (nicheClusterTrends.length > 0) {
+      setClusterScope('niche')
+      setSecondaryTab(null)
+    }
   }
 
   function moveDimensionBefore(sourceKey, targetKey) {
