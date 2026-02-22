@@ -9,6 +9,8 @@ const SOURCE_COLORS = {
   techcrunch: { fill: '#37d67a', bg: 'rgba(55,214,122,0.15)' },
   producthunt: { fill: '#ff9865', bg: 'rgba(255,152,101,0.15)' },
   web_enriched: { fill: '#22c55e', bg: 'rgba(34,197,94,0.15)' },
+  web_serper: { fill: '#22c55e', bg: 'rgba(34,197,94,0.15)' },
+  web_google_cse: { fill: '#22c55e', bg: 'rgba(34,197,94,0.15)' },
 }
 
 function engagementScore(node) {
@@ -29,7 +31,17 @@ function clamp(v, min, max) {
 }
 
 function shortSource(sourceId) {
-  const map = { hackernews: 'HN', github: 'GH', reddit: 'RD', twitter: 'X', techcrunch: 'TC', producthunt: 'PH', web_enriched: 'WEB' }
+  const map = {
+    hackernews: 'HN',
+    github: 'GH',
+    reddit: 'RD',
+    twitter: 'X',
+    techcrunch: 'TC',
+    producthunt: 'PH',
+    web_enriched: 'WEB',
+    web_serper: 'WEB',
+    web_google_cse: 'WEB',
+  }
   return map[sourceId] ?? 'SRC'
 }
 
@@ -361,12 +373,22 @@ export default function NodeGraph({ company = '', nodes = [], loading = false })
       )}
 
       <div className="web-legend">
-        {Object.entries(SOURCE_COLORS).map(([id, c]) => (
-          <span key={id} className="web-legend-item">
-            <span className="web-legend-dot" style={{ background: c.fill }} />
-            {shortSource(id)}
-          </span>
-        ))}
+        {(() => {
+          const seen = new Set()
+          return Object.entries(SOURCE_COLORS)
+            .map(([id, c]) => ({ label: shortSource(id), color: c.fill }))
+            .filter((item) => {
+              if (seen.has(item.label)) return false
+              seen.add(item.label)
+              return true
+            })
+            .map((item) => (
+              <span key={item.label} className="web-legend-item">
+                <span className="web-legend-dot" style={{ background: item.color }} />
+                {item.label}
+              </span>
+            ))
+        })()}
         <span className="web-legend-count mono">{topNodes.length} sources</span>
       </div>
 

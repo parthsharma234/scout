@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { supabase } from '../lib/supabase'
 import './Header.css'
 
 const DEFAULT_SOURCES = [
@@ -34,6 +35,15 @@ export default function Header({ sources = [], wsConnected = false }) {
   const time = useClock()
   const displaySources = sources.length > 0 ? sources : DEFAULT_SOURCES
 
+  const handleLogout = async () => {
+    const { error } = await supabase.auth.signOut()
+    if (error) {
+      console.error('Error logging out:', error.message)
+    } else {
+      navigate('/login')
+    }
+  }
+
   return (
     <header className="hdr-root">
       <div className="hdr-left">
@@ -57,6 +67,14 @@ export default function Header({ sources = [], wsConnected = false }) {
           {wsConnected ? 'Live' : 'Syncing'}
         </span>
         <span className="hdr-clock mono">{time}</span>
+        <button className="hdr-logout" onClick={handleLogout}>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+            <polyline points="16 17 21 12 16 7" />
+            <line x1="21" y1="12" x2="9" y2="12" />
+          </svg>
+          Logout
+        </button>
       </div>
     </header>
   )

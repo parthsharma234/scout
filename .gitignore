@@ -28,3 +28,12 @@ data/scout.db-wal
 
 # Local agent settings
 .claude/settings.local.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+htmlcov/

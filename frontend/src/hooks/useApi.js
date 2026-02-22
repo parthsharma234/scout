@@ -164,6 +164,8 @@ export async function searchNiche({
   useNemotron = true,
   enrichOnDemand = true,
   enrichLimit = 5,
+  queryProfile = {},
+  dimensionPriorityRank = {},
 } = {}) {
   if (!query || !String(query).trim()) {
     throw new Error('query is required')
@@ -180,6 +182,8 @@ export async function searchNiche({
       use_nemotron: useNemotron,
       enrich_on_demand: enrichOnDemand,
       enrich_limit: enrichLimit,
+      query_profile: queryProfile,
+      dimension_priority_rank: dimensionPriorityRank,
     }),
   })
 }

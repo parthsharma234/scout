@@ -1,14 +1,20 @@
 import sqlite3
+import threading
 from typing import Optional, List, Dict, Any
 from pathlib import Path
 from datetime import datetime, timezone
 
 DB_PATH = Path("c:/scout/data/scout.db")
 RAW_DB_PATH = Path("c:/scout/data/scout_raw.db")
+MIGRATIONS_PATH = Path("c:/scout/backend/migrations")
+_DB_LOCK = threading.RLock()
+
+def now_iso() -> str:
+    return datetime.now(timezone.utc).isoformat()
 
 def _get_conn(path: Path) -> sqlite3.Connection:
     path.parent.mkdir(parents=True, exist_ok=True)
-    conn = sqlite3.connect(str(path), check_same_thread=False)
+    conn = sqlite3.connect(str(path), timeout=30, check_same_thread=False)
     conn.row_factory = sqlite3.Row
     return conn
 

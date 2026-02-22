@@ -1,0 +1,4332 @@
+{
+  "_meta": {
+    "description": "Latest niche query results from Scout tool pipeline",
+    "query": "Edtech",
+    "query_profile": {
+      "sector": "Edtech",
+      "customer_pain": "Personalized AI learning pathways for teachers",
+      "buyer_gtm": "Saas sold to universities",
+      "business_model": "Pay per month"
+    },
+    "dimension_priority_rank": {
+      "sector": 1,
+      "customer_pain": 2,
+      "buyer_gtm": 3,
+      "business_model": 4,
+      "stage_traction": 5,
+      "moat_defensibility": 6,
+      "timing_tailwinds": 7,
+      "risk_filter": 8
+    }
+  },
+  "result_count": 50,
+  "results": [
+    {
+      "entity_key": "jotformaichatbotforcanva",
+      "entity": "Jotform AI Chatbot for Canva",
+      "final_score": 99.424,
+      "lexical_score": 42.889,
+      "lexical_score_norm": 100.0,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "producthunt"
+      ],
+      "top_keywords": [
+        "chatbot",
+        "canva",
+        "jotform",
+        "ai",
+        "design",
+        "bring",
+        "designs",
+        "an",
+        "answers",
+        "turn"
+      ],
+      "trend_score": 79.86,
+      "momentum_score": 98.08,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-01-27T08:01:00+00:00",
+      "last_seen_at": "2026-01-27T08:01:00+00:00",
+      "activity_last_30d": 4,
+      "source_counts": {
+        "producthunt": 4
+      },
+      "source_interactions": {
+        "producthunt": 738
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "ph-1068282-jotform-ai-chatbot-for-canva",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "Jotform AI Chatbot for Canva — Bring Canva designs to life with an embedded AI chatbot",
+          "url": "https://www.producthunt.com/products/jotform/launches/jotform-ai-chatbot-for-canva?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "Jotform AI Chatbot for Canva helps you turn any Canva design into an interactive, AI-powered experience. Add your agent directly into your design so visitors can ask questions, get instant answers, and take action, without leaving the page.",
+          "interactions": 197,
+          "views": 2114,
+          "impressions": 1894,
+          "published_at": "2026-01-27T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "mentoraeducationalplatform",
+      "entity": "Mentora Educational Platform",
+      "final_score": 96.951,
+      "lexical_score": 41.021,
+      "lexical_score_norm": 95.645,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "github"
+      ],
+      "top_keywords": [
+        "peer-to-peer",
+        "learning",
+        "teaching",
+        "client-view-mentozy",
+        "mentora-educational-platform",
+        "educational",
+        "mentora",
+        "education",
+        "online-learning",
+        "typescript"
+      ],
+      "trend_score": 56.51,
+      "momentum_score": 100.0,
+      "confidence": 0.6,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-21T15:56:54+00:00",
+      "last_seen_at": "2026-02-21T15:56:57+00:00",
+      "activity_last_30d": 3,
+      "source_counts": {
+        "github": 3
+      },
+      "source_interactions": {
+        "github": 57
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 3,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "github-1104698422-mentora-educational-platform",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "Mentora-Educational-Platform/Client-View-Mentozy",
+          "url": "https://github.com/Mentora-Educational-Platform/Client-View-Mentozy",
+          "summary": "A peer-to-peer learning and teaching platform",
+          "interactions": 16,
+          "views": 160,
+          "impressions": 160,
+          "published_at": "2026-02-21T15:56:54Z",
+          "confidence": 0.6,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "genstoreai",
+      "entity": "Genstore.ai",
+      "final_score": 96.848,
+      "lexical_score": 40.958,
+      "lexical_score_norm": 95.498,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "producthunt"
+      ],
+      "top_keywords": [
+        "genstore",
+        "ai",
+        "minutes",
+        "test",
+        "iterate",
+        "agents",
+        "in",
+        "fast",
+        "prompt",
+        "ready-to-sell"
+      ],
+      "trend_score": 80.72,
+      "momentum_score": 100.0,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-04T08:01:00+00:00",
+      "last_seen_at": "2026-02-04T08:01:00+00:00",
+      "activity_last_30d": 4,
+      "source_counts": {
+        "producthunt": 4
+      },
+      "source_interactions": {
+        "producthunt": 1982
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "ph-1059870-genstore-ai",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "Genstore.ai — Test, iterate, and launch an agentic storefront in minutes",
+          "url": "https://www.producthunt.com/products/genstore-ai-2/launches/genstore-ai-4?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "Genstore turns a simple prompt into a ready-to-sell store in minutes. AI agents handle product curation, design, and supplier setup so you can test your idea fast. Iterate with built-in AI editors, then let your agents scale operations as you grow. No product. No inventory. No limits.",
+          "interactions": 601,
+          "views": 5334,
+          "impressions": 5208,
+          "published_at": "2026-02-04T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "autosend",
+      "entity": "AutoSend",
+      "final_score": 96.78,
+      "lexical_score": 40.951,
+      "lexical_score_norm": 95.481,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "producthunt"
+      ],
+      "top_keywords": [
+        "autosend",
+        "developers",
+        "email",
+        "need",
+        "who",
+        "agents",
+        "marketers",
+        "transactional",
+        "headaches",
+        "emails"
+      ],
+      "trend_score": 80.64,
+      "momentum_score": 99.81,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-01-28T08:01:00+00:00",
+      "last_seen_at": "2026-01-28T08:01:00+00:00",
+      "activity_last_30d": 4,
+      "source_counts": {
+        "producthunt": 4
+      },
+      "source_interactions": {
+        "producthunt": 1809
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "ph-1069320-autosend",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "AutoSend — Email for Developers, Marketers, and AI Agents",
+          "url": "https://www.producthunt.com/products/autosend-2/launches/autosend-4?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "AutoSend is an email platform for developers who need reliable transactional and marketing emails without pricing headaches.",
+          "interactions": 483,
+          "views": 5194,
+          "impressions": 4585,
+          "published_at": "2026-01-28T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "brainloom",
+      "entity": "BrainLoom",
+      "final_score": 96.274,
+      "lexical_score": 40.9,
+      "lexical_score_norm": 95.362,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "producthunt"
+      ],
+      "top_keywords": [
+        "brainloom",
+        "turn",
+        "local-first",
+        "learning",
+        "flashcards",
+        "study",
+        "os",
+        "stop",
+        "linked",
+        "source"
+      ],
+      "trend_score": 80.0,
+      "momentum_score": 98.4,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-01-24T08:01:00+00:00",
+      "last_seen_at": "2026-01-24T08:01:00+00:00",
+      "activity_last_30d": 4,
+      "source_counts": {
+        "producthunt": 4
+      },
+      "source_interactions": {
+        "producthunt": 1486
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "ph-1065398-brainloom",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "BrainLoom — Turn PDFs into Flashcards. The local-first Learning OS.",
+          "url": "https://www.producthunt.com/products/brainloom/launches/brainloom?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "Stop switching between different apps just to study. BrainLoom is the local-first Learning OS that unifies your study workflow. Turn PDF highlights into Flashcards instantly and keep them linked to the source text for deep context. You can also structure ideas visually on an Infinite Canvas using \"Smart Paste\" without ",
+          "interactions": 407,
+          "views": 4214,
+          "impressions": 3788,
+          "published_at": "2026-01-24T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "pages",
+      "entity": "Pages",
+      "final_score": 94.27,
+      "lexical_score": 39.378,
+      "lexical_score_norm": 91.814,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "hackernews"
+      ],
+      "top_keywords": [
+        "hn",
+        "to",
+        "that",
+        "in",
+        "it",
+        "of",
+        "ai",
+        "x2f",
+        "built",
+        "an"
+      ],
+      "trend_score": 69.48,
+      "momentum_score": 100.0,
+      "confidence": 0.782,
+      "is_known_incumbent": false,
+      "first_seen_at": "2025-09-28T15:59:06+00:00",
+      "last_seen_at": "2026-02-16T13:00:57+00:00",
+      "activity_last_30d": 11,
+      "source_counts": {
+        "hackernews": 44
+      },
+      "source_interactions": {
+        "hackernews": 337
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "hn-46269673-pages",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: I implemented generics in my programming language",
+          "url": "https://axe-docs.pages.dev/features/generics/",
+          "summary": "It took a while to implement, though now I have generic functions working in Axe. Documentation, repository and site attached.",
+          "interactions": 80,
+          "views": 438,
+          "impressions": 438,
+          "published_at": "2025-12-15T02:20:46+00:00",
+          "confidence": 0.77,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-46417514-pages",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Matchstick Puzzle Game in the Browser",
+          "url": "https://matchmath.pages.dev/",
+          "summary": "An older family member showed me these puzzle games that he was playing via YouTube videos. I wanted to make them more playable in a frictionless way, so I generated all possible combinations for these types of puzzles and put together an interface for them.",
+          "interactions": 15,
+          "views": 110,
+          "impressions": 86,
+          "published_at": "2025-12-29T04:37:34+00:00",
+          "confidence": 0.77,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-45405319-pages",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Engineering Offer Breakdown",
+          "url": "https://engineer-offer-breakdown.pages.dev/",
+          "summary": "It&#x27;s always a bit confusing trying to understand what each companies offer actually means for your total comp each year. I made a simple tool that lets you input the relevant info and gives you a visual breakdown of your total comp over the years. Static site, no backend slu",
+          "interactions": 8,
+          "views": 42,
+          "impressions": 42,
+          "published_at": "2025-09-28T15:59:06+00:00",
+          "confidence": 0.77,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-45488946-pages",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Toolbit – A unified, privacy-friendly toolbox for developers",
+          "url": "https://toolbit.pages.dev/",
+          "summary": "I built Toolbit — a fast, ad-free, privacy-respecting developer toolbox that runs entirely in your browser.<p>It brings together 20+ everyday utilities like:\n    JSON Formatter &amp; Validator\n    Base64 Encoder &#x2F; Decoder\n    JWT Decoder\n    Markdown Previewer\n    HTML &#x2F",
+          "interactions": 6,
+          "views": 40,
+          "impressions": 34,
+          "published_at": "2025-10-06T08:20:53+00:00",
+          "confidence": 0.87,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-45946199-pages",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: ZTGI-AC – An AI that checks its internal stability before answering",
+          "url": "https://ztgiai.pages.dev/",
+          "summary": "Hi everyone,<p>This is a small experimental AI project I’ve been building called *ZTGI-AC*.<p>Most LLMs generate an answer immediately, but ZTGI-AC does something different:  \nbefore responding, it runs an internal stability check.<p>It evaluates:\n• risk  \n• jitter  \n• dissonance",
+          "interactions": 6,
+          "views": 32,
+          "impressions": 32,
+          "published_at": "2025-11-16T16:19:02+00:00",
+          "confidence": 0.87,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-46036235-pages",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: A decision making framework for DevRel resource allocation",
+          "url": "https://drim.pages.dev/",
+          "summary": "Show HN: A decision making framework for DevRel resource allocation",
+          "interactions": 3,
+          "views": 30,
+          "impressions": 18,
+          "published_at": "2025-11-24T17:00:58+00:00",
+          "confidence": 0.77,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-46026120-pages",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: OhNiceRepo – Easily discover trending GitHub gems and repos",
+          "url": "https://ohnicerepo.pages.dev",
+          "summary": "Show HN: OhNiceRepo – Easily discover trending GitHub gems and repos",
+          "interactions": 3,
+          "views": 30,
+          "impressions": 18,
+          "published_at": "2025-11-23T18:41:02+00:00",
+          "confidence": 0.77,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-46944039-pages",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: An AI mock interviewer that keeps asking follow-ups (export transcript)",
+          "url": "https://interview-agent-en.pages.dev/",
+          "summary": "I often use GPT by asking it to challenge my thinking with questions, and that worked surprisingly well for clarifying my own ideas. I recently had an interview coming up, so I built this small web app (using Codex) that acts as an interviewer and drills follow-up questions—so I ",
+          "interactions": 2,
+          "views": 20,
+          "impressions": 12,
+          "published_at": "2026-02-09T11:20:38+00:00",
+          "confidence": 0.77,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-45714268-pages",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Cozy Keys, play MIDI keys in the browser",
+          "url": "https://cozykeys.pages.dev/",
+          "summary": "Hi HN, I&#x27;ve built a low-friction web app for playing and recording MIDI keys.<p>Cozy Keys serves as a sweet spot between full-blown DAW&#x2F;piano apps and lighter online tools. Former often have setup hassle, and might not be readily available on all devices and online opti",
+          "interactions": 2,
+          "views": 20,
+          "impressions": 12,
+          "published_at": "2025-10-26T18:50:56+00:00",
+          "confidence": 0.77,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-45560471-pages",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Create your own live channel from a list of video URLs",
+          "url": "https://livechannels.pages.dev",
+          "summary": "With just a list of video urls, you can create a pseudo live channel. Like on television, the videos play based on a predefined schedule. This website will allow people to create their own channel just like on TV and have other users watch their channel, all from just a list of v",
+          "interactions": 2,
+          "views": 20,
+          "impressions": 12,
+          "published_at": "2025-10-12T18:22:29+00:00",
+          "confidence": 0.77,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-47034465-pages",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Create new calendar systems to fix uneven months",
+          "url": "https://calendar-architect.pages.dev/",
+          "summary": "I was playing around with divisors of numbers near 365 and realized you can generate a ton of valid calendar systems by picking a highly composite base (like 360) and treating the leftover days as end-of-year extra holidays.<p>365 is nearly prime (5×73), which is why our months a",
+          "interactions": 1,
+          "views": 10,
+          "impressions": 6,
+          "published_at": "2026-02-16T13:00:57+00:00",
+          "confidence": 0.77,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-46670778-pages",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Built my portfolio in one Claude Code session – 145 repos, AI chat",
+          "url": "https://tasteful-vibes.pages.dev",
+          "summary": "Teacher by day, vibe coder by night. Built this portfolio in a single Claude Code session.<p>Features:\n- Terminal aesthetic UI\n- AI chat that knows my 145 repos (Groq&#x2F;Llama 3.3)\n- Searchable by vertical\n- Live GitHub activity feed\n- Stripe payments<p>Tech: Astro, Cloudflare ",
+          "interactions": 1,
+          "views": 10,
+          "impressions": 6,
+          "published_at": "2026-01-18T18:40:19+00:00",
+          "confidence": 0.87,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-46275324-pages",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Bookpace",
+          "url": "https://bookpace.pages.dev",
+          "summary": "It&#x27;s essentially a book progress tracker. Many apps allow you to add the books that you are currently reading, but not at what pace. It&#x27;s simple, no complicated stuff, no AI shenanigans.\nCreated as I was overwhelmed by the number of books I wanted to read, and thought i",
+          "interactions": 1,
+          "views": 10,
+          "impressions": 6,
+          "published_at": "2025-12-15T14:57:00+00:00",
+          "confidence": 0.87,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-47023422-pages",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: RevenueBack – Stop losing MRR to failed payments",
+          "url": "https://revenueback.pages.dev",
+          "summary": "Show HN: RevenueBack – Stop losing MRR to failed payments",
+          "interactions": 1,
+          "views": 10,
+          "impressions": 6,
+          "published_at": "2026-02-15T13:17:34+00:00",
+          "confidence": 0.77,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "hynoteendtoendpublish",
+      "entity": "HyNote End-to-End Publish",
+      "final_score": 93.584,
+      "lexical_score": 38.958,
+      "lexical_score_norm": 90.834,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "producthunt"
+      ],
+      "top_keywords": [
+        "end-to-end",
+        "hynote",
+        "publish",
+        "second",
+        "brain",
+        "insights",
+        "raw",
+        "functions",
+        "transforms",
+        "is"
+      ],
+      "trend_score": 80.72,
+      "momentum_score": 100.0,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-03T08:01:00+00:00",
+      "last_seen_at": "2026-02-03T08:01:00+00:00",
+      "activity_last_30d": 4,
+      "source_counts": {
+        "producthunt": 4
+      },
+      "source_interactions": {
+        "producthunt": 745
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "ph-1056216-hynote-end-to-end-publish",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "HyNote End-to-End Publish — Turns any meeting, PDF, or file into presentable insights",
+          "url": "https://www.producthunt.com/products/hynote-ai/launches/hynote-end-to-end-publish?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "HyNote is a comprehensive end-to-end knowledge second brain that transforms raw data into polished results. By seamlessly managing the entire lifecycle of your information—from capturing diverse inputs like audio and video to generating professional-grade exports—it functions as a true second brain. This streamlined wo",
+          "interactions": 234,
+          "views": 1964,
+          "impressions": 1964,
+          "published_at": "2026-02-03T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "recoverpay",
+      "entity": "Recoverpay",
+      "final_score": 93.537,
+      "lexical_score": 38.929,
+      "lexical_score_norm": 90.767,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "hackernews"
+      ],
+      "top_keywords": [
+        "recoverpay",
+        "german",
+        "smbs",
+        "automation",
+        "ai-powered",
+        "debt",
+        "recovery",
+        "lose",
+        "we",
+        "smart"
+      ],
+      "trend_score": 55.36,
+      "momentum_score": 100.0,
+      "confidence": 0.87,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-20T22:34:27+00:00",
+      "last_seen_at": "2026-02-20T22:34:27+00:00",
+      "activity_last_30d": 4,
+      "source_counts": {
+        "hackernews": 4
+      },
+      "source_interactions": {
+        "hackernews": 26
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 4,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "hn-47094938-recoverpay",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: RecoverPay – AI-Powered Debt Recovery Automation for German SMBs",
+          "url": "https://recoverpay.de",
+          "summary": "German SMBs lose 50B EUR annually to unpaid invoices. We built AI-powered dunning automation recovering 73% within 14 days. Smart scoring, auto reminders, legal orders. DSGVO-compliant.",
+          "interactions": 2,
+          "views": 89,
+          "impressions": 89,
+          "published_at": "2026-02-20T22:34:27+00:00",
+          "confidence": 0.87,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "minimalistphoneappforios",
+      "entity": "minimalist phone app for iOS",
+      "final_score": 93.514,
+      "lexical_score": 38.95,
+      "lexical_score_norm": 90.816,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "producthunt"
+      ],
+      "top_keywords": [
+        "minimalist",
+        "ios",
+        "phone",
+        "digital",
+        "app",
+        "detox",
+        "get",
+        "your",
+        "time",
+        "month"
+      ],
+      "trend_score": 80.63,
+      "momentum_score": 99.81,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-01-28T08:01:00+00:00",
+      "last_seen_at": "2026-01-28T08:01:00+00:00",
+      "activity_last_30d": 4,
+      "source_counts": {
+        "producthunt": 4
+      },
+      "source_interactions": {
+        "producthunt": 1787
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "ph-1059806-minimalist-phone-app-for-ios",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "minimalist phone app for iOS — Your calmer, digital detox experience on iPhone",
+          "url": "https://www.producthunt.com/products/minimalist-phone-reduce-your-screentime/launches/minimalist-phone-app-for-ios?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "Imagine saving 80 hours/month. That’s nearly $3,000 you’d normally get for work instead of mindlessly scrolling. minimalist phone brings a true digital detox to iOS with a clean, blank-screen design. Block addictive apps, remove colourful icons, and get kicked out of your phone when time is up. Reclaim focus, improve w",
+          "interactions": 531,
+          "views": 4858,
+          "impressions": 4673,
+          "published_at": "2026-01-28T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "vislaaidirectormode",
+      "entity": "Visla AI Director Mode",
+      "final_score": 93.488,
+      "lexical_score": 38.899,
+      "lexical_score_norm": 90.697,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "producthunt"
+      ],
+      "top_keywords": [
+        "mode",
+        "visla",
+        "director",
+        "ai",
+        "video",
+        "scene",
+        "storyboard",
+        "images",
+        "ai-generated",
+        "logos"
+      ],
+      "trend_score": 79.99,
+      "momentum_score": 100.0,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-12T08:01:00+00:00",
+      "last_seen_at": "2026-02-12T08:01:00+00:00",
+      "activity_last_30d": 4,
+      "source_counts": {
+        "producthunt": 4
+      },
+      "source_interactions": {
+        "producthunt": 629
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "ph-1066304-visla-ai-director-mode",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "Visla AI Director Mode — Continuous scene-by-scene AI video generation",
+          "url": "https://www.producthunt.com/products/visla?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "AI Director Mode is Visla’s new way to build videos. You start with any input, and Visla plans your video scene by scene with AI-generated storyboard images. Next, you set the direction, like pace, voiceover style, and the exact characters, objects, and environments you want on screen. Then you lock in products, logos,",
+          "interactions": 170,
+          "views": 1792,
+          "impressions": 1625,
+          "published_at": "2026-02-12T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "forums",
+      "entity": "Forums",
+      "final_score": 93.073,
+      "lexical_score": 38.906,
+      "lexical_score_norm": 90.713,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "producthunt"
+      ],
+      "top_keywords": [
+        "forums",
+        "questions",
+        "ask",
+        "github",
+        "about",
+        "repositories",
+        "any",
+        "ai-powered",
+        "answers",
+        "grep"
+      ],
+      "trend_score": 80.08,
+      "momentum_score": 98.58,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-01-25T08:01:00+00:00",
+      "last_seen_at": "2026-01-25T08:01:00+00:00",
+      "activity_last_30d": 4,
+      "source_counts": {
+        "producthunt": 4
+      },
+      "source_interactions": {
+        "producthunt": 1340
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "ph-999623-forums",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "Forums — AI-powered Q&A for GitHub repositories.",
+          "url": "https://www.producthunt.com/products/basehub/launches/forums?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "Ask questions about any repo and AI agents will clone, explore, and grep the source code to provide source-backed answers.",
+          "interactions": 341,
+          "views": 3934,
+          "impressions": 3361,
+          "published_at": "2026-01-25T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "getaiperks",
+      "entity": "Getaiperks",
+      "final_score": 91.432,
+      "lexical_score": 41.301,
+      "lexical_score_norm": 96.297,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "hackernews"
+      ],
+      "top_keywords": [
+        "perks",
+        "free",
+        "quot",
+        "ai",
+        "deals",
+        "hn",
+        "credits",
+        "of",
+        "getaiperks",
+        "developers"
+      ],
+      "trend_score": 38.76,
+      "momentum_score": 80.08,
+      "confidence": 0.77,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-08T11:32:30+00:00",
+      "last_seen_at": "2026-02-08T11:32:30+00:00",
+      "activity_last_30d": 4,
+      "source_counts": {
+        "hackernews": 4
+      },
+      "source_interactions": {
+        "hackernews": 6
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "hn-46933367-getaiperks",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: AI Perks – A curated list of free AI credits and deals for developers",
+          "url": "https://www.getaiperks.com/en",
+          "summary": "Hi HN,<p>I built Get AI Perks to solve a problem I faced myself: keeping track of free credits, grants, and deals for AI tools is painful. Most &quot;perk&quot; lists are hidden behind expensive paywalls or buried in incubator intranets.<p>I wanted to make a clean, public dashboa",
+          "interactions": 2,
+          "views": 20,
+          "impressions": 12,
+          "published_at": "2026-02-08T11:32:30+00:00",
+          "confidence": 0.87,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "openclaw",
+      "entity": "OpenClaw",
+      "final_score": 90.535,
+      "lexical_score": 37.09,
+      "lexical_score_norm": 86.479,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "github",
+        "hackernews",
+        "producthunt"
+      ],
+      "top_keywords": [
+        "agent",
+        "agents",
+        "ai",
+        "ai-agent",
+        "auto-deploy",
+        "autonomous",
+        "claude",
+        "code",
+        "expo",
+        "hn",
+        "open-source",
+        "openclaw"
+      ],
+      "trend_score": 98.0,
+      "momentum_score": 100.0,
+      "confidence": 0.525,
+      "is_known_incumbent": false,
+      "first_seen_at": "2025-09-01T15:17:59+00:00",
+      "last_seen_at": "2026-02-21T19:08:34+00:00",
+      "activity_last_30d": 86,
+      "source_counts": {
+        "hackernews": 83,
+        "github": 27,
+        "producthunt": 8
+      },
+      "source_interactions": {
+        "github": 1181936,
+        "producthunt": 4543,
+        "hackernews": 85
+      },
+      "mention_count_1h": 1,
+      "mention_count_24h": 25,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "github-1103012935-openclaw",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "openclaw/openclaw",
+          "url": "https://github.com/openclaw/openclaw",
+          "summary": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞",
+          "interactions": 494972,
+          "views": 2627956,
+          "impressions": 2627956,
+          "published_at": "2026-02-21T19:08:34Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "ph-1068372-openclaw",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "OpenClaw — The AI that actually does things",
+          "url": "https://www.producthunt.com/products/clawdbot-2/launches/openclaw?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "Formerly Moltbot and Clawbot, OpenClaw turns your computer into a 24/7 personal agent accessible from any chat app. Control your browser, execute shell commands, manage files, and automate workflows via WhatsApp or Telegram. Features persistent memory, full system access, local privacy, and 50+ integrations.",
+          "interactions": 879,
+          "views": 10766,
+          "impressions": 8983,
+          "published_at": "2026-01-27T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "github-1123446919-gmickel-claude-marketplace",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "gmickel/gmickel-claude-marketplace",
+          "url": "https://github.com/gmickel/gmickel-claude-marketplace",
+          "summary": "Claude Code plugins for reliable AI coding. Flow-Next: plan-first workflows, Ralph autonomous mode (overnight coding with fresh context), multi-model review gates via RepoPrompt/Codex, re-anchoring to prevent drift, receipt-based gating.",
+          "interactions": 931,
+          "views": 6393,
+          "impressions": 6393,
+          "published_at": "2026-02-21T14:21:08Z",
+          "confidence": 0.55,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "ph-1081207-clawmetry-for-openclaw",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "ClawMetry for OpenClaw — Real-time observability dashboard for OpenClaw AI agents",
+          "url": "https://www.producthunt.com/products/clawmetry?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "ClawMetry is a free, open-source observability dashboard for OpenClaw AI agents. Think Grafana, but purpose-built for AI. One command install (pip install clawmetry), zero config. Monitor token costs, sub-agent activity, cron jobs, memory changes, and session history. All in real-time with a beautiful live flow visuali",
+          "interactions": 233,
+          "views": 2758,
+          "impressions": 2410,
+          "published_at": "2026-02-18T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "github-1140897918-claudia",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "kbanc85/claudia",
+          "url": "https://github.com/kbanc85/claudia",
+          "summary": "Terminal-based AI chief of staff. Remembers relationships, tracks commitments, helps you think strategically. Runs on Claude Code.",
+          "interactions": 107,
+          "views": 941,
+          "impressions": 941,
+          "published_at": "2026-02-19T21:39:55Z",
+          "confidence": 0.6,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "github-1144946140-pm-claude-skills",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "mohitagw15856/pm-claude-skills",
+          "url": "https://github.com/mohitagw15856/pm-claude-skills",
+          "summary": "Product Management Skills for Claude AI - Save 8-9 hours per week",
+          "interactions": 73,
+          "views": 661,
+          "impressions": 661,
+          "published_at": "2026-02-20T12:15:55Z",
+          "confidence": 0.6,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "github-1158960069-opencrust-org",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "opencrust-org/opencrust",
+          "url": "https://github.com/opencrust-org/opencrust",
+          "summary": "Personal AI assistant platform, rewritten in Rust from OpenClaw",
+          "interactions": 74,
+          "views": 330,
+          "impressions": 330,
+          "published_at": "2026-02-21T18:55:28Z",
+          "confidence": 0.7,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "github-1152536742-opencrew",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "AlexAnys/opencrew",
+          "url": "https://github.com/AlexAnys/opencrew",
+          "summary": "Openclaw多智能体协同系统 | Multi-Agent OS for Decision Makers — 基于 OpenClaw (Clawbot) + Slack，让 AI 团队各司其职、自主稳定迭代。",
+          "interactions": 43,
+          "views": 404,
+          "impressions": 404,
+          "published_at": "2026-02-20T09:00:43Z",
+          "confidence": 0.45,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "github-1141314793-producthunt-skills",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "yoanbernabeu/producthunt-skills",
+          "url": "https://github.com/yoanbernabeu/producthunt-skills",
+          "summary": "🚀 31 AI Agent Skills for Product Hunt launches. Expert guidance for strategy, content, marketing, compliance & more. Works with Claude Code, Cursor, Codex, and 20+ AI agents.",
+          "interactions": 18,
+          "views": 220,
+          "impressions": 220,
+          "published_at": "2026-01-30T09:09:10Z",
+          "confidence": 0.45,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "github-1160692151-oh-my-claude",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "npow/oh-my-claude",
+          "url": "https://github.com/npow/oh-my-claude",
+          "summary": "Like oh-my-zsh, but for Claude Code. An extensible statusline framework with themes and plugins.",
+          "interactions": 3,
+          "views": 285,
+          "impressions": 285,
+          "published_at": "2026-02-20T22:07:49Z",
+          "confidence": 0.45,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "github-1141398507-claude-saas-eval-skills",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "kirillpolevoy/claude-saas-eval-skills",
+          "url": "https://github.com/kirillpolevoy/claude-saas-eval-skills",
+          "summary": "Claude Code skills for evaluating niche SaaS opportunities through a lifestyle business lens",
+          "interactions": 8,
+          "views": 152,
+          "impressions": 152,
+          "published_at": "2026-01-26T20:53:49Z",
+          "confidence": 0.45,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-47101805-claudeusage",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: ClaudeUsage – macOS menu bar app to track your Claude Pro usage limits",
+          "url": "https://github.com/linuxlewis/claude-usage",
+          "summary": "No summary text available.",
+          "interactions": 5,
+          "views": 133,
+          "impressions": 133,
+          "published_at": "2026-02-21T15:44:25+00:00",
+          "confidence": 0.47,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-47099606-claude-code-open",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Claude Code Open – AI Coding Platform with Web IDE and Agents",
+          "url": "https://github.com/kill136/claude-code-open",
+          "summary": "No summary text available.",
+          "interactions": 2,
+          "views": 108,
+          "impressions": 108,
+          "published_at": "2026-02-21T11:03:15+00:00",
+          "confidence": 0.47,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-46845528-agentgram",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: AgentGram – Open-source social network for AI agents",
+          "url": "https://github.com/agentgram/agentgram",
+          "summary": "Show HN: AgentGram – Open-source social network for AI agents",
+          "interactions": 4,
+          "views": 22,
+          "impressions": 22,
+          "published_at": "2026-02-01T11:50:25+00:00",
+          "confidence": 0.47,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-46847722-agentgram",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: AgentGram – Open-source, self-hostable AI agent social network",
+          "url": "https://www.agentgram.co/",
+          "summary": "Hi HN! I&#x27;m building AgentGram, an open-source alternative for AI agent networking.<p>Why?<p>Recent security incidents in closed platforms reminded me why transparency matters. AI agents handle sensitive data and make autonomous decisions—trust can&#x27;t be optional.<p>What ",
+          "interactions": 2,
+          "views": 20,
+          "impressions": 12,
+          "published_at": "2026-02-01T17:29:45+00:00",
+          "confidence": 0.87,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "toolkuai",
+      "entity": "Toolkuai",
+      "final_score": 90.363,
+      "lexical_score": 37.33,
+      "lexical_score_norm": 87.039,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "hackernews"
+      ],
+      "top_keywords": [
+        "hn",
+        "toolkuai",
+        "pdf",
+        "browser",
+        "typst",
+        "pandoc",
+        "docx",
+        "x2f",
+        "wasm",
+        "hi"
+      ],
+      "trend_score": 54.13,
+      "momentum_score": 98.12,
+      "confidence": 0.87,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-01-31T16:11:46+00:00",
+      "last_seen_at": "2026-02-09T15:20:43+00:00",
+      "activity_last_30d": 8,
+      "source_counts": {
+        "hackernews": 8
+      },
+      "source_interactions": {
+        "hackernews": 67
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "hn-46837885-toolkuai",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: ToolKuai – Privacy-first, 100% client-side media tools",
+          "url": "https://toolkuai.com/",
+          "summary": "Hi HN,<p>I’m Linn, the creator of ToolKuai (<a href=\"https:&#x2F;&#x2F;toolkuai.com\" rel=\"nofollow\">https:&#x2F;&#x2F;toolkuai.com</a>).<p>Like many of you, I’ve always been wary of &quot;free&quot; online file converters. Most of them are black boxes: you upload your private doc",
+          "interactions": 18,
+          "views": 98,
+          "impressions": 98,
+          "published_at": "2026-01-31T16:11:46+00:00",
+          "confidence": 0.87,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-46946183-toolkuai",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Docx to PDF in the Browser Using Pandoc and Typst (WASM)",
+          "url": "https://toolkuai.com/word-to-pdf",
+          "summary": "Hi HN,<p>I wanted a way to convert .docx to .pdf without uploading my files to a random server or installing a 2GB LaTeX distribution.<p>I built a simple tool that runs Pandoc and Typst entirely in the browser via WebAssembly.<p>How it works:<p>- Pandoc (WASM) parses the .docx fi",
+          "interactions": 8,
+          "views": 60,
+          "impressions": 46,
+          "published_at": "2026-02-09T15:20:43+00:00",
+          "confidence": 0.87,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "nvidiapersonaplex",
+      "entity": "NVIDIA PersonaPlex",
+      "final_score": 90.32,
+      "lexical_score": 36.958,
+      "lexical_score_norm": 86.171,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "producthunt"
+      ],
+      "top_keywords": [
+        "personaplex",
+        "conversational",
+        "nvidia",
+        "natural",
+        "any",
+        "ai",
+        "role",
+        "introduce",
+        "we",
+        "enables"
+      ],
+      "trend_score": 80.72,
+      "momentum_score": 100.0,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-16T08:01:00+00:00",
+      "last_seen_at": "2026-02-16T08:01:00+00:00",
+      "activity_last_30d": 4,
+      "source_counts": {
+        "producthunt": 4
+      },
+      "source_interactions": {
+        "producthunt": 1351
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "ph-1079988-nvidia-personaplex",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "NVIDIA PersonaPlex — Natural Conversational AI With Any Role and Voice",
+          "url": "https://www.producthunt.com/products/nvidia?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "We introduce PersonaPlex, a full-duplex conversational AI model that enables natural conversations with customizable voices and roles. PersonaPlex handles interruptions and backchannels while maintaining any chosen persona, outperforming existing systems on conversational dynamics and task adherence.",
+          "interactions": 326,
+          "views": 4046,
+          "impressions": 3373,
+          "published_at": "2026-02-16T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "doraversesallinoneaiformeetings",
+      "entity": "Doraverses All-in-One AI for Meetings",
+      "final_score": 90.32,
+      "lexical_score": 36.958,
+      "lexical_score_norm": 86.171,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "producthunt"
+      ],
+      "top_keywords": [
+        "all-in-one",
+        "meetings",
+        "ai",
+        "live",
+        "doraverses",
+        "work",
+        "end",
+        "bot",
+        "in",
+        "we"
+      ],
+      "trend_score": 80.72,
+      "momentum_score": 100.0,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-11T08:01:00+00:00",
+      "last_seen_at": "2026-02-11T08:01:00+00:00",
+      "activity_last_30d": 4,
+      "source_counts": {
+        "producthunt": 4
+      },
+      "source_interactions": {
+        "producthunt": 1075
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "ph-1075004-doraverses-all-in-one-ai-for-meetings",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "Doraverses All-in-One AI for Meetings — Meet in any language with live translations",
+          "url": "https://www.producthunt.com/products/doraverse-3?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "To better support daily work, we’ve added new meeting features to Doraverse’s all-in-one AI platform, removing friction and eliminating follow-up work. It runs meetings end to end with live translation in 60+ languages, automatic transcripts, notes, action items, and AI assistant you can ask on the spot. Bot or no bot.",
+          "interactions": 293,
+          "views": 3052,
+          "impressions": 2763,
+          "published_at": "2026-02-11T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "visualeditingbydatocms",
+      "entity": "Visual Editing by DatoCMS",
+      "final_score": 90.32,
+      "lexical_score": 36.958,
+      "lexical_score_norm": 86.171,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "producthunt"
+      ],
+      "top_keywords": [
+        "visual",
+        "datocms",
+        "editing",
+        "cms",
+        "headless",
+        "making",
+        "by",
+        "long-standing",
+        "love-hate",
+        "developers"
+      ],
+      "trend_score": 80.72,
+      "momentum_score": 100.0,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-12T08:01:00+00:00",
+      "last_seen_at": "2026-02-12T08:01:00+00:00",
+      "activity_last_30d": 4,
+      "source_counts": {
+        "producthunt": 4
+      },
+      "source_interactions": {
+        "producthunt": 831
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "ph-1076360-visual-editing-by-datocms",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "Visual Editing by DatoCMS — Visual editing for Headless CMS",
+          "url": "https://www.producthunt.com/products/dato-cms?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "Headless CMS and Visual Editing have a long-standing love-hate relationship. Our approach to is aimed at making it dead easy for developers to implement Visual Editing in DatoCMS, to let content editors get the WYSIWYG effect seamlessly. Combined with draft mode and real-time updates, making changes is a breeze. No mor",
+          "interactions": 203,
+          "views": 2478,
+          "impressions": 2064,
+          "published_at": "2026-02-12T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "hyper",
+      "entity": "Hyper",
+      "final_score": 89.358,
+      "lexical_score": 39.76,
+      "lexical_score_norm": 92.704,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "hackernews"
+      ],
+      "top_keywords": [
+        "workloads",
+        "gpu",
+        "hyperai",
+        "leaderboard",
+        "x2f",
+        "ai",
+        "performance",
+        "hyper",
+        "hardware",
+        "benchmark"
+      ],
+      "trend_score": 40.75,
+      "momentum_score": 81.55,
+      "confidence": 0.87,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-01-24T15:57:35+00:00",
+      "last_seen_at": "2026-01-24T15:57:35+00:00",
+      "activity_last_30d": 4,
+      "source_counts": {
+        "hackernews": 4
+      },
+      "source_interactions": {
+        "hackernews": 14
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "hn-46744643-hyper",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: HyperAI GPU Leaderboard – A benchmark comparison site for AI workloads",
+          "url": "https://hyper.ai/cn/gpu-leaderboard",
+          "summary": "HyperAI built a leaderboard that compares GPU performance metrics specifically for machine learning and AI workloads.<p>URL: <a href=\"https:&#x2F;&#x2F;hyper.ai&#x2F;gpu-leaderboard\" rel=\"nofollow\">https:&#x2F;&#x2F;hyper.ai&#x2F;gpu-leaderboard</a><p>It shows up-to-date hardware",
+          "interactions": 6,
+          "views": 32,
+          "impressions": 32,
+          "published_at": "2026-01-24T15:57:35+00:00",
+          "confidence": 0.87,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "airsend",
+      "entity": "AirSend",
+      "final_score": 89.087,
+      "lexical_score": 37.535,
+      "lexical_score_norm": 87.517,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "github",
+        "hackernews"
+      ],
+      "top_keywords": [
+        "airsend",
+        "digital",
+        "nomads",
+        "spend",
+        "usd",
+        "off",
+        "pay",
+        "to",
+        "hn",
+        "in"
+      ],
+      "trend_score": 52.56,
+      "momentum_score": 92.75,
+      "confidence": 0.633,
+      "is_known_incumbent": false,
+      "first_seen_at": "2025-09-29T07:42:14+00:00",
+      "last_seen_at": "2026-02-20T15:23:35+00:00",
+      "activity_last_30d": 3,
+      "source_counts": {
+        "github": 3,
+        "hackernews": 4
+      },
+      "source_interactions": {
+        "github": 96,
+        "hackernews": 3
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "github-1161865259-airsend",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "Avi7ii/AirSend",
+          "url": "https://github.com/Avi7ii/AirSend",
+          "summary": "A native, headless LocalSend client for macOS. Lightweight, fast, and elegant.",
+          "interactions": 5,
+          "views": 348,
+          "impressions": 348,
+          "published_at": "2026-02-20T12:52:58Z",
+          "confidence": 0.55,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-45411244-useairsend",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: AirSend – beta for digital nomads to get paid in USD and spend in USDC",
+          "url": "https://www.useairsend.com/",
+          "summary": "Hi HN. I built AirSend for digital nomads abroad who prefer to hold their earnings in USD.<p>What it is\nSimple invoicing and payouts. Clients pay a link in fiat. We settle to stablecoins behind the scenes. You can spend from a card or off ramp to local rails. No crypto know how n",
+          "interactions": 1,
+          "views": 10,
+          "impressions": 6,
+          "published_at": "2025-09-29T07:42:14+00:00",
+          "confidence": 0.77,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "videoforms",
+      "entity": "Video Forms",
+      "final_score": 88.875,
+      "lexical_score": 36.073,
+      "lexical_score_norm": 84.108,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "producthunt"
+      ],
+      "top_keywords": [
+        "video",
+        "forms",
+        "in",
+        "ai",
+        "so",
+        "you",
+        "videos",
+        "generate",
+        "flixier",
+        "timeline"
+      ],
+      "trend_score": 82.16,
+      "momentum_score": 100.0,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-05T08:01:00+00:00",
+      "last_seen_at": "2026-02-18T08:01:00+00:00",
+      "activity_last_30d": 12,
+      "source_counts": {
+        "producthunt": 12
+      },
+      "source_interactions": {
+        "producthunt": 2572
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "ph-1078798-flixier-generate-ai-video-in-timeline",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "Flixier Generate AI Video in Timeline — Extend shots, connect clips, generate from any frame",
+          "url": "https://www.producthunt.com/products/flixier?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "Most AI video tools stop at generation. Flixier brings AI into the editing timeline, so you can generate, extend, and connect clips, trim, polish and finish videos in one place, without exporting or rebuilding elsewhere.",
+          "interactions": 276,
+          "views": 2842,
+          "impressions": 2670,
+          "published_at": "2026-02-18T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "ph-1074191-video-forms",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "Video Forms — Embed questionnaires in videos to create interactive forms",
+          "url": "https://www.producthunt.com/products/video-forms?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "Ask questions inside your videos, not around them VForms lets you embed questions directly into the video itself: right where the feedback actually matters 💬Add questions at specific moments in a video so viewers can give contextual feedback ⏭ Let viewers skip ahead based on their answers 🧠 Collect more accurate, highe",
+          "interactions": 257,
+          "views": 2660,
+          "impressions": 2419,
+          "published_at": "2026-02-10T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "ph-1073796-sylvian-ai-forms",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "Sylvian AI Forms — Never fill a PDF by hand again",
+          "url": "https://www.producthunt.com/products/sylvian-excel-agent/launches/sylvian-ai-forms?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "Upload a reimbursement form and 10 receipt images — Sylvian will fill in your form with all the info. Upload a compliance form and a spreadsheet with 10 rows of information — Sylvian will fill out 10 compliance forms for you. All of this in seconds. Sylvian AI Forms is the most complete PDF Form AI ever, made so you ne",
+          "interactions": 165,
+          "views": 1806,
+          "impressions": 1581,
+          "published_at": "2026-02-05T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "jmail",
+      "entity": "Jmail",
+      "final_score": 88.758,
+      "lexical_score": 36.001,
+      "lexical_score_norm": 83.94,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "hackernews"
+      ],
+      "top_keywords": [
+        "hn",
+        "files",
+        "epstein",
+        "jmail",
+        "jefftube",
+        "suite",
+        "x2f",
+        "ycombinator",
+        "com",
+        "https"
+      ],
+      "trend_score": 81.26,
+      "momentum_score": 100.0,
+      "confidence": 0.804,
+      "is_known_incumbent": false,
+      "first_seen_at": "2025-12-20T21:00:05+00:00",
+      "last_seen_at": "2026-02-16T05:53:03+00:00",
+      "activity_last_30d": 7,
+      "source_counts": {
+        "hackernews": 11
+      },
+      "source_interactions": {
+        "hackernews": 8324
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "hn-46339600-jmail",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Jmail – Google Suite for Epstein files",
+          "url": "https://www.jmail.world",
+          "summary": "Hi everyone! My name&#x27;s Luke and I made the original Jmail here alongside Riley Walz. We had a ton of friends collaborate on building out more of the app suite last night in lieue of DOJ&#x27;s &quot;Epstein files&quot; release.<p>Please AMA!",
+          "interactions": 2283,
+          "views": 15570,
+          "impressions": 12972,
+          "published_at": "2025-12-20T21:00:05+00:00",
+          "confidence": 1.0,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-47031334-jmail",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Jemini – Gemini for the Epstein Files",
+          "url": "https://jmail.world/jemini",
+          "summary": "Related: <i>Show HN: JeffTube</i> - <a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=47030797\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=47030797</a>",
+          "interactions": 692,
+          "views": 4860,
+          "impressions": 3946,
+          "published_at": "2026-02-16T05:53:03+00:00",
+          "confidence": 0.77,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-47030797-jmail",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: JeffTube",
+          "url": "https://jmail.world/jefftube",
+          "summary": "Show HN: JeffTube",
+          "interactions": 57,
+          "views": 490,
+          "impressions": 334,
+          "published_at": "2026-02-16T04:09:47+00:00",
+          "confidence": 0.77,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "agentbar",
+      "entity": "Agent Bar",
+      "final_score": 88.717,
+      "lexical_score": 35.976,
+      "lexical_score_norm": 83.882,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "producthunt"
+      ],
+      "top_keywords": [
+        "agent",
+        "ai",
+        "in",
+        "code",
+        "your",
+        "prompt",
+        "builder",
+        "you",
+        "claude",
+        "to"
+      ],
+      "trend_score": 87.2,
+      "momentum_score": 100.0,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-01-29T08:01:00+00:00",
+      "last_seen_at": "2026-02-19T08:01:00+00:00",
+      "activity_last_30d": 40,
+      "source_counts": {
+        "producthunt": 40
+      },
+      "source_interactions": {
+        "producthunt": 11046
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "ph-1076788-agent-builder-by-thesys",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "Agent Builder by Thesys — Build AI agents that respond with UI instead of text",
+          "url": "https://www.producthunt.com/products/thesys?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "Build AI agents that reason dynamically and respond with charts, cards, forms, slides and reports. No workflows. No code. Just connect your data, add instructions, customize style, and publish and share with anyone or embed on your site.",
+          "interactions": 587,
+          "views": 6468,
+          "impressions": 5672,
+          "published_at": "2026-02-10T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "ph-1066254-pretty-prompt-1-0-extension-and-web-app",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "Pretty Prompt 1.0 Extension and Web App — Grammarly for prompting. Turn any text into perfect prompts.",
+          "url": "https://www.producthunt.com/products/pretty-prompt/launches/pretty-prompt-1-0-extension-and-web-app?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "Improve your prompts in one click without leaving your browser. Works inside ChatGPT, Gemini, Claude, Perplexity, Lovable, and more AI tools.",
+          "interactions": 458,
+          "views": 4634,
+          "impressions": 4240,
+          "published_at": "2026-01-31T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "ph-1069018-ai-chrome-extension-builder",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "AI Chrome Extension Builder — Build Chrome Extensions by Talking to AI",
+          "url": "https://www.producthunt.com/products/shipper-now/launches/ai-chrome-extension-builder?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "Prompt AI to build complete Chrome Extensions. Give instructions in plain English and AI designs, codes, writes your privacy policy and creates a Chrome Web Store listing for you. Anyone can become an extension developer without knowing how to code.",
+          "interactions": 301,
+          "views": 3570,
+          "impressions": 3012,
+          "published_at": "2026-01-29T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "ph-1067260-webflow-ai-site-builder",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "Webflow AI site builder — Turn a prompt into a production-ready site with Webflow",
+          "url": "https://www.producthunt.com/products/webflow/launches/webflow-ai-site-builder?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "Turn a simple prompt into a multi-page, production-ready website with Webflow’s AI site builder. Start with structure, styles, and animations, then continue building seamlessly in Webflow. It’s a faster start on a foundation built to scale.",
+          "interactions": 316,
+          "views": 3262,
+          "impressions": 2966,
+          "published_at": "2026-02-05T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "ph-1078101-plus-ai-presentation-agent",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "Plus AI Presentation Agent — AI agent that helps you design PowerPoint slides",
+          "url": "https://www.producthunt.com/products/plus-ai-presentation-agent?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "Meet the Plus AI Presentation Agent for PowerPoint. Plus AI doesn’t just generate slides - it helps you plan your deck, write content, format slides, and edit content directly inside PowerPoint. Using Plus AI's best-in-class PowerPoint editing tools, the Plus AI agent can create presentations from a prompt, rewrite mes",
+          "interactions": 228,
+          "views": 2856,
+          "impressions": 2352,
+          "published_at": "2026-02-15T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "ph-1073718-github-agent-hq",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "GitHub Agent HQ — Run Claude, Codex & Copilot directly in GitHub & VS Code",
+          "url": "https://www.producthunt.com/products/github/launches/github-agent-hq?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "Claude by Anthropic and OpenAI Codex are now available in public preview on GitHub and VS Code with a Copilot Pro+ or Copilot Enterprise subscription.",
+          "interactions": 221,
+          "views": 2618,
+          "impressions": 2240,
+          "published_at": "2026-02-05T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "ph-1069411-agentic-vision-in-gemini",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "Agentic Vision in Gemini — Agentic visual reasoning with code execution",
+          "url": "https://www.producthunt.com/products/gemini-6/launches/agentic-vision-in-gemini?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "Agentic Vision, a new capability introduced in Gemini 3 Flash, converts image understanding from a static act into an agentic process",
+          "interactions": 209,
+          "views": 2534,
+          "impressions": 2144,
+          "published_at": "2026-01-29T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "ph-1057211-kipps-ai-whatsapp-agent",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "Kipps AI WhatsApp Agent —  Turn WhatsApp chats into revenue on autopilot",
+          "url": "https://www.producthunt.com/products/kipps-ai/launches/kipps-ai-whatsapp-agent?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "The easiest and cheapest way to grow your business on WhatsApp. See every message in one simple inbox where AI answers fast, but you can still step in for the important stuff. Automatically send birthday, rewards and loyalty gifts to your customers. Stop wasting money and start selling more for just $11",
+          "interactions": 240,
+          "views": 2142,
+          "impressions": 2102,
+          "published_at": "2026-01-29T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "ph-1079030-agent-bar",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "Agent Bar — Run Claude Code from your menu bar",
+          "url": "https://www.producthunt.com/products/agent-bar?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "Agent Bar lives in your menu bar and gives you a native GUI for Claude Code. Pick a project, talk to it with your voice, watch tool calls stream in real-time, approve or auto-approve actions, and track token costs — all without leaving your desktop.",
+          "interactions": 156,
+          "views": 2072,
+          "impressions": 1664,
+          "published_at": "2026-02-16T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "ph-1081381-kollect-voice-agent",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "Kollect Voice Agent — AI that feels human",
+          "url": "https://www.producthunt.com/products/kollect-voice-agent?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "Kollect turns boring forms into real-time AI conversations. Users speak naturally, AI listens and dynamically guides the survey. You can even create forms by simply describing them.",
+          "interactions": 161,
+          "views": 1862,
+          "impressions": 1723,
+          "published_at": "2026-02-19T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "railway",
+      "entity": "Railway",
+      "final_score": 88.029,
+      "lexical_score": 36.464,
+      "lexical_score_norm": 85.019,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "hackernews"
+      ],
+      "top_keywords": [
+        "hn",
+        "x2f",
+        "https",
+        "href",
+        "github",
+        "railway",
+        "rel",
+        "nofollow",
+        "to",
+        "built"
+      ],
+      "trend_score": 50.3,
+      "momentum_score": 95.05,
+      "confidence": 0.794,
+      "is_known_incumbent": false,
+      "first_seen_at": "2025-11-24T09:06:57+00:00",
+      "last_seen_at": "2026-02-16T05:57:39+00:00",
+      "activity_last_30d": 7,
+      "source_counts": {
+        "hackernews": 17
+      },
+      "source_interactions": {
+        "hackernews": 40
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "hn-46031891-railway",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Outliers-Series Outlier Detector",
+          "url": "https://outliers.up.railway.app/",
+          "summary": "Outliers - a time-series outlier detector.\nDemo: <a href=\"https:&#x2F;&#x2F;outliers.up.railway.app&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;outliers.up.railway.app&#x2F;</a>\nGitHub: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;andrewbrdk&#x2F;Outliers\" rel=\"nofollow\">https:&#x2F;&#",
+          "interactions": 5,
+          "views": 26,
+          "impressions": 26,
+          "published_at": "2025-11-24T09:06:57+00:00",
+          "confidence": 0.87,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-47031362-railway",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: 165k lines, 9 days, one dev I built what ICE sells to hedge funds",
+          "url": "https://web-production-71423.up.railway.app/",
+          "summary": "<a href=\"https:&#x2F;&#x2F;github.com&#x2F;Mattbusel&#x2F;Reddit-Options-Trader-ROT-\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;Mattbusel&#x2F;Reddit-Options-Trader-ROT-</a><p>ICE, the company that owns the NYSE, just started selling &quot;Reddit Signals and Sentiment&quot",
+          "interactions": 3,
+          "views": 30,
+          "impressions": 18,
+          "published_at": "2026-02-16T05:57:39+00:00",
+          "confidence": 0.77,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-46851996-railway",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: ContractShield – AI contract analyser for freelancers",
+          "url": "https://contractshield-production.up.railway.app",
+          "summary": "Built this with Claude Code.<p>Analyses freelance contracts for 12 risk categories (payment terms, IP ownership, scope issues, termination clauses, etc.) and flags problems with specific recommendations.<p>40% of freelancers report getting stiffed by clients, often due to vague c",
+          "interactions": 3,
+          "views": 30,
+          "impressions": 18,
+          "published_at": "2026-02-02T03:11:49+00:00",
+          "confidence": 0.87,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-46269015-railway",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Watchalong – live chatrooms for sports, shows, and events",
+          "url": "https://watchalong.up.railway.app/",
+          "summary": "Show HN: Watchalong – live chatrooms for sports, shows, and events",
+          "interactions": 1,
+          "views": 10,
+          "impressions": 6,
+          "published_at": "2025-12-15T00:56:39+00:00",
+          "confidence": 0.77,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-46258343-railway",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Free API for REVE EEG Foundation Model",
+          "url": "https://web-production-73111.up.railway.app/docs",
+          "summary": "I built a REST API for REVE (the 60K-hour EEG foundation model \nreleased in October). It&#x27;s free to use: <a href=\"https:&#x2F;&#x2F;web-production-73111.up.railway.app&#x2F;docs\" rel=\"nofollow\">https:&#x2F;&#x2F;web-production-73111.up.railway.app&#x2F;docs</a><p>Use case: If",
+          "interactions": 1,
+          "views": 10,
+          "impressions": 6,
+          "published_at": "2025-12-13T21:37:31+00:00",
+          "confidence": 0.87,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "storycv",
+      "entity": "StoryCV",
+      "final_score": 87.872,
+      "lexical_score": 35.458,
+      "lexical_score_norm": 82.674,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "producthunt"
+      ],
+      "top_keywords": [
+        "storycv",
+        "ai",
+        "canvas",
+        "your",
+        "storychief",
+        "clear",
+        "marketing",
+        "resume",
+        "guided",
+        "content"
+      ],
+      "trend_score": 80.72,
+      "momentum_score": 100.0,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-01-22T08:01:00+00:00",
+      "last_seen_at": "2026-01-29T08:01:00+00:00",
+      "activity_last_30d": 4,
+      "source_counts": {
+        "producthunt": 8
+      },
+      "source_interactions": {
+        "producthunt": 1567
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "ph-1066196-storychief-ai-canvas",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "StoryChief AI Canvas — A canvas to create + publish full marketing campaigns w/ AI",
+          "url": "https://www.producthunt.com/products/storychief-io/launches/storychief-ai-canvas?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "StoryChief AI Canvas is a visual workspace for your entire marketing strategy. Conduct keyword research, spy on your competitors, generate and optimize content, brainstorm ideas, research your existing content and google search console data all-in-one place. Replace scattered tools with one clear canvas to move from st",
+          "interactions": 233,
+          "views": 2198,
+          "impressions": 2095,
+          "published_at": "2026-01-22T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "ph-996890-storycv",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "StoryCV — Guided AI that interviews you and writes your resume for you",
+          "url": "https://www.producthunt.com/products/storycv/launches/storycv?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "Resume builders make you write first. StoryCV doesn’t. We start with a guided interview. You talk through your work without worrying about wording or length. We extract the context and write clear, professional resume bullet points for you.",
+          "interactions": 193,
+          "views": 2254,
+          "impressions": 1915,
+          "published_at": "2026-01-29T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "keychainsdev",
+      "entity": "keychains.dev",
+      "final_score": 87.056,
+      "lexical_score": 34.958,
+      "lexical_score_norm": 81.508,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "producthunt"
+      ],
+      "top_keywords": [
+        "keychains",
+        "dev",
+        "credentials",
+        "curl",
+        "access",
+        "ai",
+        "to",
+        "raw",
+        "prompt",
+        "template"
+      ],
+      "trend_score": 80.72,
+      "momentum_score": 100.0,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-20T08:01:00+00:00",
+      "last_seen_at": "2026-02-20T08:01:00+00:00",
+      "activity_last_30d": 4,
+      "source_counts": {
+        "producthunt": 4
+      },
+      "source_interactions": {
+        "producthunt": 930
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "ph-1082040-keychains-dev",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "keychains.dev — Give AI access to 6754+ APIs with zero credentials exposed",
+          "url": "https://www.producthunt.com/products/keychain-dev?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "Keychains.dev is a secure credential proxy for AI agents. Use \"keychains curl\" as a drop-in for curl — just replace hard-coded credentials with template variables like {{GITHUB_TOKEN}}. Keychains injects real credentials server-side. Your agent never sees raw secrets — immune to prompt injection by design. Users approv",
+          "interactions": 232,
+          "views": 2716,
+          "impressions": 2492,
+          "published_at": "2026-02-20T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "dropstone3",
+      "entity": "Dropstone 3",
+      "final_score": 87.056,
+      "lexical_score": 34.958,
+      "lexical_score_norm": 81.508,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "producthunt"
+      ],
+      "top_keywords": [
+        "dropstone",
+        "first",
+        "code",
+        "multiplayer",
+        "chat",
+        "share",
+        "ai",
+        "features",
+        "engine",
+        "original"
+      ],
+      "trend_score": 80.72,
+      "momentum_score": 100.0,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-09T08:01:00+00:00",
+      "last_seen_at": "2026-02-09T08:01:00+00:00",
+      "activity_last_30d": 4,
+      "source_counts": {
+        "producthunt": 4
+      },
+      "source_interactions": {
+        "producthunt": 1073
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "ph-1075897-dropstone-3",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "Dropstone 3 — The first multiplayer AI code editor. Now with Share Chat.",
+          "url": "https://www.producthunt.com/products/dropstone-2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "Dropstone is the first multiplayer AI workspace. v3.0.5 adds Share Chat: send a link to code with humans & agents in real-time. Features infinite context (D3 Engine), persistent memory & background swarms. Built on original research, not a wrapper.",
+          "interactions": 288,
+          "views": 3066,
+          "impressions": 2747,
+          "published_at": "2026-02-09T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "nexuscaleai",
+      "entity": "Nexuscale AI",
+      "final_score": 87.056,
+      "lexical_score": 34.958,
+      "lexical_score_norm": 81.508,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "producthunt"
+      ],
+      "top_keywords": [
+        "nexuscale",
+        "ai",
+        "assistant",
+        "sales",
+        "finds",
+        "books",
+        "stop",
+        "leads",
+        "outbound",
+        "linkedin"
+      ],
+      "trend_score": 80.72,
+      "momentum_score": 100.0,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-04T08:01:00+00:00",
+      "last_seen_at": "2026-02-04T08:01:00+00:00",
+      "activity_last_30d": 4,
+      "source_counts": {
+        "producthunt": 4
+      },
+      "source_interactions": {
+        "producthunt": 1004
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "ph-1061823-nexuscale-ai",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "Nexuscale AI — AI sales assistant that finds leads + books meetings for you",
+          "url": "https://www.producthunt.com/products/nexuscale-ai/launches/nexuscale-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "Stop filtering databases. Nexuscale AI is the first Autonomous Outbound OS. Just paste your website URL, and our Agents research your market, enrich the contacts, and run the entire email & LinkedIn sequence.",
+          "interactions": 259,
+          "views": 2926,
+          "impressions": 2524,
+          "published_at": "2026-02-04T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "archimyst",
+      "entity": "Archimyst",
+      "final_score": 86.793,
+      "lexical_score": 34.931,
+      "lexical_score_norm": 81.445,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "producthunt"
+      ],
+      "top_keywords": [
+        "archimyst",
+        "architecture",
+        "system",
+        "ai-powered",
+        "design",
+        "minutes",
+        "simulate",
+        "performan",
+        "generate",
+        "transforms"
+      ],
+      "trend_score": 80.39,
+      "momentum_score": 99.27,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-01-30T08:01:00+00:00",
+      "last_seen_at": "2026-01-30T08:01:00+00:00",
+      "activity_last_30d": 4,
+      "source_counts": {
+        "producthunt": 4
+      },
+      "source_interactions": {
+        "producthunt": 800
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "ph-1069990-archimyst",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "Archimyst — AI-powered platform for designing system architecture",
+          "url": "https://www.producthunt.com/products/archimyst/launches/archimyst?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "The intelligent architecture diagramming tool for modern engineering teams. Design, simulate, and document in minutes.Archimyst is an AI-powered system design platform that transforms ideas into production-ready backend architectures. Generate, simulate, and validate cloud systems in minutes by stress-testing performan",
+          "interactions": 211,
+          "views": 2310,
+          "impressions": 2022,
+          "published_at": "2026-01-30T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "straightcalculator",
+      "entity": "Straightcalculator",
+      "final_score": 86.552,
+      "lexical_score": 39.344,
+      "lexical_score_norm": 91.734,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "hackernews"
+      ],
+      "top_keywords": [
+        "calculators",
+        "to",
+        "straightcalculator",
+        "hn",
+        "x27",
+        "building",
+        "simple",
+        "goal",
+        "straight-to-the-point",
+        "is"
+      ],
+      "trend_score": 35.55,
+      "momentum_score": 74.46,
+      "confidence": 0.87,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-01T10:12:54+00:00",
+      "last_seen_at": "2026-02-01T10:12:54+00:00",
+      "activity_last_30d": 4,
+      "source_counts": {
+        "hackernews": 4
+      },
+      "source_interactions": {
+        "hackernews": 3
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "hn-46845018-straightcalculator",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: I'm building a site to host 1k free, ad-lite calculators",
+          "url": "https://straightcalculator.com/",
+          "summary": "Hi HN,<p>I&#x27;m a full-stack developer who got tired of searching for simple calculators online and landing on pages that are 90% ads and SEO fluff, with the actual tool buried at the bottom.<p>I decided to build StraightCalculator.com. The goal is simple: straight-to-the-point",
+          "interactions": 1,
+          "views": 10,
+          "impressions": 6,
+          "published_at": "2026-02-01T10:12:54+00:00",
+          "confidence": 0.87,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "pypi",
+      "entity": "Pypi",
+      "final_score": 86.216,
+      "lexical_score": 34.64,
+      "lexical_score_norm": 80.767,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "hackernews"
+      ],
+      "top_keywords": [
+        "python",
+        "hn",
+        "api",
+        "that",
+        "stock",
+        "sentiment",
+        "performance",
+        "heavyops",
+        "cli",
+        "free"
+      ],
+      "trend_score": 53.37,
+      "momentum_score": 98.93,
+      "confidence": 0.737,
+      "is_known_incumbent": false,
+      "first_seen_at": "2025-12-29T17:50:42+00:00",
+      "last_seen_at": "2026-02-16T12:28:43+00:00",
+      "activity_last_30d": 8,
+      "source_counts": {
+        "hackernews": 20
+      },
+      "source_interactions": {
+        "hackernews": 53
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "hn-46745110-pypi",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "I made a CLI tool that turns free Gemini into a local AI agent",
+          "url": "https://pypi.org/project/gemcli/",
+          "summary": "I made a CLI tool that turns free Gemini into a local AI agent",
+          "interactions": 8,
+          "views": 44,
+          "impressions": 44,
+          "published_at": "2026-01-24T16:50:48+00:00",
+          "confidence": 0.69,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-47034195-pypi",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Stock Sentiment API with Python",
+          "url": "https://pypi.org/project/social-stock-sentiment/",
+          "summary": "Show HN: Stock Sentiment API with Python",
+          "interactions": 3,
+          "views": 30,
+          "impressions": 18,
+          "published_at": "2026-02-16T12:28:43+00:00",
+          "confidence": 0.77,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-46423216-pypi",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: MCP-Reddit – Reddit scraper for Claude, no API keys needed",
+          "url": "https://pypi.org/project/mcp-reddit/",
+          "summary": "Show HN: MCP-Reddit – Reddit scraper for Claude, no API keys needed",
+          "interactions": 4,
+          "views": 22,
+          "impressions": 22,
+          "published_at": "2025-12-29T17:50:42+00:00",
+          "confidence": 0.77,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-46679986-pypi",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Heavyops – identify performance bottlenecks in Python",
+          "url": "https://pypi.org/project/heavyops/",
+          "summary": "Find unnecessary allocations, inefficient variable dereferences, and other potential performance bottlenecks using heavyops, based on sys.monitoring.",
+          "interactions": 2,
+          "views": 20,
+          "impressions": 12,
+          "published_at": "2026-01-19T15:22:14+00:00",
+          "confidence": 0.77,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-46580505-pypi",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Sprig-config – Spring-like config for Python, layered YAML and secrets",
+          "url": "https://pypi.org/project/sprig-config/",
+          "summary": "Hi HN,<p>I recently moved projects from Java&#x2F;Spring Boot to Python and missed the clean, profile-driven application.yml magic — deterministic layering, env var expansion, secrets, and easy binding.<p>So I built sprig-config: a lightweight, Spring-inspired config lib for Pyth",
+          "interactions": 1,
+          "views": 10,
+          "impressions": 6,
+          "published_at": "2026-01-11T21:44:34+00:00",
+          "confidence": 0.87,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-46569195-pypi",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: FlowKitX – Fluent async workflows with lazy execution for Python",
+          "url": "https://pypi.org/project/flowkitx/1.0.1/",
+          "summary": "What is FlowKitX?<p>FlowKitX is a Python library that makes writing async workflows more readable and structured.<p>It provides lazy pipelines: operations (like API calls) are queued and executed only when awaited. This lets you chain calls and process data fluently without block",
+          "interactions": 1,
+          "views": 10,
+          "impressions": 6,
+          "published_at": "2026-01-10T19:39:58+00:00",
+          "confidence": 0.77,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "itch",
+      "entity": "Itch",
+      "final_score": 85.972,
+      "lexical_score": 34.294,
+      "lexical_score_norm": 79.96,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "hackernews"
+      ],
+      "top_keywords": [
+        "hn",
+        "on",
+        "game",
+        "simple",
+        "made",
+        "simulator",
+        "godot",
+        "ai",
+        "it",
+        "up"
+      ],
+      "trend_score": 59.43,
+      "momentum_score": 100.0,
+      "confidence": 0.754,
+      "is_known_incumbent": false,
+      "first_seen_at": "2025-09-15T12:42:59+00:00",
+      "last_seen_at": "2026-02-21T03:00:02+00:00",
+      "activity_last_30d": 10,
+      "source_counts": {
+        "hackernews": 25
+      },
+      "source_interactions": {
+        "hackernews": 58
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 4,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "hn-47097043-itch",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "I made a local AI creature that runs on integers",
+          "url": "https://double-star-games.itch.io/feryl/devlog/1393626/introducing-feryl-a-local-desktop-ai-creature",
+          "summary": "I made a local AI creature that runs on integers",
+          "interactions": 4,
+          "views": 105,
+          "impressions": 105,
+          "published_at": "2026-02-21T03:00:02+00:00",
+          "confidence": 0.69,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-47037629-itch",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: I.T. Never Ends – IT Support Simulator Built with React/Tauri/Supabase",
+          "url": "https://dadbodgames.itch.io/it-never-ends",
+          "summary": "Hi HN,<p>I am the solo developer behind this.<p>The Pitch:\nIt is a card-based resource management game (inspired by Reigns) where you work IT support for a corporation taken over by eldritch horrors. You have to balance ticket resolution, budget, and entropy while dealing with pr",
+          "interactions": 2,
+          "views": 20,
+          "impressions": 12,
+          "published_at": "2026-02-16T17:22:06+00:00",
+          "confidence": 0.87,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-45248978-itch",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: I tried learning Angular, ended up making a Parcel Locker Simulator",
+          "url": "https://themarelle.itch.io/parcel-locker-simulator",
+          "summary": "Show HN: I tried learning Angular, ended up making a Parcel Locker Simulator",
+          "interactions": 2,
+          "views": 20,
+          "impressions": 12,
+          "published_at": "2025-09-15T12:42:59+00:00",
+          "confidence": 0.77,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-47035478-itch",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: I build a puzzle game based on the wireworld cellular automation",
+          "url": "https://maxime-wegesin.itch.io/wireworld",
+          "summary": "Show HN: I build a puzzle game based on the wireworld cellular automation",
+          "interactions": 1,
+          "views": 10,
+          "impressions": 6,
+          "published_at": "2026-02-16T14:33:37+00:00",
+          "confidence": 0.77,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-45795115-itch",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: MiniMotif – assemble a simple tune then export as .wav",
+          "url": "https://sheltocom.itch.io/minimotif",
+          "summary": "Show HN: MiniMotif – assemble a simple tune then export as .wav",
+          "interactions": 1,
+          "views": 10,
+          "impressions": 6,
+          "published_at": "2025-11-03T01:45:25+00:00",
+          "confidence": 0.77,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-45642119-itch",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: FlashDrive 1987 – A retro sci-fi film exploring AI-assisted filmmaking",
+          "url": "https://erickernin.itch.io/flashdrive",
+          "summary": "Hi everyone,<p>I’ve been working on FlashDrive 1987, a retro sci-fi short film inspired by 1980s adventure movies like Explorers and Back to the Future.<p>The project isn’t made by AI - it’s developed with AI as a creative assistant. I use tools like Midjourney, Hedra and ElevenL",
+          "interactions": 1,
+          "views": 10,
+          "impressions": 6,
+          "published_at": "2025-10-20T10:06:28+00:00",
+          "confidence": 0.77,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-45566883-itch",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Simple 2D Interaction System for Godot",
+          "url": "https://wasivis.itch.io/simple-2d-interaction-system-for-godot",
+          "summary": "This lightweight system includes a ready-to-use player, interactable objects, and an interaction manager singleton.<p>Perfect for chests, buttons, NPCs, and more. Drop in the scripts, set up your scene, and start interacting!<p>Includes a fully playable demo scene for easy testin",
+          "interactions": 1,
+          "views": 10,
+          "impressions": 6,
+          "published_at": "2025-10-13T10:39:40+00:00",
+          "confidence": 0.77,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-45494401-itch",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Godot Platformer Template/Starter Kit",
+          "url": "https://wasivis.itch.io/platformerstarterkit",
+          "summary": "Features smooth dash, wall-slide&#x2F;wall-jump, double-jump, coyote-time jumps, coin pickups with HUD, spike hazards with health-hearts — everything wired and tunable via exported variables.<p>Includes all scripts, placeholder art, Level 1 scene, and a README with setup + usage ",
+          "interactions": 1,
+          "views": 10,
+          "impressions": 6,
+          "published_at": "2025-10-06T18:17:13+00:00",
+          "confidence": 0.77,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "substack",
+      "entity": "Substack",
+      "final_score": 85.729,
+      "lexical_score": 34.145,
+      "lexical_score_norm": 79.612,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "hackernews"
+      ],
+      "top_keywords": [
+        "built",
+        "hn",
+        "of",
+        "app",
+        "claude",
+        "code",
+        "to",
+        "here",
+        "ai",
+        "on"
+      ],
+      "trend_score": 66.31,
+      "momentum_score": 100.0,
+      "confidence": 0.734,
+      "is_known_incumbent": false,
+      "first_seen_at": "2025-09-21T22:13:51+00:00",
+      "last_seen_at": "2026-02-21T14:57:43+00:00",
+      "activity_last_30d": 10,
+      "source_counts": {
+        "hackernews": 34
+      },
+      "source_interactions": {
+        "hackernews": 166
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 4,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "hn-46416488-substack",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: On Making Music with the Machine",
+          "url": "https://songxytr.substack.com/p/on-making-music-with-the-machine",
+          "summary": "Have been making music using ML&#x2F;AI tools for about as long as I&#x27;ve been on HN.  Had a recent comment section on HN here [1] and after that thought it might be worthwhile to write out about the journey in greater detail... from crude LSTM models, to hacking around with J",
+          "interactions": 22,
+          "views": 116,
+          "impressions": 116,
+          "published_at": "2025-12-29T01:42:56+00:00",
+          "confidence": 0.77,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-47101419-substack",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: A New Framework for Understanding Consciousness and Free Will",
+          "url": "https://substack.com/home/post/p-188676932",
+          "summary": "Full disclosure: I&#x27;m an engineer.<p>I think you&#x27;ll find the framing to be intuitive, useful and scary. It allows for elegant explanations for normal and abnormal brain phenomena. Dreams, depression, flow states, hypnosis, deja vu, drugs and so on.",
+          "interactions": 2,
+          "views": 113,
+          "impressions": 113,
+          "published_at": "2026-02-21T14:57:43+00:00",
+          "confidence": 0.77,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-46766157-substack",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Partial content web crawling using HTTP/2 and Go",
+          "url": "https://altayakkus.substack.com/p/partial-content-web-crawling-using",
+          "summary": "Hi,\nI wrote a low-level HTTP&#x2F;2 web crawler in Go, which can scrape partial content to save traffic.<p>Tl;dr e.g. the HTML of a YouTube video contains the video description, views, likes etc. in its first 600KB, the remaining 900KB are of no use for me, but I have to pay my p",
+          "interactions": 5,
+          "views": 50,
+          "impressions": 30,
+          "published_at": "2026-01-26T14:38:05+00:00",
+          "confidence": 0.77,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-46186556-substack",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "I Built a Production App with Claude Code",
+          "url": "https://leadershiplighthouse.substack.com/p/how-i-built-a-production-app-with",
+          "summary": "I Built a Production App with Claude Code",
+          "interactions": 5,
+          "views": 30,
+          "impressions": 28,
+          "published_at": "2025-12-07T23:36:49+00:00",
+          "confidence": 0.69,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-46108902-substack",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: I benchmarked read latency of AWS S3, S3Express, EBS and Instance store",
+          "url": "https://nixiesearch.substack.com/p/benchmarking-read-latency-of-aws",
+          "summary": "Show HN: I benchmarked read latency of AWS S3, S3Express, EBS and Instance store",
+          "interactions": 3,
+          "views": 30,
+          "impressions": 18,
+          "published_at": "2025-12-01T15:58:02+00:00",
+          "confidence": 0.77,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-46841389-substack",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "I Built My Own Observability for Claude Code – Here's Why and How",
+          "url": "https://doneyli.substack.com/p/i-built-my-own-observability-for",
+          "summary": "I Built My Own Observability for Claude Code – Here's Why and How",
+          "interactions": 3,
+          "views": 30,
+          "impressions": 18,
+          "published_at": "2026-01-31T22:07:10+00:00",
+          "confidence": 0.69,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-46567311-substack",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "I built several small apps instead of one big iOS 26 app",
+          "url": "https://iamshift.substack.com/p/lessons-from-ios-26-micro-apps",
+          "summary": "I built several small apps instead of one big iOS 26 app",
+          "interactions": 3,
+          "views": 30,
+          "impressions": 18,
+          "published_at": "2026-01-10T16:49:39+00:00",
+          "confidence": 0.69,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-46679927-substack",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "When \"I Built\" Became \"I Ordered\"",
+          "url": "https://decodebytes.substack.com/p/when-i-built-became-i-ordered",
+          "summary": "When \"I Built\" Became \"I Ordered\"",
+          "interactions": 2,
+          "views": 20,
+          "impressions": 12,
+          "published_at": "2026-01-19T15:17:49+00:00",
+          "confidence": 0.69,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-46103962-substack",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "I built Pinpoint: a daily mini-game for discovering your city",
+          "url": "https://imperfectionist.substack.com/p/how-i-built-pinpoint",
+          "summary": "I built Pinpoint: a daily mini-game for discovering your city",
+          "interactions": 2,
+          "views": 20,
+          "impressions": 12,
+          "published_at": "2025-12-01T05:51:49+00:00",
+          "confidence": 0.69,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-46500408-substack",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "I built an AI resume tool with Antigravity, and got banned from LinkedIn",
+          "url": "https://lastfitstanding.substack.com/p/gradient-log-1-build-in-2-days-get",
+          "summary": "I built an AI resume tool with Antigravity, and got banned from LinkedIn",
+          "interactions": 1,
+          "views": 10,
+          "impressions": 6,
+          "published_at": "2026-01-05T16:03:30+00:00",
+          "confidence": 0.69,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-45327165-substack",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Captur Compressed a Multi-Task Model into the Size of a Single Photo",
+          "url": "https://captur.substack.com/p/how-captur-compressed-a-multi-task",
+          "summary": "Show HN: Captur Compressed a Multi-Task Model into the Size of a Single Photo",
+          "interactions": 1,
+          "views": 10,
+          "impressions": 6,
+          "published_at": "2025-09-21T22:13:51+00:00",
+          "confidence": 0.77,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "polymcp",
+      "entity": "Polymcp",
+      "final_score": 85.366,
+      "lexical_score": 33.923,
+      "lexical_score_norm": 79.095,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "github",
+        "hackernews"
+      ],
+      "top_keywords": [
+        "agents",
+        "ai",
+        "ai-agents",
+        "and",
+        "anthropic",
+        "built",
+        "hi",
+        "hn",
+        "mcp",
+        "polymcp",
+        "python",
+        "sdk"
+      ],
+      "trend_score": 91.54,
+      "momentum_score": 100.0,
+      "confidence": 0.71,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-01-18T21:37:10+00:00",
+      "last_seen_at": "2026-02-21T18:26:54+00:00",
+      "activity_last_30d": 41,
+      "source_counts": {
+        "hackernews": 42,
+        "github": 1
+      },
+      "source_interactions": {
+        "hackernews": 373,
+        "github": 77
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 27,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "hn-46746700-polymcp",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Polymcp – Turn Any Python Function into an MCP Tool for AI Agents",
+          "url": "https://news.ycombinator.com/item?id=46746700",
+          "summary": "I built Polymcp, a framework that allows you to transform any Python function into an MCP (Model Context Protocol) tool ready to be used by AI agents. No rewriting, no complex integrations.<p>Examples<p>Simple function:<p>from polymcp.polymcp_toolkit import expose_tools_http<p>de",
+          "interactions": 37,
+          "views": 230,
+          "impressions": 208,
+          "published_at": "2026-01-24T19:27:58+00:00",
+          "confidence": 0.47,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-47096131-agent-passport",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Agent Passport – OAuth-like identity verification for AI agents",
+          "url": "https://news.ycombinator.com/item?id=47096131",
+          "summary": "Hi HN, I built Agent Passport, an open-source identity verification layer for AI agents. Think \"Sign in with Google, but for Agents.\" The problem: AI agents are everywhere now (OpenClaw has 180K+ GitHub stars, Moltbook had 2.3M agent accounts), but there's no standard way for age",
+          "interactions": 19,
+          "views": 188,
+          "impressions": 188,
+          "published_at": "2026-02-21T00:39:37+00:00",
+          "confidence": 0.47,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-47103237-hmem",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Hmem – Persistent hierarchical memory for AI coding agents (MCP)",
+          "url": "https://news.ycombinator.com/item?id=47103237",
+          "summary": "My Claude told me to post this here :D AI coding agents have two memory problems that CLAUDE.md and Rules files don't solve: (1) long conversations get compressed and context silently disappears — the agent forgets decisions made 2 hours ago in the same session, and (2) memory is",
+          "interactions": 4,
+          "views": 128,
+          "impressions": 128,
+          "published_at": "2026-02-21T18:19:47+00:00",
+          "confidence": 0.47,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-47096177-mephistomail",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: MephistoMail – A RAM-only, tracker-free disposable email client",
+          "url": "https://news.ycombinator.com/item?id=47096177",
+          "summary": "Hi HN,<p>I got frustrated with the current landscape of 10-minute mail services. They are often full of ads, Google Analytics trackers, and clunky interfaces—completely defeating the purpose of a &quot;privacy&quot; tool.<p>I built MephistoMail as a clean, RAM-only frontend alter",
+          "interactions": 4,
+          "views": 104,
+          "impressions": 104,
+          "published_at": "2026-02-21T00:46:00+00:00",
+          "confidence": 0.47,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-47103291-wiredigg",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Wiredigg – Real-Time Network Analysis with ML and Ollama Support",
+          "url": "https://news.ycombinator.com/item?id=47103291",
+          "summary": "I built Wiredigg, an open-source network traffic analysis and security tool written in Python. It combines real-time packet capture, protocol inspection, machine learning-based anomaly detection, and local LLM analysis via Ollama. The goal is to provide interactive network visibi",
+          "interactions": 1,
+          "views": 112,
+          "impressions": 112,
+          "published_at": "2026-02-21T18:26:54+00:00",
+          "confidence": 0.47,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-47102936-shelldock",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: ShellDock – Run curated DevOps toolchains with a single command",
+          "url": "https://news.ycombinator.com/item?id=47102936",
+          "summary": "Hi HN I built ShellDock to make setting up and running development tools less painful across different environments. ShellDock is a lightweight CLI that lets you define and execute curated command sets for installing or configuring tools — think of it like a portable launcher for",
+          "interactions": 1,
+          "views": 112,
+          "impressions": 112,
+          "published_at": "2026-02-21T17:45:42+00:00",
+          "confidence": 0.47,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-47101647-datachecker-pro",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: DataChecker Pro – AI finds issues in your CSV, you approve or reject",
+          "url": "https://news.ycombinator.com/item?id=47101647",
+          "summary": "Hi HN, Built DataChecker Pro to make CSV data cleaning faster. Uses AI to find issues, then shows you a diff to approve/reject each fix. Most data cleaning tools require building rules upfront. I wanted something where you just upload a file and it tells you what's wrong. Then yo",
+          "interactions": 1,
+          "views": 108,
+          "impressions": 108,
+          "published_at": "2026-02-21T15:26:41+00:00",
+          "confidence": 0.47,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-47096170-mephistomail",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: MephistoMail – A RAM-only, tracker-free disposable email client",
+          "url": "https://mephistomail.site?1",
+          "summary": "Hi HN,<p>I got frustrated with the current landscape of 10-minute mail services. They are often full of ads, Google Analytics trackers, and clunky interfaces--completely defeating the purpose of a &quot;privacy&quot; tool.<p>I built MephistoMail as a clean, RAM-only frontend alte",
+          "interactions": 3,
+          "views": 98,
+          "impressions": 98,
+          "published_at": "2026-02-21T00:44:55+00:00",
+          "confidence": 0.87,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-47017912-polymcp",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: PolyMCP – A framework for building and orchestrating MCP agents",
+          "url": "https://news.ycombinator.com/item?id=47017912",
+          "summary": "Hi everyone,<p>I’ve been working on PolyMCP, an open-source framework for building and orchestrating agents using the Model Context Protocol (MCP).<p>Most of the tooling around MCP focuses on exposing tools. With PolyMCP, the focus this time is on agents: how to structure them, c",
+          "interactions": 7,
+          "views": 38,
+          "impressions": 38,
+          "published_at": "2026-02-14T20:11:10+00:00",
+          "confidence": 0.47,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-47026179-polymcp",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: PolyMCP – A framework for structuring and orchestrating MCP agents",
+          "url": "https://news.ycombinator.com/item?id=47026179",
+          "summary": "I’ve been working on PolyMCP, an open-source framework designed to make it easier to build and coordinate agents using the Model Context Protocol (MCP).<p>Most MCP tooling today focuses primarily on exposing tools. PolyMCP instead targets the agent layer: how to structure agents ",
+          "interactions": 1,
+          "views": 10,
+          "impressions": 6,
+          "published_at": "2026-02-15T18:40:05+00:00",
+          "confidence": 0.47,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-46842573-polymcp",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: PolyMCP – Expose Python/TS functions as MCP tools easily",
+          "url": "https://news.ycombinator.com/item?id=46842573",
+          "summary": "I built PolyMCP to make it trivial to expose existing functions as MCP tools, without rewriting logic or adding much glue code.<p>The goal: take “normal” Python or TypeScript functions and instantly make them usable by MCP clients (Claude Desktop, agents, Ollama, etc.).<p>Python ",
+          "interactions": 1,
+          "views": 10,
+          "impressions": 6,
+          "published_at": "2026-02-01T00:58:27+00:00",
+          "confidence": 0.47,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "jdoodleai20",
+      "entity": "JDoodle.ai 2.0",
+      "final_score": 84.701,
+      "lexical_score": 33.515,
+      "lexical_score_norm": 78.144,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "producthunt"
+      ],
+      "top_keywords": [
+        "jdoodle",
+        "ai",
+        "build",
+        "mcp",
+        "can",
+        "you",
+        "to",
+        "like",
+        "figma",
+        "editable"
+      ],
+      "trend_score": 81.44,
+      "momentum_score": 100.0,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-01-26T08:01:00+00:00",
+      "last_seen_at": "2026-02-16T08:01:00+00:00",
+      "activity_last_30d": 8,
+      "source_counts": {
+        "producthunt": 8
+      },
+      "source_interactions": {
+        "producthunt": 2386
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "ph-1066062-jdoodle-ai-2-0",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "JDoodle.ai 2.0 — Clone websites and Figma designs into editable sites",
+          "url": "https://www.producthunt.com/products/jdoodle-ai/launches/jdoodle-ai-2-0?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "See a website you like? Start from it. With JDoodle.ai, you can paste any website URL or upload an image or Figma design to instantly get an editable starting point. Change layouts, tweak styles, and build on real references without starting from scratch or touching code. Every project includes a built-in database, aut",
+          "interactions": 364,
+          "views": 3948,
+          "impressions": 3471,
+          "published_at": "2026-01-26T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "ph-1078858-jdoodle-ai-mcp",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "JDoodle.ai MCP — Build and deploy web apps straight from ChatGPT/Claude",
+          "url": "https://www.producthunt.com/products/jdoodle-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "JDoodle.ai MCP connects with ChatGPT/Claude, so you can build websites and web apps directly through chat. You interact with ChatGPT/Claude like normal, while your project is created and updated inside JDoodle.ai with live preview. When you're ready, just ask the AI to publish and JDoodle.ai generates a live link insta",
+          "interactions": 254,
+          "views": 2996,
+          "impressions": 2534,
+          "published_at": "2026-02-16T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "superx",
+      "entity": "SuperX",
+      "final_score": 84.701,
+      "lexical_score": 33.515,
+      "lexical_score_norm": 78.144,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "producthunt"
+      ],
+      "top_keywords": [
+        "superx",
+        "superagent",
+        "is",
+        "delivers",
+        "works",
+        "research",
+        "work",
+        "all-in-one",
+        "growth",
+        "like"
+      ],
+      "trend_score": 81.44,
+      "momentum_score": 100.0,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-01-30T08:01:00+00:00",
+      "last_seen_at": "2026-02-09T08:01:00+00:00",
+      "activity_last_30d": 8,
+      "source_counts": {
+        "producthunt": 8
+      },
+      "source_interactions": {
+        "producthunt": 4794
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "ph-1068248-superx",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "SuperX — All-in-one growth OS for serious 𝕏 creators",
+          "url": "https://www.producthunt.com/products/superx?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "SuperX is an all-in-one growth toolkit for 𝕏. Get daily inspiration based on viral posts in your niche, trend-based research, and fast rewrites in your voice. Schedule posts at the best time, engage with the right accounts to get discovered, and track what works with built-in analytics.",
+          "interactions": 1114,
+          "views": 11732,
+          "impressions": 10460,
+          "published_at": "2026-02-09T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "ph-1070047-superagent-from-airtable",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "Superagent from Airtable — The multi-agent system that delivers finished work",
+          "url": "https://www.producthunt.com/products/superagent-from-airtable/launches/superagent-from-airtable?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "Superagent is a new AI research assistant that works like a coordinated team, not a single bot. Ask a complex question—like a market, competitor, or investment analysis—and it plans the work, pulls from trusted data sources, and delivers a polished, interactive report you can use immediately.",
+          "interactions": 164,
+          "views": 2044,
+          "impressions": 1687,
+          "published_at": "2026-01-30T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "beyteflow",
+      "entity": "BeyteFlow",
+      "final_score": 84.284,
+      "lexical_score": 33.26,
+      "lexical_score_norm": 77.549,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "github"
+      ],
+      "top_keywords": [
+        "ai",
+        "automation",
+        "beyteflow",
+        "create",
+        "developer-tool",
+        "generator",
+        "github",
+        "github-api",
+        "instantly",
+        "markdown",
+        "professional",
+        "readme"
+      ],
+      "trend_score": 84.5,
+      "momentum_score": 100.0,
+      "confidence": 0.99,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-19T14:40:36+00:00",
+      "last_seen_at": "2026-02-21T17:32:28+00:00",
+      "activity_last_30d": 5,
+      "source_counts": {
+        "github": 5
+      },
+      "source_interactions": {
+        "github": 954
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 3,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "github-1152942711-beyteflow",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "BeyteFlow/ReadmeGenAI",
+          "url": "https://github.com/BeyteFlow/ReadmeGenAI",
+          "summary": "AI-powered README generator for GitHub. Paste a repo URL and instantly create a professional, well-structured README.md file.",
+          "interactions": 66,
+          "views": 674,
+          "impressions": 674,
+          "published_at": "2026-02-21T17:32:28Z",
+          "confidence": 0.75,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "stackryze",
+      "entity": "Stackryze",
+      "final_score": 84.237,
+      "lexical_score": 33.231,
+      "lexical_score_norm": 77.481,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "github"
+      ],
+      "top_keywords": [
+        "stackryze",
+        "domain",
+        "today",
+        "everyone",
+        "free",
+        "claim",
+        "freedomains",
+        "yours",
+        "domains",
+        "developer-tools"
+      ],
+      "trend_score": 84.14,
+      "momentum_score": 100.0,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-21T11:49:22+00:00",
+      "last_seen_at": "2026-02-21T17:29:34+00:00",
+      "activity_last_30d": 3,
+      "source_counts": {
+        "github": 3
+      },
+      "source_interactions": {
+        "github": 1483
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 3,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "github-1117828152-stackryze",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "stackryze/FreeDomains",
+          "url": "https://github.com/stackryze/FreeDomains",
+          "summary": "Stackryze Domains: Free Domain for Everyone, Claim yours today.",
+          "interactions": 562,
+          "views": 3541,
+          "impressions": 3541,
+          "published_at": "2026-02-21T11:49:22Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "aiforabuck",
+      "entity": "Aiforabuck",
+      "final_score": 83.924,
+      "lexical_score": 39.252,
+      "lexical_score_norm": 91.52,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "hackernews"
+      ],
+      "top_keywords": [
+        "ai",
+        "still",
+        "bill",
+        "medical",
+        "aiforabuck",
+        "lets",
+        "we",
+        "how",
+        "access",
+        "60x"
+      ],
+      "trend_score": 34.4,
+      "momentum_score": 66.2,
+      "confidence": 0.87,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-01-18T22:01:51+00:00",
+      "last_seen_at": "2026-01-18T22:01:51+00:00",
+      "activity_last_30d": 0,
+      "source_counts": {
+        "hackernews": 4
+      },
+      "source_interactions": {
+        "hackernews": 24
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "hn-46672593-aiforabuck",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: I'm selling AI medical bill review for $1 and still making 60x",
+          "url": "https://aiforabuck.com/medical-repricing",
+          "summary": "Warning still a WIP,<p>I work in big tech where we have access to AI for everything, and it surprises me how cheap certain use cases actually are. I wanted to build a site that lets folks pay a dollar and use frontier models or agents without tracking or ads, yanno just paying mo",
+          "interactions": 10,
+          "views": 54,
+          "impressions": 54,
+          "published_at": "2026-01-18T22:01:51+00:00",
+          "confidence": 0.87,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "superlaunch",
+      "entity": "Super Launch",
+      "final_score": 83.853,
+      "lexical_score": 32.996,
+      "lexical_score_norm": 76.933,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "hackernews"
+      ],
+      "top_keywords": [
+        "super",
+        "get",
+        "discovered",
+        "to",
+        "x27",
+        "hunt",
+        "indie",
+        "developers",
+        "their",
+        "visibility"
+      ],
+      "trend_score": 56.2,
+      "momentum_score": 100.0,
+      "confidence": 1.0,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-20T22:44:39+00:00",
+      "last_seen_at": "2026-02-20T22:44:39+00:00",
+      "activity_last_30d": 4,
+      "source_counts": {
+        "hackernews": 4
+      },
+      "source_interactions": {
+        "hackernews": 34
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 4,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "hn-47095056-super-launch",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Super Launch – A platform for you to get discovered and grow traffic",
+          "url": "https://super-launch.app",
+          "summary": "I&#x27;ve been launching side projects for a while and realized that after the initial Product Hunt spike, there&#x27;s not many places to get consistent visibility. So I built Super Launch — a curated directory where indie developers can list their startups and keep getting disc",
+          "interactions": 6,
+          "views": 109,
+          "impressions": 109,
+          "published_at": "2026-02-20T22:44:39+00:00",
+          "confidence": 1.0,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "clawiai",
+      "entity": "Clawi.ai",
+      "final_score": 83.791,
+      "lexical_score": 32.958,
+      "lexical_score_norm": 76.845,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "producthunt"
+      ],
+      "top_keywords": [
+        "openclaw",
+        "clawi",
+        "stop",
+        "ai",
+        "wrestling",
+        "on",
+        "cloud",
+        "zero",
+        "servers",
+        "setup"
+      ],
+      "trend_score": 80.72,
+      "momentum_score": 100.0,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-19T08:01:00+00:00",
+      "last_seen_at": "2026-02-19T08:01:00+00:00",
+      "activity_last_30d": 4,
+      "source_counts": {
+        "producthunt": 4
+      },
+      "source_interactions": {
+        "producthunt": 1901
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "ph-1080597-clawi-ai",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "Clawi.ai — OpenClaw in the Cloud with Zero Setup and on 24/7",
+          "url": "https://www.producthunt.com/products/clawi-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "Stop wrestling with servers. Get your private OpenClaw assistant running in 5 minutes. Works on WhatsApp, Telegram, and Discord while you sleep.",
+          "interactions": 443,
+          "views": 5754,
+          "impressions": 4799,
+          "published_at": "2026-02-19T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "formaly",
+      "entity": "Formaly",
+      "final_score": 83.791,
+      "lexical_score": 32.958,
+      "lexical_score_norm": 76.845,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "producthunt"
+      ],
+      "top_keywords": [
+        "formaly",
+        "forms",
+        "create",
+        "conversational",
+        "like",
+        "conversations",
+        "ai-powered",
+        "feel",
+        "instant",
+        "ai"
+      ],
+      "trend_score": 80.72,
+      "momentum_score": 100.0,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-15T08:01:00+00:00",
+      "last_seen_at": "2026-02-15T08:01:00+00:00",
+      "activity_last_30d": 4,
+      "source_counts": {
+        "producthunt": 4
+      },
+      "source_interactions": {
+        "producthunt": 1449
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "ph-1075246-formaly",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "Formaly — Forms that feel like conversations",
+          "url": "https://www.producthunt.com/products/formaly?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "Create AI-powered conversational forms in seconds. Build forms with natural language prompts, collect feedback through chat, and get instant AI insights.",
+          "interactions": 393,
+          "views": 4130,
+          "impressions": 3686,
+          "published_at": "2026-02-15T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "lunair",
+      "entity": "Lunair",
+      "final_score": 83.791,
+      "lexical_score": 32.958,
+      "lexical_score_norm": 76.845,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "producthunt"
+      ],
+      "top_keywords": [
+        "lunair",
+        "video",
+        "scenes",
+        "custom",
+        "not",
+        "videos",
+        "generate",
+        "voiceover",
+        "idea",
+        "consistent"
+      ],
+      "trend_score": 80.72,
+      "momentum_score": 100.0,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-15T08:01:00+00:00",
+      "last_seen_at": "2026-02-15T08:01:00+00:00",
+      "activity_last_30d": 4,
+      "source_counts": {
+        "producthunt": 4
+      },
+      "source_interactions": {
+        "producthunt": 2706
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "ph-1072464-lunair",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "Lunair — Generate studio-quality explainer videos. Instantly.",
+          "url": "https://www.producthunt.com/products/lunair?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "The fastest way to add a video to your landing page. As easy as writing, with creative control. Describe your product or idea and Lunair generates a complete video: consistent characters, custom scenes (not stock assets), voiceover, music, and motion, delivered as a ready-to-share video file. Then edit with plain langu",
+          "interactions": 846,
+          "views": 7156,
+          "impressions": 7156,
+          "published_at": "2026-02-15T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "toolspend",
+      "entity": "Toolspend",
+      "final_score": 83.791,
+      "lexical_score": 32.958,
+      "lexical_score_norm": 76.845,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "producthunt"
+      ],
+      "top_keywords": [
+        "toolspend",
+        "usage",
+        "spend",
+        "tools",
+        "across",
+        "stop",
+        "track",
+        "upkeep",
+        "we",
+        "visibility"
+      ],
+      "trend_score": 80.72,
+      "momentum_score": 100.0,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-16T08:01:00+00:00",
+      "last_seen_at": "2026-02-16T08:01:00+00:00",
+      "activity_last_30d": 4,
+      "source_counts": {
+        "producthunt": 4
+      },
+      "source_interactions": {
+        "producthunt": 2014
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "ph-1071095-toolspend",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "Toolspend — Track AI spend, usage, and cost across tools",
+          "url": "https://www.producthunt.com/products/toolspend?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "Stop losing money on forgotten SaaS subscriptions and \"ghost\" licenses. Toolspend is the ultimate command center for your stack, designed to give you 100% spend visibility without the manual upkeep. While other tools just list your apps, Toolspend deep-dives into your actual usage and spend patterns. We identify underu",
+          "interactions": 542,
+          "views": 5754,
+          "impressions": 5138,
+          "published_at": "2026-02-16T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "applecreatorstudio",
+      "entity": "Apple Creator Studio",
+      "final_score": 83.791,
+      "lexical_score": 32.958,
+      "lexical_score_norm": 76.845,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "producthunt"
+      ],
+      "top_keywords": [
+        "apple",
+        "features",
+        "apps",
+        "productivity",
+        "premium",
+        "studio",
+        "pro",
+        "creator",
+        "cut",
+        "create"
+      ],
+      "trend_score": 80.72,
+      "momentum_score": 100.0,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-09T08:01:00+00:00",
+      "last_seen_at": "2026-02-09T08:01:00+00:00",
+      "activity_last_30d": 4,
+      "source_counts": {
+        "producthunt": 4
+      },
+      "source_interactions": {
+        "producthunt": 717
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "ph-1076210-apple-creator-studio",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "Apple Creator Studio — Powerful creativity apps and premium productivity features",
+          "url": "https://www.producthunt.com/products/apple?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "The apps you need for everything you want to create. Craft your stories with video in Final Cut Pro. Reimagine images in Pixelmator Pro. Produce your best music in Logic Pro. Supercharge productivity with premium content in Keynote, Pages, Numbers, and Freeform Boost workflows with AI features that build on Apple Intel",
+          "interactions": 188,
+          "views": 2072,
+          "impressions": 1836,
+          "published_at": "2026-02-09T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "herodotai",
+      "entity": "Herodot AI",
+      "final_score": 83.791,
+      "lexical_score": 32.958,
+      "lexical_score_norm": 76.845,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "producthunt"
+      ],
+      "top_keywords": [
+        "herodot",
+        "ai",
+        "travel",
+        "local",
+        "guide",
+        "like",
+        "app",
+        "moving",
+        "we",
+        "years"
+      ],
+      "trend_score": 80.72,
+      "momentum_score": 100.0,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-01-31T08:01:00+00:00",
+      "last_seen_at": "2026-01-31T08:01:00+00:00",
+      "activity_last_30d": 4,
+      "source_counts": {
+        "producthunt": 4
+      },
+      "source_interactions": {
+        "producthunt": 1091
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "ph-1062925-herodot-ai",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "Herodot AI — Travel at any place like with a personal local guide",
+          "url": "https://www.producthunt.com/products/herodot-ai/launches/herodot-ai-4?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "We work on Herodot AI for more than two years moving from just a nice concept to truly reliable, easy to use app. Our task is to give you a feeling that you walk and travel with a knowledgeable local friend, who can guide you pretty much like a human, telling exciting stories on what is around, whatever catches your ey",
+          "interactions": 298,
+          "views": 3094,
+          "impressions": 2804,
+          "published_at": "2026-01-31T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "webaitool",
+      "entity": "Webaitool",
+      "final_score": 83.759,
+      "lexical_score": 32.938,
+      "lexical_score_norm": 76.798,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "hackernews"
+      ],
+      "top_keywords": [
+        "browser",
+        "photos",
+        "quot",
+        "in",
+        "photo",
+        "site",
+        "background",
+        "their",
+        "standard",
+        "so"
+      ],
+      "trend_score": 55.47,
+      "momentum_score": 100.0,
+      "confidence": 0.87,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-21T09:02:01+00:00",
+      "last_seen_at": "2026-02-21T09:02:01+00:00",
+      "activity_last_30d": 4,
+      "source_counts": {
+        "hackernews": 4
+      },
+      "source_interactions": {
+        "hackernews": 27
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 4,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "hn-47098872-webaitool",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Remove backgrounds and make passport photos in the browser",
+          "url": "https://webaitool.net/bg-remove.html",
+          "summary": "I was tired of &quot;free&quot; photo tools that required signups or uploaded my personal photos to their servers.<p>So, I added two new utilities to my site:<p>A background remover that runs in the browser.<p>A passport-size photo maker with standard dimensions.<p>Everything is ",
+          "interactions": 1,
+          "views": 98,
+          "impressions": 98,
+          "published_at": "2026-02-21T09:02:01+00:00",
+          "confidence": 0.87,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "aidevhub",
+      "entity": "Aidevhub",
+      "final_score": 83.297,
+      "lexical_score": 32.655,
+      "lexical_score_norm": 76.138,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "hackernews"
+      ],
+      "top_keywords": [
+        "client-side",
+        "tools",
+        "dev",
+        "hub",
+        "signup",
+        "no",
+        "ai",
+        "missing",
+        "hn",
+        "all"
+      ],
+      "trend_score": 55.69,
+      "momentum_score": 100.0,
+      "confidence": 0.77,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-21T16:16:21+00:00",
+      "last_seen_at": "2026-02-21T16:16:21+00:00",
+      "activity_last_30d": 4,
+      "source_counts": {
+        "hackernews": 4
+      },
+      "source_interactions": {
+        "hackernews": 29
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 4,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "hn-47102101-aidevhub",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: AI Dev Hub. 100 free dev tools (all client-side, no signup, no ads)",
+          "url": "https://aidevhub.io/",
+          "summary": "Hey HN, I’m Christoph.<p>I built AI Dev Hub because I hate switching between sites and was missing some light weight tools for building with ai.<p>Principles:\n• no signup\n• current tools run fully client-side\n• fast utility over flashy UI\n• built for real workflows<p>I’m curious ",
+          "interactions": 1,
+          "views": 109,
+          "impressions": 109,
+          "published_at": "2026-02-21T16:16:21+00:00",
+          "confidence": 0.77,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "goodassistant",
+      "entity": "Good Assistant",
+      "final_score": 83.256,
+      "lexical_score": 32.63,
+      "lexical_score_norm": 76.08,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "producthunt"
+      ],
+      "top_keywords": [
+        "assistant",
+        "that",
+        "you",
+        "to",
+        "email",
+        "is",
+        "tasks",
+        "in",
+        "emails",
+        "inbox"
+      ],
+      "trend_score": 82.88,
+      "momentum_score": 100.0,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-01T08:01:00+00:00",
+      "last_seen_at": "2026-02-12T08:01:00+00:00",
+      "activity_last_30d": 16,
+      "source_counts": {
+        "producthunt": 16
+      },
+      "source_interactions": {
+        "producthunt": 5258
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "ph-1034112-revo-ai-email-assistant",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "Revo AI Email Assistant — AI with accurate replies that tackle the next-step tasks",
+          "url": "https://www.producthunt.com/products/revo-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "Revo for Email is an intelligent inbox layer that connects your meetings, Slack, and CRM to answer emails for you. Built for Gmail, Outlook and is ready in seconds. No more searching. No more typing. No more guessing.",
+          "interactions": 525,
+          "views": 5054,
+          "impressions": 4709,
+          "published_at": "2026-02-11T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "ph-1073326-lindy-assistant",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "Lindy Assistant — Proactive assistant that does tasks without being prompted",
+          "url": "https://www.producthunt.com/products/lindy?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "Lindy is your AI executive assistant. Takes 2min to set up and saves you 2h a day. Proactively manages your inbox, meetings, and calendar. You don't even have to ask. It triages emails, preps for meetings, takes notes, and sends follow-ups automatically.",
+          "interactions": 395,
+          "views": 4130,
+          "impressions": 3719,
+          "published_at": "2026-02-12T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "ph-1070589-good-assistant",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "Good Assistant — Partner for goals that matter",
+          "url": "https://www.producthunt.com/products/good-assistant/launches/good-assistant?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "Good Assistant is a passion project with simple goal. To give us all an assistant that will make real impact on the goals most important to us. With powerful memory, notes, proactivity, reminders / tasks of any kind, focus and persistence in helping you get to where you want to be.",
+          "interactions": 291,
+          "views": 3304,
+          "impressions": 2871,
+          "published_at": "2026-02-01T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "ph-1068942-lightfern-for-email",
+          "source_id": "producthunt",
+          "source_name": "Product Hunt",
+          "headline": "Lightfern for Email — The telepathic AI writing tool",
+          "url": "https://www.producthunt.com/products/lightfern/launches/lightfern-for-email?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+          "summary": "Finish thoughts before fingers hit keys. Working directly in your inbox as a browser extension, Lightfern nails the details that make emails feel like you - nicknames, sign-offs, your tone of voice - and pulls context from past threads to finish sentences the way you would. All with zero data retention by default.",
+          "interactions": 254,
+          "views": 2296,
+          "impressions": 2209,
+          "published_at": "2026-02-03T08:01:00Z",
+          "confidence": 0.8,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "gumroad",
+      "entity": "Gumroad",
+      "final_score": 83.207,
+      "lexical_score": 32.6,
+      "lexical_score_norm": 76.01,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "hackernews"
+      ],
+      "top_keywords": [
+        "hn",
+        "to",
+        "app",
+        "in",
+        "built",
+        "local",
+        "next",
+        "x2f",
+        "like",
+        "js"
+      ],
+      "trend_score": 56.13,
+      "momentum_score": 100.0,
+      "confidence": 0.761,
+      "is_known_incumbent": false,
+      "first_seen_at": "2025-10-12T13:22:20+00:00",
+      "last_seen_at": "2026-02-09T03:32:50+00:00",
+      "activity_last_30d": 14,
+      "source_counts": {
+        "hackernews": 29
+      },
+      "source_interactions": {
+        "hackernews": 68
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "hn-45558068-gumroad",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Learn Linux Bash Scripting with Interactive Jupyter Notebooks",
+          "url": "https://franklinux.gumroad.com/l/uxmcrj",
+          "summary": "I put together some interactive notebooks to help people get started with Linux Bash scripting.<p>Runs in the browser, no setup needed.",
+          "interactions": 4,
+          "views": 40,
+          "impressions": 24,
+          "published_at": "2025-10-12T13:22:20+00:00",
+          "confidence": 0.77,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-46572727-gumroad",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Airboard – $1 voice dictation for Mac local",
+          "url": "https://dhruvian473.gumroad.com/l/pgcjbc",
+          "summary": "I use voice dictation daily, but Wispr Flow at $144&#x2F;year felt \nlike too much for what it does.<p>So I built a minimal version: Hold Option → Speak → Release → \nText appears at cursor.<p>- Works in any app\n- 100% local (WhisperKit), works offline\n- No account, no cloud<p>It&#",
+          "interactions": 4,
+          "views": 40,
+          "impressions": 24,
+          "published_at": "2026-01-11T04:33:59+00:00",
+          "confidence": 0.77,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-46841387-gumroad",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: I treated my back pain like a hardware bug",
+          "url": "https://deskrelief.gumroad.com/l/7-day-pain-relief",
+          "summary": "I’ve been a developer for years, but I also have 14 years of experience in calisthenics. I realized that &quot;remembering&quot; to take breaks rarely works when you are deep in a flow state. Willpower is a terrible mechanism for posture.<p>Instead, I started treating my back hea",
+          "interactions": 4,
+          "views": 22,
+          "impressions": 22,
+          "published_at": "2026-01-31T22:07:04+00:00",
+          "confidence": 0.77,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-46488084-gumroad",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Self-hosted video clipper architecture (Next.js, N8N, FFmpeg, Docker)",
+          "url": "https://suryaelidanto.gumroad.com/l/ai-video-saas",
+          "summary": "Show HN: Self-hosted video clipper architecture (Next.js, N8N, FFmpeg, Docker)",
+          "interactions": 4,
+          "views": 22,
+          "impressions": 22,
+          "published_at": "2026-01-04T14:06:40+00:00",
+          "confidence": 0.77,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-46853226-gumroad",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: SwitchBlade – A macOS menu bar app to context-switch dev environments",
+          "url": "https://8533705985940.gumroad.com/l/vxrols",
+          "summary": "Show HN: SwitchBlade – A macOS menu bar app to context-switch dev environments",
+          "interactions": 3,
+          "views": 16,
+          "impressions": 16,
+          "published_at": "2026-02-02T07:00:39+00:00",
+          "confidence": 0.77,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-46941272-gumroad",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: AI Prompt Frameworks That Generated $47K in Business Value",
+          "url": "https://tannerwave37.gumroad.com/l/hsrzok",
+          "summary": "I spent 6 months testing 200+ AI prompts across marketing, sales, and operations. Most generic prompts fail because they lack structure.<p>These 10 frameworks delivered $47K in measurable ROI:<p>- Email Wizard: 3 hrs&#x2F;week saved\n- Content Multiplier: 2 weeks of content from 1",
+          "interactions": 1,
+          "views": 10,
+          "impressions": 6,
+          "published_at": "2026-02-09T03:32:50+00:00",
+          "confidence": 0.77,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-46760971-gumroad",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: Invoice Studios – local first invoicing app (one time purchase)",
+          "url": "https://liblab.gumroad.com/l/invoice-studio",
+          "summary": "I built Invoice Studios because I was tired of messy invoice templates and subscription tools. It’s a local‑first desktop app: create invoices&#x2F;quotes, live preview, export clean PDFs. Looking for feedback on the UX and the exported PDF layout.",
+          "interactions": 1,
+          "views": 10,
+          "impressions": 6,
+          "published_at": "2026-01-26T02:05:08+00:00",
+          "confidence": 0.77,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-46676834-gumroad",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: I built a Next.js boilerplate to stop fighting with CSS",
+          "url": "https://veloxweb.gumroad.com/l/launch-ui",
+          "summary": "Hi HN, I suck at design so I made a Bento Grid template to reuse for my SaaS projects. Stack: Next.js 14 + Tailwind + Framer Motion. Feedback welcome.",
+          "interactions": 1,
+          "views": 10,
+          "impressions": 6,
+          "published_at": "2026-01-19T09:35:24+00:00",
+          "confidence": 0.77,
+          "node_type": "source_raw"
+        },
+        {
+          "id": "hn-46587312-gumroad",
+          "source_id": "hackernews",
+          "source_name": "Hacker News",
+          "headline": "Show HN: ADB Remote – First attempt at IDE-less Android development",
+          "url": "https://saltserv.gumroad.com/l/adbremote",
+          "summary": "I built ADB Remote from the sole desire to be able to do Android development without having to commit to launching Android Studio.<p>ADB Remote wraps common ADB and Gradle operations into a single interface. Useful for quick tasks like checking LogCat, managing devices, running b",
+          "interactions": 1,
+          "views": 10,
+          "impressions": 6,
+          "published_at": "2026-01-12T12:04:59+00:00",
+          "confidence": 0.77,
+          "node_type": "source_raw"
+        }
+      ]
+    },
+    {
+      "entity_key": "niaexperience",
+      "entity": "NiaExperience",
+      "final_score": 83.08,
+      "lexical_score": 32.522,
+      "lexical_score_norm": 75.828,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "",
+      "sources": [
+        "github"
+      ],
+      "top_keywords": [
+        "access",
+        "companion",
+        "developers",
+        "distributed",
+        "intelligent",
+        "memory",
+        "multi-platform",
+        "niaexperience",
+        "self-evolving",
+        "systems",
+        "typescript"
+      ],
+      "trend_score": 77.77,
+      "momentum_score": 100.0,
+      "confidence": 0.78,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-20T16:54:57+00:00",
+      "last_seen_at": "2026-02-20T22:35:31+00:00",
+      "activity_last_30d": 3,
+      "source_counts": {
+        "github": 3
+      },
+      "source_interactions": {
+        "github": 626
+      },
+      "mention_count_1h": 0,
+      "mention_count_24h": 1,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "id": "github-1160852606-niaexperience",
+          "source_id": "github",
+          "source_name": "GitHub",
+          "headline": "NiaExperience/PearlOS",
+          "url": "https://github.com/NiaExperience/PearlOS",
+          "summary": "Self-evolving Intelligent OS companion with memory systems, voice integration, and distributed architecture. Multi-platform support with OpenClaw intelligent agent orchestration. Early access for developers..",
+          "interactions": 26,
+          "views": 468,
+          "impressions": 468,
+          "published_at": "2026-02-20T16:54:57Z",
+          "confidence": 0.7,
+          "node_type": "source_raw"
+        }
+      ]
+    }
+  ]
+}
