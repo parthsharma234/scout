@@ -22,7 +22,6 @@ Thumbs.db
 .vscode/
 
 # Local pipeline database
-data/scout.db
 data/scout.db-shm
 data/scout.db-wal
 
