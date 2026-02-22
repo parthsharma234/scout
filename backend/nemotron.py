@@ -115,6 +115,11 @@ Post Content:
             if start_idx != -1 and end_idx != -1 and end_idx > start_idx:
                 content = content[start_idx:end_idx+1]
                 
+            # If the LLM still failed to escape internal quotes, try an emergency replace before crashing
+            import re
+            # Matches any double quote not preceeded by a colon, space, comma, or brace, and not followed by a comma, brace, colon, or space
+            content = re.sub(r'(?<![:,\{\[ \n])"(?![,\]\}\:\n ])', "'", content)
+                
             parsed = json.loads(content.strip())
             return parsed
             
