@@ -403,7 +403,7 @@ def load_entities_from_scout_db() -> list[dict[str, Any]]:
     """Load all startups from scout.db and convert to the entity format
     that lexical_score_entity() and call_openrouter_nemotron() expect."""
     import sqlite3 as _sql
-    _db = _sql.connect("data/scout.db", timeout=10)
+    _db = _sql.connect("../data/scout.db", timeout=10)
     _db.row_factory = _sql.Row
     rows = [dict(r) for r in _db.execute(
         "SELECT * FROM Startups ORDER BY scout_score DESC"
@@ -622,7 +622,7 @@ class SearchHandler(BaseHTTPRequestHandler):
             if not startup:
                 # Try searching by name (the frontend passes entity name via fetchEntityNodes)
                 import sqlite3 as _sql
-                _db = _sql.connect("data/scout.db", timeout=10)
+                _db = _sql.connect("../data/scout.db", timeout=10)
                 _db.row_factory = _sql.Row
                 row = _db.execute(
                     "SELECT * FROM Startups WHERE startup_name = ? COLLATE NOCASE LIMIT 1",
@@ -745,7 +745,7 @@ class SearchHandler(BaseHTTPRequestHandler):
                 
                 # Query scout.db – filter out junk names, prioritize classified startups
                 import sqlite3 as _sql
-                _db = _sql.connect("data/scout.db", timeout=10)
+                _db = _sql.connect("../data/scout.db", timeout=10)
                 _db.row_factory = _sql.Row
                 
                 # Filter out garbage names + prioritize properly classified startups

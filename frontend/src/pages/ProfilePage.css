@@ -194,99 +194,100 @@
     color: #94a3b8;
     padding: 40px;
 }
+
 .bookmark-info {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .bookmark-main {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .bookmark-score {
-  font-size: 14px;
-  background: #1e1e21;
-  padding: 2px 8px;
-  border-radius: 4px;
-  color: #3b82f6;
-  border: 1px solid #3b82f633;
+    font-size: 14px;
+    background: #1e1e21;
+    padding: 2px 8px;
+    border-radius: 4px;
+    color: #3b82f6;
+    border: 1px solid #3b82f633;
 }
 
 .bookmark-tags {
-  display: flex;
-  gap: 8px;
+    display: flex;
+    gap: 8px;
 }
 
 .bookmark-tag {
-  font-size: 12px;
-  background: #1e1e21;
-  color: #94a3b8;
-  padding: 2px 6px;
-  border-radius: 4px;
-  border: 1px solid #232326;
+    font-size: 12px;
+    background: #1e1e21;
+    color: #94a3b8;
+    padding: 2px 6px;
+    border-radius: 4px;
+    border: 1px solid #232326;
 }
 
 .bookmark-actions {
-  display: flex;
-  align-items: center;
-  gap: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 .draft-email-btn {
-  background: #e0f2fe;
-  color: #0369a1;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 6px;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.2s;
+    background: #e0f2fe;
+    color: #0369a1;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
 }
 
 .draft-email-btn:hover {
-  background: #bae6fd;
+    background: #bae6fd;
 }
 
 .avatar-upload-wrap {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .upload-trigger-btn {
-  background: #1e1e21;
-  border: 1px solid #232326;
-  color: #fff;
-  padding: 10px 16px;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  transition: all 0.2s;
+    background: #1e1e21;
+    border: 1px solid #232326;
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
 }
 
 .upload-trigger-btn:hover {
-  background: #232326;
-  border-color: #3b82f6;
+    background: #232326;
+    border-color: #3b82f6;
 }
 
 .remove-avatar-btn {
-  background: none;
-  border: none;
-  color: #ef4444;
-  font-size: 13px;
-  font-weight: 500;
-  cursor: pointer;
-  padding: 4px 8px;
+    background: none;
+    border: none;
+    color: #ef4444;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 4px 8px;
 }
 
 .remove-avatar-btn:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
