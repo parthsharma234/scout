@@ -29,14 +29,30 @@ function formatDate(value) {
   return date.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' })
 }
 
+const DIMENSION_FIELDS = [
+  { key: 'sector', label: 'Sector', placeholder: 'AI, Fintech, Edtech, Cybersecurity...' },
+  { key: 'customer_pain', label: 'Customer + pain', placeholder: 'Workflow automation for dental clinics' },
+  { key: 'buyer_gtm', label: 'Buyer + GTM', placeholder: 'Enterprise security sold to CISOs' },
+  { key: 'business_model', label: 'Business model', placeholder: 'Usage-based API startups' },
+  { key: 'stage_traction', label: 'Stage / traction', placeholder: 'Pre-seed AI startups with fast weekly growth' },
+  { key: 'moat_defensibility', label: 'Moat / defensibility', placeholder: 'Companies with proprietary data moat in healthcare' },
+  { key: 'timing_tailwinds', label: 'Timing / tailwinds', placeholder: 'Startups benefiting from new AI compliance rules' },
+  { key: 'risk_filter', label: 'Risk filter', placeholder: 'Fintech startups excluding lending exposure' },
+]
+
+const DEFAULT_QUERY_PROFILE = Object.fromEntries(DIMENSION_FIELDS.map((field) => [field.key, '']))
+const FIELD_BY_KEY = Object.fromEntries(DIMENSION_FIELDS.map((field) => [field.key, field]))
+
 export default function DashboardPage() {
   const [drilledEntity, setDrilledEntity] = useState(null)
   const [secondaryTab, setSecondaryTab] = useState(null)
-  const [nicheQuery, setNicheQuery] = useState('')
   const [nicheLoading, setNicheLoading] = useState(false)
   const [nicheError, setNicheError] = useState('')
   const [nicheResults, setNicheResults] = useState([])
   const [nicheUsedNemotron, setNicheUsedNemotron] = useState(false)
+  const [queryProfile, setQueryProfile] = useState(DEFAULT_QUERY_PROFILE)
+  const [dimensionOrder, setDimensionOrder] = useState(DIMENSION_FIELDS.map((field) => field.key))
+  const [draggingKey, setDraggingKey] = useState('')
   const [clusterScope, setClusterScope] = useState('top')
   const [apiEntityNodes, setApiEntityNodes] = useState([])
   const [apiEntityNodesLoading, setApiEntityNodesLoading] = useState(false)
@@ -93,6 +109,10 @@ export default function DashboardPage() {
 
   const trends = clusterScope === 'niche' && nicheClusterTrends.length > 0 ? nicheClusterTrends : trendsTop
   const sources = wsSources.length > 0 ? wsSources : apiSources
+  const orderedDimensionFields = useMemo(
+    () => dimensionOrder.map((key) => FIELD_BY_KEY[key]).filter(Boolean),
+    [dimensionOrder],
+  )
 
   const selectedTrend = [...trendsTop, ...nicheClusterTrends].find((item) => {
     if (!drilledEntity) return false
@@ -195,17 +215,41 @@ export default function DashboardPage() {
     if (nicheClusterTrends.length > 0) setClusterScope('niche')
   }
 
+  function moveDimensionBefore(sourceKey, targetKey) {
+    if (!sourceKey || !targetKey || sourceKey === targetKey) return
+    setDimensionOrder((prev) => {
+      const sourceIndex = prev.indexOf(sourceKey)
+      const targetIndex = prev.indexOf(targetKey)
+      if (sourceIndex < 0 || targetIndex < 0 || sourceIndex === targetIndex) return prev
+      const next = [...prev]
+      next.splice(sourceIndex, 1)
+      const insertIndex = next.indexOf(targetKey)
+      next.splice(insertIndex, 0, sourceKey)
+      return next
+    })
+  }
+
   async function handleRunNicheSearch() {
-    if (!nicheQuery.trim() || nicheLoading) return
+    if (nicheLoading) return
+    const hasProfileInput = DIMENSION_FIELDS.some((field) => String(queryProfile[field.key] || '').trim())
+    const resolvedQuery = String(queryProfile.sector || '').trim()
+    if (!hasProfileInput) return
+    const dimensionPriorityRank = dimensionOrder.reduce((acc, key, idx) => {
+      acc[key] = idx + 1
+      return acc
+    }, {})
+
     setNicheLoading(true)
     setNicheError('')
     try {
       const payload = await searchNiche({
-        query: nicheQuery.trim(),
+        query: resolvedQuery || 'vc startup profile',
         limit: 50,
         useNemotron: true,
         enrichOnDemand: true,
         enrichLimit: 5,
+        queryProfile,
+        dimensionPriorityRank,
       })
       setNicheResults(payload.results ?? [])
       setNicheUsedNemotron(Boolean(payload.used_nemotron))
@@ -354,22 +398,48 @@ export default function DashboardPage() {
               {nicheUsedNemotron && <span className="db-search-chip mono">Nemotron</span>}
             </header>
 
+            <div className="db-profile-panel">
+              {orderedDimensionFields.map((field, index) => (
+                <div
+                  key={field.key}
+                  className={`db-profile-row ${draggingKey === field.key ? 'db-profile-row--dragging' : ''}`}
+                  draggable
+                  onDragStart={() => setDraggingKey(field.key)}
+                  onDragEnd={() => setDraggingKey('')}
+                  onDragOver={(event) => event.preventDefault()}
+                  onDrop={() => {
+                    moveDimensionBefore(draggingKey, field.key)
+                    setDraggingKey('')
+                  }}
+                >
+                  <div className="db-profile-meta">
+                    <label htmlFor={`profile-${field.key}`} className="db-profile-label">{field.label}</label>
+                    <span className="db-rank-pill mono">Rank {index + 1}</span>
+                  </div>
+                  <div className="db-profile-input-wrap">
+                    <span className="db-drag-handle mono" title="Drag to reorder">::</span>
+                    <input
+                      id={`profile-${field.key}`}
+                      className="db-profile-input"
+                      type="text"
+                      placeholder={field.placeholder}
+                      value={queryProfile[field.key] || ''}
+                      onChange={(event) => {
+                        const next = event.target.value
+                        setQueryProfile((prev) => ({ ...prev, [field.key]: next }))
+                      }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+
             <div className="db-search-form">
-              <input
-                className="db-search-input"
-                type="text"
-                placeholder='Try: "weather intelligence startup"'
-                value={nicheQuery}
-                onChange={(event) => setNicheQuery(event.target.value)}
-                onKeyDown={(event) => {
-                  if (event.key === 'Enter') handleRunNicheSearch()
-                }}
-              />
               <button
                 type="button"
                 className="db-search-btn"
                 onClick={handleRunNicheSearch}
-                disabled={nicheLoading || !nicheQuery.trim()}
+                disabled={nicheLoading}
               >
                 {nicheLoading ? 'Searching...' : 'Search'}
               </button>
@@ -378,7 +448,7 @@ export default function DashboardPage() {
             {nicheError && <p className="db-search-error">{nicheError}</p>}
 
             {!nicheError && nicheResults.length === 0 && (
-              <p className="db-search-empty">Run a query to rank startups by niche.</p>
+              <p className="db-search-empty">Set your VC profile dimensions and run a weighted startup search.</p>
             )}
 
             {nicheResults.length > 0 && (

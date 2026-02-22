@@ -188,31 +188,96 @@
 
 .db-search-form {
   padding: 10px;
+  display: block;
+}
+
+.db-profile-panel {
+  display: grid;
+  gap: 8px;
+  padding: 10px;
+  border-bottom: 1px solid var(--border-faint);
+  max-height: 360px;
+  overflow-y: auto;
+}
+
+.db-profile-row {
+  display: grid;
+  gap: 6px;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.db-profile-row--dragging {
+  opacity: 0.55;
+  background: rgba(59, 130, 246, 0.12);
+}
+
+.db-profile-meta {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 8px;
 }
 
-.db-search-input {
-  flex: 1;
-  min-width: 0;
-  height: 34px;
-  border-radius: 6px;
+.db-profile-label {
+  font-family: var(--font-body);
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.db-rank-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 22px;
+  min-width: 56px;
+  border-radius: 999px;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  background: rgba(59, 130, 246, 0.12);
+  color: var(--blue-300);
+  font-size: 10px;
+  padding: 0 8px;
+}
+
+.db-profile-input-wrap {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  align-items: center;
+  gap: 8px;
+}
+
+.db-drag-handle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 11px;
+  line-height: 1;
+  cursor: grab;
+  user-select: none;
+}
+
+.db-profile-input {
+  width: 100%;
+  height: 28px;
+  border-radius: 5px;
   border: 1px solid var(--border);
-  background: rgba(148, 163, 184, 0.06);
+  background: rgba(148, 163, 184, 0.05);
   color: var(--text-primary);
   font-family: var(--font-body);
-  font-size: 12px;
-  padding: 0 10px;
+  font-size: 11px;
+  padding: 0 8px;
   outline: none;
 }
 
-.db-search-input:focus {
+.db-profile-input:focus {
   border-color: rgba(59, 130, 246, 0.55);
-  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.16);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.14);
 }
 
 .db-search-btn {
-  height: 34px;
+  width: 100%;
+  height: 36px;
   border-radius: 6px;
   border: 1px solid rgba(59, 130, 246, 0.45);
   background: rgba(59, 130, 246, 0.16);

@@ -57,6 +57,28 @@ QUERY_STOPWORDS = {
     "top",
 }
 
+PROFILE_DIMENSIONS: list[str] = [
+    "sector",
+    "customer_pain",
+    "buyer_gtm",
+    "business_model",
+    "stage_traction",
+    "moat_defensibility",
+    "timing_tailwinds",
+    "risk_filter",
+]
+
+DIMENSION_LABELS: dict[str, str] = {
+    "sector": "Sector",
+    "customer_pain": "Customer + pain",
+    "buyer_gtm": "Buyer + GTM",
+    "business_model": "Business model",
+    "stage_traction": "Stage / traction",
+    "moat_defensibility": "Moat / defensibility",
+    "timing_tailwinds": "Timing / tailwinds",
+    "risk_filter": "Risk filter",
+}
+
 
 def load_env_file(path: Path = Path(".env")) -> None:
     shared_load_env_file(path)
@@ -81,6 +103,56 @@ def parse_refresh_targets(raw: str) -> list[str]:
         if target in {"hn", "github", "producthunt"} and target not in out:
             out.append(target)
     return out
+
+
+def normalize_query_profile(raw_profile: dict[str, Any] | None) -> dict[str, str]:
+    profile: dict[str, str] = {}
+    if not isinstance(raw_profile, dict):
+        return profile
+    for key in PROFILE_DIMENSIONS:
+        value = str(raw_profile.get(key) or "").strip()
+        if value:
+            profile[key] = value
+    return profile
+
+
+def normalize_priority_map(raw_priorities: dict[str, Any] | None) -> dict[str, int]:
+    max_rank = len(PROFILE_DIMENSIONS)
+    priorities: dict[str, int] = {}
+    if isinstance(raw_priorities, dict):
+        for key in PROFILE_DIMENSIONS:
+            raw = raw_priorities.get(key)
+            try:
+                rank = int(raw)
+            except (TypeError, ValueError):
+                continue
+            priorities[key] = min(max(1, rank), max_rank)
+
+    for default_rank, key in enumerate(PROFILE_DIMENSIONS, start=1):
+        priorities.setdefault(key, default_rank)
+    return priorities
+
+
+def profile_priority_weights(priority_map: dict[str, int] | None) -> dict[str, float]:
+    priorities = normalize_priority_map(priority_map)
+    max_rank = len(PROFILE_DIMENSIONS)
+    raw_weights: dict[str, float] = {}
+    for key in PROFILE_DIMENSIONS:
+        rank = priorities.get(key, max_rank)
+        raw_weights[key] = float(max_rank - rank + 1)
+
+    total = sum(raw_weights.values()) or 1.0
+    return {key: round(value / total, 4) for key, value in raw_weights.items()}
+
+
+def build_profile_query_text(query: str, query_profile: dict[str, str] | None) -> str:
+    profile = normalize_query_profile(query_profile)
+    parts = [str(query or "").strip()]
+    for key in PROFILE_DIMENSIONS:
+        value = profile.get(key, "").strip()
+        if value:
+            parts.append(value)
+    return " ".join(part for part in parts if part).strip()
 
 
 def run_command(cmd: list[str]) -> None:
@@ -259,7 +331,13 @@ def _build_retrieval_context(query: str, candidates: list[dict[str, Any]], max_c
     return chunks
 
 
-def call_openrouter_nemotron(query: str, candidates: list[dict[str, Any]], timeout_seconds: int = 40) -> dict[str, Any]:
+def call_openrouter_nemotron(
+    query: str,
+    candidates: list[dict[str, Any]],
+    query_profile: dict[str, str] | None = None,
+    priority_map: dict[str, int] | None = None,
+    timeout_seconds: int = 40,
+) -> dict[str, Any]:
     api_key = os.getenv("OPENROUTER_API_KEY", "").strip()
     if not api_key:
         raise ValueError("Missing OPENROUTER_API_KEY for Nemotron reranking")
@@ -293,13 +371,24 @@ def call_openrouter_nemotron(query: str, candidates: list[dict[str, Any]], timeo
 
     retrieval_context = _build_retrieval_context(query=query, candidates=candidates)
 
+    normalized_profile = normalize_query_profile(query_profile)
+    normalized_priorities = normalize_priority_map(priority_map)
+    priority_weights = profile_priority_weights(normalized_priorities)
+
     system_prompt = (
         "You are a VC intelligence ranking assistant. "
-        "Classify each candidate into entity_type and score relevance to the niche query. "
+        "Score each candidate against a weighted venture profile, classify entity_type, and decide inclusion. "
         "Return strict JSON only."
     )
     user_prompt = {
         "query": query,
+        "query_profile": {
+            key: normalized_profile.get(key, "")
+            for key in PROFILE_DIMENSIONS
+        },
+        "dimension_labels": DIMENSION_LABELS,
+        "dimension_priority_rank": normalized_priorities,
+        "dimension_priority_weight": priority_weights,
         "entity_type_labels": [
             "startup_company",
             "open_source_project",
@@ -312,6 +401,8 @@ def call_openrouter_nemotron(query: str, candidates: list[dict[str, Any]], timeo
             "Use open_source_project for repos/projects without clear company signal.",
             "Set include=true only if relevant to the query niche.",
             "relevance_score must be 0-100.",
+            "profile_match_score must be 0-100 and reflect weighted match to query_profile.",
+            "Use dimension_match_scores (0-100 each) for dimensions present in query_profile.",
             "Do not invent URLs.",
             "Use retrieval_context as grounding evidence before deciding relevance.",
         ],
@@ -324,6 +415,8 @@ def call_openrouter_nemotron(query: str, candidates: list[dict[str, Any]], timeo
                     "include": "boolean",
                     "entity_type": "string",
                     "relevance_score": "number",
+                    "profile_match_score": "number",
+                    "dimension_match_scores": {"dimension_key": "number"},
                     "reason": "string",
                 }
             ]
@@ -377,7 +470,10 @@ def call_openrouter_nemotron(query: str, candidates: list[dict[str, Any]], timeo
 
 
 def combine_scores(
-    candidates: list[dict[str, Any]], llm_payload: dict[str, Any] | None
+    candidates: list[dict[str, Any]],
+    llm_payload: dict[str, Any] | None,
+    query_profile: dict[str, str] | None = None,
+    priority_map: dict[str, int] | None = None,
 ) -> list[dict[str, Any]]:
     llm_map: dict[str, dict[str, Any]] = {}
     if isinstance(llm_payload, dict):
@@ -386,25 +482,43 @@ def combine_scores(
             if key:
                 llm_map[key] = row
 
+    llm_active = len(llm_map) > 0
     lexical_max = max((float(item.get("lexical_score") or 0.0) for item in candidates), default=1.0)
     output: list[dict[str, Any]] = []
     for item in candidates:
         entity = item["entity"]
         key = str(entity.get("entity_key") or "")
         llm = llm_map.get(key, {})
-        relevance = float(llm.get("relevance_score") or 0.0)
+        raw_relevance = llm.get("relevance_score") if llm else None
+        raw_profile_match = llm.get("profile_match_score") if llm else None
+        relevance = float(raw_relevance or 0.0)
+        profile_match = float(raw_profile_match or 0.0)
         include = bool(llm.get("include")) if llm else True
         entity_type = str(llm.get("entity_type") or "unknown")
         reason = str(llm.get("reason") or "")
+        dimension_match_scores = llm.get("dimension_match_scores")
+        if not isinstance(dimension_match_scores, dict):
+            dimension_match_scores = {}
 
         lexical = float(item.get("lexical_score") or 0.0)
         lexical_norm = 100.0 * lexical / max(1.0, lexical_max)
         momentum = float(entity.get("momentum_score") or entity.get("trend_score") or 0.0)
-        final_score = (
-            round(lexical_norm * 0.3 + relevance * 0.55 + momentum * 0.15, 3)
-            if llm
-            else round(lexical_norm * 0.7 + momentum * 0.3, 3)
-        )
+
+        has_llm_profile_match = bool(llm) and raw_profile_match is not None
+        if llm_active:
+            if has_llm_profile_match:
+                final_score = round(lexical_norm * 0.2 + relevance * 0.4 + profile_match * 0.3 + momentum * 0.1, 3)
+            else:
+                # If LLM rerank is active but this entity did not receive a profile match,
+                # heavily downrank and remove momentum boost.
+                final_score = round(lexical_norm * 0.25, 3)
+                relevance = 0.0
+                profile_match = 0.0
+                if not reason:
+                    reason = "Downranked: no LLM profile match returned."
+        else:
+            final_score = round(lexical_norm * 0.7 + momentum * 0.3, 3)
+
         if llm and not include:
             final_score *= 0.5
 
@@ -416,6 +530,9 @@ def combine_scores(
                 "lexical_score": lexical,
                 "lexical_score_norm": round(lexical_norm, 3),
                 "relevance_score": relevance if llm else None,
+                "profile_match_score": profile_match if llm else None,
+                "llm_profile_matched": has_llm_profile_match,
+                "dimension_match_scores": dimension_match_scores if llm else {},
                 "entity_type": entity_type,
                 "include": include,
                 "reason": reason,
@@ -441,11 +558,19 @@ def combine_scores(
     return output
 
 
-def save_latest_results(path: Path, query: str, rows: list[dict[str, Any]]) -> None:
+def save_latest_results(
+    path: Path,
+    query: str,
+    rows: list[dict[str, Any]],
+    query_profile: dict[str, str] | None = None,
+    priority_map: dict[str, int] | None = None,
+) -> None:
     payload = {
         "_meta": {
             "description": "Latest niche query results from Scout tool pipeline",
             "query": query,
+            "query_profile": normalize_query_profile(query_profile),
+            "dimension_priority_rank": normalize_priority_map(priority_map),
         },
         "result_count": len(rows),
         "results": rows,

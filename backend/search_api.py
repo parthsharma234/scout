@@ -42,9 +42,12 @@ try:
     )
     from pipeline_runner import PipelineScheduler, run_full_pipeline, run_on_demand_enrichment
     from niche_search import (
+        build_profile_query_text,
         call_openrouter_nemotron,
         combine_scores,
         load_index,
+        normalize_priority_map,
+        normalize_query_profile,
         parse_refresh_targets,
         save_latest_results,
         tool_build_index,
@@ -63,9 +66,12 @@ except ModuleNotFoundError:
     )
     from backend.pipeline_runner import PipelineScheduler, run_full_pipeline, run_on_demand_enrichment  # type: ignore
     from backend.niche_search import (  # type: ignore
+        build_profile_query_text,
         call_openrouter_nemotron,
         combine_scores,
         load_index,
+        normalize_priority_map,
+        normalize_query_profile,
         parse_refresh_targets,
         save_latest_results,
         tool_build_index,
@@ -405,6 +411,8 @@ def run_niche_pipeline(
     save_out: Path = DEFAULT_SAVE,
     enrich_on_demand: bool = False,
     enrich_limit: int = 5,
+    query_profile: dict[str, Any] | None = None,
+    dimension_priority_rank: dict[str, Any] | None = None,
 ) -> dict:
     if not query.strip():
         raise ValueError("query is required")
@@ -422,11 +430,25 @@ def run_niche_pipeline(
     if not isinstance(entities, list) or not entities:
         raise RuntimeError("Entity index is empty. Build/refresh data first.")
 
-    candidates = tool_search_index(query, entities, limit=max(limit * 5, 40))
+    profile_payload = normalize_query_profile(query_profile)
+    priority_payload = normalize_priority_map(dimension_priority_rank)
+    effective_query = build_profile_query_text(query, profile_payload) or query
+
+    candidates = tool_search_index(effective_query, entities, limit=max(limit * 5, 40))
     llm_payload = None
     if use_nemotron and candidates:
-        llm_payload = call_openrouter_nemotron(query, candidates)
-    rows = combine_scores(candidates, llm_payload)
+        llm_payload = call_openrouter_nemotron(
+            query=query,
+            candidates=candidates,
+            query_profile=profile_payload,
+            priority_map=priority_payload,
+        )
+    rows = combine_scores(
+        candidates,
+        llm_payload,
+        query_profile=profile_payload,
+        priority_map=priority_payload,
+    )
     filtered = [row for row in rows if row.get("include", True)] if llm_payload else rows
     final_rows = filtered if filtered else rows
     final_rows = [row for row in final_rows if float(row.get("final_score") or 0.0) >= min_score]
@@ -446,9 +468,18 @@ def run_niche_pipeline(
             enrichment_applied = True
             enriched_links_added = int(enrichment_result.get("links_added") or 0)
 
-    save_latest_results(save_out, query, final_rows[: max(limit, 25)])
+    save_latest_results(
+        save_out,
+        query,
+        final_rows[: max(limit, 25)],
+        query_profile=profile_payload,
+        priority_map=priority_payload,
+    )
     return {
         "query": query,
+        "effective_query": effective_query,
+        "query_profile": profile_payload,
+        "dimension_priority_rank": priority_payload,
         "used_nemotron": bool(llm_payload),
         "result_count": len(final_rows),
         "results": final_rows,
@@ -612,6 +643,16 @@ class SearchHandler(BaseHTTPRequestHandler):
             use_nemotron = ((params.get("use_nemotron") or ["true"])[0]).lower() != "false"
             enrich_on_demand = ((params.get("enrich_on_demand") or ["false"])[0]).lower() == "true"
             enrich_limit = int((params.get("enrich_limit") or ["5"])[0])
+            query_profile_raw = (params.get("query_profile") or ["{}"])[0]
+            priority_raw = (params.get("dimension_priority_rank") or ["{}"])[0]
+            try:
+                query_profile = json.loads(query_profile_raw) if query_profile_raw else {}
+            except json.JSONDecodeError:
+                query_profile = {}
+            try:
+                dimension_priority_rank = json.loads(priority_raw) if priority_raw else {}
+            except json.JSONDecodeError:
+                dimension_priority_rank = {}
             try:
                 payload = run_niche_pipeline(
                     query=query,
@@ -620,6 +661,8 @@ class SearchHandler(BaseHTTPRequestHandler):
                     use_nemotron=use_nemotron,
                     enrich_on_demand=enrich_on_demand,
                     enrich_limit=max(1, min(enrich_limit, 10)),
+                    query_profile=query_profile,
+                    dimension_priority_rank=dimension_priority_rank,
                 )
                 self._set_json(200)
                 self.wfile.write(json.dumps(payload, ensure_ascii=False).encode("utf-8"))
@@ -674,6 +717,10 @@ class SearchHandler(BaseHTTPRequestHandler):
                 save_out=Path(body.get("save_out") or DEFAULT_SAVE),
                 enrich_on_demand=bool(body.get("enrich_on_demand", False)),
                 enrich_limit=max(1, min(int(body.get("enrich_limit", 5)), 10)),
+                query_profile=body.get("query_profile") if isinstance(body.get("query_profile"), dict) else {},
+                dimension_priority_rank=body.get("dimension_priority_rank")
+                if isinstance(body.get("dimension_priority_rank"), dict)
+                else {},
             )
             self._set_json(200)
             self.wfile.write(json.dumps(payload, ensure_ascii=False).encode("utf-8"))
