@@ -5,15 +5,15 @@ from typing import Optional, List, Dict, Any
 from pathlib import Path
 from datetime import datetime, timezone
 
-DB_PATH = Path("c:/scout/data/scout.db")
-RAW_DB_PATH = Path("c:/scout/data/scout_raw.db")
-MIGRATIONS_PATH = Path("c:/scout/backend/migrations")
+DB_PATH = Path("data/scout.db")
+RAW_DB_PATH = Path("data/scout_raw.db")
+MIGRATIONS_PATH = Path("backend/migrations")
 _DB_LOCK = threading.RLock()
 
 # ── Teammate compatibility layer ──────────────────────────────────
 # index_store.py / enrich_links.py expect these public names.
 
-TEAMMATE_DB = Path("c:/scout/data/scout.db")
+TEAMMATE_DB = Path("data/scout.db")
 
 def now_iso() -> str:
     return datetime.now(timezone.utc).isoformat()
