@@ -14,12 +14,15 @@ from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
+import threading
 from urllib.parse import urlparse
 
 try:
     from db import get_conn, json_loads, now_iso
+    from enrich_links import enrich_entity
 except ModuleNotFoundError:
     from backend.db import get_conn, json_loads, now_iso  # type: ignore
+    from backend.enrich_links import enrich_entity  # type: ignore
 
 
 EXTERNAL_GITHUB_INDEX = Path("data/index_data/github_index.json")
@@ -539,6 +542,19 @@ def export_index_json(out_path: Path) -> dict[str, Any]:
 
 
 def get_entity_nodes(entity_key: str, include_enriched: bool = True, limit: int = 40) -> list[dict[str, Any]]:
+    if include_enriched:
+        try:
+            from config import load_env_file
+        except ModuleNotFoundError:
+            from backend.config import load_env_file  # type: ignore
+        load_env_file()
+        # Trigger enrichment synchronously if stale so results appear on first click.
+        # enrich_entity handles its own get_conn() and the 7-day TTL check.
+        try:
+            enrich_entity(entity_key, force=False, max_links=8)
+        except Exception:
+            pass # Fail gracefully
+
     with get_conn() as conn:
         profile = conn.execute(
             "SELECT id FROM entity_profiles WHERE entity_key=?",
@@ -546,6 +562,7 @@ def get_entity_nodes(entity_key: str, include_enriched: bool = True, limit: int 
         ).fetchone()
         if not profile:
             return []
+        
         if include_enriched:
             rows = conn.execute(
                 """

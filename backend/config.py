@@ -46,6 +46,10 @@ def get_google_cse_cx() -> str:
     return get_env_any("GOOGLE_CSE_CX")
 
 
+def get_google_serper_key() -> str:
+    return get_env_any("GOOGLE_SERPER_KEY")
+
+
 def get_pipeline_run_utc() -> str:
     return get_env_any("PIPELINE_RUN_UTC", default="02:30")
 

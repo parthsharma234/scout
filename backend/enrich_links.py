@@ -16,14 +16,15 @@ from datetime import datetime, timedelta, timezone
 from typing import Any
 
 try:
-    from config import get_google_cse_api_key, get_google_cse_cx
+    from config import get_google_cse_api_key, get_google_cse_cx, get_google_serper_key
     from db import get_conn, json_dumps, json_loads, now_iso
 except ModuleNotFoundError:
-    from backend.config import get_google_cse_api_key, get_google_cse_cx  # type: ignore
+    from backend.config import get_google_cse_api_key, get_google_cse_cx, get_google_serper_key  # type: ignore
     from backend.db import get_conn, json_dumps, json_loads, now_iso  # type: ignore
 
 
 GOOGLE_CSE_ENDPOINT = "https://www.googleapis.com/customsearch/v1"
+SERPER_ENDPOINT = "https://google.serper.dev/search"
 DEFAULT_MODEL = "nvidia/llama-3.1-nemotron-ultra-253b-v1"
 
 
@@ -31,13 +32,19 @@ def _hash_url(url: str) -> str:
     return hashlib.sha1(url.encode("utf-8")).hexdigest()[:16]  # noqa: S324
 
 
-def _request_json(url: str, timeout_seconds: int = 20) -> dict[str, Any]:
+def _request_json(url: str, timeout_seconds: int = 20, method: str = "GET", data: bytes | None = None, headers: dict[str, str] | None = None) -> dict[str, Any]:
+    final_headers = {
+        "Accept": "application/json",
+        "User-Agent": "scout-enrichment/0.1",
+    }
+    if headers:
+        final_headers.update(headers)
+    
     req = urllib.request.Request(
         url,
-        headers={
-            "Accept": "application/json",
-            "User-Agent": "scout-enrichment/0.1",
-        },
+        data=data,
+        method=method,
+        headers=final_headers,
     )
     with urllib.request.urlopen(req, timeout=timeout_seconds) as response:
         return json.loads(response.read().decode("utf-8"))
@@ -85,7 +92,64 @@ def google_cse_search(query: str, limit: int = 8) -> list[dict[str, Any]]:
     return out
 
 
+def serper_search(query: str, limit: int = 8) -> list[dict[str, Any]]:
+    api_key = get_google_serper_key()
+    if not api_key:
+        return []
+    
+    payload = json.dumps({
+        "q": query,
+        "num": max(1, min(20, int(limit))),
+    }).encode("utf-8")
+    
+    try:
+        resp = _request_json(
+            SERPER_ENDPOINT,
+            method="POST",
+            data=payload,
+            headers={
+                "X-API-KEY": api_key,
+                "Content-Type": "application/json",
+            }
+        )
+    except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, json.JSONDecodeError):
+        return []
+    
+    organic = resp.get("organic") or []
+    if not isinstance(organic, list):
+        return []
+    
+    out: list[dict[str, Any]] = []
+    for item in organic:
+        if not isinstance(item, dict):
+            continue
+        link = str(item.get("link") or "").strip()
+        title = str(item.get("title") or "").strip()
+        snippet = str(item.get("snippet") or "").strip()
+        if not link:
+            continue
+        out.append({
+            "url": link,
+            "title": title,
+            "snippet": snippet,
+            "display_link": _domain_root(link),
+        })
+    return out
+
+
+def _domain_root(url: str) -> str:
+    from urllib.parse import urlparse
+    try:
+        host = (urlparse(url).hostname or "").lower().strip()
+    except ValueError:
+        return ""
+    if host.startswith("www."):
+        host = host[4:]
+    return host
+
+
 def _nemotron_select_links(entity_name: str, query: str, candidates: list[dict[str, Any]], max_links: int = 8) -> list[dict[str, Any]]:
+# ... (rest of the file remains same, I will use replace_file_content carefully)
     api_key = os.getenv("OPENROUTER_API_KEY", "").strip()
     if not api_key:
         return candidates[:max_links]
@@ -238,10 +302,15 @@ def enrich_entity(entity_key: str, force: bool = False, max_links: int = 8) -> d
     keyword_tail = " ".join(str(token) for token in top_keywords[:4] if str(token).strip())
     query = f"{display_name} startup tool {keyword_tail}".strip()
 
-    provider = "google_cse"
+    serper_key = get_google_serper_key()
+    provider = "serper" if serper_key else "google_cse"
     job_id = _start_job(entity_id=entity_id, provider=provider, query=query)
     try:
-        candidates = google_cse_search(query=query, limit=max(10, max_links))
+        if serper_key:
+            candidates = serper_search(query=query, limit=max(10, max_links))
+        else:
+            candidates = google_cse_search(query=query, limit=max(10, max_links))
+
         if not candidates:
             _finish_job(job_id, "success", links_found=0, meta={"empty": True})
             return {"ok": True, "reason": "no_candidates", "entity_key": entity_key, "links_added": 0}
@@ -323,7 +392,7 @@ def enrich_entity(entity_key: str, force: bool = False, max_links: int = 8) -> d
                         entity_id,
                         entity_key,
                         display_name,
-                        "web_enriched",
+                        f"web_{provider}",
                         "WEB",
                         title or display_name,
                         url,

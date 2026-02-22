@@ -16,7 +16,7 @@ from typing import Any, Iterable
 
 DB_PATH = Path("data/scout.db")
 MIGRATIONS_PATH = Path("backend/migrations")
-_DB_LOCK = threading.Lock()
+_DB_LOCK = threading.RLock()
 
 
 def now_iso() -> str:
