@@ -3,9 +3,10 @@ import json
 import urllib.request
 import urllib.error
 from typing import Dict, Any, Optional
+from pathlib import Path
 
 from dotenv import load_dotenv
-load_dotenv(dotenv_path="../.env") # load from root
+load_dotenv(dotenv_path=Path(__file__).parent.parent / ".env") # load from root
 
 NEMOTRON_MODEL = "nvidia/llama-3.1-nemotron-70b-instruct" # Standard OpenRouter Nemotron model
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
@@ -43,7 +44,8 @@ CRITICAL SCORING INSTRUCTIONS: Do NOT pick a default number or guess. Calculate 
 2. Traction Bonus: Add the number of upvotes directly to the score (cap this bonus at +30).
 3. Velocity Bonus: Add (velocity * 2) to the score (cap this bonus at +20).
 4. Final Score: Sum these three values together.
-Return exactly this summed integer. Never return round/clustered numbers like 14, 20, 31, 42 unless mathematically reached.
+Return exactly this summed integer inside the JSON object. Never return round/clustered numbers like 14, 20, 31, 42 unless mathematically reached.
+ABSOLUTELY NO CONVERSATIONAL TEXT ALLOWED. YOUR ENTIRE RESPONSE MUST BE THE RAW JSON OBJECT.
 """
 
 def evaluate_post(post_text: str, source: str, engagement: Dict[str, Any]) -> Optional[Dict[str, Any]]:
@@ -102,6 +104,12 @@ Post Content:
                 content = content[3:]
             if content.endswith("```"):
                 content = content[:-3]
+                
+            # Extra safeguard to find only the core JSON object block in case of weird prefix/postfix
+            start_idx = content.find('{')
+            end_idx = content.rfind('}')
+            if start_idx != -1 and end_idx != -1 and end_idx > start_idx:
+                content = content[start_idx:end_idx+1]
                 
             parsed = json.loads(content.strip())
             return parsed
