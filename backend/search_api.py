@@ -32,7 +32,7 @@ from urllib.parse import parse_qs, urlparse
 
 try:
     from config import load_env_file
-    from db import migrate, get_top50, get_startup_by_id
+    from db import migrate, get_top50, get_startup_by_id, _get_conn, DB_PATH
     from index_store import (
         export_index_json,
         get_entity_history,
@@ -56,7 +56,7 @@ try:
     )
 except ModuleNotFoundError:
     from backend.config import load_env_file  # type: ignore
-    from backend.db import migrate, get_top50, get_startup_by_id  # type: ignore
+    from backend.db import migrate, get_top50, get_startup_by_id, _get_conn, DB_PATH  # type: ignore
     from backend.index_store import (  # type: ignore
         export_index_json,
         get_entity_history,
@@ -88,7 +88,6 @@ PIPELINE_LAST_RUN: dict | None = None
 PIPELINE_LAST_RUN_LOCK = threading.Lock()
 SCORE_EXPL_CACHE = {"signature": "", "expires_at": 0.0, "map": {}}
 DEFAULT_NEMOTRON_MODEL = "nvidia/llama-3.1-nemotron-ultra-253b-v1"
-
 
 def _env_truthy(name: str, default: bool = False) -> bool:
     raw = os.getenv(name, "").strip().lower()
@@ -594,7 +593,7 @@ class SearchHandler(BaseHTTPRequestHandler):
         self.send_header("Content-Type", "application/json; charset=utf-8")
         self.send_header("Access-Control-Allow-Origin", "*")
         self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
-        self.send_header("Access-Control-Allow-Headers", "Content-Type")
+        self.send_header("Access-Control-Allow-Headers", "Content-Type, X-User-ID")
         self.end_headers()
 
     def _read_json_body(self) -> dict:
@@ -791,7 +790,6 @@ class SearchHandler(BaseHTTPRequestHandler):
                     # Keep unknown/unspecified as 'other' -> gray
                     if 'unknown' in v or 'unspecified' in v or v.strip() == '':
                         cat = 'other'
-                
                     formatted_trends.append({
                         "id": s['id'],
                         "entity_key": s['id'],
@@ -807,6 +805,8 @@ class SearchHandler(BaseHTTPRequestHandler):
                         "source_url": s.get('source_url', ''),
                         "sources": sources,
                         "mention_count_1h": len(sources),
+                        "first_seen_at": s.get('scrape_date', None),
+                        "last_seen_at": s.get('scrape_date', None),
                     })
                     
                 payload = {"entities": formatted_trends}
@@ -884,6 +884,38 @@ class SearchHandler(BaseHTTPRequestHandler):
                 self.wfile.write(json.dumps({"error": str(exc)}).encode("utf-8"))
             return
 
+        if parsed.path in {"/api/user/profile", "/api/user/profile/"}:
+            try:
+                load_env_file()
+                user_id = params.get("user_id", [None])[0]
+                if not user_id:
+                    raise ValueError("user_id required")
+                with _get_conn(DB_PATH) as conn:
+                    row = conn.execute("SELECT * FROM Profiles WHERE id = ?", (user_id,)).fetchone()
+                    profile = dict(row) if row else {}
+                self._set_json(200)
+                self.wfile.write(json.dumps(profile, ensure_ascii=False).encode("utf-8"))
+            except Exception as exc:
+                self._set_json(400)
+                self.wfile.write(json.dumps({"error": str(exc)}).encode("utf-8"))
+            return
+
+        if parsed.path in {"/api/user/bookmarks", "/api/user/bookmarks/"}:
+            try:
+                load_env_file()
+                user_id = params.get("user_id", [None])[0]
+                if not user_id:
+                    raise ValueError("user_id required")
+                with _get_conn(DB_PATH) as conn:
+                    rows = conn.execute("SELECT * FROM Bookmarks WHERE user_id = ? ORDER BY created_at DESC", (user_id,)).fetchall()
+                    bookmarks = [dict(r) for r in rows]
+                self._set_json(200)
+                self.wfile.write(json.dumps({"bookmarks": bookmarks}, ensure_ascii=False).encode("utf-8"))
+            except Exception as exc:
+                self._set_json(400)
+                self.wfile.write(json.dumps({"error": str(exc)}).encode("utf-8"))
+            return
+
         self._set_json(404)
         self.wfile.write(json.dumps({"error": "Not found"}).encode("utf-8"))
 
@@ -907,6 +939,63 @@ class SearchHandler(BaseHTTPRequestHandler):
             except Exception as exc:  # noqa: BLE001
                 self._set_json(400)
                 self.wfile.write(json.dumps({"error": str(exc), "trace": traceback.format_exc(limit=1)}).encode("utf-8"))
+            return
+
+        if parsed.path in {"/api/user/profile", "/api/user/profile/"}:
+            try:
+                load_env_file()
+                user_id = self.headers.get("X-User-ID")
+                if not user_id:
+                    raise ValueError("Missing X-User-ID header")
+                body = self._read_json_body()
+                
+                with _get_conn(DB_PATH) as conn:
+                    conn.execute("""
+                        INSERT INTO Profiles (id, niche, bio, firm, location, avatar_url, updated_at) 
+                        VALUES (?, ?, ?, ?, ?, ?, datetime('now'))
+                        ON CONFLICT(id) DO UPDATE SET 
+                            niche = excluded.niche,
+                            bio = excluded.bio,
+                            firm = excluded.firm,
+                            location = excluded.location,
+                            avatar_url = excluded.avatar_url,
+                            updated_at = excluded.updated_at
+                    """, (user_id, body.get("niche"), body.get("bio"), body.get("firm"), body.get("location"), body.get("avatar_url")))
+                    conn.commit()
+                
+                self._set_json(200)
+                self.wfile.write(json.dumps({"ok": True}, ensure_ascii=False).encode("utf-8"))
+            except Exception as exc:
+                self._set_json(400)
+                self.wfile.write(json.dumps({"error": str(exc)}).encode("utf-8"))
+            return
+
+        if parsed.path in {"/api/user/bookmarks", "/api/user/bookmarks/"}:
+            try:
+                load_env_file()
+                user_id = self.headers.get("X-User-ID")
+                if not user_id:
+                    raise ValueError("Missing X-User-ID header")
+                body = self._read_json_body()
+                entity_key = body.get("entity_key")
+                if not entity_key:
+                    raise ValueError("entity_key missing")
+                
+                with _get_conn(DB_PATH) as conn:
+                    existing = conn.execute("SELECT id FROM Bookmarks WHERE user_id = ? AND entity_key = ?", (user_id, entity_key)).fetchone()
+                    if existing:
+                        conn.execute("DELETE FROM Bookmarks WHERE user_id = ? AND entity_key = ?", (user_id, entity_key))
+                        action = "removed"
+                    else:
+                        conn.execute("INSERT INTO Bookmarks (user_id, entity_key, created_at) VALUES (?, ?, datetime('now'))", (user_id, entity_key))
+                        action = "added"
+                    conn.commit()
+                    
+                self._set_json(200)
+                self.wfile.write(json.dumps({"ok": True, "action": action}, ensure_ascii=False).encode("utf-8"))
+            except Exception as exc:
+                self._set_json(400)
+                self.wfile.write(json.dumps({"error": str(exc)}).encode("utf-8"))
             return
 
         if parsed.path != "/api/niche-search":

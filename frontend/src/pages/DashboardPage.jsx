@@ -5,7 +5,8 @@ import ClusterMap from '../components/ClusterMap'
 import FundingTimeline from '../components/FundingTimeline'
 import TrendLeaderboard from '../components/TrendLeaderboard'
 import { useWebSocket } from '../hooks/useWebSocket'
-import { fetchEntityNodes, searchNiche, useSourceStatus, useTrends } from '../hooks/useApi'
+import { fetchEntityNodes, searchNiche, useSourceStatus, useTrends, useUserBookmarks } from '../hooks/useApi'
+import { useAuth } from '../components/AuthProvider'
 import './DashboardPage.css'
 
 function scoreNode(node) {
@@ -56,6 +57,9 @@ export default function DashboardPage() {
   const [clusterScope, setClusterScope] = useState('top')
   const [apiEntityNodes, setApiEntityNodes] = useState([])
   const [apiEntityNodesLoading, setApiEntityNodesLoading] = useState(false)
+
+  const { user } = useAuth()
+  const { isBookmarked, toggleBookmark } = useUserBookmarks(user?.id)
 
   const {
     connected: wsConnected,
@@ -306,17 +310,32 @@ export default function DashboardPage() {
                     <span className="db-stat-value">{trendScore(selectedTrend).toFixed(1)}</span>
                   </span>
                   <span className="db-drilled-stat">
-                    <span className="db-stat-label">Mentions/h</span>
-                    <span className="db-stat-value">{selectedTrend.mention_count_1h}</span>
+                    <span className="db-stat-label">Mentions</span>
+                    <span className="db-stat-value">{selectedTrend.mention_count_1h || selectedTrend.mention_count_24h || 1}</span>
                   </span>
-                  <span className="db-drilled-stat">
-                    <span className="db-stat-label">First seen</span>
-                    <span className="db-stat-value">{formatDate(selectedTrend.first_seen_at)}</span>
-                  </span>
-                  <span className="db-drilled-stat">
-                    <span className="db-stat-label">Last seen</span>
-                    <span className="db-stat-value">{formatDate(selectedTrend.last_seen_at)}</span>
-                  </span>
+                  {selectedTrend.first_seen_at && (
+                    <span className="db-drilled-stat">
+                      <span className="db-stat-label">First seen</span>
+                      <span className="db-stat-value">{formatDate(selectedTrend.first_seen_at)}</span>
+                    </span>
+                  )}
+                  {selectedTrend.last_seen_at && (
+                    <span className="db-drilled-stat">
+                      <span className="db-stat-label">Last seen</span>
+                      <span className="db-stat-value">{formatDate(selectedTrend.last_seen_at)}</span>
+                    </span>
+                  )}
+                  {user && (
+                    <button
+                      className={`db-bookmark-btn ${isBookmarked(selectedTrend.entity_key || normalizeEntityKey(selectedTrend.entity)) ? 'db-bookmark-btn--saved' : ''}`}
+                      onClick={() => toggleBookmark(selectedTrend.entity_key || normalizeEntityKey(selectedTrend.entity))}
+                      title={isBookmarked(selectedTrend.entity_key || normalizeEntityKey(selectedTrend.entity)) ? 'Remove saved startup' : 'Save startup'}
+                    >
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill={isBookmarked(selectedTrend.entity_key || normalizeEntityKey(selectedTrend.entity)) ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                      </svg>
+                    </button>
+                  )}
                 </>
               )}
             </>

@@ -224,3 +224,82 @@ export async function triggerPipelineRun({ mode = 'manual', doBackfill = true, d
     }),
   })
 }
+
+export function useUserProfile(userId) {
+  const [profile, setProfile] = useState(null)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(null)
+
+  const fetchProfile = useCallback(async () => {
+    if (!userId) return
+    setLoading(true)
+    setError(null)
+    try {
+      const data = await apiFetch(`/api/user/profile?user_id=${userId}`)
+      setProfile(data)
+    } catch (err) {
+      setError(err)
+    } finally {
+      setLoading(false)
+    }
+  }, [userId])
+
+  const updateProfile = async (data) => {
+    return apiFetch('/api/user/profile', {
+      method: 'POST',
+      headers: { 'X-User-ID': userId },
+      body: JSON.stringify(data),
+    })
+  }
+
+  useEffect(() => { fetchProfile() }, [fetchProfile])
+
+  return { profile, loading, error, refetch: fetchProfile, updateProfile }
+}
+
+export function useUserBookmarks(userId) {
+  const [bookmarks, setBookmarks] = useState([])
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(null)
+
+  const fetch = useCallback(async () => {
+    if (!userId) {
+      setBookmarks([])
+      return
+    }
+    setLoading(true)
+    setError(null)
+    try {
+      const data = await apiFetch(`/api/user/bookmarks?user_id=${userId}`)
+      setBookmarks(data.bookmarks || [])
+    } catch (err) {
+      setError(err)
+    } finally {
+      setLoading(false)
+    }
+  }, [userId])
+
+  const toggleBookmark = async (entityKey) => {
+    if (!userId) return
+    try {
+      const res = await apiFetch('/api/user/bookmarks', {
+        method: 'POST',
+        headers: { 'X-User-ID': userId },
+        body: JSON.stringify({ entity_key: entityKey }),
+      })
+      fetch() // Refetch after toggle
+      return res
+    } catch (err) {
+      console.error('Failed to toggle bookmark:', err)
+      throw err
+    }
+  }
+
+  const isBookmarked = useCallback((key) => {
+    return bookmarks.some(b => b.entity_key === key)
+  }, [bookmarks])
+
+  useEffect(() => { fetch() }, [fetch])
+
+  return { bookmarks, loading, error, refetch: fetch, toggleBookmark, isBookmarked }
+}

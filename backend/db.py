@@ -75,6 +75,24 @@ def init_dbs() -> None:
                 startup_id TEXT,
                 FOREIGN KEY(startup_id) REFERENCES Startups(id) ON DELETE CASCADE
             );
+
+            CREATE TABLE IF NOT EXISTS Profiles (
+                id TEXT PRIMARY KEY,
+                niche TEXT,
+                bio TEXT,
+                firm TEXT,
+                location TEXT,
+                avatar_url TEXT,
+                updated_at TIMESTAMP
+            );
+
+            CREATE TABLE IF NOT EXISTS Bookmarks (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                user_id TEXT NOT NULL,
+                entity_key TEXT NOT NULL,
+                created_at TIMESTAMP,
+                UNIQUE(user_id, entity_key)
+            );
         """)
         
     # 2. Raw DB (All scraped signals before Nemotron filters them)

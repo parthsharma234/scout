@@ -20,72 +20,27 @@
   "result_count": 15,
   "results": [
     {
-      "entity_key": "anthropic",
-      "entity": "Anthropic",
-      "final_score": 77.272,
-      "lexical_score": 19.486,
-      "lexical_score_norm": 84.209,
-      "relevance_score": 98.0,
-      "profile_match_score": 41.66,
-      "llm_profile_matched": true,
-      "dimension_match_scores": {
-        "sector": 100,
-        "customer_pain": 100
-      },
-      "entity_type": "startup_company",
-      "include": true,
-      "reason": "Claude Code Security product directly matches cybersecurity and automation. High confidence from multiple signals.",
-      "sources": [
-        "hackernews",
-        "hackernews"
-      ],
-      "top_keywords": [
-        "AI/ML",
-        "B2B",
-        "Early revenue",
-        "hackernews",
-        "hackernews"
-      ],
-      "trend_score": 87.32,
-      "momentum_score": 87.32,
-      "confidence": 0.8,
-      "is_known_incumbent": false,
-      "first_seen_at": "2026-02-22T03:08:27.165124+00:00",
-      "last_seen_at": "2026-02-22T04:16:19.673924+00:00",
-      "activity_last_30d": null,
-      "source_counts": {},
-      "source_interactions": {},
-      "mention_count_1h": 0,
-      "mention_count_24h": 0,
-      "spike_detected": false,
-      "top_nodes": [
-        {
-          "headline": "Makes frontier cybersecurity capabilities available to defenders through its product Claude",
-          "summary": "Title: Making frontier cybersecurity capabilities available to defenders\nURL: https://www.anthropic.com/news/claude-code-security\nDescription: ",
-          "url": "https://code.claude.com/docs/en/legal-and-compliance,https://www.anthropic.com/news/claude-code-security"
-        }
-      ],
-      "vertical": "AI/ML",
-      "one_liner": "Makes frontier cybersecurity capabilities available to defenders through its product Claude",
-      "source_url": "https://code.claude.com/docs/en/legal-and-compliance,https://www.anthropic.com/news/claude-code-security",
-      "cat": "ai"
-    },
-    {
       "entity_key": "claudecodesecurity",
       "entity": "Claude Code Security",
-      "final_score": 76.298,
+      "final_score": 90.2,
       "lexical_score": 23.14,
       "lexical_score_norm": 100.0,
       "relevance_score": 95.0,
-      "profile_match_score": 41.66,
+      "profile_match_score": 88.0,
       "llm_profile_matched": true,
       "dimension_match_scores": {
         "sector": 100,
-        "customer_pain": 100
+        "customer_pain": 90,
+        "buyer_gtm": 0,
+        "business_model": 0,
+        "stage_traction": 0,
+        "moat_defensibility": 0,
+        "timing_tailwinds": 0,
+        "risk_filter": 0
       },
       "entity_type": "startup_company",
       "include": true,
-      "reason": "Directly addresses cybersecurity (sector) and automation of vulnerability detection/patching (customer_pain). Clear startup signals via Product Hunt launch.",
+      "reason": "High relevance to 'cybersecurity' sector and 'automation' customer pain. Signals indicate a company/product venture.",
       "sources": [
         "producthunt"
       ],
@@ -122,19 +77,25 @@
     {
       "entity_key": "socketdev",
       "entity": "Socket.dev",
-      "final_score": 72.99,
+      "final_score": 87.29,
       "lexical_score": 22.757,
       "lexical_score_norm": 98.345,
-      "relevance_score": 90.0,
-      "profile_match_score": 40.0,
+      "relevance_score": 92.0,
+      "profile_match_score": 85.0,
       "llm_profile_matched": true,
       "dimension_match_scores": {
         "sector": 100,
-        "customer_pain": 80
+        "customer_pain": 80,
+        "buyer_gtm": 0,
+        "business_model": 0,
+        "stage_traction": 0,
+        "moat_defensibility": 0,
+        "timing_tailwinds": 0,
+        "risk_filter": 0
       },
       "entity_type": "startup_company",
       "include": true,
-      "reason": "Focuses on securing AI toolchains and CI workflows (cybersecurity sector) with automation implications. HackerNews presence indicates early traction.",
+      "reason": "Strong alignment with 'cybersecurity' and 'automation' pain points. Clear company signals.",
       "sources": [
         "hackernews"
       ],
@@ -170,19 +131,25 @@
     {
       "entity_key": "nanovms",
       "entity": "NanoVMs",
-      "final_score": 65.871,
+      "final_score": 77.973,
       "lexical_score": 20.1,
       "lexical_score_norm": 86.863,
-      "relevance_score": 85.0,
-      "profile_match_score": 41.66,
+      "relevance_score": 88.0,
+      "profile_match_score": 78.0,
       "llm_profile_matched": true,
       "dimension_match_scores": {
         "sector": 100,
-        "customer_pain": 100
+        "customer_pain": 60,
+        "buyer_gtm": 0,
+        "business_model": 0,
+        "stage_traction": 0,
+        "moat_defensibility": 0,
+        "timing_tailwinds": 0,
+        "risk_filter": 0
       },
       "entity_type": "startup_company",
       "include": true,
-      "reason": "Container security solutions (cybersecurity) with implied automation in threat detection. Early revenue indicates traction.",
+      "reason": "Relevant to 'cybersecurity' sector with container security solutions. Indicates early revenue stage.",
       "sources": [
         "lobsters"
       ],
@@ -217,36 +184,33 @@
       "cat": "defense"
     },
     {
-      "entity_key": "minidiarium",
-      "entity": "Mini-Diarium",
-      "final_score": 61.275,
-      "lexical_score": 22.34,
-      "lexical_score_norm": 96.543,
-      "relevance_score": 70.0,
-      "profile_match_score": 22.22,
-      "llm_profile_matched": true,
-      "dimension_match_scores": {
-        "sector": 100,
-        "customer_pain": 0
-      },
-      "entity_type": "open_source_project",
+      "entity_key": "multiple1employeeshiftsmobileapp2seotoolforbrokenlinks3documentprocessingautomationplatform",
+      "entity": "Multiple (1. Employee Shifts Mobile App, 2. SEO Tool for Broken Links, 3. Document Processing Automation Platform)",
+      "final_score": 21.629,
+      "lexical_score": 20.02,
+      "lexical_score_norm": 86.517,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "llm_profile_matched": false,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
       "include": true,
-      "reason": "Provides encryption (cybersecurity sector) but lacks automation focus. GitHub-hosted with no clear company signals.",
+      "reason": "Downranked: no LLM profile match returned.",
       "sources": [
-        "hackernews"
+        "reddit"
       ],
       "top_keywords": [
-        "Cybersecurity",
-        "B2C",
-        "Pre-revenue",
-        "hackernews"
+        "Other",
+        "B2B2C",
+        "Early revenue",
+        "reddit"
       ],
-      "trend_score": 73,
-      "momentum_score": 73.0,
+      "trend_score": 44,
+      "momentum_score": 44.0,
       "confidence": 0.8,
       "is_known_incumbent": false,
-      "first_seen_at": "2026-02-22T04:09:50.854691+00:00",
-      "last_seen_at": "2026-02-22T04:09:50.854691+00:00",
+      "first_seen_at": "2026-02-22T05:26:21.676652+00:00",
+      "last_seen_at": "2026-02-22T05:26:21.676652+00:00",
       "activity_last_30d": null,
       "source_counts": {},
       "source_interactions": {},
@@ -255,80 +219,29 @@
       "spike_detected": false,
       "top_nodes": [
         {
-          "headline": "An encrypted, local, cross-platform journaling app",
-          "summary": "Title: Show HN: Mini-Diarium - An encrypted, local, cross-platform journaling app\nURL: https://github.com/fjrevoredo/mini-diarium\nDescription: ",
-          "url": "https://github.com/fjrevoredo/mini-diarium"
+          "headline": "Solo founder simultaneously developing a mobile app for employee shifts, an SEO tool for fixing broken links, and a document processing automation platform, seeking advice on managing multiple projects.",
+          "summary": "Title: [I will not promote] Why did I think solo-founding 3 projects at once was a good idea???\nURL: https://reddit.com/r/startups/comments/1qtqh1h/i_will_not_promote_why_did_i_think_solofounding_3/\nContent: I have officially reached \"Context Switching Burnout.\"\n\nRight now, my brain is split between:\n\n1. A mobile app for employee shifts.\n2. An SEO tool for fixing broken links.\n3. A document proces",
+          "url": "https://reddit.com/r/startups/comments/1qtqh1h/i_will_not_promote_why_did_i_think_solofounding_3/"
         }
       ],
-      "vertical": "Cybersecurity",
-      "one_liner": "An encrypted, local, cross-platform journaling app",
-      "source_url": "https://github.com/fjrevoredo/mini-diarium",
-      "cat": "defense"
-    },
-    {
-      "entity_key": "fulu",
-      "entity": "FULU",
-      "final_score": 51.899,
-      "lexical_score": 20.98,
-      "lexical_score_norm": 90.666,
-      "relevance_score": 60.0,
-      "profile_match_score": 22.22,
-      "llm_profile_matched": true,
-      "dimension_match_scores": {
-        "sector": 100,
-        "customer_pain": 0
-      },
-      "entity_type": "startup_company",
-      "include": true,
-      "reason": "Offers security bounties (cybersecurity sector) but no explicit automation connection. Bounties suggest early-stage company.",
-      "sources": [
-        "hackernews"
-      ],
-      "top_keywords": [
-        "Cybersecurity",
-        "Pre-revenue",
-        "hackernews"
-      ],
-      "trend_score": 31,
-      "momentum_score": 31.0,
-      "confidence": 0.8,
-      "is_known_incumbent": false,
-      "first_seen_at": "2026-02-22T04:02:18.262417+00:00",
-      "last_seen_at": "2026-02-22T04:02:18.262417+00:00",
-      "activity_last_30d": null,
-      "source_counts": {},
-      "source_interactions": {},
-      "mention_count_1h": 0,
-      "mention_count_24h": 0,
-      "spike_detected": false,
-      "top_nodes": [
-        {
-          "headline": "Offers bounties for hacking Ring Video Doorbells, presumably for security research or vulnerability discovery",
-          "summary": "Title: FULU Bounties – Ring Video Doorbells\nURL: https://bounties.fulu.org/bounties/ring-video-doorbells\nDescription: ",
-          "url": "https://bounties.fulu.org/bounties/ring-video-doorbells"
-        }
-      ],
-      "vertical": "Cybersecurity",
-      "one_liner": "Offers bounties for hacking Ring Video Doorbells, presumably for security research or vulnerability discovery",
-      "source_url": "https://bounties.fulu.org/bounties/ring-video-doorbells",
-      "cat": "defense"
+      "vertical": "Other",
+      "one_liner": "Solo founder simultaneously developing a mobile app for employee shifts, an SEO tool for fixing broken links, and a document processing automation platform, seeking advice on managing multiple projects.",
+      "source_url": "https://reddit.com/r/startups/comments/1qtqh1h/i_will_not_promote_why_did_i_think_solofounding_3/",
+      "cat": "other"
     },
     {
       "entity_key": "emberot",
       "entity": "EmberOT",
-      "final_score": 51.024,
+      "final_score": 21.197,
       "lexical_score": 19.62,
       "lexical_score_norm": 84.788,
-      "relevance_score": 65.0,
-      "profile_match_score": 22.22,
-      "llm_profile_matched": true,
-      "dimension_match_scores": {
-        "sector": 100,
-        "customer_pain": 0
-      },
-      "entity_type": "startup_company",
+      "relevance_score": null,
+      "profile_match_score": null,
+      "llm_profile_matched": false,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
       "include": true,
-      "reason": "OT security insights (cybersecurity sector) but no automation focus. Resources suggest thought leadership.",
+      "reason": "Downranked: no LLM profile match returned.",
       "sources": [
         "hackernews"
       ],
@@ -361,11 +274,11 @@
       "cat": "defense"
     },
     {
-      "entity_key": "macky",
-      "entity": "Macky",
-      "final_score": 16.292,
-      "lexical_score": 15.08,
-      "lexical_score_norm": 65.169,
+      "entity_key": "cybersummary",
+      "entity": "CyberSummary",
+      "final_score": 21.197,
+      "lexical_score": 19.62,
+      "lexical_score_norm": 84.788,
       "relevance_score": null,
       "profile_match_score": null,
       "llm_profile_matched": false,
@@ -374,19 +287,19 @@
       "include": true,
       "reason": "Downranked: no LLM profile match returned.",
       "sources": [
-        "producthunt"
+        "reddit"
       ],
       "top_keywords": [
-        "Dev Tools",
-        "Just launched",
-        "producthunt"
+        "Other",
+        "Pre-revenue",
+        "reddit"
       ],
-      "trend_score": 66,
-      "momentum_score": 66.0,
+      "trend_score": 14,
+      "momentum_score": 14.0,
       "confidence": 0.8,
       "is_known_incumbent": false,
-      "first_seen_at": "2026-02-22T04:17:13.013111+00:00",
-      "last_seen_at": "2026-02-22T04:17:13.013111+00:00",
+      "first_seen_at": "2026-02-22T04:51:44.786388+00:00",
+      "last_seen_at": "2026-02-22T04:51:44.786388+00:00",
       "activity_last_30d": null,
       "source_counts": {},
       "source_interactions": {},
@@ -395,22 +308,116 @@
       "spike_detected": false,
       "top_nodes": [
         {
-          "headline": "Enables remote connection to Mac terminal from an iPhone",
-          "summary": "Title: Macky\nTagline: Connect to your Mac terminal from iPhone\nURL: https://www.producthunt.com/products/macky-2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29\nDescription: Connect to your Mac terminal from the bar, your bed, and lets be real your bathroom.",
-          "url": "https://www.producthunt.com/products/macky-2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29"
+          "headline": "Collects cybersecurity news from multiple sources into one Discord channel with summarized, labeled content",
+          "summary": "Title: Marketing Advice Needed (I will not promote)\nURL: https://reddit.com/r/startups/comments/1q77emz/marketing_advice_needed_i_will_not_promote/\nContent: Hey! I am testing an n8n workflow that collects cybersecurity news from multiple sources into one Discord channel. It removes duplicates and posts short, cleaned summaries with simple severity labels to make scanning easier.\n\nI have a strong t",
+          "url": "https://reddit.com/r/startups/comments/1q77emz/marketing_advice_needed_i_will_not_promote/"
         }
       ],
-      "vertical": "Dev Tools",
-      "one_liner": "Enables remote connection to Mac terminal from an iPhone",
-      "source_url": "https://www.producthunt.com/products/macky-2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+      "vertical": "Other",
+      "one_liner": "Collects cybersecurity news from multiple sources into one Discord channel with summarized, labeled content",
+      "source_url": "https://reddit.com/r/startups/comments/1q77emz/marketing_advice_needed_i_will_not_promote/",
+      "cat": "other"
+    },
+    {
+      "entity_key": "anthropic",
+      "entity": "Anthropic",
+      "final_score": 21.052,
+      "lexical_score": 19.486,
+      "lexical_score_norm": 84.209,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "llm_profile_matched": false,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "Downranked: no LLM profile match returned.",
+      "sources": [
+        "hackernews",
+        "hackernews"
+      ],
+      "top_keywords": [
+        "AI/ML",
+        "B2B",
+        "Early revenue",
+        "hackernews",
+        "hackernews"
+      ],
+      "trend_score": 87.32,
+      "momentum_score": 87.32,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-22T03:08:27.165124+00:00",
+      "last_seen_at": "2026-02-22T04:16:19.673924+00:00",
+      "activity_last_30d": null,
+      "source_counts": {},
+      "source_interactions": {},
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "headline": "Makes frontier cybersecurity capabilities available to defenders through its product Claude",
+          "summary": "Title: Making frontier cybersecurity capabilities available to defenders\nURL: https://www.anthropic.com/news/claude-code-security\nDescription: ",
+          "url": "https://code.claude.com/docs/en/legal-and-compliance,https://www.anthropic.com/news/claude-code-security"
+        }
+      ],
+      "vertical": "AI/ML",
+      "one_liner": "Makes frontier cybersecurity capabilities available to defenders through its product Claude",
+      "source_url": "https://code.claude.com/docs/en/legal-and-compliance,https://www.anthropic.com/news/claude-code-security",
+      "cat": "ai"
+    },
+    {
+      "entity_key": "socialmediaaiassistant",
+      "entity": "Social Media AI Assistant",
+      "final_score": 20.506,
+      "lexical_score": 18.98,
+      "lexical_score_norm": 82.022,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "llm_profile_matched": false,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "Downranked: no LLM profile match returned.",
+      "sources": [
+        "reddit"
+      ],
+      "top_keywords": [
+        "B2B SaaS",
+        "B2B2C",
+        "Just launched",
+        "reddit"
+      ],
+      "trend_score": 31,
+      "momentum_score": 31.0,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-22T05:00:27.209499+00:00",
+      "last_seen_at": "2026-02-22T05:00:27.209499+00:00",
+      "activity_last_30d": null,
+      "source_counts": {},
+      "source_interactions": {},
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "headline": "AI-powered web app for generating, scheduling, and posting content across multiple social media platforms",
+          "summary": "Title: Built a web app that writes + schedules + posts to IG/TikTok/FB/X/LinkedIn looking for beta testers\nURL: https://reddit.com/r/SideProject/comments/1r9wx53/built_a_web_app_that_writes_schedules_posts_to/\nContent: I’m working on a **web app that acts like an AI social media assistant** for people juggling too many platforms at once.\n\nWhat it does right now:\n\n* You can **chat with it** and gen",
+          "url": "https://reddit.com/r/SideProject/comments/1r9wx53/built_a_web_app_that_writes_schedules_posts_to/"
+        }
+      ],
+      "vertical": "B2B SaaS",
+      "one_liner": "AI-powered web app for generating, scheduling, and posting content across multiple social media platforms",
+      "source_url": "https://reddit.com/r/SideProject/comments/1r9wx53/built_a_web_app_that_writes_schedules_posts_to/",
       "cat": "devtools"
     },
     {
-      "entity_key": "huntscout",
-      "entity": "HuntScout",
-      "final_score": 16.206,
-      "lexical_score": 15.0,
-      "lexical_score_norm": 64.823,
+      "entity_key": "awsharai",
+      "entity": "Awshar AI",
+      "final_score": 19.382,
+      "lexical_score": 17.94,
+      "lexical_score_norm": 77.528,
       "relevance_score": null,
       "profile_match_score": null,
       "llm_profile_matched": false,
@@ -422,63 +429,109 @@
         "producthunt"
       ],
       "top_keywords": [
-        "Consumer",
+        "AI/ML",
+        "B2B",
+        "Just launched",
+        "producthunt"
+      ],
+      "trend_score": 68,
+      "momentum_score": 68.0,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-22T04:16:38.906684+00:00",
+      "last_seen_at": "2026-02-22T04:16:38.906684+00:00",
+      "activity_last_30d": null,
+      "source_counts": {},
+      "source_interactions": {},
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "headline": "An AI-first social listening and intelligence platform providing real-time insights across social media, news, forums, and review sites.",
+          "summary": "Title: Awshar AI\nTagline: Everything internet is talking about you at single platform.\nURL: https://www.producthunt.com/products/awshar-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29\nDescription: Awshar AI is an AI-first social listening and intelligence platform that goes beyond dashboards. It detects emerging narratives, sentiment shi",
+          "url": "https://www.producthunt.com/products/awshar-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29"
+        }
+      ],
+      "vertical": "AI/ML",
+      "one_liner": "An AI-first social listening and intelligence platform providing real-time insights across social media, news, forums, and review sites.",
+      "source_url": "https://www.producthunt.com/products/awshar-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+      "cat": "ai"
+    },
+    {
+      "entity_key": "meetclawai",
+      "entity": "MeetClaw AI",
+      "final_score": 18.95,
+      "lexical_score": 17.54,
+      "lexical_score_norm": 75.799,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "llm_profile_matched": false,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "Downranked: no LLM profile match returned.",
+      "sources": [
+        "producthunt"
+      ],
+      "top_keywords": [
+        "AI/ML",
+        "B2B",
+        "Just launched",
+        "producthunt"
+      ],
+      "trend_score": 63,
+      "momentum_score": 63.0,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-22T04:16:25.863545+00:00",
+      "last_seen_at": "2026-02-22T04:16:25.863545+00:00",
+      "activity_last_30d": null,
+      "source_counts": {},
+      "source_interactions": {},
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "headline": "Provides OpenClaw-as-a-Service, streamlining installation, security, and operation for AI-native businesses.",
+          "summary": "Title: MeetClaw AI\nTagline: Your companion for OpenClaw as a Service\nURL: https://www.producthunt.com/products/meetclaw-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29\nDescription: MeetClaw is your OpenClaw‑as‑a‑Service companion for AI‑native, forward‑thinking businesses. It takes the pain out of installing, securing, and operating Open",
+          "url": "https://www.producthunt.com/products/meetclaw-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29"
+        }
+      ],
+      "vertical": "AI/ML",
+      "one_liner": "Provides OpenClaw-as-a-Service, streamlining installation, security, and operation for AI-native businesses.",
+      "source_url": "https://www.producthunt.com/products/meetclaw-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+      "cat": "ai"
+    },
+    {
+      "entity_key": "kraftcv",
+      "entity": "KraftCV",
+      "final_score": 17.761,
+      "lexical_score": 16.44,
+      "lexical_score_norm": 71.046,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "llm_profile_matched": false,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "Downranked: no LLM profile match returned.",
+      "sources": [
+        "producthunt"
+      ],
+      "top_keywords": [
+        "B2B SaaS",
         "B2C",
-        "Early revenue",
-        "producthunt"
-      ],
-      "trend_score": 65,
-      "momentum_score": 65.0,
-      "confidence": 0.8,
-      "is_known_incumbent": false,
-      "first_seen_at": "2026-02-22T04:15:30.707455+00:00",
-      "last_seen_at": "2026-02-22T04:15:30.707455+00:00",
-      "activity_last_30d": null,
-      "source_counts": {},
-      "source_interactions": {},
-      "mention_count_1h": 0,
-      "mention_count_24h": 0,
-      "spike_detected": false,
-      "top_nodes": [
-        {
-          "headline": "An all-in-one hunting companion app for Canada with AI, offline maps, and real-time season tracking.",
-          "summary": "Title: HuntScout\nTagline: Canada's all-in-one hunting companion with AI & offline maps\nURL: https://www.producthunt.com/products/huntscout?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29\nDescription: Canadian hunters waste hours digging through provincial PDFs and government websites just to figure out what's in season. HuntScout puts every",
-          "url": "https://www.producthunt.com/products/huntscout?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29"
-        }
-      ],
-      "vertical": "Consumer",
-      "one_liner": "An all-in-one hunting companion app for Canada with AI, offline maps, and real-time season tracking.",
-      "source_url": "https://www.producthunt.com/products/huntscout?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
-      "cat": "media"
-    },
-    {
-      "entity_key": "indiestack",
-      "entity": "IndieStack",
-      "final_score": 15.946,
-      "lexical_score": 14.76,
-      "lexical_score_norm": 63.786,
-      "relevance_score": null,
-      "profile_match_score": null,
-      "llm_profile_matched": false,
-      "dimension_match_scores": {},
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "Downranked: no LLM profile match returned.",
-      "sources": [
-        "producthunt"
-      ],
-      "top_keywords": [
-        "Dev Tools",
-        "B2B",
         "Just launched",
         "producthunt"
       ],
-      "trend_score": 62,
-      "momentum_score": 62.0,
+      "trend_score": 83,
+      "momentum_score": 83.0,
       "confidence": 0.8,
       "is_known_incumbent": false,
-      "first_seen_at": "2026-02-22T04:12:03.714320+00:00",
-      "last_seen_at": "2026-02-22T04:12:03.714320+00:00",
+      "first_seen_at": "2026-02-22T04:16:59.229159+00:00",
+      "last_seen_at": "2026-02-22T04:16:59.229159+00:00",
       "activity_last_30d": null,
       "source_counts": {},
       "source_interactions": {},
@@ -487,22 +540,22 @@
       "spike_detected": false,
       "top_nodes": [
         {
-          "headline": "A curated index of 100+ indie dev tools with a JSON API, helping AI coding assistants avoid rebuilding existing solutions",
-          "summary": "Title: IndieStack\nTagline:  Find indie dev tools your AI can search before building  \nURL: https://www.producthunt.com/products/indiestack-2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29\nDescription: AI coding assistants burn thousands of tokens rebuilding auth, analytics, and billing from scratch --because they don't know indie alternati",
-          "url": "https://www.producthunt.com/products/indiestack-2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29"
+          "headline": "Generates tailored resumes per job with a git-inspired approach, offering free forever and paid power mode for active job applicants.",
+          "summary": "Title: KraftCV\nTagline: Tailored resumes per job. Free forever.\nURL: https://www.producthunt.com/products/kraftcv?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29\nDescription: Most resume builders treat your resume like a static file. KraftCV treats it like a repo. • Create a new branch per job. • Generate targeted commits for each role. • V",
+          "url": "https://www.producthunt.com/products/kraftcv?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29"
         }
       ],
-      "vertical": "Dev Tools",
-      "one_liner": "A curated index of 100+ indie dev tools with a JSON API, helping AI coding assistants avoid rebuilding existing solutions",
-      "source_url": "https://www.producthunt.com/products/indiestack-2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+      "vertical": "B2B SaaS",
+      "one_liner": "Generates tailored resumes per job with a git-inspired approach, offering free forever and paid power mode for active job applicants.",
+      "source_url": "https://www.producthunt.com/products/kraftcv?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
       "cat": "devtools"
     },
     {
-      "entity_key": "pikaaiselves",
-      "entity": "Pika AI Selves",
-      "final_score": 15.946,
-      "lexical_score": 14.76,
-      "lexical_score_norm": 63.786,
+      "entity_key": "prismvideos",
+      "entity": "Prism Videos",
+      "final_score": 17.675,
+      "lexical_score": 16.36,
+      "lexical_score_norm": 70.7,
       "relevance_score": null,
       "profile_match_score": null,
       "llm_profile_matched": false,
@@ -515,15 +568,16 @@
       ],
       "top_keywords": [
         "AI/ML",
+        "B2B2C",
         "Just launched",
         "producthunt"
       ],
-      "trend_score": 62,
-      "momentum_score": 62.0,
+      "trend_score": 82,
+      "momentum_score": 82.0,
       "confidence": 0.8,
       "is_known_incumbent": false,
-      "first_seen_at": "2026-02-22T04:16:16.337245+00:00",
-      "last_seen_at": "2026-02-22T04:16:16.337245+00:00",
+      "first_seen_at": "2026-02-22T04:17:23.985757+00:00",
+      "last_seen_at": "2026-02-22T04:17:23.985757+00:00",
       "activity_last_30d": null,
       "source_counts": {},
       "source_interactions": {},
@@ -532,112 +586,22 @@
       "spike_detected": false,
       "top_nodes": [
         {
-          "headline": "Create and raise a living, AI-powered digital extension of yourself with persistent memory and customizable traits.",
-          "summary": "Title: Pika AI Selves\nTagline: Birth, raise & set loose to be a living extension of AI you!\nURL: https://www.producthunt.com/products/pika-ai-selves?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29\nDescription: Create your Pika AI Self - AI you birth, raise, and set loose to be a living extension of you. They’re rich, multi-faceted beings wi",
-          "url": "https://www.producthunt.com/products/pika-ai-selves?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29"
+          "headline": "AI video creation platform for generating and editing short-form videos in a unified workspace",
+          "summary": "Title: Prism Videos\nTagline: A unified workspace to generate and edit AI videos \nURL: https://www.producthunt.com/products/prism-videos?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29\nDescription: Prism is an AI video creation platform for making short-form videos without using a dozen different tools. Generate image and video assets from m",
+          "url": "https://www.producthunt.com/products/prism-videos?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29"
         }
       ],
       "vertical": "AI/ML",
-      "one_liner": "Create and raise a living, AI-powered digital extension of yourself with persistent memory and customizable traits.",
-      "source_url": "https://www.producthunt.com/products/pika-ai-selves?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+      "one_liner": "AI video creation platform for generating and editing short-form videos in a unified workspace",
+      "source_url": "https://www.producthunt.com/products/prism-videos?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
       "cat": "ai"
     },
     {
-      "entity_key": "eleccirai",
-      "entity": "ElecCir AI",
-      "final_score": 15.687,
-      "lexical_score": 14.52,
-      "lexical_score_norm": 62.748,
-      "relevance_score": null,
-      "profile_match_score": null,
-      "llm_profile_matched": false,
-      "dimension_match_scores": {},
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "Downranked: no LLM profile match returned.",
-      "sources": [
-        "producthunt"
-      ],
-      "top_keywords": [
-        "AI/ML",
-        "Just launched",
-        "producthunt"
-      ],
-      "trend_score": 59,
-      "momentum_score": 59.0,
-      "confidence": 0.8,
-      "is_known_incumbent": false,
-      "first_seen_at": "2026-02-22T04:10:50.743012+00:00",
-      "last_seen_at": "2026-02-22T04:10:50.743012+00:00",
-      "activity_last_30d": null,
-      "source_counts": {},
-      "source_interactions": {},
-      "mention_count_1h": 0,
-      "mention_count_24h": 0,
-      "spike_detected": false,
-      "top_nodes": [
-        {
-          "headline": "AI tool for designing and analyzing electrical circuits through descriptive input",
-          "summary": "Title: ElecCir AI\nTagline: ElecCir AI is an AI tool for electrical circuits design\nURL: https://www.producthunt.com/products/eleccir-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29\nDescription: ElecCir AI is a AI tool that helps you design and analyze electrical circuits. Built with cutting-edge technology, whether you're an engineer, st",
-          "url": "https://www.producthunt.com/products/eleccir-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29"
-        }
-      ],
-      "vertical": "AI/ML",
-      "one_liner": "AI tool for designing and analyzing electrical circuits through descriptive input",
-      "source_url": "https://www.producthunt.com/products/eleccir-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
-      "cat": "ai"
-    },
-    {
-      "entity_key": "grouptube",
-      "entity": "GroupTube",
-      "final_score": 15.601,
-      "lexical_score": 14.44,
-      "lexical_score_norm": 62.403,
-      "relevance_score": null,
-      "profile_match_score": null,
-      "llm_profile_matched": false,
-      "dimension_match_scores": {},
-      "entity_type": "unknown",
-      "include": true,
-      "reason": "Downranked: no LLM profile match returned.",
-      "sources": [
-        "producthunt"
-      ],
-      "top_keywords": [
-        "Consumer",
-        "Just launched",
-        "producthunt"
-      ],
-      "trend_score": 58,
-      "momentum_score": 58.0,
-      "confidence": 0.8,
-      "is_known_incumbent": false,
-      "first_seen_at": "2026-02-22T04:11:10.627323+00:00",
-      "last_seen_at": "2026-02-22T04:11:10.627323+00:00",
-      "activity_last_30d": null,
-      "source_counts": {},
-      "source_interactions": {},
-      "mention_count_1h": 0,
-      "mention_count_24h": 0,
-      "spike_detected": false,
-      "top_nodes": [
-        {
-          "headline": "Platform for synchronized YouTube video watching, music listening, and game nights with friends remotely",
-          "summary": "Title: GroupTube\nTagline: GroupTube 1.10 – Apps & Games\nURL: https://www.producthunt.com/products/grouptube?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29\nDescription: Watch YouTube videos together, listen to music, or host a game night. Have a great time together with friends – anywhere, anytime.",
-          "url": "https://www.producthunt.com/products/grouptube?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29"
-        }
-      ],
-      "vertical": "Consumer",
-      "one_liner": "Platform for synchronized YouTube video watching, music listening, and game nights with friends remotely",
-      "source_url": "https://www.producthunt.com/products/grouptube?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
-      "cat": "media"
-    },
-    {
-      "entity_key": "fluxui",
-      "entity": "FLUX UI",
-      "final_score": 15.428,
-      "lexical_score": 14.28,
-      "lexical_score_norm": 61.711,
+      "entity_key": "gitlrc",
+      "entity": "git-lrc",
+      "final_score": 16.897,
+      "lexical_score": 15.64,
+      "lexical_score_norm": 67.589,
       "relevance_score": null,
       "profile_match_score": null,
       "llm_profile_matched": false,
@@ -653,12 +617,12 @@
         "Just launched",
         "producthunt"
       ],
-      "trend_score": 56,
-      "momentum_score": 56.0,
+      "trend_score": 73,
+      "momentum_score": 73.0,
       "confidence": 0.8,
       "is_known_incumbent": false,
-      "first_seen_at": "2026-02-22T04:11:36.656272+00:00",
-      "last_seen_at": "2026-02-22T04:11:36.656272+00:00",
+      "first_seen_at": "2026-02-22T04:17:29.749493+00:00",
+      "last_seen_at": "2026-02-22T04:17:29.749493+00:00",
       "activity_last_30d": null,
       "source_counts": {},
       "source_interactions": {},
@@ -667,22 +631,22 @@
       "spike_detected": false,
       "top_nodes": [
         {
-          "headline": "A React UI library with 40 physics-based motion primitives powered by a unified physics engine.",
-          "summary": "Title: FLUX UI\nTagline: 40 physics-based motion primitives for React\nURL: https://www.producthunt.com/products/flux-ui?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29\nDescription: Every UI library treats animation as decoration. FLUX UI treats it as a language. 40 composable motion primitives powered by a unified physics engine with 7 named",
-          "url": "https://www.producthunt.com/products/flux-ui?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29"
+          "headline": "Offers free, unlimited AI-powered code reviews integrated with git commits",
+          "summary": "Title: git-lrc\nTagline: Free, unlimited AI code reviews that run on commit\nURL: https://www.producthunt.com/products/git-lrc?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29\nDescription: GenAI is like a race car without brakes. It accelerates fast — you describe something, and large blocks of code appear instantly. But AI agents silently bre",
+          "url": "https://www.producthunt.com/products/git-lrc?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29"
         }
       ],
       "vertical": "Dev Tools",
-      "one_liner": "A React UI library with 40 physics-based motion primitives powered by a unified physics engine.",
-      "source_url": "https://www.producthunt.com/products/flux-ui?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+      "one_liner": "Offers free, unlimited AI-powered code reviews integrated with git commits",
+      "source_url": "https://www.producthunt.com/products/git-lrc?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
       "cat": "devtools"
     },
     {
-      "entity_key": "excelformulabotplatform",
-      "entity": "Excel Formula Bot Platform",
-      "final_score": 15.082,
-      "lexical_score": 13.96,
-      "lexical_score_norm": 60.328,
+      "entity_key": "minis",
+      "entity": "Minis",
+      "final_score": 16.897,
+      "lexical_score": 15.64,
+      "lexical_score_norm": 67.589,
       "relevance_score": null,
       "profile_match_score": null,
       "llm_profile_matched": false,
@@ -691,20 +655,20 @@
       "include": true,
       "reason": "Downranked: no LLM profile match returned.",
       "sources": [
-        "indiehackers"
+        "reddit"
       ],
       "top_keywords": [
         "AI/ML",
-        "B2B",
-        "Early revenue",
-        "indiehackers"
+        "B2C",
+        "Just launched",
+        "reddit"
       ],
-      "trend_score": 52,
-      "momentum_score": 52.0,
+      "trend_score": 73,
+      "momentum_score": 73.0,
       "confidence": 0.8,
       "is_known_incumbent": false,
-      "first_seen_at": "2026-02-22T03:53:14.276435+00:00",
-      "last_seen_at": "2026-02-22T03:53:14.276435+00:00",
+      "first_seen_at": "2026-02-22T04:50:18.402066+00:00",
+      "last_seen_at": "2026-02-22T04:50:18.402066+00:00",
       "activity_last_30d": null,
       "source_counts": {},
       "source_interactions": {},
@@ -713,15 +677,61 @@
       "spike_detected": false,
       "top_nodes": [
         {
-          "headline": "AI-driven platform for Excel formula automation, generating $500k ARR",
-          "summary": "Title: May 17, 2025\n\n        Getting serious about marketing after hitting $500k ARR\n    \n\n        David Bressler built one of the first AI-driven Excel formula bots. Then, he turned it into a platform making $500k ARR. Here's how.\n        \n \n \n\n\n\n\nby James Fleischmann\nURL: https://www.indiehackers.com/post/8XGnzrxG1neA3jy37x2D",
-          "url": "https://www.indiehackers.com/post/8XGnzrxG1neA3jy37x2D"
+          "headline": "A social media platform where users create and share interactive, AI-generated mini-apps and games",
+          "summary": "Title: I showed my brother my social media app and he didn't believe I made it...\nURL: https://reddit.com/r/SideProject/comments/1raa3j7/i_showed_my_brother_my_social_media_app_and_he/\nContent: I showed this at an event recently and it kind of blew up more than I expected so figured I'd share it here too.  \n  \n  \n Basically I kept thinking about this idea. What if social media wasn't videos. What ",
+          "url": "https://reddit.com/r/SideProject/comments/1raa3j7/i_showed_my_brother_my_social_media_app_and_he/"
         }
       ],
       "vertical": "AI/ML",
-      "one_liner": "AI-driven platform for Excel formula automation, generating $500k ARR",
-      "source_url": "https://www.indiehackers.com/post/8XGnzrxG1neA3jy37x2D",
+      "one_liner": "A social media platform where users create and share interactive, AI-generated mini-apps and games",
+      "source_url": "https://reddit.com/r/SideProject/comments/1raa3j7/i_showed_my_brother_my_social_media_app_and_he/",
       "cat": "ai"
+    },
+    {
+      "entity_key": "wayout",
+      "entity": "WayOut",
+      "final_score": 16.724,
+      "lexical_score": 15.48,
+      "lexical_score_norm": 66.897,
+      "relevance_score": null,
+      "profile_match_score": null,
+      "llm_profile_matched": false,
+      "dimension_match_scores": {},
+      "entity_type": "unknown",
+      "include": true,
+      "reason": "Downranked: no LLM profile match returned.",
+      "sources": [
+        "producthunt"
+      ],
+      "top_keywords": [
+        "Health Tech",
+        "B2C",
+        "Just launched",
+        "producthunt"
+      ],
+      "trend_score": 71,
+      "momentum_score": 71.0,
+      "confidence": 0.8,
+      "is_known_incumbent": false,
+      "first_seen_at": "2026-02-22T04:16:11.385369+00:00",
+      "last_seen_at": "2026-02-22T04:16:11.385369+00:00",
+      "activity_last_30d": null,
+      "source_counts": {},
+      "source_interactions": {},
+      "mention_count_1h": 0,
+      "mention_count_24h": 0,
+      "spike_detected": false,
+      "top_nodes": [
+        {
+          "headline": "A digital wellbeing app that blocks iOS apps, requiring users to earn screen time by walking, with rewards in Neon currency.",
+          "summary": "Title: WayOut - Walk to Earn Screen Time\nTagline: Walk more, scroll less. Earn screen time with every step.\nURL: https://www.producthunt.com/products/wayout-walk-to-earn-screen-time?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29\nDescription: What if you had to earn your screen time by walking? WayOut blocks your apps at the iOS system leve",
+          "url": "https://www.producthunt.com/products/wayout-walk-to-earn-screen-time?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29"
+        }
+      ],
+      "vertical": "Health Tech",
+      "one_liner": "A digital wellbeing app that blocks iOS apps, requiring users to earn screen time by walking, with rewards in Neon currency.",
+      "source_url": "https://www.producthunt.com/products/wayout-walk-to-earn-screen-time?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+scout-scraper+%28ID%3A+275662%29",
+      "cat": "defense"
     }
   ]
 }

@@ -117,6 +117,39 @@
   border-color: rgba(59, 130, 246, 0.3);
 }
 
+.db-bookmark-btn {
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: 8px;
+  transition: all 120ms ease;
+  padding: 0;
+}
+
+.db-bookmark-btn:hover {
+  color: var(--text-primary);
+  background: rgba(148, 163, 184, 0.08);
+  border-color: var(--border-strong);
+}
+
+.db-bookmark-btn--saved {
+  color: var(--blue-400);
+  background: rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.db-bookmark-btn--saved:hover {
+  background: rgba(59, 130, 246, 0.15);
+  color: var(--blue-300);
+}
+
 .db-entity-count {
   font-size: 10px;
   color: var(--text-muted);

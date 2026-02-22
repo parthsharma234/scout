@@ -30,7 +30,7 @@ function chipTone(status) {
   return 'badge'
 }
 
-export default function Header({ sources = [], wsConnected = false }) {
+export default function Header({ sources = [], wsConnected = false, showBackBtn = false }) {
   const navigate = useNavigate()
   const time = useClock()
   const displaySources = sources.length > 0 ? sources : DEFAULT_SOURCES
@@ -47,6 +47,22 @@ export default function Header({ sources = [], wsConnected = false }) {
   return (
     <header className="hdr-root">
       <div className="hdr-left">
+        {showBackBtn && (
+          <>
+            <button
+              className="hdr-logout"
+              onClick={() => navigate('/dashboard')}
+              style={{ padding: '4px 10px', fontSize: '11px', display: 'flex', alignItems: 'center', gap: '6px' }}
+            >
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+              </svg>
+              Back
+            </button>
+            <span className="hdr-divider" />
+          </>
+        )}
         <button className="hdr-brand" onClick={() => navigate('/')}>
           Scout
         </button>
@@ -55,11 +71,6 @@ export default function Header({ sources = [], wsConnected = false }) {
       </div>
 
       <div className="hdr-center">
-        {displaySources.map((source) => (
-          <span key={source.id} className={chipTone(source.status)}>
-            {source.label}
-          </span>
-        ))}
       </div>
 
       <div className="hdr-right">
@@ -67,6 +78,13 @@ export default function Header({ sources = [], wsConnected = false }) {
           {wsConnected ? 'Live' : 'Syncing'}
         </span>
         <span className="hdr-clock mono">{time}</span>
+        <button className="hdr-logout" onClick={() => navigate('/profile')} style={{ marginRight: '8px' }}>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
+          Profile
+        </button>
         <button className="hdr-logout" onClick={handleLogout}>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
