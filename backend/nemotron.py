@@ -45,6 +45,10 @@ CRITICAL SCORING INSTRUCTIONS: Do NOT pick a default number or guess. Calculate 
 3. Velocity Bonus: Add (velocity * 2) to the score (cap this bonus at +20).
 4. Final Score: Sum these three values together.
 Return exactly this summed integer inside the JSON object. Never return round/clustered numbers like 14, 20, 31, 42 unless mathematically reached.
+
+JSON ESCAPING RULES:
+You MUST properly escape all internal double-quotes (\") within your string values (such as `is_startup_reason` and `one_liner`).
+Do not use raw unescaped double-quotes inside strings. If possible, use single quotes instead for inner quotes.
 ABSOLUTELY NO CONVERSATIONAL TEXT ALLOWED. YOUR ENTIRE RESPONSE MUST BE THE RAW JSON OBJECT.
 """
 
