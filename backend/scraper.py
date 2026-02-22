@@ -322,8 +322,8 @@ def scrape_indiehackers() -> List[Dict[str, Any]]:
     results = []
     seen_urls = set()
     
-    # Scrape 10 pages for a deep run
-    for page in range(1, 11):
+    # Scrape 22 pages for a deep run
+    for page in range(1, 23):
         url = f"https://www.indiehackers.com/tech?page={page}"
         logger.info(f"Paginating IndieHackers page {page}...")
         try:
@@ -468,7 +468,9 @@ def run_pipeline() -> None:
         if result and result.get('is_startup') is True:
             logger.info(f"✅ Startup Found: {result.get('startup_name')} (Score: {result.get('scout_score')})")
             
-            startup_name = result.get('startup_name', 'Unknown')
+            startup_name = result.get('startup_name')
+            if not startup_name:
+                startup_name = 'Unknown'
             safe_id = "".join(c for c in startup_name.lower() if c.isalnum())
             if not safe_id:
                 safe_id = f"startup_{int(time.time())}"

@@ -37,13 +37,13 @@ You must distinguish between actual fundable startups making products vs open so
 Set to `true` ONLY if it is a real software, hardware, or biotech company/product attempting to build a scalable business. Reject media projects, content, and services businesses.
 
 RULES FOR scout_score:
-Calculate a score from 1-100 evaluating how interesting this is to an early stage VC.
-CRITICAL SCORING INSTRUCTIONS: Do not cluster scores around common numbers like 20, 42, 60, or 80. Use the FULL continuous range from 1 to 100.
-Factors:
-1. High organic buzz early on (e.g. lots of upvotes/comments in few hours) = Higher score.
-2. Low buzz or old post = Lower score.
-3. Niche, highly technical, or strong team signals = Higher score.
-4. Scale your score smoothly and dynamically based on the exact numbers of upvotes and comments provided. Avoid generic rounded numbers.
+Calculate an integer score from 1-100 evaluating how interesting this is to an early stage VC.
+CRITICAL SCORING INSTRUCTIONS: Do NOT pick a default number or guess. Calculate the exact score using this formula:
+1. Base Idea Score: Rate the product novelty, scale, and technical depth from 1 to 50.
+2. Traction Bonus: Add the number of upvotes directly to the score (cap this bonus at +30).
+3. Velocity Bonus: Add (velocity * 2) to the score (cap this bonus at +20).
+4. Final Score: Sum these three values together.
+Return exactly this summed integer. Never return round/clustered numbers like 14, 20, 31, 42 unless mathematically reached.
 """
 
 def evaluate_post(post_text: str, source: str, engagement: Dict[str, Any]) -> Optional[Dict[str, Any]]:
