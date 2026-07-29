@@ -50,10 +50,10 @@ async function apiFetch(path, options = {}) {
  * Set `enabled` to false to disable polling (e.g. when WS is live).
  *
  * Returns:
- *   trends   — TrendEntity[]
- *   loading  — boolean
- *   error    — Error | null
- *   refetch  — manually trigger a refresh
+ *   trends: TrendEntity[]
+ *   loading: boolean
+ *   error: Error | null
+ *   refetch: manually trigger a refresh
  */
 export function useTrends({ enabled = true, pollInterval = 10000 } = {}) {
   const [trends, setTrends] = useState([])

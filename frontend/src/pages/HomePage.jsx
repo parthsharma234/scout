@@ -266,7 +266,7 @@ export default function HomePage() {
             </h1>
             <p className="hp-hero-sub">
               Scout surfaces companies gaining traction across developer and founder
-              channels — from first mention to breakout moment.
+              channels, from first mention to breakout moment.
             </p>
             <div className="hp-hero-actions">
               <button className="hp-btn-primary" onClick={() => navigate('/dashboard')}>
@@ -330,7 +330,7 @@ export default function HomePage() {
             <span className="hp-overline mono">The product</span>
             <h2>One ranked view of every signal that matters.</h2>
             <p className="hp-showcase-desc">
-              Scout collects, normalizes, and scores startup mentions in real-time — then
+              Scout collects, normalizes, and scores startup mentions in real-time, then
               presents them as an interactive map where bubble size equals traction.
             </p>
           </RevealSection>

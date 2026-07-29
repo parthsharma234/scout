@@ -29,11 +29,11 @@ const MAX_RECONNECT_ATTEMPTS = 10
  * }
  *
  * Returns:
- *   connected    — boolean, true when WS is open
- *   trends       — latest array of trend entities from 'trend_update' messages
- *   alerts       — array of spike alert objects from 'spike_alert' messages
- *   sources      — array of source status objects from 'source_status' messages
- *   velocityData — time-series data for the velocity chart
+ *   connected: boolean, true when WS is open
+ *   trends: latest array of trend entities from 'trend_update' messages
+ *   alerts: array of spike alert objects from 'spike_alert' messages
+ *   sources: array of source status objects from 'source_status' messages
+ *   velocityData: time-series data for the velocity chart
  */
 export function useWebSocket() {
   const [connected, setConnected]       = useState(false)

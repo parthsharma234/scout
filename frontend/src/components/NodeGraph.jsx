@@ -123,9 +123,9 @@ function buildEdges(layout) {
       const dy = b.y - a.y
       const dist = Math.sqrt(dx * dx + dy * dy)
 
-      // Same source type — always connect if nearby
+      // Same source type: always connect if nearby
       const sameSource = a.source_id === b.source_id
-      // Shared keywords — topic similarity
+      // Shared keywords: topic similarity
       const overlap = keywordOverlap(a.headline, b.headline)
 
       let strength = 0

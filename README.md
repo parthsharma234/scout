@@ -8,13 +8,13 @@ Scout turns fragmented founder and developer discussion into a queryable company
 
 [API reference](API.md) · [Local setup](#local-development) · [Architecture](#architecture) · [Devpost](https://devpost.com/software/scout-svtmd3)
 
-🏆 **Winner — Best FinTech Track, 2026 Startup Week Buildathon**
+🏆 **Winner: Best FinTech Track, 2026 Startup Week Buildathon**
 
 </div>
 
 ![Scout walkthrough: ranked company map, thesis search, and an entity evidence graph](docs/assets/scout-demo.gif)
 
-> **Status — research prototype.** Scout is designed for product exploration and investor research workflows. It is not investment advice, and upstream data quality, coverage, and enrichment depend on external services.
+> **Status: research prototype.** Scout is designed for product exploration and investor research workflows. It is not investment advice, and upstream data quality, coverage, and enrichment depend on external services.
 
 ## What Scout does
 
@@ -83,9 +83,9 @@ investor thesis + profile constraints → lexical retrieval → optional LLM rer
 
 ## Retrieval-augmented ranking
 
-Scout uses a lightweight, evidence-grounded RAG workflow for thesis search. It works directly from the SQLite company dataset and source text rather than a vector database, so every retrieved result can be traced back to a concrete record. The LLM sees a focused evidence set—not the entire corpus.
+Scout uses a lightweight, evidence-grounded RAG workflow for thesis search. It works directly from the SQLite company dataset and source text rather than a vector database, so every retrieved result can be traced back to a concrete record. The LLM sees a focused evidence set, not the entire corpus.
 
-### Stage 1 — hybrid lexical retrieval
+### Stage 1: hybrid lexical retrieval
 
 The query is tokenized, expanded with domain aliases, and matched against an entity name, structured keywords, and source-node headline/summary text. For entity `e` and query terms `t`, the lexical score is:
 
@@ -95,9 +95,9 @@ L(e,q) = 22I_q^{name} + 10I_q^{node} + \sum_{t \in q}(6I_t^{name} + 4I_t^{keywor
 
 Where `M` is persisted momentum (`scout_score`), `C` is confidence, `N` is the number of available evidence nodes, and `I` is a match indicator. A single-hit candidate is penalized by `0.65` to prefer multi-signal matches. Scout retains `max(5 × requested_limit, 40)` candidates before reranking.
 
-### Stage 2 — bounded RAG context and investor-profile reranking
+### Stage 2: bounded RAG context and investor-profile reranking
 
-For the top 16 candidates, Scout emits at most three evidence chunks per company—headline, summary, URL, source, and extracted keywords—capped at 36 total chunks. Nemotron receives this context with the natural-language thesis, candidate metadata, and a weighted investor profile. Profile dimensions are rank-weighted linearly:
+For the top 16 candidates, Scout emits at most three evidence chunks per company: headline, summary, URL, source, and extracted keywords. The context is capped at 36 total chunks. Nemotron receives this context with the natural-language thesis, candidate metadata, and a weighted investor profile. Profile dimensions are rank-weighted linearly:
 
 ```math
 w_i = \frac{m - r_i + 1}{\sum_{j=1}^{m}(m - r_j + 1)}
@@ -105,7 +105,7 @@ w_i = \frac{m - r_i + 1}{\sum_{j=1}^{m}(m - r_j + 1)}
 
 Here `r_i` is a user-assigned priority rank and `m` is the number of supported profile dimensions. The model returns inclusion, entity type, relevance, profile match, per-dimension match scores, and an evidence-grounded rationale.
 
-### Stage 3 — score fusion
+### Stage 3: score fusion
 
 Once the model responds, the final order is computed deterministically. Let `L̂` be lexical score normalized to 0–100, `R` be LLM relevance, `P` be LLM profile match, and `M` be momentum:
 
@@ -166,10 +166,10 @@ On Windows PowerShell, use `Copy-Item .env.example .env`.
 Run these in separate terminals from the repository root:
 
 ```bash
-# terminal 1 — API on http://127.0.0.1:8000
+# terminal 1: API on http://127.0.0.1:8000
 npm run dev:api
 
-# terminal 2 — Vite on http://localhost:5173
+# terminal 2: Vite on http://localhost:5173
 npm run dev
 ```
 
@@ -212,13 +212,13 @@ The API is served by Python's `ThreadingHTTPServer`; it is REST-only. The fronte
 
 | Route | Query / body | Response focus |
 | --- | --- | --- |
-| `GET /api/health` | — | API and search-index status |
-| `GET /api/trends` | — | Ranked entity payload for the map |
-| `GET /api/sources` | — | Source health and ingestion counts |
+| `GET /api/health` | None | API and search-index status |
+| `GET /api/trends` | None | Ranked entity payload for the map |
+| `GET /api/sources` | None | Source health and ingestion counts |
 | `GET /api/entity/{key}/nodes` | `include_enriched`, `limit` | Original source plus optional web evidence |
 | `GET /api/entity/{key}/history` | `window_days` | Time-series entity history |
 | `GET` / `POST /api/niche-search` | query, profile dimensions, rank priorities | Ranked thesis matches |
-| `GET /api/pipeline/status` | — | Scheduler and recent pipeline metadata |
+| `GET /api/pipeline/status` | None | Scheduler and recent pipeline metadata |
 | `POST /api/user/profile` | profile fields + `X-User-ID` | Upserted investor profile |
 | `GET` / `POST /api/user/bookmarks` | `user_id` or `entity_key` + `X-User-ID` | Saved-company list or toggle result |
 

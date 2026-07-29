@@ -503,7 +503,7 @@ def run_niche_pipeline(
 
     # If no lexical matches, fall back to returning top scored startups
     if not candidates:
-        print("[NICHE] No lexical matches — falling back to top startups by score")
+        print("[NICHE] No lexical matches; falling back to top startups by score")
         candidates = [{"entity": e, "lexical_score": e.get("trend_score", 0) * 0.1} for e in entities[:limit]]
 
     # Nemotron LLM reranking
